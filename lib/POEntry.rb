@@ -6,8 +6,40 @@
 #
 # TODO: Make it more OOP later! (not right now)
 class POEntry
+  # TODO: Maybe refactor these? Bit hard to read
+  PARAM_SUB_RE = /(?:\A|([^\\]))\\\{\d+\\\}/
   PARAM_RE = /(?:\A|([^\\]))\{\d+\}/
-  
+
+  # TODO: Remove after testing!
+  TEST_ENTRY = [{
+    "msgid" => "Validation Error: Please only use the {1} option. It does the same\n"\
+    "as {2}, which is only supported for legacy purposes."
+  }, {
+    "msgstr" => "[Ṽȧŀīḓȧŧīǿƞ Ḗřřǿř: Ƥŀḗȧşḗ ǿƞŀẏ ŭşḗ ŧħḗ {1} ǿƥŧīǿƞ. Īŧ ḓǿḗş ŧħḗ şȧḿḗ\n"\
+    "ȧş {2}, ẇħīƈħ īş ǿƞŀẏ şŭƥƥǿřŧḗḓ ƒǿř ŀḗɠȧƈẏ ƥŭřƥǿşḗş. ϵςϱϖΐǈϖǅϑϖ ẛςǲ衋衋ǲ 靐ϕ]"
+  }]
+
+  TEST_ENTRY_2 = [{
+    "msgid" => "JOB TARGET: Nodes matching a PuppetDB query (using the Puppet Query "\
+    "Language). We recommend wrapping the query in single quotes and, inside the "\
+    "query, using double quotes. Eg. All nodes containing example in certname: "\
+    "--query 'nodes {certname ~ \"example\\.com\"}' Eg. All nodes containing the "\
+    "Ntp class: --query 'resources { type = \"Class\" and title = \"Ntp\"}' "\
+    "Review these docs for additional help with PQL: "\
+    "https://docs.puppet.com/pe/latest/orchestrator_job_run.html#enforce-change-"\
+    "based-on-a-pql-nodes-query"
+  }, {
+    "msgstr" => "[ĴǾƁ ŦȦŘƓḖŦ: Ƞǿḓḗş ḿȧŧƈħīƞɠ ȧ ƤŭƥƥḗŧḒƁ ɋŭḗřẏ (ŭşīƞɠ ŧħḗ Ƥŭƥƥḗŧ Ɋŭḗřẏ "\
+    "Ŀȧƞɠŭȧɠḗ). Ẇḗ řḗƈǿḿḿḗƞḓ ẇřȧƥƥīƞɠ ŧħḗ ɋŭḗřẏ īƞ şīƞɠŀḗ ɋŭǿŧḗş ȧƞḓ, īƞşīḓḗ ŧħḗ "\
+    "ɋŭḗřẏ, ŭşīƞɠ ḓǿŭƀŀḗ ɋŭǿŧḗş. Ḗɠ. Ȧŀŀ ƞǿḓḗş ƈǿƞŧȧīƞīƞɠ ḗẋȧḿƥŀḗ īƞ ƈḗřŧƞȧḿḗ: "\
+    "--ɋŭḗřẏ 'ƞǿḓḗş {ƈḗřŧƞȧḿḗ ~ \"ḗẋȧḿƥŀḗ\\.ƈǿḿ\"}' Ḗɠ. Ȧŀŀ ƞǿḓḗş ƈǿƞŧȧīƞīƞɠ ŧħḗ "\
+    "Ƞŧƥ ƈŀȧşş: --ɋŭḗřẏ 'řḗşǿŭřƈḗş { ŧẏƥḗ = \"Ƈŀȧşş\" ȧƞḓ ŧīŧŀḗ = \"Ƞŧƥ\"}' "\
+    "Řḗṽīḗẇ ŧħḗşḗ ḓǿƈş ƒǿř ȧḓḓīŧīǿƞȧŀ ħḗŀƥ ẇīŧħ ƤɊĿ: "\
+    "ħŧŧƥş://ḓǿƈş.ƥŭƥƥḗŧ.ƈǿḿ/ƥḗ/ŀȧŧḗşŧ/ǿřƈħḗşŧřȧŧǿř_ĵǿƀ_řŭƞ.ħŧḿŀ#ḗƞƒǿřƈḗ-ƈħȧƞɠḗ-"\
+    "ƀȧşḗḓ-ǿƞ-ȧ-ƥɋŀ-ƞǿḓḗş-ɋŭḗřẏ 衋ϕǅ ẛſΰıϱǲ鶱 ϐϰ靐ıϱ ΐıſϱǲϵϰ鶱 ϕ ΐϕ衋ǲǋǅϰϖ ϵ衋靐ẛϰ "\
+    "靐ıϐΰ靐ı ΐǈſ ϰẛςςıϖ ẛ靐ıϰϵ ϑǅǈϐϑϐϐǲǋſ ǅẛ ſϐıǅǋ鶱ς靐ſ ϵ靐靐ǲǈ衋]"
+  }]
+
   #TODO: Remove accesses to these attributes after testing!
   attr_reader :translations 
 
@@ -21,19 +53,21 @@ class POEntry
     end.to_h
   end
   
-  def to_regex(msgstr)
-    Regexp.new(msgstr.gsub(PARAM_RE,'\1(.*)'))
+  def to_regex(msgstr) 
+    Regexp.new(Regexp.escape(msgstr).gsub(PARAM_SUB_RE,'\1(?m-ix:(.*))'))
   end
 
   # This method does the reverse translation. Here we find the first matching
   # msgstr in our translation map, extract out the parameters, translate it to
-  # its original form, and then put the parameters back in.
+  # its original form, and then put the parameters back in. Note that only part
+  # of the message might be translated.
   def reverse_translate(msg)
     match_re = @translations.keys.find { |k| msg =~ k }
     return msg if match_re == nil 
     match_obj = match_re.match(msg) 
-    match_obj[1..-1].inject(@translations[match_re]) do |new_msg, param|
+    translated_part = match_obj[1..-1].inject(@translations[match_re]) do |new_msg, param|
       new_msg.sub(PARAM_RE, "\\1#{param}")
     end
+    match_obj.pre_match + translated_part + match_obj.post_match
   end
 end

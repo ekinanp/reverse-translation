@@ -2,6 +2,21 @@
 # POT file). Maybe add some error message output/error-handling? Not necessary
 # for now, though.
 module POParser
+  # msgid and msgstr values are strings inside strings, so Ruby escape characters
+  # get read with an extra backslash (e.g. "\n" becomes "\\n"). The regex below
+  # recognizes these characters, while the ESCP_SUB gives the proper substitutions
+  # for escape characters other than \\ or \", the latter of which can be replaced
+  # as-is.
+  ESCP_CH = /\\([\"\\abrnst])/
+  ESCP_SUB = {
+    "a" => "\a",
+    "b" => "\b",
+    "r" => "\r",
+    "n" => "\n",
+    "s" => "\s",
+    "t" => "\t"
+  }
+
   MSGID = /msgid(?:_plural)?/
   MSGSTR = /msgstr(?:\[\d+\])?/
   VALUE = /"(.*)"/
@@ -19,7 +34,7 @@ module POParser
   def self.parse_part(part, entry_re)
     part.scan(entry_re).inject({}) do |entries, entry|
      key = entry[0]
-     val = entry[1].scan(VALUE).join
+     val = entry[1].scan(VALUE).join.gsub(ESCP_CH) { |m| (sub = ESCP_SUB[m[1]]) ? sub : m[1] } 
      entries.merge(key => val)
     end
   end
