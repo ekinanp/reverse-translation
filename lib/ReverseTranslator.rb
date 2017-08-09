@@ -1,8 +1,9 @@
 require_relative 'POTable'
+require_relative 'LogParser'
 
 # This class contains the code used to reverse translate a given log file.
 # For now, it hardcodes the possible PO files that it needs to go to as class
-# level constants for the but in the future, this will be remedied
+# level constants but in the future, this will be remedied
 #
 # Right now, it will maintain an array of lookup tables where one lookup table
 # encapsulates a single POT file. For initialization, it will take the list of
@@ -27,14 +28,12 @@ class ReverseTranslator
   def reverse_translate(log_file)
     log_file_trans = log_file + ".trans"
     out_file = File.open(log_file_trans, "w")
-    File.open(log_file, "r").each do |line|
-      # TODO: Add more here, to account for the message's
-      # prefix!
-      translated_line = tables.inject(line) do |new_line, table|
-        table.reverse_translate(new_line)
+    LogParser.parse(log_file).each do |entry|
+      translated_entry = tables.inject(entry) do |new_entry, table|
+        table.reverse_translate(new_entry)
       end
-      out_file.puts(translated_line)
+      out_file.puts(translated_entry)
     end
-    File.close(log_file_trans)
+    out_file.close
   end
 end
