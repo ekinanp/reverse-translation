@@ -8,16 +8,16 @@ describe ReverseTranslator do
   
       @data_table_map = ReverseTranslatorFixture::MOCK_PO_FILES.map { |d| [d, double()] }.to_h
       @data_table_map.each do |d, t| 
-        allow(t).to receive(:reverse_translate).exactly(num_log_msgs).times { |msg| msg + (ReverseTranslatorFixture::TRANSLATIONS[d]) } 
+        expect(t).to receive(:reverse_translate).exactly(num_log_msgs).times { |msg| msg + (ReverseTranslatorFixture::TRANSLATIONS[d]) } 
       end
       allow(POTable).to receive(:new).exactly(num_po_files).times { |d| @data_table_map[d] }
   
-      allow(LogParser).to receive(:parse).with(ReverseTranslatorFixture::MOCK_LOG_FILE).once.and_return(ReverseTranslatorFixture::MOCK_LOG_MSGS_MAP.keys)
+      expect(LogParser).to receive(:parse).with(ReverseTranslatorFixture::MOCK_LOG_FILE).once.and_return(ReverseTranslatorFixture::MOCK_LOG_MSGS_MAP.keys)
   
       @out_file = double()
       @translated_log = ""
-      allow(@out_file).to receive(:puts).exactly(num_log_msgs).times { |msg| @translated_log = @translated_log + msg + "\n" }
-      allow(File).to receive(:open).with(ReverseTranslatorFixture::MOCK_LOG_FILE+".trans", "w").once.and_return(@out_file)
+      expect(@out_file).to receive(:puts).exactly(num_log_msgs).times { |msg| @translated_log = @translated_log + msg + "\n" }
+      expect(File).to receive(:open).with(ReverseTranslatorFixture::MOCK_LOG_FILE+".trans", "w").once.and_return(@out_file)
       expect(@out_file).to receive(:close).with(no_args).once 
   
       @reverse_translator = ReverseTranslator.new (ReverseTranslatorFixture::MOCK_PO_FILES)
