@@ -10,22 +10,6 @@ module POParserFixture
     "\t" => "t"
   }
 
-  @@msgid_ctr = 0
-  MSGID_GEN = lambda do
-    entry_name = (@@msgid_ctr >= 1) ? "msgid_plural" : "msgid"
-    @@msgid_ctr = @@msgid_ctr + 1
-    entry_name
-  end
-
-  @@msgstr_ctr = 0
-  @@is_array = false
-  MSGSTR_GEN = lambda do
-    return "msgstr" if !@@is_array
-    entry_name = "msgstr[#{@@msgstr_ctr}]"
-    @@msgstr_ctr = @@msgstr_ctr + 1
-    entry_name
-  end
-
   # Takes an array of strings representing the values for a single po entry
   # (e.g. a "msgid" entry) and converts it to a quoted string, i.e. how it
   # would be written by xgettext when the POT file is created.
@@ -56,20 +40,16 @@ module POParserFixture
     end
   end
 
-  def self.reset
-    @@msgid_ctr, @@msgstr_ctr, @@is_array = [0, 0, false]
-  end
-
   # This method takes in [MsgidValues, MsgStrValues] as input, where MsgidValues and
   # MsgStrValues are both arrays of arrays of strings. MsgidValues represents all the
   # values corresponding to the MsgId entry, while MsgStrValues is the same for the
   # MsgStr entry. This method returns [structure, set] with similar semantics as
   # above.
   def self.make_po_set(msgid_values, msgstr_values)
-    reset
-    @@is_array = true if msgstr_values.length > 1
-    msgid_structure, msgid_entries = to_po_entries(MSGID_GEN, msgid_values)
-    msgstr_structure, msgstr_entries = to_po_entries(MSGSTR_GEN, msgstr_values) 
+    FixtureUtils.reset
+    FixtureUtils.set_is_array(true) if msgstr_values.length > 1
+    msgid_structure, msgid_entries = to_po_entries(FixtureUtils::MSGID_GEN, msgid_values)
+    msgstr_structure, msgstr_entries = to_po_entries(FixtureUtils::MSGSTR_GEN, msgstr_values) 
     [[msgid_structure, msgstr_structure], msgid_entries + msgstr_entries + "\n"]
   end
 

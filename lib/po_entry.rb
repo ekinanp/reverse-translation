@@ -35,8 +35,12 @@ class POEntry
     match_re = @translations.keys.find { |k| msg =~ k }
     return msg if match_re == nil 
     match_obj = match_re.match(msg) 
-    translated_part = match_obj[1..-1].inject(@translations[match_re]) do |new_msg, param|
-      new_msg.sub(PARAM_RE, "\\1#{param}")
+    _, translated_part = match_obj[1..-1].inject([@translations[match_re], ""]) do |accum, param|
+      input, output = accum
+      param_match = PARAM_RE.match(input)
+      rem_input = param_match.post_match
+      new_output = output + (param_match.pre_match + param_match[1].to_s + param)
+      [rem_input, new_output]
     end
     match_obj.pre_match + translated_part + match_obj.post_match
   end
