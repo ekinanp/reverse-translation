@@ -6,19 +6,32 @@
 class POEntry
   # TODO: Maybe refactor these? Bit hard to read
   PARAM_SUB_RE = /(?:\A|([^\\]))\\\{\d+\\\}/
-  PARAM_RE = /(?:\A|([^\\]))\{\d+\}/
+  PARAM_RE = /(?:\A|([^\\]))\{(\d+)\}/
 
   def initialize(pot_entry)
     msgid_part, msgstr_part = pot_entry
     translation = msgid_part["msgid#{"_plural" if msgid_part.size > 1}"]
     @translations = msgstr_part.values.map do |value| 
       key_regex = to_regex(value)
-      [key_regex, translation]
+      param_ordering = value.scan(PARAM_RE).map { |e| e[1].to_i }
+      [key_regex, [translation, param_ordering]]
     end.to_h
   end
   
   def to_regex(msgstr) 
     Regexp.new(Regexp.escape(msgstr).gsub(PARAM_SUB_RE,'\1(?m-ix:(.*))'))
+  end
+
+  # This method extracts the parameters (in numeric order) of "msg"
+  # given the matching_re. It returns an array of three things:
+  #    [pre, params, post]
+  # where pre is the part of the message before the match, params 
+  # are the messages' parameters, and post is the part of the message
+  # after the match.
+  def extract_params(msg, match_re)
+    match_obj = match_re.match(msg)
+    params = @translations[match_re][1].zip(match_obj[1..-1]).sort.map { |e| e[1] }
+    [match_obj.pre_match, params, match_obj.post_match]
   end
 
   # This method does the reverse translation. Here we find the first matching
@@ -28,14 +41,16 @@ class POEntry
   def reverse_translate(msg)
     match_re = @translations.keys.find { |k| msg =~ k }
     return msg if match_re == nil 
-    match_obj = match_re.match(msg) 
-    final_in, final_out = match_obj[1..-1].inject([@translations[match_re], ""]) do |accum, param|
+    pre, params, post = extract_params(msg, match_re) 
+    final_in, final_out = params.inject([@translations[match_re][0], ""]) do |accum, param|
       input, output = accum
       param_match = PARAM_RE.match(input)
       rem_input = param_match.post_match
       new_output = output + (param_match.pre_match + param_match[1].to_s + param)
       [rem_input, new_output]
     end
-    match_obj.pre_match + final_out + final_in + match_obj.post_match
+    pre + final_out + final_in + post
   end
+
+  private #:to_regex#, :extract_params
 end

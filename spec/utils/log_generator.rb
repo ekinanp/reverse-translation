@@ -82,7 +82,7 @@ class LogGenerator
   PARAMS = [FILENAMES, IDENTIFIERS, QUOTED_PARAMS, EXCEPTION_MSGS, MISC]
 
   # For substituting-in the random parameters
-  PARAM_RE = /(?:\A|([^\\]))\{\d+\}/
+  PARAM_RE = /(?:\A|([^\\]))\{(\d+)\}/
 
   attr_reader :po_entries
 
@@ -97,7 +97,8 @@ class LogGenerator
 
   # Substitutes the given params into the message
   def substitute_params(msg, params)
-    params.inject(msg) do |new_msg, param|
+    ordered_params = msg.scan(PARAM_RE).map { |e| e[1] }.zip(params).sort.map { |e| e[1] }
+    ordered_params.inject(msg) do |new_msg, param|
       new_msg.sub(PARAM_RE, "\\1#{param}")
     end
   end
@@ -106,15 +107,12 @@ class LogGenerator
   # English version of the generated message while "non_english_msg" contains the non-English 
   # version.
   #
-  # TODO: Include plural messages. I could not include them for now because the ja.po file
-  # I was using for testing did not have msgstr[1], msgstr[2] for plural messages. Will need
-  # to revise my translator for plural entries
+  # Note that if there is a "msgid_plural" entry, that one will always be selected since
+  # the translator automatically translates all msgstr entries to "msgid_plural"
   def random_msg
     entry = @po_entries.sample
-    english_key = entry[0].keys.sample
-#    non_english_key_ixs = (english_key =~ /plural/) ? (1..-1) : (0..0)
-    non_english_key_ixs = (0..0)
-    non_english_key = entry[1].keys.sort[non_english_key_ixs].sample
+    english_key = entry[0].keys.sort[entry[0].keys.size - 1]
+    non_english_key = entry[1].keys.sample
 
     english_msg_raw = entry[0][english_key]
     non_english_msg_raw = entry[1][non_english_key]

@@ -9,11 +9,11 @@ module POEntryFixture
 
   UNTRANSLATED_MSG = "This message is not meant to be translated."
   MSGID_TEMPLATE = "{0} is \\{1} OK because this is a simple case of {1} with regular parameters: {2} blah"
-  MSGSTR_TEMPLATE = "{0} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
-       "ensure that the escaped regex characters are also matched {1} so that things work {2} blah" 
+  MSGSTR_TEMPLATE = "{2} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
+       "ensure that the escaped regex characters are also matched {1} so that things work {0} blah" 
 
-  INPUT_MSG_TEMPLATE = "#{BASIC_PARAM} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
-       "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{MULTI_LINE_PARAM} blah" 
+  INPUT_MSG_TEMPLATE = "#{MULTI_LINE_PARAM} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
+       "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{BASIC_PARAM} blah" 
 
   EXPECTED_RESULT_TEMPLATE = "#{BASIC_PARAM} is \\{1} OK because this is a simple case of "\
     "#{QUOTED_PARAM} with regular parameters: #{MULTI_LINE_PARAM} blah"

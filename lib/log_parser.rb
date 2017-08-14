@@ -1,4 +1,5 @@
 module LogParser
+  # TODO: Improve the prefix matcher! Need to have more specific regexes, unfortunately.
   DATE_YYYY_MM_DD = /\d{4}-\d{2}-\d{2}/
   SEPARATOR = Regexp.new("(^" + DATE_YYYY_MM_DD.to_s + ")")
 
