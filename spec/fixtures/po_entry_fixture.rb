@@ -8,15 +8,15 @@ module POEntryFixture
     "messages, because these can also happen"
 
   UNTRANSLATED_MSG = "This message is not meant to be translated."
-  MSGID_TEMPLATE = "{0} is \\{1} OK because this is a simple case of {1} with regular parameters: {2}"
+  MSGID_TEMPLATE = "{0} is \\{1} OK because this is a simple case of {1} with regular parameters: {2} blah"
   MSGSTR_TEMPLATE = "{0} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
-       "ensure that the escaped regex characters are also matched {1} so that things work {2}" 
+       "ensure that the escaped regex characters are also matched {1} so that things work {2} blah" 
 
   INPUT_MSG_TEMPLATE = "#{BASIC_PARAM} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
-       "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{MULTI_LINE_PARAM}" 
+       "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{MULTI_LINE_PARAM} blah" 
 
   EXPECTED_RESULT_TEMPLATE = "#{BASIC_PARAM} is \\{1} OK because this is a simple case of "\
-    "#{QUOTED_PARAM} with regular parameters: #{MULTI_LINE_PARAM}"
+    "#{QUOTED_PARAM} with regular parameters: #{MULTI_LINE_PARAM} blah"
 
   def self.pluralize(template, num_times)
     template.sub(/(\\\{\d\})/, "\\1#{"s"*num_times}")
@@ -49,9 +49,10 @@ module POEntryFixture
       make_entry_test_case(FixtureUtils::MSGSTR_GEN, MSGSTR_TEMPLATE, INPUT_MSG_TEMPLATE, num_msgstr)
 
     # Now generate the "expected" part
-    expected_plural = (num_msgstr-1).times.collect { |i| [inputs[1+i], expected_results[1]] }.to_h
+    expected_result = expected_results[1] ? expected_results[1] : expected_results[0]
+    expected_map = (num_msgstr).times.collect { |i| [inputs[i], expected_result] }.to_h
 
-    [[msgid_part, msgstr_part], {inputs[0] => expected_results[0]}.merge(expected_plural)]
+    [[msgid_part, msgstr_part], expected_map]
   end
 
   SIMPLE_TEST_CASE = make_happy_test_case(1)

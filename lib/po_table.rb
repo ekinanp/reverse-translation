@@ -5,13 +5,12 @@ require_relative 'po_entry'
 # This class represents the reverse-lookup table for a single POT file.
 # It is an array of POEntries. It will have one method, reverse_translate,
 # that takes in a message and tries to translate it using its entries.
-# 
-# TODO: Have it also account for the pluralization formula later on, making
-# sure that msgstr[0] is what corresponds to msgid.
 class POTable
   def initialize(pot_file)
     @entries = POParser::parse(pot_file).sort! do |e1, e2|
-      - (average_length(e1[1]) <=> average_length(e2[1]))
+      msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
+      next msgstr_avg_cmp unless msgstr_avg_cmp == 0
+      average_length(e2[0]) <=> average_length(e1[0])
     end.map { |e| POEntry.new(e) }
   end
 

@@ -17,12 +17,12 @@ module Main
   NO_ARG_MSG = "ERROR: No log-file provided!\n#{USAGE}"
 
   PO_FILES = [
-    "/Users/enis.inan/GitHub/reverse-translation/lib/pe-rbac-service.po"
+    "lib/pe-rbac-service-ja.po"
   ]
 
   def self.error_exit(msg)
     puts msg
-    return 1
+    1
   end
 
   def self.run(argv)

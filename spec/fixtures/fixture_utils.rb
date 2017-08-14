@@ -22,4 +22,24 @@ module FixtureUtils
   def self.reset
     @@msgid_ctr, @@msgstr_ctr, @@is_array = [0, 0, false]
   end
+
+  def self.non_existent_file_msg(path)
+    "ERROR: #{path} does not exist!\n"
+  end
+
+  def self.invalid_file_msg(path)
+    "ERROR: #{path} is not a valid log file! Log files must have the \".log\" extension.\n"
+  end
+
+  def self.valid_file_msg(path)
+    "#{path} was successfully translated, with the result written to #{path}.trans!\n"
+  end
+
+  def self.unique_path(prefix)
+    tmp_file = Tempfile.new(prefix)
+    path = tmp_file.path
+    tmp_file.close
+    tmp_file.unlink
+    path
+  end
 end

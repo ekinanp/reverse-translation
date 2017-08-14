@@ -1,4 +1,3 @@
-require_relative "po_parser"
 # This class is used to generate random log files for testing. It takes in a PO file containing the
 # required strings.
 #
@@ -11,6 +10,10 @@ require_relative "po_parser"
 #   capture real world behavior.
 #
 #   (3) Could probably randomly generate the prefix too. But this is not that necessary.
+#
+#   (4) Have this class take in an array of PO files, to simulate the fact that services
+#   depend on different files
+#
 # Note this class might re-use code from the core library classes. This is OK, as it's
 # a test class so there is no need to refactor the main code base.
 class LogGenerator
@@ -125,7 +128,8 @@ class LogGenerator
   #   (2) The number of entries to generate (default to 100)
   #
   # This method will create two files: <path>_english.log and <path>_non_english.log
-  # storing the english and non-english versions of the log file, respectively.
+  # storing the english and non-english versions of the log file, respectively. It will
+  # return the paths of both the english and non-english files.
   def generate (path, num_entries = 100)
     english_file = File.open(path + "_english.log", "w")
     non_english_file = File.open(path + "_non_english.log", "w")
@@ -135,5 +139,6 @@ class LogGenerator
     end
     english_file.close
     non_english_file.close
+    [english_file.path, non_english_file.path]
   end
 end
