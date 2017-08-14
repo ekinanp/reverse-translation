@@ -55,4 +55,6 @@ module POParser
       [msgid_entries, msgstr_entries]
     end
   end
+
+  private_class_method :parse_part
 end
