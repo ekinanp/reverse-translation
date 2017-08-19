@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the puppetlabs.pcp_client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.pcp_client\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yuki Okabe <yukio@v001.vaio.ne.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "exception while establishing a connection; not connected"
+msgstr "接続確立中に例外が発生しました; 未接続です"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "No handler for {0}"
+msgstr "{0}に対応したハンドラが不在です"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "Sending WebSocket ping"
+msgstr "WebSocket pingを送信します"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "WebSocket heartbeat task is about to finish"
+msgstr "WebSocket heartbeatタスクはもうすぐ終了します"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "Making connection to {0}"
+msgstr "{0}への接続を行います"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "WebSocket connected, heartbeat task starting"
+msgstr "Websocketへの接続完了。Heartbeatタスクを開始します"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "WebSocket error"
+msgstr "WebSocketエラー"
+
+#. Format error code as a string rather than a localized number, i.e. 1,234.
+#: src/puppetlabs/pcp/client.clj
+msgid "WebSocket closed {0} {1}"
+msgstr "WebSocketは閉じました{0} {1}"
+
+#. Ensure disconnect state is immediately registered as connecting.
+#: src/puppetlabs/pcp/client.clj
+msgid "Sleeping for up to {0} ms to retry"
+msgstr "再試行までに最大{0}ミリ秒間スリープします"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "Received text message"
+msgstr "テキストメッセージを受信しました"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "TLS Handshake failed. Sleeping for up to {0} ms to retry"
+msgstr "TLSハンドシェイクに失敗しました。再試行まで最大{0}ミリ秒間スリープします"
+
+#. The following will produce "Didn't get connected. ..."
+#. The apostrophe needs to be duplicated (even in the translations).
+#: src/puppetlabs/pcp/client.clj
+msgid "Didn''t get connected. Sleeping for up to {0} ms to retry"
+msgstr "接続できませんでした。再試行まで最大{0}ミリ秒間スリープします"
+
+#: src/puppetlabs/pcp/client.clj
+msgid ""
+"Connection closed while establishing connection. Sleeping for up to {0} ms "
+"to reconnect"
+msgstr "接続確立中に接続が閉じました。再接続まで最大{0}ミリ秒間スリープします"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "Unexpected error"
+msgstr "予期せぬエラーが発生しました"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "exception while waiting for a connection; not connected"
+msgstr "接続を待っている間に例外が発生しました; 未接続です"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "refusing to send message on unconnected session"
+msgstr "未接続のセッションからのメッセージ送信を拒否します"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "exception on the connection while attempting to send a message"
+msgstr "メッセージ送信試行中に接続の例外が発生しました"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "Closing"
+msgstr "切断します"
+
+#: src/puppetlabs/pcp/client.clj
+msgid "exception while closing the connection; connection already closed"
+msgstr "接続切断中に例外が発生しました; 接続はすでに閉じています"

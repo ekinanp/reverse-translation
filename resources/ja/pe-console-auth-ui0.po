@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the puppetlabs.pe_console_auth_ui package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.pe_console_auth_ui\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: 梅田智世 <c-umeda@nifty.com>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid ""
+"You are using a browser that is not supported or you have disabled "
+"JavaScript."
+msgstr "サポートされていないブラウザを使用しているか、JavaScriptが無効になっています。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Refer to the Puppet Enterprise browser requirements."
+msgstr "Puppet Enterpriseのブラウザ要件を参照してください。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Copyright"
+msgstr "Copyright"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "2017"
+msgstr "2017"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Need help logging in?"
+msgstr "ログインにヘルプが必要ですか"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "This field is required"
+msgstr "このフィールドは必須です"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "The username/password combination entered is incorrect."
+msgstr "入力されたユーザー名とパスワードの組み合わせが正しくありません。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid ""
+"If you believe you have received this message in error, please consult the "
+"logs at /var/log/puppetlabs/console-services/console-services.log."
+msgstr ""
+"何かの手違いでこのメッセージを受け取ったと思われる場合は、/var/log/puppetlabs/console-services/console-"
+"services.logにてログを閲覧してください。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Something unexpected occurred:"
+msgstr "予期せぬ何かが発生しました。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "The password has been successfully changed."
+msgstr "パスワードは正常に変更されました。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Failed to change password."
+msgstr "パスワードの変更に失敗しました。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Hello."
+msgstr "ようこそ。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "User name:"
+msgstr "ユーザー名:"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Password:"
+msgstr "パスワード:"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Log In | Puppet Enterprise"
+msgstr "ログイン | Puppet Enterprise"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Log in"
+msgstr "ログイン"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "User {0} failed to login."
+msgstr "ユーザー{0}はログインに失敗しました。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "{0} is revoked."
+msgstr "{0}は無効化されています。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "You are not authorized to access the console."
+msgstr "コンソールへアクセスする権限がありません。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Unauthorized | Puppet Enterprise"
+msgstr "未認証 | Puppet Enterprise"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Please contact your system administrator for details."
+msgstr "詳細についてはシステム管理者に連絡してください。"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Return to the login screen"
+msgstr "ログイン画面に戻ります"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Reset Password | Puppet Enterprise"
+msgstr "パスワードをリセット | Puppet Enterprise"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Reset password"
+msgstr "パスワードをリセット"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "New password"
+msgstr "新しいパスワード"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "(at least 6 characters)"
+msgstr "(6文字以上)"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Show password"
+msgstr "パスワードを表示"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Page not found"
+msgstr "ページが見つかりません"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Return to home"
+msgstr "ホームに戻る"
+
+#: src/puppetlabs/pe_console_auth_ui/routes.clj
+msgid "Page Not Found | Puppet Enterprise"
+msgstr "ページが見つかりませんでした | Puppet Enterprise"
+
+#: src/puppetlabs/pe_console_auth_ui/service.clj
+msgid "Adding authentication routes at https://{0}:{1,number,#}{2}"
+msgstr "https://{0}:{1,number,#}{2}に認証経路を追加します。"
+
+#: src/puppetlabs/pe_console_auth_ui/service.clj
+msgid "Setting console inactivity timeout to one minute"
+msgid_plural "Setting console inactivity to {0} minutes"
+msgstr[0] "コンソールの自動ログアウトを{0}分に設定します"
+
+#: src/puppetlabs/pe_console_auth_ui/service.clj
+msgid "Setting console session max-lifetime to {0}"
+msgstr "コンソールセッションの継続時間の上限を{0}に設定しています"

@@ -1,0 +1,725 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pe-client-tools\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: satoko inoue <satoko-inoue@to-in.co.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Git-Ref: c910f80763da9685eda4dd52f1ad389de2761f0f\n"
+
+#: /exe/puppet-task.cc
+msgid ""
+"Validation Error: You supplied too few arguments to the task command. task-"
+"name is required"
+msgstr "検証エラー: タスクコマンドに指定された引数が多すぎます。タスク名は必須です。"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid ""
+"Validation Error: Please only use the {1} option. It does the same\n"
+"as {2}, which is only supported for legacy purposes."
+msgstr ""
+"検証エラー: {1}オプションのみを使用してください。これは{2}と同じで、\n"
+"レガシーシステムの為にのみサポートされています。"
+
+#: /exe/puppet-task.cc /lib/src/job/main.cc
+msgid ""
+"JOB TARGET: A single node or comma-separated list of nodes. Eg. --nodes "
+"nodename1,nodename2"
+msgstr "ジョブターゲット: 単一のノードまたはノードから成るカンマ区切りリスト。例：--nodes nodename1,nodename2"
+
+#: /exe/puppet-task.cc /lib/src/job/main.cc
+msgid ""
+"JOB TARGET: Nodes matching a PuppetDB query (using the Puppet Query "
+"Language). We recommend wrapping the query in single quotes and, inside the "
+"query, using double quotes. Eg. All nodes containing example in certname: "
+"--query 'nodes {certname ~ \"example\\.com\"}' Eg. All nodes containing the "
+"Ntp class: --query 'resources { type = \"Class\" and title = \"Ntp\"}' "
+"Review these docs for additional help with PQL: "
+"https://docs.puppet.com/pe/latest/orchestrator_job_run.html#enforce-change-"
+"based-on-a-pql-nodes-query"
+msgstr ""
+"ジョブターゲット: PuppetDBクエリに一致するノード(Puppet Query "
+"Languageを使用)。クエリをシングルクオーテーションで囲み、クエリ内ではダブルクオーテーションを使用することを推奨します。例１. "
+"certnameに「example」を含むすべてのノード: --query 'nodes {certname ~ \"example\\.com\"}'"
+" 　例２. Ntpクラスを含むすべてのノード: --query 'resources { type = \"Class\" and title = "
+"\"Ntp\"}' 　PQLについては次のマニュアルを参照してください: "
+"https://docs.puppet.com/pe/latest/orchestrator_job_run.html#enforce-change-"
+"based-on-a-pql-nodes-query"
+
+#: /exe/puppet-task.cc
+msgid ""
+"Runs a Puppet Task on a given target: --nodes or --query. Supply task "
+"parameters on the commandline in a param_name=param_val format or use "
+"--params-file to specify them as json."
+msgstr ""
+"--nodesまたは--"
+"queryで指定されたターゲットでPuppetタスクを実行します。コマンドラインからparam_name=param_val形式でタスクパラメータを指定するか"
+"、--params-fileを使用してjsonとしてタスクパラメータを指定します。"
+
+#: /exe/puppet-task.cc
+msgid ""
+"Shows a list of available tasks if no task name is provided. If invoked with"
+" a task name shows documentation for that task."
+msgstr "タスク名を指定しない場合、利用可能なタスクのリストを表示します。タスク名を指定して呼び出した場合、タスクの説明を表示します。"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "The URL of the Orchestrator service (config file setting)"
+msgstr "オーケストレータサービスのURL(コンフィグファイル設定可)"
+
+#: /exe/puppet-task.cc
+msgid ""
+"Sets the environment for a job. This is the environment tasks will be loaded"
+" from"
+msgstr "ジョブの環境を設定します。ここで設定した環境から、タスクが読み込まれます。"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "Sets path to a CA certificate (config file setting)"
+msgstr "CA証明書へのパスを設定(コンフィグファイル設定)"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "Path to a token file (config file setting)"
+msgstr "トークンファイルへのパス(コンフィグファイル設定)"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "Disables color output (config file setting)"
+msgstr "カラー出力を無効化(コンフィグファイル設定)"
+
+#: /exe/puppet-task.cc
+msgid "Runs tasks in 'noop' mode across all nodes in the job"
+msgstr "ジョブのすべてのノードで、'noop'モードでタスクを実行します。"
+
+#: /exe/puppet-task.cc
+msgid "Selects the transport for this run. options: pxp, ssh, winrm"
+msgstr "この実行のトランスポートを選択します。オプション: pxp、ssh、winrm"
+
+#: /exe/puppet-task.cc
+msgid "Load task params from a JSON file"
+msgstr "JSONファイルからタスクパラメータを読み込みます。"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "Failed to parse the command line input."
+msgstr "コマンドライン入力の解析に失敗しました。"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "Invalid flag."
+msgstr "無効なフラグです。"
+
+#: /exe/puppet-task.cc /lib/src/app/main.cc /lib/src/job/main.cc
+msgid "Cannot parse config file. Invalid Json."
+msgstr "コンフィグファイルを解析できませんでした。無効なJSON形式です。"
+
+#: /lib/src/action.cc
+msgid "Validation Error: Cannot use params-file and command line params."
+msgstr "検証エラー: params-fileとコマンドラインパラメータを使用できません。"
+
+#: /lib/src/action.cc
+msgid "Param Parsing Error: No value supplied for param \"{1}\""
+msgstr "パラメータ解析エラー: パラメータ\"{1}\"に値が指定されていません。"
+
+#: /lib/src/action.cc
+msgid ""
+"Param Parsing Error: No param name specified for param {1} with value "
+"\"{2}\""
+msgstr "パラメータ解析エラー: 値\"{2}\"を持つパラメータ{1}にパラメータ名が指定されていません。"
+
+#: /lib/src/action.cc
+msgid "Could not read params file: {1}"
+msgstr "パラメータファイルを読み込めません: {1}"
+
+#: /lib/src/app/main.cc
+msgid ""
+"Deprecation Warning: use of the --env flag is deprecated please use -e or "
+"--environment"
+msgstr "廃止予定の機能に関する警告: --envフラグの使用は廃止予定です。-eまたは--environmentを使用してください"
+
+#: /lib/src/app/main.cc
+msgid ""
+"Prints a list of application instances from your site manifest and/or the "
+"ENC."
+msgstr "サイトマニフェストとENCの両方、もしくは一方からアプリケーションインスタンスのリストを表示します。"
+
+#: /lib/src/app/main.cc
+msgid ""
+"Sets what puppet environment to use; defaults to production (config file "
+"setting)"
+msgstr "使用するPuppet環境を設定;デフォルトでは本稼働環境(コンフィグファイル設定)"
+
+#: /lib/src/app/show.cc
+msgid "Failed to retrieve application instances: {1}"
+msgstr "アプリケーションインスタンスの取得に失敗しました: {1}"
+
+#: /lib/src/app/show.cc
+msgid "No application instances found in your {1} environment"
+msgstr "{1}環境にはアプリケーションインスタンスが見つかりませんでした"
+
+#: /lib/src/catalog.cc
+msgid ""
+"The server returned an unsupported environment catalog format. Upgrade your "
+"client to the latest version to use this command."
+msgstr ""
+"サーバーから非サポートの環境カタログフォーマットを受け取りました。このコマンドを使用するには、クライアントを最新バージョンにアップグレードしてください。"
+
+#: /lib/src/client_error.cc
+msgid "Could not connect to {1}: only HTTPS connections are supported"
+msgstr "{1}に接続できませんでした：HTTPS接続のみがサポートされています"
+
+#: /lib/src/client_error.cc
+msgid "Request to '{1}' failed: {2}"
+msgstr "'{1}'へのリクエストが失敗しました: {2}"
+
+#: /lib/src/client_error.cc
+msgid ""
+"Got an unexpected response from {1}\n"
+"HTTP {2}\n"
+"{3}"
+msgstr ""
+"{1}から予期せぬ応答を受け取りました\n"
+"HTTP {2}\n"
+"{3}"
+
+#: /lib/src/client_error.cc
+msgid ""
+"No credentials supplied. See `puppet access --help` to learn how to request "
+"an access token from Puppet Enterprise."
+msgstr ""
+"証明書が提供されていません。`puppet access --help`を参照し、Puppet "
+"Enterpriseからアクセストークンをリクエストする方法を学んでください。"
+
+#: /lib/src/client_error.cc
+msgid ""
+"The provided token for {1} has expired. Use `puppet access login` to "
+"generate another."
+msgstr "提供された{1}のトークンは失効しました。`puppet access login`を使用して新たなトークンを生成してください。"
+
+#: /lib/src/client_error.cc
+msgid ""
+"The provided token is invalid. Use `puppet access login` to generate "
+"another."
+msgstr "提供されたトークンは無効です。`puppet access login`を使用して新たなトークンを生成してください。"
+
+#: /lib/src/client_error.cc
+msgid ""
+"The provided token is revoked. Use `puppet access login` to generate "
+"another."
+msgstr "提供されたトークンは無効化されました。`puppet access login`を使用して新たなトークンを生成してください。"
+
+#: /lib/src/client_error.cc
+msgid "{1}: {2}"
+msgstr "{1}: {2}"
+
+#: /lib/src/configuration.cc
+msgid "Unable to determine the %PROGRAMDATA% directory."
+msgstr "%PROGRAMDATA%ディレクトリを確定できません。"
+
+#: /lib/src/configuration.cc
+msgid ""
+"Error in config file {1}:\n"
+"both the {2} and {3} options are set. Please use only {3}"
+msgstr ""
+"コンフィグファイル{1}のエラー:\n"
+"{2}と{3}の双方のオプションが選択されています。{3}のみを使用してください"
+
+#: /lib/src/configuration.cc
+msgid ""
+"Error in config file {1}:\n"
+"no-noop is specified. Please remove it."
+msgstr ""
+"コンフィグファイル{1}でエラーが発生しました:\n"
+"no-noopが指定されています。削除してください。"
+
+#: /lib/src/configuration.cc
+msgid "Error parsing config file at {1}: {2}"
+msgstr "{1}にてコンフィグファイル解析のエラー: {2}"
+
+#: /lib/src/formatter.cc
+msgid "Job ID"
+msgstr "ジョブID"
+
+#: /lib/src/formatter.cc
+msgid "Environment"
+msgstr "Environment"
+
+#: /lib/src/formatter.cc
+msgid "Concurrency Limit"
+msgstr "同時処理数の制限"
+
+#: /lib/src/formatter.cc
+msgid "Nodes"
+msgstr "ノード"
+
+#: /lib/src/formatter.cc
+msgid "Target"
+msgstr "ターゲット"
+
+#: /lib/src/formatter.cc
+msgid "none"
+msgstr "なし"
+
+#: /lib/src/formatter.cc
+msgid "None"
+msgstr "なし"
+
+#: /lib/src/formatter.cc /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "{1,number}"
+msgstr "{1,number}"
+
+#: /lib/src/formatter.cc
+msgid "Application instances: {1}"
+msgstr "アプリケーションインスタンス: {1}"
+
+#: /lib/src/formatter.cc
+msgid "**WARNING** target does not contain all nodes in this application."
+msgstr "**警告** ターゲットはこのアプリケーションに含まれるすべてのノードを所有していません。"
+
+#: /lib/src/formatter.cc
+msgid ""
+"Node run order (nodes in level 0 run before their dependent nodes in level "
+"1, etc.):"
+msgstr "ノード実行順序(レベル0のノードはそれに依存するレベル1のノードより先に実行する):"
+
+#: /lib/src/job/list.cc
+msgid "ID"
+msgstr "ID"
+
+#: /lib/src/job/list.cc
+msgid "STATE"
+msgstr "状態"
+
+#: /lib/src/job/list.cc
+msgid "TIMESTAMP"
+msgstr "タイムスタンプ"
+
+#: /lib/src/job/list.cc
+msgid "USER"
+msgstr "ユーザ"
+
+#: /lib/src/job/list.cc
+msgid "NODES"
+msgstr "ノード"
+
+#: /lib/src/job/list.cc
+msgid "TARGET"
+msgstr "ターゲット"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Validation Error: You must specify an environment using the --environment "
+"flag for target {1}"
+msgstr "検証エラー: ターゲット{1}に--environmentフラグを使用して環境を指定する必要があります"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Validation Error: You supplied too many arguments to the run command. Only "
+"{1} is allowed."
+msgstr "検証エラー: コマンドを実行するために提供された引数が多すぎます。{1}つのみ提供してください。 "
+
+#: /lib/src/job/main.cc
+msgid ""
+"Validation Error: --noop and --no-noop are mutually exclusive flags. Specify"
+" at most one of them."
+msgstr "検証エラー: --noopと--no-noopは相互に排他的なフラグです。指定する場合はいずれか1つだけ指定してください。"
+
+#: /lib/src/job/main.cc
+msgid ""
+"JOB TARGET: Nodes included in a given application or application instance. "
+"Eg. --application myApp[title]"
+msgstr ""
+"ジョブターゲット: 指定されたアプリケーションまたはアプリケーションインスタンスに含まれるノード。例: --application "
+"myApp[title]"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Runs Puppet on a given target: --nodes, --query, or --application. "
+"https://docs.puppet.com/pe/latest/orchestrator_job_run.html"
+msgstr ""
+"指定されたターゲットでPuppetを実行: --nodes、--query、または --application. "
+"https://docs.puppet.com/pe/latest/orchestrator_job_run.html"
+
+#: /lib/src/job/main.cc
+msgid "Shows status and details of jobs, whether complete or in-progress."
+msgstr "完了または作業中か、ジョブのステータスと詳細を表示します。"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Shows a preview of the `puppet job run` command with the same arguments, "
+"includes nodes or application instances in the job and node run order. "
+"https://docs.puppet.com/pe/latest/orchestrator_job_plan.html"
+msgstr ""
+"同一の引数を用いて実行する`puppet job "
+"run`コマンドのプレビューを表示します。ジョブに含まれたノードおよびアプリケーションインスタンス、およびノードの実行順序も`puppet job "
+"run`実行の際と同様に扱われます。https://docs.puppet.com/pe/latest/orchestrator_job_plan.html"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Sets the environment for a job. This is the environment applications will be"
+" loaded from when planning run order and all agents will run in; it is unset"
+" by default (config file setting)"
+msgstr ""
+"ジョブの環境を設定します。実行順序の計画の際にはこの環境からアプリケーションがロードされます。また、すべてのAgent実行はこの環境内で行われます。デフォルトでは未設定です(コンフィグファイル設定)"
+
+#: /lib/src/job/main.cc
+msgid "Runs Puppet in 'noop' mode across all nodes in the job"
+msgstr "ジョブに含まれるのすべてのノードでPuppetを'noop'モードで実行します"
+
+#: /lib/src/job/main.cc
+msgid "Runs Puppet in 'no-noop' mode across all nodes in the job"
+msgstr "ジョブに含まれるのすべてのノードで、Puppetを'no-noop'モードで実行します"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Ignores the environment set by the --environment flag for agent runs. Agents"
+" run in the environment assigned to them, either by the PE Node Manager or "
+"the node's configuration file."
+msgstr ""
+"Agent実行の--environmentフラグにより指定された環境を無視します。AgentはPuppet "
+"Enterpriseノードマネージャまたはノードの設定ファイルに割り当てられた環境内で実行します。"
+
+#: /lib/src/job/main.cc
+msgid ""
+"Limits how many nodes can run concurrently. Default is unlimited. (config "
+"file setting)"
+msgstr "並行して実行できるノードの数を制限します。デフォルトは無制限です。(コンフィグファイル設定)"
+
+#: /lib/src/job/main.cc
+msgid "A description of the job to be run. Eg. --description myDescription"
+msgstr "実行予定のジョブの説明。例: --description myDescription"
+
+#: /lib/src/job/main.cc
+msgid "Limits the number of jobs printed to the number specified"
+msgstr "表示されるジョブの数を指定された数に制限します"
+
+#: /lib/src/job/plan.cc
+msgid "Failed to submit plan: {1}"
+msgstr "プランの送信に失敗しました: {1}"
+
+#: /lib/src/job/plan.cc
+msgid "Upgrade your client to the latest version to see the job plan."
+msgstr "ジョブプランを参照するには、クライアントを最新バージョンにアップグレードしてください。"
+
+#: /lib/src/job/plan.cc
+msgid ""
+"Use `puppet app show --environment {1} <app instance>` to view which nodes "
+"are part of an application."
+msgstr ""
+"どのノードがアプリケーションに含まれているかを表示するには`puppet app show --environment {1} <app "
+"instance>`を使用してください。"
+
+#: /lib/src/job/plan.cc
+msgid ""
+"Use `puppet job run --environment {1} --application <app-resource>` to run "
+"all the nodes in an application."
+msgstr ""
+"アプリケーションが含むすべてのノードを実行するには`puppet job run --environment {1} --application "
+"<app-resource>`を使用してください。"
+
+#: /lib/src/job/plan.cc
+msgid "Use `{1}` to create and run a job like this."
+msgstr "このようなジョブを作成および実行するには`{1}`を使用してください。"
+
+#: /lib/src/job/plan.cc
+msgid "Node catalogs may have changed since this plan was generated."
+msgstr "このプランが生成されたため、ノードカタログが変更された可能性があります。"
+
+#: /lib/src/job/run.cc
+msgid "Affected apps: {1}"
+msgstr "影響を受けるアプリケーション: {1}"
+
+#: /lib/src/job/run.cc
+msgid "Expected resource events: "
+msgstr "想定されるリソースイベント: "
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "Resource events: "
+msgstr "リソースイベント: "
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc /lib/src/util.cc
+msgid "unknown"
+msgstr "不明"
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "failed"
+msgstr "失敗"
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "changed"
+msgstr "変更済み"
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "unchanged"
+msgstr "変更なし"
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "skipped"
+msgstr "スキップ済み"
+
+#: /lib/src/job/run.cc /lib/src/job/show.cc
+msgid "noop"
+msgstr "noop"
+
+#: /lib/src/job/run.cc
+msgid "Report: "
+msgstr "レポート: "
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Stopping job {1} ..."
+msgstr "ジョブ{1}の停止..."
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "No pending puppet runs"
+msgstr "保留中のPuppet実行はありません"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Completing 1 puppet run ..."
+msgstr "Puppet実行を1つ完了..."
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Completing {1} puppet runs ..."
+msgstr "Puppet実行を{1}完了..."
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Failed to contact server. Could not stop job. Trying again..."
+msgstr "サーバーとの連絡に失敗しました。ジョブを停止できませんでした。もう一度試してください..."
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Interrupted. No job was created"
+msgstr "中断されました。作成されたジョブはありません"
+
+#: /lib/src/job/run.cc
+msgid "Starting deployment ..."
+msgstr "デプロイを開始..."
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Failed to submit job: {1}"
+msgstr "ジョブの送信に失敗しました: {1}"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Couldn't retrieve job status: {1}"
+msgstr "ジョブステータスを取得できませんでした: {1}"
+
+#: /lib/src/job/run.cc
+msgid "Failed to retrieve catalog for job: {1}"
+msgstr "ジョブの為のカタログの取得に失敗しました: {1}"
+
+#: /lib/src/job/run.cc
+msgid ""
+"Warning: Upgrade your client to the latest version to see the job plan."
+msgstr "警告: ジョブプランを参照するには、クライアントを最新バージョンにアップグレードしてください。"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "New job id created: {1}"
+msgstr "新規ジョブIDが作成されました: {1}"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Couldn't retrieve node status: {1}"
+msgstr "ノードステータスを取得できませんでした: {1}"
+
+#: /lib/src/job/run.cc
+msgid "Success! {1}/{2} runs succeeded."
+msgstr "{1}/{2} の実行が正常に終了しました。"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Job failed. "
+msgstr "ジョブが失敗しました。"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid " failed, "
+msgstr "失敗、"
+
+#: /lib/src/job/run.cc
+msgid " skipped, "
+msgstr "スキップ、"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid " succeeded."
+msgstr "成功。"
+
+#: /lib/src/job/run.cc /lib/src/task/run.cc
+msgid "Duration: {1}"
+msgstr "継続時間: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Started {1} ago"
+msgstr "{1}前に開始しました"
+
+#: /lib/src/job/show.cc
+msgid "Start time:   {1}"
+msgstr "開始時間: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Finish time:  {1}"
+msgstr "終了時間: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Duration:     {1}"
+msgstr "継続時間: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Elapsed time: {1}"
+msgstr "経過時間: {1}"
+
+#: /lib/src/job/show.cc
+msgid "User:         {1}"
+msgstr "ユーザ: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Environment:  {1}"
+msgstr "環境: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Enforce env:  {1}"
+msgstr "環境を適用: {1}"
+
+#: /lib/src/job/show.cc
+msgid "Run mode:     --noop"
+msgstr "実行モード:     --noopモード"
+
+#: /lib/src/job/show.cc
+msgid "Run mode:     Enforcement with --no-noop"
+msgstr "実行モード:     --no-noop付き適用モード"
+
+#: /lib/src/job/show.cc
+msgid "Run mode:     Enforcement"
+msgstr "実行モード:     適用モード"
+
+#: /lib/src/job/show.cc
+msgid "Target:"
+msgstr "ターゲット:"
+
+#: /lib/src/job/show.cc
+msgid "No nodes to display"
+msgstr "表示するノードがありません"
+
+#: /lib/src/job/show.cc
+msgid "FAILED RUNS"
+msgstr "失敗した実行数"
+
+#: /lib/src/job/show.cc
+msgid "COMPLETED RUNS"
+msgstr "完了した実行数"
+
+#: /lib/src/job/show.cc
+msgid "SKIPPED RUNS"
+msgstr "スキップ済み実行数"
+
+#: /lib/src/job/show.cc
+msgid "IN-PROGRESS RUNS"
+msgstr "進行中の実行数"
+
+#: /lib/src/job/show.cc
+msgid "UPCOMING RUNS"
+msgstr "予定されている実行数"
+
+#: /lib/src/scope.cc
+msgid ""
+"Validation Error: Use --application {1} to specify an application target."
+msgstr "検証エラー: --application {1}を使用してアプリケーションターゲットを指定してください。"
+
+#: /lib/src/scope.cc
+msgid ""
+"Validation Error: Found no targets. Specify a single target with "
+"--application, --nodes, --query."
+msgstr "検証エラー: ターゲットが欠けています。--application、--nodes、--queryで単一のターゲットを指定してください。"
+
+#: /lib/src/scope.cc
+msgid ""
+"Validation Error: Found multiple targets `{1}`. Specify a single target with"
+" --application, --nodes, --query."
+msgstr ""
+"検証エラー: "
+"複数のターゲット`{1}`が見つかりました。--application、--nodes、--queryで単一のターゲットを指定してください。"
+
+#: /lib/src/scope.cc
+msgid ""
+"Validation Error: Found multiple targets `{1}`. Specify a single target with"
+" --nodes and --query."
+msgstr "検証エラー: 複数のターゲット`{1}`が見つかりました。--nodesおよび--queryで単一のターゲットを指定してください。"
+
+#: /lib/src/scope.cc
+msgid ""
+"Validation Error: Found no targets. Specify a single target with --nodes or "
+"--query."
+msgstr "検証エラー: ターゲットが見つかりません。--nodesまたは--queryで単一のターゲットを指定してください。"
+
+#: /lib/src/task/run.cc
+msgid "Task {1} failed on node {2} result:"
+msgstr "ノード{2}でタスク{1}が失敗しました。結果:"
+
+#: /lib/src/task/run.cc
+msgid "Finished {1} on node {2} result:"
+msgstr "ノード{2}で{1}が完了しました。結果:"
+
+#: /lib/src/task/run.cc
+msgid "Starting Task execution  ..."
+msgstr "タスク実行を開始中..."
+
+#: /lib/src/task/run.cc
+msgid "Success! {1} succeeded on {2}/{3} nodes."
+msgstr "{2}/{3}ノードで{1}が正常に終了しました。"
+
+#: /lib/src/util.cc
+msgid "{1} hr, {2} min, {3} sec"
+msgstr "{1}時間{2}分{3}秒"
+
+#: /lib/src/util.cc
+msgid "{1} min, {2} sec"
+msgstr "{1}分{2}秒"
+
+#: /lib/src/util.cc
+msgid "{1} sec"
+msgstr "{1}秒"
+
+#: /lib/src/util.cc
+msgid "Job stopping"
+msgstr "ジョブを停止中"
+
+#: /lib/src/util.cc
+msgid "Job aborted due to {1}"
+msgstr "{1}のためジョブが停止しました"
+
+#: /lib/src/util.cc
+msgid "Job finished with failures"
+msgstr "ジョブは完了しましたが、失敗があります"
+
+#: /lib/src/util.cc
+msgid "Job finished normally"
+msgstr "ジョブは正常に完了しました"
+
+#: /lib/src/util.cc
+msgid "Job was stopped before completion"
+msgstr "ジョブは完了前に停止しました"
+
+#: /lib/src/util.cc
+msgid "Job finished in state {1}"
+msgstr "ジョブは{1}の状態で終了しました"
+
+#: /lib/src/util.cc
+msgid "Started puppet run on {1} {2}..."
+msgstr "{1} {2}でPuppet実行を開始しました..."
+
+#: /lib/src/util.cc
+msgid "Puppet run failed on {1}"
+msgstr "Puppet実行は{1}で失敗しました"
+
+#: /lib/src/util.cc
+msgid "Error running puppet on {1}: {2}"
+msgstr "{1}でPuppet実行エラー: {2}"
+
+#: /lib/src/util.cc
+msgid "Unknown Error running puppet on {1}"
+msgstr "{1}でPuppet実行の不明なエラー"
+
+#: /lib/src/util.cc
+msgid "Finished puppet run on {1} - Success!{2}"
+msgstr "{1}でPuppetの実行が完了しました - 正常終了{2}"

@@ -1,0 +1,781 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.classifier\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Eriko Kashiwagi <eriko.55@d5.dion.ne.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Git-Ref: 3f0dcbc5fad3cd1b4e69e954e94152fb587e1c28\n"
+
+#: src/puppetlabs/classifier/application/default.clj
+msgid ""
+"Node check-in storage is currently disabled, so no new node check-ins are "
+"being stored."
+msgstr "ノードチェックインストレージは現在無効になっているため、新規のノードチェックインは保存されません。"
+
+#: src/puppetlabs/classifier/application/default.clj
+msgid ""
+"Add 'node-check-in-storage' set to 'true' in the classifier configuration to"
+" enable check-in storage."
+msgstr ""
+"Classifierの設定に'node-check-in-storage'を追加して'true'に設定し、チェックインストレージを有効にしてください。"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "access all groups"
+msgstr "すべてのグループにアクセス"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "change the rules"
+msgstr "ルールを変更"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "edit the classes and variables"
+msgstr "クラスと変数を編集"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "edit the configuration data"
+msgstr "設定データを編集"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "change the environment"
+msgstr "Environmentを変更"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "change variables or class parameters"
+msgstr "変数またはクラスパラメータを変更"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "create or delete children"
+msgstr "子を作成または削除"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid "view"
+msgstr "表示"
+
+#: src/puppetlabs/classifier/application/permissioned.clj
+msgid ""
+"create this group with a different environment than its parent''s "
+"environment of {0} because you can''t edit the parent''s environment"
+msgstr ""
+"親のenvironmentを変更することはできないため、このグループの作成の際には親のenvironment{0}とは異なるenvironmentを指定してください"
+
+#: src/puppetlabs/classifier/application/permissioned/rbac.clj
+msgid "Could not map permission ''{0}'' to RBAC permission."
+msgstr "パーミッション\"{0}\"をRBACパーミッションにマッピングできません。"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "Requesting environment list from {0}."
+msgstr "{0}からenvironmentリストをリクエストしています。"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "{0} response received for request for environments from {1}"
+msgstr "{1}へのenvironmentのリクエストに対して{0}応答を受信しました"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "Requesting classes in {0} from {1}"
+msgstr "{1}から{0}の含有するクラスをリクエストしています"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "Requesting classes in {0} from {1} with etag {2}"
+msgstr "{1}から{0}が含みかつetagが{2}と一致するクラスをリクエストしています"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "{0} response received for request for classes in {1}."
+msgstr "{1}の含むクラスのリクエストに対して{0}応答を受信しました。"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "The error is:"
+msgstr "エラーは次の通りです:"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "Errors found in environment {0}: {1}"
+msgstr "Environment{0}にてエラーが見つかりました: {1}"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid ""
+"Synchronized {0} classes for environment {1} from the Puppet Master in {2} "
+"seconds"
+msgstr "Puppet Masterからenvironment{1}の{0}つのクラスを{2}秒で同期しました"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "Synchronized {0} classes from the Puppet Master in {1} seconds"
+msgstr "Puppet Masterから{0}つのクラスを{1}秒で同期しました"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "Starting background class update"
+msgstr "バックグラウンドでクラスの更新を開始します"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid ""
+"Received an unexpected {0} response when trying to synchronize classes from "
+"the Puppet Master''s REST interface at {1}"
+msgstr "Puppet MasterのRESTインタフェース{1}からのクラスの同期を試行の際に、予期せぬ{0}応答を受信しました"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid "The response is: \"{0}\""
+msgstr "応答は次の通りです: \"{0}\""
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid ""
+"Could not synchronize classes from the Puppet Master because client SSL is "
+"not configured in the classifier''s configuration file"
+msgstr "クライアントSSLがClassifierの設定ファイルにて設定されていないため、Puppet Masterからクラスを同期できません"
+
+#: src/puppetlabs/classifier/class_updater.clj
+msgid ""
+"Encountered an unexpected exception while trying to synchronize classes from"
+" the Puppet Master:"
+msgstr "Puppet Masterからクラスを同期試行の際に、予期せぬ例外が発生しました:"
+
+#: src/puppetlabs/classifier/classification.clj
+msgid ""
+"the validation trees must have the same structure in order to create a "
+"difference."
+msgstr "差異を作るには、検証ツリーは同じ構造である必要があります。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "The resource could not be found."
+msgstr "リソースが見つかりません。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "The body of your request is not valid JSON."
+msgstr "リクエストボディは有効なJSON形式ではありません。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "Value \"{0}\" for parameter \"{1}\" could not be parsed as an integer"
+msgstr "パラメータ\"{1}\"の値\"{0}\"は整数として解析できません"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "Parameter \"{0}\" must not be less than zero"
+msgstr "パラメータ\"{0}\"は0未満ではいけません"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "The group id in the request''s URI is not a valid UUID."
+msgstr "リクエストのURIのグループIDは有効なUUIDではありません。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "The group''s parent id is not a valid UUID."
+msgstr "グループの親のIDは有効なUUIDではありません。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid ""
+"The group''s rule attempts to make numeric comparisons against the following"
+" non-numeric value:"
+msgid_plural ""
+"The group''s rule attempts to make numeric comparisons against the following"
+" non-numeric values:"
+msgstr[0] "グループのルールは、次の非数値と数値的な比較をしようとしています:"
+
+#: src/puppetlabs/classifier/http.clj
+msgid ""
+"An exception was encountered when trying to evaluate the group''s rule: {0}"
+msgstr "グループのルールを評価しようとしたときに例外が発生しました: {0}"
+
+#: src/puppetlabs/classifier/http.clj
+msgid ""
+"The ''config_data'' field of node groups is not allowed because the ''allow-"
+"config-data'' configuration setting has not been set to ''true''."
+msgstr ""
+"''allow-config-"
+"data''の設定が''true'になっていないため、ノードグループの''config_data'フィールドは利用できません。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "No group was submitted."
+msgstr "いずれのグループも送信されません。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid ""
+"The group id submitted in the request body differs from the id present in "
+"the URL''s request."
+msgstr "送信されたリクエストボディ内のグループIDは、URLのリクエスト内のIDと異なります。"
+
+#: src/puppetlabs/classifier/http.clj
+msgid "a comma-separated list of node names"
+msgstr "ノード名のコンマ区切りリスト"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The object(s) in your submitted request did not conform to the schema."
+msgstr "送信したリクエスト内のオブジェクトはスキーマに適合しません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The problem is:"
+msgstr "問題は次の通りです:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "\"The rule is malformed."
+msgstr "「このルールの形式は不正です。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Please consult the group documentation for details on the rule grammar.\""
+msgstr "ルールの文法についてはグループのマニュアルを参照してください。」"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"An object retrieved from the database did not conform to the expected "
+"schema."
+msgstr "データベースから取得されたオブジェクトは、予期されたスキーマと適合しません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"This is indicative of either database corruption, modification of the "
+"database by a third party, or a bug on our part."
+msgstr "これはデータベースの破損、第三者によるデータベースの修正、またはPuppet Enterpriseのバグの可能性を示唆します。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Please open an issue at https://tickets.puppetlabs.com so that we can "
+"investigate."
+msgstr "我々が調査しますのでhttps://tickets.puppetlabs.comで問題を提起してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "An unexpected data validation error occurred: {0}"
+msgstr "予期せぬデータ検証エラーが発生しました: {0}"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"See the `details` key for the full schema, value, error, and location from "
+"which the error was thrown."
+msgstr "完全なスキーマ、値、エラー、およびエラー発生源については項目「details」を参照してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "Your request was missing the parameter:"
+msgid_plural "Your request was missing the parameters:"
+msgstr[0] "リクエストはパラメータが不足していました:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The \"{0}\" parameter should be {1}."
+msgstr "\"{0}\"パラメータは{1}であるべきです。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "See the API documentation for more information."
+msgstr "詳細についてはAPIマニュアルを参照してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "\"{0}\" class''s \"{1}\" parameter in the \"{2}\" environment"
+msgstr "\"{2}\"environment内の\"{0}\"クラスの\"{1}\"パラメータ"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "\"{0}\" class in the \"{1}\" environment"
+msgstr "\"{1}\"environment内の\"{0}\"クラス"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Descendents of the group being edited make reference to the following "
+"missing class parameters:"
+msgstr "編集中のグループの子孫は、次の不明なクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Descendents of the group being edited make reference to the following "
+"missing classes:"
+msgstr "編集中のグループの子孫は、次の不明なクラスを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Descendents of the group being edited make reference to the following "
+"missing classes and class parameters:"
+msgstr "編集中のグループの子孫は、次の不明なクラスおよびクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"A descendent of the group being edited make reference to the following "
+"missing class parameters:"
+msgstr "編集中のグループの子孫は、次の不明なクラスパラメータを参照をしています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"A descendent of the group being edited make reference to the following "
+"missing classes:"
+msgstr "編集中のグループの子孫は、次の不明なクラスを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"A descendent of the group being edited make reference to the following "
+"missing classes and class parameters:"
+msgstr "編集中のグループの子孫は、次の不明なクラスおよびクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group being edited or created makes reference to the following missing "
+"class parameters:"
+msgstr "編集中もしくは作成中のグループは、次の不明なクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group being edited or created makes reference to the following missing "
+"classes:"
+msgstr "編集中もしくは作成中のグループは、次の不明なクラスを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group being edited or created makes reference to the following missing "
+"classes and class parameters:"
+msgstr "編集中もしくは作成中のグループは、次の不明なクラスおよびクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group being edited and {0,number,integer} of its descendents make "
+"reference to the following missing class parameters:"
+msgstr "編集中のグループおよびその{0,number,integer}の子孫は、次の不明なクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group being edited and {0,number,integer} of its descendents make "
+"reference to the following missing classes:"
+msgstr "編集中のグループおよびその{0,number,integer}の子孫は、次の不明なクラスを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group being edited and {0,number,integer} of its descendents make "
+"reference to the following missing classes and class parameters:"
+msgstr "編集されるグループおよびその{0,number,integer}の子孫は、次の不明なクラスおよびクラスパラメータを参照しています:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"See the details key for complete information on where every missing "
+"reference originated."
+msgstr "不明なリファレンスの発生源についての完全な情報については、項目「details」を参照してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The variable \"{0}\" is invalid."
+msgstr "変数\"{0}\"は無効です。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The \"{0}\" parameter of the \"{1}\" class is invalid."
+msgstr "\"{1}\"クラスの\"{0}\"パラメータは無効です。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "See the following:"
+msgstr "次を参照してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The group conflicts with itself by setting values for the same class "
+"parameter in both the ''classes'' and ''config_data'' fields:"
+msgid_plural ""
+"The group conflicts with itself by setting values for the same class "
+"parameters in both the ''classes'' and ''config_data'' fields:"
+msgstr[0] ""
+"''classes'フィールドと''config_data'フィールドの両方で、同一のクラスパラメータに値を設定すると、グループは自分自身と競合します。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "\"{0}\" class''s \"{1}\" parameter"
+msgstr "\"{0}\"クラスの\"{1}\"パラメータ"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a class uniqueness "
+"constraint."
+msgstr "クラスのユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A class already exists that has:"
+msgstr "次を持つクラスがすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a class parameter "
+"uniqueness constraint."
+msgstr "クラスパラメータのユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A class parameter already exists that has:"
+msgstr "次を持つクラスパラメータがすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a group uniqueness "
+"constraint."
+msgstr "グループのユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A group already exists that has:"
+msgstr "次を持つグループがすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a group class parameter "
+"uniqueness constraint."
+msgstr "グループクラスパラメータのユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A group class parameter already exists that has:"
+msgstr "次を持つグループクラスパラメータがすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a group-class link "
+"uniqueness constraint."
+msgstr "グループクラスリンクのユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A group-class link already exists that has:"
+msgstr "次を持つグループクラスリンクがすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a group variable "
+"uniqueness constraint."
+msgstr "グループ変数のユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A group variable already exists that has:"
+msgstr "次を持つグループ変数がすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Could not complete the request because it violates a group data uniqueness "
+"constraint."
+msgstr "グループデータのユニーク制約に反するため、リクエストを完了できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "A group data binding already exists that has:"
+msgstr "次を持つグループデータバインディングがすでに存在します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "Detected group inheritance cycle: {0}."
+msgstr "グループ継承構造に循環依存関係を検知しました: {0}。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "See the `details` key for the full groups of the cycle."
+msgstr "サイクルに含まれる全てのグループを見るには項目「details」を参照してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "This group is not reachable from the root of the hierarchy:"
+msgid_plural ""
+"These {0} groups are not reachable from the root of the hierarchy:"
+msgstr[0] "下記の{0} グループは階層構造の最上階からアクセスできません:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The parent group {0} does not exist."
+msgstr "親グループ{0}は存在しません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "These groups defined conflicting values for the environment."
+msgstr "これらのグループがenvironmentに定義した値は競合します。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"These groups defined conflicting values for class parameters for the "
+"classes:"
+msgstr "これらのグループがクラスに定義したクラスパラメータの値は競合します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "These groups defined conflicting values for variables named:"
+msgstr "これらのグループが次の変数に定義した値は競合します:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The node was classified into groups named:"
+msgstr "ノードは次のグループに分類されました:"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "See the `details` key for all conflicts."
+msgstr "すべての競合については項目「details」を参照してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "Cannot change rules in the root group."
+msgstr "ルートグループのルールは変更できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"None of your other edits were applied, but you may retry by re-submitting "
+"your delta less the `rule` key."
+msgstr "他の編集は適用されませんでした。再試行をお望みであれば、`rule`キーを含まない差分を再送信してください。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"The received delta can be found in this object''s `details` key for "
+"convenience."
+msgstr "受信した差分はこのオブジェクトの項目「details」で参照できます。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The rule cannot be translated because {0}"
+msgstr "{0}のためルールは変換できません"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The group cannot be deleted because it has children: {0}"
+msgstr "グループには子があるため削除できません: {0}"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "Received an unexpected {0} status response while trying to access {1}"
+msgstr "{1}へのアクセスを試行中に、予期せぬ{0}ステータス応答を受信しました"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "Sorry, but you don''t have permission to access all groups."
+msgstr "全てのグループにアクセスするパーミッションがありません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Sorry, but you don''t have permission to create or delete children for group"
+" {0} or any of its ancestors."
+msgstr "グループ{0}への次のパーミッションがありません：子の作成及び削除、祖先グループの子の作成及び削除"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Sorry, but you don''t have permission to edit the classes and variables for "
+"group {0} or any of its ancestors."
+msgstr "グループ{0}への次のパーミッションがありません：クラスおよび変数を編集、祖先グループのクラスおよび変数を編集"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Sorry, but you don''t have permission to change the environment for group "
+"{0} or any of its ancestors."
+msgstr "グループ{0}への次のパーミッションがありません：environmentを変更、祖先グループのenvironmentを変更"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Sorry, but you don''t have permission to change the rules for group {0} or "
+"any of its ancestors."
+msgstr "グループ{0}への次のパーミッションがありません：ルールを変更、祖先グループのルールを変更"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Sorry, but you don''t have permission to change variables or class "
+"parameters for group {0} or any of its ancestors."
+msgstr "グループ{0}への次のパーミッションがありません：変数またはクラスパラメータを変更、祖先グループの変数またはクラスパラメータを変更"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid ""
+"Sorry, but you don''t have permission to view for group {0} or any of its "
+"ancestors."
+msgstr "グループ{0}への次のパーミッションがありません：表示、祖先グループを表示"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "The provided client ssl certificates are not trusted."
+msgstr "提供されたクライアントSSL証明書は信頼できません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "No client ssl certificates were provided."
+msgstr "クライアントSSL証明書が提供されません。"
+
+#: src/puppetlabs/classifier/http/middleware.clj
+msgid "This account has been revoked."
+msgstr "このアカウントは無効化されています。"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" contains a closing square bracket in the variable "
+"name"
+msgstr "補間\"{0}\"に閉じ角括弧を含む変数名があります"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" contains another opening square bracket inside an "
+"index"
+msgstr "補間\"{0}\"には開き角括弧を含むインデックスがあります"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid "the interpolation \"{0}\" contains a \"{1}\" inside a unquoted string index"
+msgstr "補間\"{0}\"には\"{1}\"を含む引用されていない文字列のインデックスがあります"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" contains a \"{1}\" where a closing square bracket "
+"is expected"
+msgstr "補間\"{0}\"には閉じ角括弧が想定される場所に\"{1}\"があります"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" contains a \"{1}\" where either an opening square "
+"bracket or closing curly brace is expected"
+msgstr "補間\"{0}\"には開き角括弧か閉じ波括弧が想定される場所に\"{1}\"があります"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" contains an unidentifiable error (please check the"
+" syntax and try again)"
+msgstr "補間\"{0}\"には正体不明のエラーが含まれます(構文規則を確認して再試行してください)"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" terminates unexpectedly (please ensure you have "
+"properly closed any indices)"
+msgstr "補間\"{0}\"は予期せず終了しました(いずれのインデックスも適切に閉じたことを確認してください)"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid "the interpolation \"{0}\" is missing a closing curly brace"
+msgstr "補間\"{0}\"には閉じ波括弧が不足しています"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" contains an index that is unsupported in the Node "
+"Manager (consult the documentation for a description of supported indices)"
+msgstr ""
+"補間\"{0}\"にはノードマネージャで非サポートのインデックスが含まれています(サポートされるインデックスに関してはマニュアルを参照してください)"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid ""
+"the interpolation \"{0}\" uses the namespace separator \"::\" which is not "
+"permitted in the Node Manager"
+msgstr "補間\"{0}\"はノードマネージャでは使用不可の名前空間セパレータ\"::\"を使用しています。"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid "the interpolation \"{0}\" has a numeric variable name \"{1}\""
+msgstr "補間\"{0}\"には数値変数名\"{1}\"があります"
+
+#: src/puppetlabs/classifier/interpolation.clj
+msgid "the interpolation \"{0}\" has an invalid variable name \"{1}\""
+msgstr "補間\"{0}\"には無効な変数名\"{1}\"があります"
+
+#: src/puppetlabs/classifier/main.clj
+msgid "Classifier service shutting down."
+msgstr "Classifierサービスを停止します。"
+
+#: src/puppetlabs/classifier/main.clj
+msgid ""
+"Initialized background job running every {0} seconds to prune node check-ins"
+" older than {1} days."
+msgstr "{0}秒間隔で初期化されたバックグラウンドジョブが実行し、 {1}日前以上のノードチェックインを削除します。"
+
+#: src/puppetlabs/classifier/main.clj
+msgid ""
+"Initialized background job running every {0} seconds to synchronize "
+"environments and classes from Puppet."
+msgstr "{0}秒間隔で初期化されたバックグラウンドジョブが実行し、Puppetからenvironmentとクラスを同期します。"
+
+#: src/puppetlabs/classifier/main.clj
+msgid "Node check-in storage enabled."
+msgstr "ノードチェックインストレージは有効です。"
+
+#: src/puppetlabs/classifier/main.clj
+msgid "Node check-in storage disabled."
+msgstr "ノードチェックインストレージは無効です。"
+
+#: src/puppetlabs/classifier/main.clj
+msgid ""
+"Access-control explicitly disabled in configuration, running without it"
+msgstr "アクセス制御は明示的に設定で無効化されており、アクセス制御なしで実行しています"
+
+#: src/puppetlabs/classifier/main.clj
+msgid "Access-control enabled"
+msgstr "アクセス制御は有効"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the parent to {0}"
+msgstr "親を{0}に変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the rule to {0}"
+msgstr "ルールを{0}に変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the environment to {0}"
+msgstr "Environmentを{0}に変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the environment override setting to {0}"
+msgstr "Environmentの上書き設定を{0}に変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the name to {0}"
+msgstr "名称を{0}に変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the description to {0}"
+msgstr "説明を{0}に変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Added the {0} class"
+msgstr "{0}クラスを追加しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Removed the {0} class"
+msgstr "{0}クラスを削除しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Removed the {0} parameter from the {1} class"
+msgstr "{1}クラスから{0}パラメータを削除しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the value of the {0} parameter of the {1} class"
+msgstr "{1}クラスの{0}パラメータの値を変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Added the {0} parameter to the {1} class"
+msgstr "{1}クラスに{0}パラメータを追加しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Removed the {0} variable"
+msgstr "{0}変数を削除しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Changed the value of the {0} variable"
+msgstr "{0}変数の値を変更しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Added the {0} variable"
+msgstr "{0}変数を追加しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Delete the group"
+msgstr "グループを削除しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Pinned the node {0} to the group."
+msgstr "ノード{0}をグループにピン留めしました。"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Unpinned the node {0} from the group."
+msgstr "ノード{0}のグループへのピン留めを外しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Created the {0} group with id {1}"
+msgstr "ID {1}の{0}グループを作成しました"
+
+#: src/puppetlabs/classifier/reporting.clj
+msgid "Deleted the {0} group with id {1}"
+msgstr "ID {1}の{0}グループを削除しました"
+
+#: src/puppetlabs/classifier/rules.clj
+msgid ""
+"Encountered an exception when trying to match rule {0} of group {1} against "
+"the node named {2}"
+msgstr "名称{2}のノードにグループ{1}のルール{0}を適用試行の際に例外が発生しました"
+
+#: src/puppetlabs/classifier/status.clj
+msgid "Status check failed with unexpected response from the puppet master:"
+msgstr "Puppet Masterからの予期せぬ応答によりステータスチェックが失敗しました:"
+
+#: src/puppetlabs/classifier/status.clj
+msgid ""
+"Status check encountered an unexpected error when trying to contact the "
+"Puppet Master:"
+msgstr "Puppet Masterとの通信試行の際に、ステータスチェックに予期せぬエラーが発生しました:"
+
+#: src/puppetlabs/classifier/storage/memory.clj
+msgid ""
+"The given hierarchy is not a tree since no groups have the root group as "
+"their parent."
+msgstr "ルートグループを親として持つグループがないため、この階層構造はツリーではありません。"
+
+#: src/puppetlabs/classifier/storage/postgres.clj
+msgid "Can't update last check-in time to a read-only database."
+msgstr "最終チェックイン時間を読込専用データベースに上書きできません。"
+
+#: src/puppetlabs/classifier/storage/postgres.clj
+msgid "All Nodes"
+msgstr "All Nodes"
+
+#: src/puppetlabs/classifier/storage/postgres.clj
+msgid "The {1} class requires the following parameter:"
+msgid_plural "The {1} class requires the following parameters:"
+msgstr[0] "{1}クラスは次のパラメータを必要とします:"
+
+#: src/puppetlabs/classifier/storage/postgres.clj
+msgid ""
+"The group \"{0}\" ({1}) has been added or modified without specifying all of"
+" the parameters required by its classes."
+msgstr "グループ\"{0}\"({1})は、そのクラスが必要とするパラメータが指定されぬまま、追加または修正されました。"

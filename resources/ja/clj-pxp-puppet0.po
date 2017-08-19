@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the puppetlabs.clj_pxp_puppet package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.clj_pxp_puppet\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yuki Okabe <yukio@v001.vaio.ne.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Action timed out"
+msgstr "アクションはタイムアウトしました"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Not connected to pcp-broker"
+msgstr "PCPブローカに接続していません"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Querying pcp broker for list of connected agents"
+msgstr "接続済みのAgentのリストについてPCPブローカにクエリを行っています"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Querying pcp broker for list of connected agents matching query"
+msgstr "クエリに一致する接続済みのAgentのリストについてPCPブローカにクエリを行っています"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received provisional response of type {0}"
+msgstr "タイプ{0}のプロビジョナルリスポンスを受信しました"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid ""
+"Received response {0} of type {1} while expecting the following response "
+"type(s): {2}"
+msgstr "応答タイプ{2}を予期していたところ、タイプ{1}の応答{0}を受信しました"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received unexpected message from the broker. Ignoring: {0}"
+msgstr "ブローカから受信した予期せぬメッセージを無視します。無視されたメッセージ：{0}"
+
+#. The following will produce "Received PXP response {0} which doesn't match
+#. ..."
+#. The apostrophe needs to be duplicated (even in the translations).
+#: src/puppetlabs/pxp/puppet.clj
+msgid ""
+"Received PXP response {0} which doesn''t match any known transaction_id; data content:\n"
+"{1}"
+msgstr ""
+"いずれの既知のtransaction_idとも一致しないPXP応答{0}を受信しました；データの内容は次の通りです：\n"
+"{1}"
+
+#. The following will produce "Received PXP response {0} which doesn't match
+#. ..."
+#. The apostrophe needs to be duplicated (even in the translations).
+#: src/puppetlabs/pxp/puppet.clj
+msgid ""
+"Received PXP response {0} which doesn''t match any known transaction_id; "
+"data content is not available"
+msgstr "いずれの既知のtransaction_idとも一致しないPXP応答{0}を受信しました；データ内容は不明です"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Making request to {0} to initiate puppet run"
+msgstr "{0}にリクエストを行ってPuppet実行を開始します"
+
+#. The following will produce "non blocking request for 'pxp-module-puppet
+#. run'"
+#. The single quotes need to be duplicated (even in the translations).
+#: src/puppetlabs/pxp/puppet.clj
+msgid "non blocking request for ''{0} {1}''"
+msgstr "\"{0} {1}\"への非ブロッキングリクエスト"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received message of unknown type. Ignoring: {0}"
+msgstr "未知のタイプのメッセージを受信しました。無視します: {0}"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received inventory response message"
+msgstr "インベントリ情報の応答メッセージを受信しました"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received PCP error message - validating it"
+msgstr "PCPエラーメッセージを受信しました - 検証します"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received a PCP error message due to message {0} ({1})"
+msgstr "メッセージ{0} ({1})のため、PCPエラーメッセージを受信しました"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Message {0} resulted in a PCP error. Description: {1}"
+msgstr "メッセージ{0}によりPCPエラーが発生しました。説明：{1}"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received PCP error message of unknown cause. Ignoring: {0}"
+msgstr "起因不明のPCPエラーメッセージを受信しました。無視します: {0}"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received provisional response message - validating it"
+msgstr "プロビジョナルリスポンスを受信しました - 検証します"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "The provisional response is related to the transaction {0} ({1})"
+msgstr "このプロビジョナルリスポンスはトランザクション{0} ({1})と関連しています"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received PXP response message - validating it"
+msgstr "PXP応答メッセージを受信しました - 検証します"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Received PXP error message - validating it"
+msgstr "PXPエラーメッセージを受信しました - 検証します"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid ""
+"Received a PXP error message related to the transaction {0} ({1}) due to "
+"message {2}: {3}"
+msgstr "メッセージ{2}のため、トランザクション{0} ({1})に関連した次のPXPエラーメッセージを受信しました：{3}"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Message {0} resulted in a PXP error. Description: {1}"
+msgstr "メッセージ{0}によりPXPエラーが発生しました。エラーの内容：{1}"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Closing connection to pcp-broker"
+msgstr "PCPブローカへの接続を閉じます"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "inventory request"
+msgstr "インベントリ情報リクエスト"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "expected provisional response txn_id"
+msgstr "プロビジョナルリスポンスtxn_idを予期しました"
+
+#. The following will produce "blocking request for 'status query'"
+#. The single quotes need to be duplicated (even in the translations).
+#: src/puppetlabs/pxp/puppet.clj
+msgid "blocking request for ''status query''"
+msgstr "\"ステータスクエリ\"の為のブロッキングリクエスト"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid ""
+"Requesting status of puppet run with id: {0} to {1} (status query - request "
+"id: {2}; transaction id: {3})"
+msgstr ""
+"IDが{0}から{1}の間であるPuppet実行のステータスをリクエストします： (ステータスクエリ - "
+"リクエストID：{2}；トランザクションID：{3})"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid ""
+"The puppet run with id {0} is still running, will wait for up to {1} seconds"
+" before checking again."
+msgstr "ID{0}のPuppet実行は実行中です。次回のチェックまでに最大{1}秒待ちます。"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Unexpected exception: {0}"
+msgstr "予期せぬ例外：{0}"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Attempting to establish connection to pcp-broker: {0}"
+msgstr "PCPブローカ{0}への接続の確立を試みています"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Failed to associate connection with pcp-broker. Closing connection."
+msgstr "PCPブローカとの関連付けに失敗しました。接続を閉じます。"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Association with PCP Broker failed"
+msgstr "PCPブローカとの関連付けに失敗しました"
+
+#: src/puppetlabs/pxp/puppet.clj
+msgid "Established connection to broker: {0}"
+msgstr "ブローカ{0}への接続を確立しました"

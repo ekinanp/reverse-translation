@@ -5,6 +5,7 @@
 *.log
 *.log.trans
 log-files/*
+translated-repos/*
 
 Gemfile.lock
 .ruby-version

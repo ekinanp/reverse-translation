@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the puppetlabs.pe_activity_service package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.pe_activity_service\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Atsuya Kumano <at.kumano@gmail.com>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/puppetlabs/activity/http.clj
+msgid "The body of the request did not conform to the schema. "
+msgstr "リクエストの内容がスキーマに適合しませんでした。"
+
+#: src/puppetlabs/activity/http.clj:47
+msgid "The problem is: {0}"
+msgstr "問題は次の通りです: {0}"
+
+#. DOCS REVIEWED
+#: src/puppetlabs/activity/http/middleware.clj:42
+#: src/puppetlabs/activity/http/middleware.clj:41
+#: src/puppetlabs/activity/http/middleware.clj
+msgid "An uncaught server error was thrown."
+msgstr "キャッチされなかったサーバーエラーがスローされました。"
+
+#: src/puppetlabs/activity/http/middleware.clj:43
+#: src/puppetlabs/activity/http/middleware.clj:42
+#: src/puppetlabs/activity/http/middleware.clj
+msgid "Check the log for details."
+msgstr "詳細についてはログを参照してください。"
+
+#: src/puppetlabs/activity/http/middleware.clj:51
+#: src/puppetlabs/activity/http/middleware.clj:50
+#: src/puppetlabs/activity/http/middleware.clj
+msgid "Bad request."
+msgstr "無効なリクエストです。"
+
+#: src/puppetlabs/activity/http/middleware.clj:55
+#: src/puppetlabs/activity/http/middleware.clj:54
+#: src/puppetlabs/activity/http/middleware.clj
+msgid "The resource could not be found."
+msgstr "リソースが見つかりませんでした。"
+
+#: src/puppetlabs/activity/services.clj:98
+#: src/puppetlabs/activity/services.clj:104
+#: src/puppetlabs/activity/services.clj
+msgid "Activity service shutting down."
+msgstr "アクティビティサービスをシャットダウンします。"
+
+#: src/puppetlabs/activity/services.clj:107
+#: src/puppetlabs/activity/services.clj:113
+#: src/puppetlabs/activity/services.clj
+msgid "Activity service starting up."
+msgstr "アクティビティサービスを起動します。"

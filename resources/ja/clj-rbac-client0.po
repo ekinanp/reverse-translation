@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the puppetlabs.rbac_client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.rbac_client\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: LarissaLane <larissa@puppet.com>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/puppetlabs/rbac_client/core.clj
+msgid "Could not connect to server with {0}"
+msgstr "{0}でサーバーに接続できませんでした"
+
+#: src/puppetlabs/rbac_client/core.clj
+msgid "Error executing {0} to {1} Status: {2,number,#}"
+msgstr "{0}を{1}に実行中のエラー。ステータス: {2,number,#}"
+
+#: src/puppetlabs/rbac_client/core.clj
+msgid "Invalid JSON body: {0}"
+msgstr "無効なJSON形式: {0}"
+
+#: src/puppetlabs/rbac_client/middleware/authentication.clj
+msgid "Authenticated subject {0} ({1}) via authentication token"
+msgstr "認証トークンを介してサブジェクト{0} ({1})を認証しました"
+
+#: src/puppetlabs/rbac_client/middleware/authentication.clj
+msgid "Authenticated user ''{0}'' with cert CN={1}"
+msgstr "cert CN={1}のユーザー''{0}'' を認証しました"
+
+#: src/puppetlabs/rbac_client/middleware/authentication.clj
+msgid ""
+"Certificate access middleware could not authenticate user with cert CN={0}"
+msgstr "証明書アクセス用ミドルウェアはcert CN={0}のユーザーを認証できませんでした"
+
+#: src/puppetlabs/rbac_client/middleware/authentication.clj
+msgid "Certificate access middleware called, but received a non-ssl request."
+msgstr "証明書アクセス用ミドルウェアを呼び出しましたが、non-sslリクエストを受信しました。"
+
+#: src/puppetlabs/rbac_client/middleware/authentication.clj
+msgid "Route requires authentication"
+msgstr "認証が必要なルートです"
+
+#. DOCS REVIEWED
+#: src/puppetlabs/rbac_client/services/rbac.clj
+msgid "Error parsing UUID {0}"
+msgstr "UUID {0}の解析中にエラーが発生しました"
+
+#: src/puppetlabs/rbac_client/services/rbac.clj
+msgid "''rbac-consumer'' not configured with an ''api-url''"
+msgstr "''rbac-consumer''の''api-url''は設定されていません"
