@@ -42,16 +42,13 @@ get_all_po_files() {
   if [[ -d "$repo_dir" ]]; then
     cd "$repo_dir"
     git pull
-    cd "$cwd"
   else
     cd "$REPOS_DIR_ROOT"
     git clone "${PUPPET_GIT_URL}/${repo}.git" 
-    cd "$cwd"
   fi
+  cd "$cwd"
  
-  # at this point, we should be at the directory
-  # we were in when calling this routine. our repo
-  # should have been created.
+  # at this point, our repo should have been created.
   counter=0
   for po_file in `find "${repo_dir}" -name "*.po"`; do
     if is_japanese_po_file "$po_file"; then

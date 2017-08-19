@@ -4,6 +4,7 @@ describe Main do
   describe ".run" do
     invalid_log_file = MainFixture::INVALID_LOG_FILE
     valid_log_file = MainFixture::VALID_LOG_FILE
+    valid_log_file_trans = MainFixture::VALID_LOG_FILE_TRANS
 
     context "given no command line arguments" do
       it "should output an error message, the usage of the tool and return an exit code of 1" do
@@ -36,7 +37,7 @@ describe Main do
         expect(File).to receive(:exists?).with(valid_log_file).once.and_return(true)
 
         @mock_translator = double()
-        expect(@mock_translator).to receive(:reverse_translate).with(valid_log_file).once
+        expect(@mock_translator).to receive(:reverse_translate).with(valid_log_file, valid_log_file_trans).once
         expect(ReverseTranslator).to receive(:new).with(Main::PO_FILES).once.and_return(@mock_translator)
         expect do
           expect(Main.run([valid_log_file])).to eql(0) 

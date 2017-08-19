@@ -7,8 +7,9 @@ module ReverseTranslatorFixture
     [map.merge(po_file => ch), ch.succ]
   end.first
 
-  # Mock log file path
+  # Mock log file paths
   MOCK_LOG_FILE = "foo.log" 
+  MOCK_LOG_FILE_TRANS = "foo.log.trans"
 
   # A map of the mocked log messages to their expected results after
   # translation

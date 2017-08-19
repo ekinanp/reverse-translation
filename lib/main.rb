@@ -4,11 +4,6 @@ require_relative 'reverse_translator'
 # a single log-file as an argument (with the ".log" extension) and
 # outputs a translated log-file (extended with an additional ".trans"
 # extension).
-#
-# TODO: Refactor the ReverseTranslator class' reverse_translate method
-# to take in the output file as a method parameter so that knowledge
-# of where the output file should be written is contained inside the
-# Main module, instead of both the ReverseTranslator and Main modules.
 module Main
   USAGE = "USAGE: ./reverse_translate <log-file>"
   NO_ARG_MSG = "ERROR: No log-file provided!\n#{USAGE}"
@@ -27,8 +22,9 @@ module Main
     return error_exit("ERROR: #{log_file} is not a valid log file! Log files must have the "\
       "\".log\" extension.") unless log_file =~ /.*\.log/
 
-    ReverseTranslator.new(PO_FILES).reverse_translate(log_file)
-    puts "#{log_file} was successfully translated, with the result written to #{log_file+".trans"}!"
+    log_file_trans = log_file + ".trans"
+    ReverseTranslator.new(PO_FILES).reverse_translate(log_file, log_file_trans)
+    puts "#{log_file} was successfully translated, with the result written to #{log_file_trans}!"
     0
   end
 

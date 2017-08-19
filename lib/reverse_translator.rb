@@ -10,10 +10,10 @@ class ReverseTranslator
     @tables = po_groups.map { |po_files| POTable.new(po_files) }
   end
 
-  # Reverse translations will be written with the ".trans" extension.
-  # This can be changed in the future
-  def reverse_translate(log_file)
-    log_file_trans = log_file + ".trans"
+  # This method takes two parameters: the log file that's to be translated,
+  # and the path of the output file containing the locations of where to write
+  # the translations.
+  def reverse_translate(log_file, log_file_trans)
     out_file = File.open(log_file_trans, "w")
     LogParser.parse(log_file).each do |entry|
       translated_entry = @tables.inject(entry) do |new_entry, table|

@@ -1,4 +1,3 @@
-# TODO: Change these to require eventually!
 require_relative 'po_parser'
 require_relative 'po_entry'
 
