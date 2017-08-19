@@ -1,16 +1,13 @@
 require_relative 'po_table'
 require_relative 'log_parser'
 
-# This class contains the code used to reverse translate a given log file.
-# For now, it hardcodes the possible PO files that it needs to go to as class
-# level constants but in the future, this will be remedied
-#
+# This class contains the code used to reverse translate a given log file.#
 # Right now, it will maintain an array of lookup tables where one lookup table
-# encapsulates a single POT file. For initialization, it will take the list of
-# POT files that it needs in order to create its lookup tables.
+# encapsulates multiple PO files. For initialization, it will take an array of
+# arrays of PO files that it needs to create its lookup tables.
 class ReverseTranslator 
-  def initialize(pot_files)
-    @tables = pot_files.map { |file| POTable.new(file) }
+  def initialize(po_groups)
+    @tables = po_groups.map { |po_files| POTable.new(po_files) }
   end
 
   # Reverse translations will be written with the ".trans" extension.

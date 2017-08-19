@@ -13,7 +13,7 @@ module Main
   USAGE = "USAGE: ./reverse_translate <log-file>"
   NO_ARG_MSG = "ERROR: No log-file provided!\n#{USAGE}"
 
-  PO_FILES = `find resources/ja/ -name "*.po"`.split
+  PO_FILES = [`find resources/ja/ -name "*.po"`.split]
  
   def self.error_exit(msg)
     puts msg

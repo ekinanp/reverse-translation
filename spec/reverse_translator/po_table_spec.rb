@@ -9,7 +9,7 @@ describe POTable do
         expect(e).to receive(:reverse_translate).once { |msg| msg + (POTableFixture::TRANSLATIONS[d]) } 
       end
       allow(POEntry).to receive(:new).exactly(@data_entry_map.size).times { |d| @data_entry_map[d] }
-      @table = POTable.new (POTableFixture::MOCK_PO_FILE)
+      @table = POTable.new ([POTableFixture::MOCK_PO_FILE])
 
       expect(@table.reverse_translate("")).to eql("CBA")
     end

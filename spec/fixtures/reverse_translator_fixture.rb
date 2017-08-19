@@ -1,7 +1,7 @@
 module ReverseTranslatorFixture
   # Mock PO file paths. Expected order of the translations should be
   # 123
-  MOCK_PO_FILES = ["mock_file1.po", "mock_file2.po", "mock_file3.po"]
+  MOCK_PO_FILES = [["mock_file1.po"], ["mock_file2.po"], ["mock_file3.po"]]
   TRANSLATIONS = MOCK_PO_FILES.inject([{}, "1"]) do |accum, po_file|
     map, ch = accum
     [map.merge(po_file => ch), ch.succ]
