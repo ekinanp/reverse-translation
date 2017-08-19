@@ -33,7 +33,7 @@ describe "Reverse translation tool CLI" do
 
   context "when the user passes in a valid log file" do
     it "should translate it, tell the user where the translated file was written, and return an exit code of 0" do
-      log_generator = LogGenerator.new("lib/pe-rbac-service-ja.po")
+      log_generator = LogGenerator.new("test-resources/ja.po")
       expected_translation, log_file = log_generator.generate(FixtureUtils.unique_path("reverse_translator_valid_log_file"), 10000)
       actual_translation = log_file + ".trans"
 

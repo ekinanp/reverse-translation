@@ -1,0 +1,1051 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.pe_rbac_service\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Eriko Kashiwagi <eriko.55@d5.dion.ne.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Git-Ref: ce66d4364ceed41003859c6b941838a33a0a99f2\n"
+
+#: src/clj/puppetlabs/rbac/db_utils.clj
+msgid "Adding query parameters to RBAC database URI."
+msgstr "クエリパラメータをRBACデータベースURIに追加しています。"
+
+#: src/clj/puppetlabs/rbac/db_utils.clj
+msgid "URI is now {0}"
+msgstr "URIは現在{0}です"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Connection to directory service failed."
+msgstr "ディレクトリサービスへの接続に失敗しました。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Check your connection settings."
+msgstr "接続設定を確認してください。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "The provided search base is invalid."
+msgstr "提供された検索ベースは無効です。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Please check your base DN and RDN settings and try again."
+msgstr "ベースDNおよびRDN設定を確認して再試行してください。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Check the logs for more information."
+msgstr "詳細情報についてはログを参照してください。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid ""
+"Encountered fatal error when communicating with directory service: {0} (code"
+" {1})."
+msgstr "ディレクトリサービスと通信中に重大なエラーが発生しました: {0} (コード {1})。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid ""
+"We found multiple entries with the same lookup value in your directory "
+"service."
+msgstr "ディレクトリサービスに、ルックアップ値に該当するエントリが複数見つかりました。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Invalid ID filter list."
+msgstr "無効なIDフィルタリストです。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "The ID in the URL doesn't match the ID in the submitted data."
+msgstr "URL中のIDが送信されたデータのIDと一致しません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "The objects that were submitted did not conform to the schema."
+msgstr "送信されたオブジェクトは次の理由でスキーマに適合しません。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "The problem is: {0}"
+msgstr "問題は次の通りです: {0}"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Route requires authentication."
+msgstr "認証が必要な経路です。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "This account has been revoked."
+msgstr "このアカウントは無効化されています。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid ""
+"You have attempted to log in as a new remote user using a login that is "
+"already in use by a local user."
+msgstr "ローカルユーザがすでに使用しているログインを使用して、新規のリモートユーザとしてログインしようとしました。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Please change the login for one of the users and try again."
+msgstr "いずれかのユーザのログインを変更して再試行してください。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+#: src/clj/puppetlabs/rbac/sql_utils.clj
+msgid "There was a database conflict due to the value(s): {0}"
+msgstr "次の値がデータベースで競合しています: {0}"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "A provided associated ID was invalid."
+msgstr "提供されたIDは無効です。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "The user \"{0}\" was not found in the directory service."
+msgstr "ユーザ\"{0}\"はディレクトリサービス内に見つかりません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "The group \"{0}\" was not found in the directory service."
+msgstr "グループ\"{0}\"はディレクトリサービス内に見つかりません。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "An uncaught server error was thrown."
+msgstr "不明なエラーが検出されました。"
+
+#: src/clj/puppetlabs/rbac/http/middleware.clj
+msgid "Check the log for details."
+msgstr "詳細はログを参照してください。"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Certificate access middleware called, but received a non-ssl request."
+msgstr "証明書アクセス用ミドルウェアを呼び出しましたが、non-sslリクエストを受信しました。"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Authenticated user '{0}' with cert CN={1}"
+msgstr "cert CN={1}のユーザー'{0}'を認証しました"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid ""
+"Certificate access middleware could not authenticate user with cert CN={0}"
+msgstr "証明書アクセス用ミドルウェアはcert CN={0}のユーザーを認証できません"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Authenticated subject {0} via authentication token"
+msgstr "認証トークンを介してサブジェクト{0}を認証しました"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Found a Shiro session but its subject is not authenticated"
+msgstr "Shiroセッションが見つかりましたがサブジェクトは認証されていません"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Shiro subject middleware ran but no subject was found in the request."
+msgstr "Shiroサブジェクトのミドルウェアは実行しましたが、リクエスト内にサブジェクトは見つかりません。"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Was an authentication middleware applied?"
+msgstr "認証ミドルウェアは適用されていましたか。"
+
+#: src/clj/puppetlabs/rbac/http/middleware/authentication.clj
+msgid "Route requires authentication"
+msgstr "認証が必要な経路です"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "The directory service presented an untrusted certificate."
+msgstr "ディレクトリサービスは未信頼の証明書を提供しました。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "The connection timed out."
+msgstr "接続タイムアウト。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "Not enough values passed to prepare-search-filter."
+msgstr "prepare-search-filterに十分な数の値が渡されていません。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "Too many values passed to prepare-search-filter."
+msgstr "prepare-search-filterに渡された値が多すぎます。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "Found more than one match for attribute {0} using value {1}."
+msgstr "2件以上が値{1}を使用する属性{0}に一致しました。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "type must be :user or :group"
+msgstr "タイプは:userまたは:groupである必要があります"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "search-type must be :user or :group"
+msgstr "search-typeは:userまたは:groupである必要があります"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "Searching from base {0} with filter {1}."
+msgstr "ベース{0}からフィルタ{1}で検索します。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "Searched from base {0} with filter {1} and returned {2}."
+msgstr "ベース{0}からフィルタ{1}で検索し、{2}が見つかりました。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "User info found for {0}: {1}"
+msgstr "{0}のユーザ情報が見つかりました: {1}"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "Group info found for {0}: {1}"
+msgstr "{0}のグループ情報が見つかりました: {1}"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "No such user was found."
+msgstr "そのようなユーザは見つかりませんでした。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid "User {0} is in groups named: {1}"
+msgstr "ユーザ{0}は次のグループに属します: {1}"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid ""
+"The directory service trust store cache that RBAC was configured with does "
+"not exist and RBAC does not have permission to create it."
+msgstr ""
+"RBACが使用するよう設定されているディレクトリサービスのトラストストアのキャッシュは存在せず、RBACはそれを作成するパーミッションがありません。"
+
+#: src/clj/puppetlabs/rbac/ldap.clj
+msgid ""
+"The directory service trust store must be in a PEM file with  the `.pem` "
+"suffix or a Java KeyStore file with the `.jks` suffix."
+msgstr ""
+"ディレクトリサービスのトラストストアは`.pem`サフィックスのPEMファイルか、`.jks` サフィックスのJava "
+"KeyStoreファイルである必要があります。"
+
+#. Translators: {0} is a data field in the new object, {1} is the value
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Created with \"{0}\" set to \"{1}\""
+msgstr "\"{0}\"を\"{1}\"に設定して作成されました"
+
+#. Translators: {0} is a data field in the updated object, {1} is the value
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "\"{0}\" set to \"{1}\""
+msgstr "\"{0}\"を\"{1}\"に設定"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Group {0} ({1}) added to role {2}"
+msgstr "グループ{0} ({1})がロール{2}に追加されました"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User {0} ({1}) added to role {2}"
+msgstr "ユーザ{0} ({1})がロール{2}に追加されました"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Group {0} ({1}) removed from role {2}"
+msgstr "グループ{0} ({1})がロール{2}から削除されました"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User {0} ({1}) removed from role {2}"
+msgstr "ユーザ{0} ({1})がロール{2}から削除されました"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Permission {0} added to role {1}"
+msgstr "パーミッション{0}がロール{1}に追加されました"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Permission {0} removed from role {1}"
+msgstr "パーミッション{0}がロール{1}から削除されました"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User revoked."
+msgstr "ユーザが無効化されました。"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User reinstated."
+msgstr "ユーザが復元されました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Password updated."
+msgstr "パスワードが更新されました。"
+
+#. Translators: {0} is the display name, {1} is the ID
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User {0} ({1}) deleted."
+msgstr "ユーザ{0} ({1})が削除されました。"
+
+#. Translators: {0} is the display name, {1} is the ID
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User group {0} ({1}) deleted."
+msgstr "ユーザグループ{0} ({1})が削除されました。"
+
+#. Translators: {0} is the display name, {1} is the ID
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Role {0} ({1}) deleted."
+msgstr "ロール{0} ({1})が削除されました。"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "User {0} ({1}) logged in."
+msgstr "ユーザ{0} ({1})がログインしました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "A password reset token was generated for user {0} ({1})."
+msgstr "ユーザ{0} ({1})のためにパスワードリセットトークンが生成されました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Password reset for user {0} ({1})."
+msgstr "ユーザ{0} ({1})のパスワードはリセットされました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "{0} ({1}) revoked after {2} failed login attempts."
+msgstr "{2}回のログイン失敗の後、{0} ({1})は無効化されました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "{0} ({1}) generated an authentication token."
+msgstr "{0} ({1})は認証トークンを生成しました。"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "Deleted user"
+msgstr "削除されたユーザ"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "removed"
+msgstr "削除しました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid ""
+"{0} ({1}) revoked an authentication token belonging to {2} ({3}), issued at "
+"{4} and expiring at {5}."
+msgstr "{0} ({1})は{2} ({3})に属し、{4}で発行され{5}に期限切れとなる認証トークンを無効化しました。"
+
+#. FOR DOCS REVIEW
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "{0} ({1}) revoked all authentication tokens belonging to {2} ({3})."
+msgstr "{0} ({1})は{2} ({3})に属するすべての認証トークンを無効化しました。"
+
+#: src/clj/puppetlabs/rbac/reporting.clj
+msgid "ID-UNAVAILABLE"
+msgstr "ID-UNAVAILABLE"
+
+#: src/clj/puppetlabs/rbac/services/authn.clj
+msgid "Authentication failed."
+msgstr "認証に失敗しました。"
+
+#: src/clj/puppetlabs/rbac/services/authn.clj
+msgid ""
+"There are users with identical usernames in both the local database and the "
+"directory service."
+msgstr "ローカルデータベースとディレクトリサービスの両方に同一のユーザ名を持つユーザがいます。"
+
+#: src/clj/puppetlabs/rbac/services/authn.clj
+msgid "Username/password authentication not allowed for API User."
+msgstr "APIユーザにユーザ名/パスワード認証は許可されていません。"
+
+#: src/clj/puppetlabs/rbac/services/authn.clj
+msgid "User is revoked."
+msgstr "ユーザは無効化されています。"
+
+#: src/clj/puppetlabs/rbac/services/authn.clj
+msgid "Authenticated user {0} with realm {1} in RBAC"
+msgstr "RBACのレルムが{1}のユーザ{0}を認証しました"
+
+#: src/clj/puppetlabs/rbac/services/authn.clj
+msgid "Logged out user {0} with RBAC"
+msgstr "RBACでユーザ{0}をログアウトしました"
+
+#: src/clj/puppetlabs/rbac/services/consumer.clj
+msgid "Authentication token is malformed."
+msgstr "認証トークンが不正です。"
+
+#: src/clj/puppetlabs/rbac/services/consumer.clj
+msgid "Authentication token has expired."
+msgstr "認証トークンは期限切れです。"
+
+#: src/clj/puppetlabs/rbac/services/consumer.clj
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The provided token has timed out (timeout: {0})"
+msgstr "提供されたトークンはタイムアウトしました(タイムアウト: {0})"
+
+#: src/clj/puppetlabs/rbac/services/consumer.clj
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Authentication token has been revoked."
+msgstr "認証トークンは無効化されています。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "You used an unsupported media type."
+msgstr "サポートされていないメディアタイプが使用されました。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "No content type found."
+msgstr "コンテンツタイプが見つかりません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Conflict."
+msgstr "競合。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The resource was not found."
+msgstr "リソースが見つかりません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The method you used is not allowed."
+msgstr "使用したメソッドは許可されていません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "A password change is not allowed on remote users."
+msgstr "リモートユーザのパスワード変更は許可されていません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "An incorrect current password was provided."
+msgstr "間違った現行パスワードが提供されました。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "A password reset is not allowed on remote users."
+msgstr "リモートユーザのパスワードリセットは許可されていません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The password reset failed, because the token has already been used."
+msgstr "トークンはすでに使用されているため、パスワードリセットは失敗しました。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Error connecting to LDAP server"
+msgstr "LDAPサーバーへの接続のエラー"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Requested lifetime exceeds configured maximum ({0})."
+msgstr "指定のライフタイムは設定に規定された最大値({0})を超過しています。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Authentication token is invalid."
+msgstr "認証トークンは無効です。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The provided token has expired."
+msgstr "提供されたトークンは期限切れです。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "A database error occured while revoking the supplied tokens."
+msgstr "提供されたトークンの無効化中に、データベースエラーが発生しました。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid ""
+"A database error occured while revoking tokens for the supplied usernames."
+msgstr "提供されたユーザのトークンの無効化中に、データベースエラーが発生しました。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The body of the request contained invalid JSON."
+msgstr "リクエストボディに無効なJSON形式が含まれます。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid ""
+"When provided in the body, the value of \"revoke_tokens\" and/or "
+"\"revoke_tokens_by_usernames\" must be an array."
+msgstr ""
+"ボディに含まれるときには、\"revoke_tokens\"と\"revoke_tokens_by_usernames\"の両方あるいはいずれか一方の値は、配列である必要があります。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid ""
+"You must provide a value for the \"revoke_tokens\" and/or "
+"\"revoke_tokens_by_usernames\" parameter(s)."
+msgstr ""
+"\"revoke_tokens\"と\"revoke_tokens_by_usernames\"の両方あるいはいずれか一方のパラメータの値を提供する必要があります。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid ""
+"This endpoint only supports the \"revoke_tokens\" and "
+"\"revoke_tokens_by_usernames\" parameters."
+msgstr "このエンドポイントは\"revoke_tokens\"および\"revoke_tokens_by_usernames\"パラメータのみをサポートします。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Your request also contained the following unrecognized parameter: {1}"
+msgid_plural ""
+"Your request also contained the following unrecognized parameters: {1}"
+msgstr[0] "リクエストには次の認識されないパラメータも含まれます: {1}"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid ""
+"Usernames must be between 1 and 254 characters long (inclusive) and may not "
+"start or end with whitespace."
+msgstr "ユーザ名は1文字以上254文字以下。最初または最後の文字はホワイトスペース不可。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The following username is invalid: {1}"
+msgid_plural "The following usernames are invalid: {1}"
+msgstr[0] "次のユーザ名は無効です: {1}"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Invalid tokens can be created by an error while copying and pasting."
+msgstr "コピーアンドペースト中の誤りによって無効なトークンが作成されることがあります。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The following token is malformed: {1}"
+msgid_plural "The following tokens are malformed: {1}"
+msgstr[0] "次のトークンは不正です: {1}"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid ""
+"Labels must not exceed 200 characters in length and must contain non-"
+"whitespace characters."
+msgstr "ラベルは200文字以下。少なくとも非ホワイトスペース文字を一つ含んでください。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The following label is malformed: {1}"
+msgid_plural "The following labels are malformed: {1}"
+msgstr[0] "次のラベルは不正です: {1}"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "The following user does not exist: {1}"
+msgid_plural "The following users do not exist: {1}"
+msgstr[0] "次のユーザは存在しません: {1}"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "You do not have permission to revoke the following user: {1}"
+msgid_plural "You do not have permission to revoke the following users: {1}"
+msgstr[0] "次のユーザを無効化するパーミッションがありません: {1}"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "All other tokens were successfully revoked."
+msgstr "他のすべてのトークンは正常に無効化されました。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "No tokens were revoked."
+msgstr "無効化されたトークンはありません。"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Not Found"
+msgstr "見つかりません"
+
+#: src/clj/puppetlabs/rbac/services/http/api.clj
+msgid "Not found"
+msgstr "見つかりません"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "The ID filter list you used is invalid."
+msgstr "使用したIDフィルタリストは無効です。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "The UUID filter list is invalid."
+msgstr "UUIDフィルタリストは無効です。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "The ID in the request must match the route."
+msgstr "リクエスト内のIDは経路と一致する必要があります。"
+
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid ""
+"The `ssl` and `start_tls` options are mutually exclusive and cannot both be "
+"set to true."
+msgstr "`ssl`および`start_tls`オプションは相互に排他的であり、両方をtrueに設定することはできません。"
+
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid ""
+"Timeout must be specified as a stringified integer with optional suffix "
+"s/m/h/d/y."
+msgstr "タイムアウトは任意のサフィックスs/m/h/d/y付きの整数の文字列を指定してください。"
+
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "Labels cannot contain commas."
+msgstr "ラベルにはカンマを使用しないでください。"
+
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "Labels must contain non-whitespace characters"
+msgstr "ラベルには非ホワイトスペース文字を使用してください"
+
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "Labels must be 200 characters or less"
+msgstr "ラベルは200文字以下である必要があります"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/http/api_validation.clj
+msgid "The body of your request is not valid JSON."
+msgstr "リクエストボディは有効なJSON形式ではありません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "The token could not be verified."
+msgstr "トークンを検証できませんでした。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid ""
+"Password reset failed. Check to ensure the full token text was included."
+msgstr "パスワードのリセットが失敗しました。全トークンのテキストが含まれているか確認してください。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "Password reset failed because the token expired."
+msgstr "トークンが期限切れのためパスワードリセットが失敗しました。"
+
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid ""
+"The operation could not be completed because RBAC's database has not been "
+"initialized."
+msgstr "RBACのデータベースが初期化されていないため操作を完了できませんでした。"
+
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "Database initialization interrupted prematurely"
+msgstr "データベース初期化が中断されました"
+
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "Encountered an unrecoverable error during database initialization."
+msgstr "データベース初期化中に修復不可なエラーが発生しました。"
+
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "Initialized background job to purge expired tokens every one second."
+msgid_plural ""
+"Initialized background job to purge expired tokens every {0} seconds."
+msgstr[0] "期限切れのトークンを{0}秒毎に除去するバックグラウンドジョブを開始しました。"
+
+#. else (no valid purge period, so background jobs disabled)
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "Disabled background job to purge expired tokens."
+msgstr "期限切れのトークンを除去するバックグラウンドジョブを無効化しました。"
+
+#: src/clj/puppetlabs/rbac/services/rbac.clj
+msgid "Starting in replica mode, tokens will not be purged."
+msgstr "レプリカモードで起動中、トークンは除去されません。"
+
+#: src/clj/puppetlabs/rbac/shiro_utils.clj src/clj/puppetlabs/rbac/subject.clj
+msgid "Checked permission {0} for subject {1} and returned {2}"
+msgstr "サブジェクト{1}のパーミッション{0}をチェックし、{2}が返されました"
+
+#: src/clj/puppetlabs/rbac/shiro_utils.clj
+msgid "Checked permissions {0} for subject {1} and returned {2}"
+msgstr "サブジェクト{1}のパーミッション{0}をチェックし、{2}が返されました"
+
+#. When in Rome, throw as the Romans do. Our login! function
+#. will catch and process this kind of error.
+#: src/clj/puppetlabs/rbac/shiro_utils.clj
+msgid "User DN was nil."
+msgstr "ユーザのDNはnil。"
+
+#. This list is not used in the codebase and is strictly for getting these
+#. messages in the messages.pot file. These strings are meant to be the errors
+#. raised by the functions associated with the superuser during the database
+#. migrations. If any of the errors are changed via migrations, so too must
+#. the string counterpart here change. This list was generated by looking at
+#. the errors in the superusers-immutable.up.sql migration
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "This user cannot be deleted."
+msgstr "このユーザは削除できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "This user''s login cannot be changed."
+msgstr "このユーザのログイン情報は変更できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "This user cannot be revoked."
+msgstr "このユーザは無効化できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "This user must be a superuser."
+msgstr "このユーザはスーパーユーザである必要があります。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "This user''s roles cannot be changed."
+msgstr "このユーザのロールは変更できません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "Invalid permission: {0}"
+msgstr "無効なパーミッション: {0}"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "The display name for the \"{0}\" role cannot be changed."
+msgstr "\"{0}\"ロールの表示名は変更できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Administrators"
+msgstr "管理者"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "The description for the \"{0}\" role cannot be changed."
+msgstr "\"{0}\"ロールの説明は変更できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "The permissions for the \"{0}\" role cannot be changed."
+msgstr "\"{0}\"ロールのパーミッションは変更できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "The admin and api users cannot be removed from the \"{0}\" role."
+msgstr "\"{0}\"ロールからadminおよびapiユーザは削除できません。"
+
+#: src/clj/puppetlabs/rbac/storage.clj
+msgid "Expired tokens could not be purged from the database."
+msgstr "期限切れのトークンをデータベースから除去できません。"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/storage/authorization.clj
+msgid "You do not have permission to perform this action."
+msgstr "このアクションを実行するパーミッションがありません。"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "Updated display_name for group {0}"
+msgstr "グループ{0}のdisplay_nameを更新しました"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "Synced group membership for user {0}"
+msgstr "ユーザ{0}のグループメンバーシップを同期しました"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "Synced user data for user {0}"
+msgstr "ユーザ{0}のユーザデータを同期しました"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "Created record of remote user {0} in RBAC database"
+msgstr "RBACデータベースにリモートユーザ{0}のレコードを作成しました"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "No such user found via LDAP: {0}"
+msgstr "そのようなユーザはLDAPを介して見つかりません: {0}"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "Created record of group {0} in RBAC database"
+msgstr "RBACデータベースのグループ{0}のレコードを作成しました"
+
+#: src/clj/puppetlabs/rbac/sync.clj
+msgid "No such group found via LDAP: {0}"
+msgstr "そのようなグループはLDAPを介して見つかりません: {0}"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Operators"
+msgstr "オペレータ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Viewers"
+msgstr "ビューア"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Code Deployers"
+msgstr "コードデプロイア"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid ""
+"Manage users and their permissions, and create and modify node groups and "
+"other objects."
+msgstr "ユーザとそのパーミッションを管理し、ノードグループやその他のオブジェクトを作成および修正します。"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Create and modify node groups and other objects."
+msgstr "ノードグループやその他のオブジェクトを作成および修正します。"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View, but not modify, all objects in the console."
+msgstr "コンソールですべてのオブジェクトを表示しますが修正はできません。"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Synchronizes code from version control system to Puppet Servers."
+msgstr "バージョン管理システムからPuppetサーバーへコードを同期します。"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Administrator"
+msgstr "管理者(admin)"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "API User"
+msgstr "APIユーザ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Node groups"
+msgstr "ノードグループ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Users"
+msgstr "ユーザ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "User groups"
+msgstr "ユーザグループ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "User roles"
+msgstr "ユーザロール"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Directory service"
+msgstr "ディレクトリサービス"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Console"
+msgstr "コンソール"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Certificate requests"
+msgstr "証明書のリクエスト"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Puppet agent"
+msgstr "Puppet agent"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Puppet environment"
+msgstr "Puppet環境"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Nodes"
+msgstr "ノード"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Puppet Enterprise console users"
+msgstr "Puppet Enterpriseコンソールユーザ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Groups of users"
+msgstr "ユーザのグループ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Define what users and groups have permission to do"
+msgstr "ユーザとグループが何をするパーミッションを持つか定義する"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Authenticates remote users"
+msgstr "リモートユーザの認証"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Pages in Puppet console"
+msgstr "Puppetコンソールのページ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Certificate requests made to the Puppet Certificate Authority"
+msgstr "Puppet認証局に送られた証明書のリクエスト"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit and view data from PuppetDB"
+msgstr "データを編集および表示"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View"
+msgstr "表示"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Create, edit, and delete child groups"
+msgstr "子グループを作成、編集および削除"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit child group rules"
+msgstr "子グループのルールを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Set environment"
+msgstr "環境を設定"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit classes, parameters, and variables"
+msgstr "クラス、パラメータおよび変数を編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit configuration data"
+msgstr "設定データを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Create"
+msgstr "作成"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Reset password"
+msgstr "パスワードをリセット"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit"
+msgstr "編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Revoke"
+msgstr "無効化"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Import"
+msgstr "インポート"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit members"
+msgstr "メンバーを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View, edit, and test"
+msgstr "表示、編集およびテスト"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Delete"
+msgstr "削除"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Accept and reject"
+msgstr "許諾および拒否"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Deploy code"
+msgstr "コードをデプロイ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View node data from PuppetDB"
+msgstr "ノードデータを表示"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit node data from PuppetDB"
+msgstr "PuppetDBのノードデータを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Run Puppet on agent nodes"
+msgstr "AgentノードでPuppetを実行"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View a node group"
+msgstr "ノードグループを表示"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Create, edit, and delete child groups below a given node group"
+msgstr "指定されたノードグループの子グループを作成、編集、および削除"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit rules of all groups below a given node group"
+msgstr "指定されたノードグループ下のすべてのグループのルールを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit a node group's environment"
+msgstr "ノードグループの環境を編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit a node group's classification and variables"
+msgstr "ノードグループの分類および変数を編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid ""
+"The ability to edit configuration data (values for class parameters which "
+"don't cause the class to be declared) on a node group"
+msgstr "ノードグループ上の設定データ(クラスの宣言を必要としないクラスパラメータの値)を編集可"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Create a local user"
+msgstr "ローカルユーザを作成"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Reset a user's password"
+msgstr "ユーザのパスワードをリセット"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit user information and delete user"
+msgstr "ユーザ情報の編集およびユーザの削除"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Revoke a user"
+msgstr "ユーザを無効化"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Import a user group from AD/LDAP"
+msgstr "AD/LDAPからユーザグループをインポート"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Create a role"
+msgstr "ロールを作成"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit a role"
+msgstr "ロールを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit a role's members"
+msgstr "ロールのメンバーを編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View, edit, and test the directory service settings"
+msgstr "ディレクトリサービス設定の表示、編集およびテスト"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "View a console page"
+msgstr "コンソールページを表示"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit parameters and variables"
+msgstr "パラメータおよび変数を編集"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Edit a node group's parameters and variables."
+msgstr "ノードグループのパラメータおよび変数を編集。"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Delete a user group"
+msgstr "ユーザグループを削除"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Accept and reject certificate requests"
+msgstr "証明書のリクエストの許諾および拒否"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Deploy code to a Puppet environment"
+msgstr "コードをPuppet環境にデプロイ"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "The ability to view node data imported from PuppetDB"
+msgstr "PuppetDBからインポートされたノードデータを表示可"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "The ability to edit node data imported from PuppetDB"
+msgstr "PuppetDBからインポートされたノードデータの編集可"
+
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Run Puppet on agent nodes from the console or orchestrator"
+msgstr "コンソールまたはオーケストレータからAgentノードでPuppetを実行"
+
+#. DOCS REVIEWED
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid "Error parsing UUID {0}"
+msgstr "UUID {0}の解析中にエラーが発生しました"
+
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid "{0} was called with {1} and returned {2}"
+msgstr "{0}は引数{1}を用いて呼び出され、{2}が返されました"
+
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid "the future or promise was not realized within {0} ms"
+msgstr "Futureもしくはpromiseは{0}ミリ秒以内に実現しません"
+
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid ""
+"The directory service presented a certificate that the RBAC service does not"
+" trust."
+msgstr "ディレクトリサービスはRBACサービスが信頼しない証明書を提供しました。"
+
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid ""
+"This means that either the RBAC service's chain of trust has been misbuilt "
+"or misconfigured, or that someone is attempting to perform a man-in-the-"
+"middle (MITM) attack on the RBAC service."
+msgstr ""
+"これはRBACサービスの信頼チェーンが不正に構築または設定されたか、何者かがRBACサービスに中間者攻撃(MITM)を試みたことを示唆します。"
+
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid "key must be 16 bytes long"
+msgstr "キーは16バイト長である必要があります。"
+
+#: src/clj/puppetlabs/rbac/utils.clj
+msgid ""
+"It took longer than {0} ms to generate a random number. This can be caused "
+"by a lack of entropy on the server. Please try again in a few minutes, or "
+"see your system administrator for assistance."
+msgstr ""
+"乱数の生成に{0}ミリ秒以上かかりました。これはサーバーのエントロピーの不足が原因である可能性があります。数分後に再試行するか、システム管理者に支援を依頼してください。"

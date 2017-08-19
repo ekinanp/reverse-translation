@@ -5,9 +5,6 @@ require_relative 'reverse_translator'
 # outputs a translated log-file (extended with an additional ".trans"
 # extension).
 #
-# TODO: Add code that dynamically loads all of the PO files given their
-# root directory, instead of hard-coding their paths.
-#
 # TODO: Refactor the ReverseTranslator class' reverse_translate method
 # to take in the output file as a method parameter so that knowledge
 # of where the output file should be written is contained inside the
@@ -16,10 +13,8 @@ module Main
   USAGE = "USAGE: ./reverse_translate <log-file>"
   NO_ARG_MSG = "ERROR: No log-file provided!\n#{USAGE}"
 
-  PO_FILES = [
-    "lib/pe-rbac-service-ja.po"
-  ]
-
+  PO_FILES = `find resources/ja/ -name "*.po"`.split
+ 
   def self.error_exit(msg)
     puts msg
     1
