@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "Reverse translation tool CLI" do
   cmd = "bin/reverse_translate"
+  test_po_files = `find resources/ja/ -name "*.po"`.split
 
   context "when the user does not pass in any command line arguments" do
     it "should output an error message, the usage of the tool and return an exit code of 1" do
@@ -33,7 +34,7 @@ describe "Reverse translation tool CLI" do
 
   context "when the user passes in a valid log file" do
     it "should translate it, tell the user where the translated file was written, and return an exit code of 0" do
-      log_generator = LogGenerator.new("test-resources/ja.po")
+      log_generator = LogGenerator.new(test_po_files)
       expected_translation, log_file = log_generator.generate(FixtureUtils.unique_path("reverse_translator_valid_log_file"), 1000)
       actual_translation = log_file + ".trans"
 

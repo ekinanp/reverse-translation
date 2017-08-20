@@ -1,0 +1,4927 @@
+# Translators:
+# Eriko Kashiwagi <eriko.55@d5.dion.ne.jp>, 2017
+# LarissaLane <larissa@puppet.com>, 2017
+# Kojima Ai <ai-kojima@to-in.co.jp>, 2017
+# sayaka inagaki <sayaka-inagaki@to-in.co.jp>, 2017
+# Atsuya Kumano <at.kumano@gmail.com>, 2017
+# 梅田智世 <c-umeda@nifty.com>, 2017
+# satoko inoue <satoko-inoue@to-in.co.jp>, 2017
+# Sam Woods <sam.woods@puppet.com>, 2017
+# Mindy Moreland <mindy.moreland@puppet.com>, 2017
+# Yuki Okabe <yukio@v001.vaio.ne.jp>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2017-08-14T10:34:08.103Z\n"
+"PO-Revision-Date: 2017-08-14T10:34:08.103Z\n"
+"Last-Translator: Yuki Okabe <yukio@v001.vaio.ne.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Git-Ref: 5c4d195746d9be5c2240325affe9ad5d6fc5367b\n"
+
+#: app/pods/components/cm/package/package-count/template.hbs
+msgid "(continued)"
+msgstr "(続き)"
+
+#: app/pods/security/vulnerabilities/composition/filter/template.hbs
+msgid "({{count}} node)"
+msgid_plural "({{count}} node)"
+msgstr[0] "(ノード数: {{count}})"
+
+#: app/pods/jobs/job/template.hbs
+msgid "({{count}} total nodes)"
+msgstr "(ノード数合計: {{count}})"
+
+#: app/pods/security/vulnerabilities/composition/filter/template.hbs
+msgid "1234-5678"
+msgstr "1234-5678"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+msgid "<b>Classes</b> with events"
+msgstr "イベントありの<b>クラス</b>"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+msgid "<b>Nodes</b> with events"
+msgstr "イベントありの<b>ノード</b>"
+
+#: app/pods/jobs/create/template.hbs
+msgid ""
+"<b>Note:</b> If your job target includes application instances, the selected"
+" environment will also determine the dependency order of your node runs."
+msgstr ""
+"<b>注意:</b> ジョブターゲットにアプリケーションインスタンスが含まれる場合、選択された環境によってノード実行の依存関係の順序も決定されます。"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+msgid "<b>Resources</b> with events"
+msgstr "イベントありの<b>リソース</b>"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+msgid "<b>Unknown</b> with events"
+msgstr "イベントありの<b>未知</b>"
+
+#: app/pods/jobs/job/template.hbs
+msgid "<span class=\"nodes-failed\">{{formattedCount}}</span> Node failed"
+msgid_plural "<span class=\"nodes-failed\">{{formattedCount}}</span> Node failed"
+msgstr[0] "失敗したノード: <span class=\"nodes-failed\">{{formattedCount}}</span>"
+
+#: app/pods/jobs/job/template.hbs
+msgid "<span class=\"nodes-skipped\">{{formattedCount}}</span> Node skipped"
+msgid_plural ""
+"<span class=\"nodes-skipped\">{{formattedCount}}</span> Node skipped"
+msgstr[0] "スキップされたノード: <span class=\"nodes-skipped\">{{formattedCount}}</span>"
+
+#: app/pods/jobs/job/template.hbs
+msgid "<span class=\"nodes-succeeded\">{{formattedCount}}</span> Node succeeded"
+msgid_plural ""
+"<span class=\"nodes-succeeded\">{{formattedCount}}</span> Node succeeded"
+msgstr[0] "成功したノード: <span class=\"nodes-succeeded\">{{formattedCount}}</span>"
+
+#: app/pods/components/classifier/class-entry/template.hbs
+msgid "<span>Class:</span> {{className}}"
+msgstr "<span>クラス:</span> {{className}}"
+
+#: app/pods/jobs/job/template.hbs
+msgid "<span>{{formattedCount}}</span> Node completed"
+msgid_plural "<span>{{formattedCount}}</span> Node completed"
+msgstr[0] "完了したノード: <span>{{formattedCount}}</span>"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "A Puppet run is already in progress on this node."
+msgstr "このノードでPuppet実行がすでに進行中です。"
+
+#: app/pods/cm/graph/node/controller.js
+msgid ""
+"A Puppet run is in progress: no report or status details available. Wait a "
+"few moments and then refresh this page"
+msgstr "Puppetが実行中: レポートやステータス詳細を取得できません。少し待ってから、このページを更新してください。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "A friendly name for this directory."
+msgstr "このディレクトリの分かりやすい名前です。"
+
+#: app/templates/license.hbs
+msgid ""
+"A node is any network-connected device, such as a server, desktop, laptop, "
+"or virtual machine."
+msgstr "ノードとは、サーバー、デスクトップ、ラップトップ、仮想マシンなど、ネットワークに接続された任意のデバイスを指します。"
+
+#: app/templates/license.hbs app/templates/license.hbs
+msgid ""
+"A node is any network-connected device, such as an EC2 instance, server, "
+"desktop, laptop, or virtual machine."
+msgstr "ノードとは、EC2インスタンス、サーバー、デスクトップ、ラップトップ、仮想マシンなど、ネットワークに接続された任意のデバイスを指します。"
+
+#: app/pods/components/security/alert-message/component.js
+msgid "ALERT"
+msgstr "アラート"
+
+#: app/templates/license.hbs
+msgid "AWS OpsWorks for Puppet Enterprise pricing"
+msgstr "Puppet Enterpriseの料金設定のためのAWS OpsWorks"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "Accept"
+msgstr "承認"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Accept All"
+msgstr "すべてを承認"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Accept certificate requests to bring nodes into your inventory."
+msgstr "証明書要求を承認し、ノードをインベントリに入れます。"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "Accepted"
+msgstr "承認済み"
+
+#: app/templates/components/access-control/access-control-nav.hbs
+msgid "Access control"
+msgstr "アクセス管理"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/inventory/node/activity/template.hbs
+#: app/pods/classifier/inventory/node/template.hbs
+#: app/pods/rbac/group/template.hbs app/pods/rbac/group/template.hbs
+#: app/pods/rbac/role/template.hbs app/pods/rbac/role/template.hbs
+#: app/pods/rbac/user/tab/partial/template.hbs
+#: app/pods/rbac/user/tab/partial/template.hbs
+msgid "Activity"
+msgstr "アクティビティ"
+
+#: app/pods/classifier/groups/index/template.hbs
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+msgid "Add"
+msgstr "追加"
+
+#: app/pods/components/tasks/add-param-row/template.hbs
+msgid "Add Parameter"
+msgstr "パラメータの追加"
+
+#: app/pods/components/jobs/node-target-list/template.hbs
+msgid "Add all"
+msgstr "すべてを追加"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Add class"
+msgstr "クラスを追加"
+
+#: app/pods/components/classifier/config-data-add-row/template.hbs
+msgid "Add data"
+msgstr "データの追加"
+
+#: app/pods/components/rbac/role/groups-tab/template.hbs
+#: app/pods/rbac/groups/index/template.hbs
+msgid "Add group"
+msgstr "グループを追加"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Add group..."
+msgstr "グループを追加..."
+
+#: app/pods/rbac/users/index/template.hbs
+msgid "Add local user"
+msgstr "ローカルユーザを追加"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Add membership rules, classes, and variables."
+msgstr "メンバーシップルール、クラス、変数を追加します。"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Add new class"
+msgstr "新しいクラスを追加"
+
+#: app/pods/components/tasks/node-selection/template.hbs
+msgid "Add nodes"
+msgstr "すべてのノード"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Add or modify classes that apply to this group and its child groups."
+msgstr "このグループおよびその子グループに適用されるクラスを追加または変更します。"
+
+#: app/pods/components/classifier/class-params/template.hbs
+msgid "Add parameter"
+msgstr "パラメータを追加"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Add permission"
+msgstr "パーミッションを追加"
+
+#: app/pods/rbac/roles/index/template.hbs
+msgid "Add role"
+msgstr "ロールを追加"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+msgid "Add rule"
+msgstr "ルールを追加"
+
+#: app/pods/rbac/groups/index/template.hbs
+msgid "Add some groups."
+msgstr "グループをいくつか追加します。"
+
+#: app/pods/components/rbac/role/users-tab/template.hbs
+msgid "Add user"
+msgstr "ユーザを追加"
+
+#: app/pods/components/classifier/group/variables-tab/template.hbs
+msgid "Add variable"
+msgstr "変数を追加"
+
+#: app/pods/components/rbac/role/user-row/template.hbs
+msgid "Added manually"
+msgstr "手動で追加済み"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Adding nodes to manage with Puppet Enterprise"
+msgstr "Puppet Enterpriseで管理するノードの追加"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Advanced"
+msgstr "高度"
+
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/components/classifier/rules/facts-section/component.js
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/package/version-filter/template.hbs
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/jobs/job/filter-state.js
+#: app/pods/security/vulnerabilities/composition/controller.js
+msgid "All"
+msgstr "すべて"
+
+#: app/pods/cm/report/report-id/events/route.js
+msgid "All Types"
+msgstr "すべての型"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "All fields are required unless noted as optional."
+msgstr "「任意」と記載されていない限り、すべてのフィールドは必須項目です。"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "All hosts"
+msgstr "すべてのホスト"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "All nodes"
+msgstr "All nodes"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+msgid "All nodes are members of this group, based on the following rule:"
+msgstr "次のルールに基づき、すべてのノードはこのグループのメンバーです。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "All nodes ran without failures."
+msgstr "すべてのノードが失敗なしで実行されました。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "All nodes that did not run will be \"Skipped\"."
+msgstr "実行されなかったノードはすべて「スキップ済み」になります。"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "All run statuses"
+msgstr "すべての実行ステータス"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "All statuses"
+msgstr "すべてのステータス"
+
+#: app/pods/rbac/users/index/route.js
+msgid "An error occured while deleting a user"
+msgstr "ユーザの削除中にエラーが発生しました。"
+
+#: app/pods/classifier/groups/index/route.js
+msgid "An error occurred creating this group"
+msgstr "このグループの作成中にエラーが発生しました。"
+
+#: app/pods/rbac/groups/index/route.js
+msgid "An error occurred deleting this group"
+msgstr "このグループの削除中にエラーが発生しました。"
+
+#: app/components/ajax-error.js app/templates/error.hbs
+msgid "An error occurred loading this page"
+msgstr "このページの読み込み中にエラーが発生しました。"
+
+#: app/pods/components/cm/graph-error/template.hbs
+#: app/pods/components/cm/graph-error/template.hbs
+msgid "An error occurred:"
+msgstr "エラーが発生しました:"
+
+#: app/pods/components/classifier/rules/facts-section/component.js
+msgid "Any"
+msgstr "いずれか1つ"
+
+#: app/pods/jobs/job/controller.js
+msgid "Application - {{application}}"
+msgstr "アプリケーション - {{application}}"
+
+#: app/pods/jobs/job/controller.js
+msgid ""
+"Application targets are not supported in the console. Rerun the job from the"
+" command line."
+msgstr "アプリケーションターゲットはコンソールでサポートされていません。コマンドラインからジョブを再実行してください。"
+
+#: app/pods/components/classifier/inventory/node-search/template.hbs
+#: app/pods/components/cm/search-input/template.hbs
+#: app/pods/components/jobs/job-status-filter/template.hbs
+msgid "Apply"
+msgstr "適用"
+
+#: app/pods/rbac/remove-directory-modal/template.hbs
+msgid ""
+"Are you sure you would like to remove your directory service connection?"
+msgstr "ディレクトリサービスの接続を本当に削除してよろしいですか。"
+
+#: app/pods/components/rbac/user/role-row/template.hbs
+msgid "Assigned"
+msgstr "割り当て済み"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Attribute mappings"
+msgstr "属性マッピング"
+
+#: app/pods/components/cm/si-bread-crumbs/crumb/component.js
+#: app/pods/components/cm/si-bread-crumbs/crumb/component.js
+msgid "Back"
+msgstr "戻る"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Base distinguished name"
+msgstr "ベース識別子"
+
+#: app/pods/rbac/ds-user-no-removal-modal/template.hbs
+msgid ""
+"Because you are a directory service defined user, if you remove the "
+"Directory Service you will be immediately logged out and locked out of the "
+"application."
+msgstr ""
+"ユーザとしてディレクトリサービスに定義されているため、ディレクトリサービスを削除するとすぐにログアウトされ、アプリケーションからロックアウトされます。"
+
+#: app/templates/help.hbs
+msgid ""
+"Before writing your own modules, you may want to see if a similar module has"
+" already been shared on the Puppet Forge."
+msgstr "自身でモジュールを作成する前にPuppet Forgeを確認してみましょう。"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+msgid "Begin with &ldquo;trusted&rdquo; to designate a trusted fact."
+msgstr "信頼済みのfactを指定するには、先頭に&ldquo;trusted&rdquo;を付けます。"
+
+#: app/templates/help.hbs
+msgid ""
+"Both levels allow you to report your support issues through our confidential"
+" customer support portal."
+msgstr "いずれも専用のカスタマーサポートポータルから問題を報告できます。"
+
+#: app/pods/security/vulnerabilities/template.hbs
+msgid "CVSS rating"
+msgstr "CVSS評価"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Can't remove a group that has children"
+msgstr "子グループをもつグループは削除できません。"
+
+#: app/pods/classifier/group-remove-modal/template.hbs
+#: app/pods/rbac/reinstate-user-modal/template.hbs
+#: app/pods/rbac/remove-directory-modal/template.hbs
+#: app/pods/rbac/remove-user-group-modal/template.hbs
+#: app/pods/rbac/remove-user-modal/template.hbs
+#: app/pods/rbac/revoke-user-modal/template.hbs
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "Cannot accept or reject this request"
+msgstr "このリクエストを承認または拒否できません。"
+
+#: app/pods/components/cm/graph-error/template.hbs
+msgid "Catalog failed to compile. Try running Puppet again on this node"
+msgstr "カタログのコンパイルに失敗しました。このノードでPuppetをもう一度実行してください。"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "Catalog submission time"
+msgstr "カタログの送信時間"
+
+#: app/pods/components/classifier/rules/pinned-section/template.hbs
+msgid "Certname"
+msgstr "Certname"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/reports/template.hbs
+msgid "Changed"
+msgstr "変更済み"
+
+#: app/pods/cm/report/report-id/events/template.hbs
+msgid "Changed from"
+msgstr "変更前"
+
+#: app/pods/cm/report/report-id/events/template.hbs
+msgid "Changed to"
+msgstr "変更後"
+
+#: app/pods/classifier/inventory/node/class-list/template.hbs
+#: app/pods/cm/inspector/event/show/template.hbs
+#: app/pods/components/cm/inspector-sidebar/class-node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/class-resource/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+#: app/pods/components/cm/inspector-table/event/template.hbs
+msgid "Class"
+msgstr "クラス"
+
+#: app/pods/cm/inspector/class/template.hbs
+msgid "Class <b>{{class}}</b> was not found."
+msgstr "クラス<b>{{class}}</b>が見つかりませんでした。"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Class containment"
+msgstr "格納クラス"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Class definitions updated: "
+msgstr "クラス定義がアップデートされました: "
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Class name"
+msgstr "クラス名"
+
+#: app/pods/classifier/class-params/class-structured-value-popover/template.hbs
+msgid ""
+"Class parameters can be structured as JSON. If we can't parse your parameter"
+" as JSON we'll send it to the classifier service as a string."
+msgstr "クラスパラメータは、JSON形式で読み込まれます。JSON形式でない場合、パラメータは文字列として扱われます。"
+
+#: app/pods/cm/inspector/class/template.hbs
+msgid "Class was not found."
+msgstr "クラスが見つかりませんでした。"
+
+#: app/pods/cm/inspector/class/show/template.hbs
+msgid "Class:"
+msgstr "クラス:"
+
+#: app/pods/classifier/inventory/node/class-list/template.hbs
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+msgid "Classes"
+msgstr "クラス"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with corrective changes"
+msgstr "修正ありのクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with corrective changes:"
+msgstr "修正ありのクラス:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with corrective no-ops"
+msgstr "no-opの修正ありのクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with corrective no-ops:"
+msgstr "no-opの修正ありのクラス: "
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with events"
+msgstr "イベントありのクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with events:"
+msgstr "イベントありのクラス:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with failures"
+msgstr "失敗のあるクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with failures:"
+msgstr "失敗のあるクラス:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with intentional changes"
+msgstr "変更ありのクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with intentional changes:"
+msgstr "変更ありのクラス:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with intentional no-ops"
+msgstr "変更(no-op)ありのクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with intentional no-ops:"
+msgstr "変更(no-op)ありのクラス: "
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Classes with skips"
+msgstr "スキップありのクラス"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Classes with skips:"
+msgstr "スキップありのクラス:"
+
+#: app/pods/classifier/groups/index/template.hbs
+#: app/pods/classifier/inventory/node/template.hbs
+#: app/templates/application.hbs
+msgid "Classification"
+msgstr "分類"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Classification | Puppet Enterprise"
+msgstr "分類 | Puppet Enterprise"
+
+#: app/pods/components/tasks/target-table/component.js
+msgid "Clear selected"
+msgstr "選択した項目を解除"
+
+#: app/pods/cm/service-alerts-modal/template.hbs
+#: app/pods/rbac/ds-user-no-removal-modal/template.hbs
+#: app/pods/rbac/password-generate-modal/template.hbs
+msgid "Close"
+msgstr "閉じる"
+
+#: app/pods/components/security/alert-message/template.hbs
+msgid "Close message"
+msgstr "メッセージを閉じる"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Commit changes"
+msgstr "変更を保存"
+
+#: app/pods/classifier/group/template.hbs app/pods/rbac/role/template.hbs
+#: app/pods/rbac/user/local/template.hbs
+msgid "Commit {{count}} change"
+msgid_plural "Commit {{count}} change"
+msgstr[0] "{{count}}件の変更を保存"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Common queries"
+msgstr "よくあるクエリ"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "Compile master"
+msgstr "コンパイルmaster"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Concurrency:"
+msgstr "同時処理:"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/reports/template.hbs
+msgid "Config retrieval (sec)"
+msgstr "設定の取得(秒)"
+
+#: app/pods/cm/report/report-id/template.hbs
+msgid "Config retrieval time (sec)"
+msgstr "設定の取得時間(秒)"
+
+#: app/pods/cm/graph/node/template.hbs
+#: app/pods/cm/inspector/event/show/template.hbs
+#: app/pods/cm/report/report-id/template.hbs
+msgid "Config version"
+msgstr "設定バージョン"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Configuration"
+msgstr "設定"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Configuration <span class=\"tab-change-count\">({{count}} change)</span>"
+msgid_plural ""
+"Configuration <span class=\"tab-change-count\">({{count}} change)</span>"
+msgstr[0] "設定 <span class=\"tab-change-count\">({{count}}件の変更)</span>"
+
+#: app/templates/application.hbs
+msgid "Configure"
+msgstr "設定"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Confirm new password"
+msgstr "新しいパスワードを確認"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Confirm your curent password, then assign a new password below."
+msgstr "現在のパスワードを確認してから、新しいパスワードを以下で割り当てます。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"Connect to an external directory to load existing users and groups into your"
+" system."
+msgstr "外部ディレクトリに接続し、既存のユーザとグループをシステムに読み込みます。"
+
+#: app/pods/rbac/directory/index/template.hbs
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Connect using SSL?"
+msgstr "SSLを使用して接続しますか"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Connected"
+msgstr "接続済み"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Connection information"
+msgstr "接続情報"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Connection timeout (seconds)"
+msgstr "接続タイムアウト(秒)"
+
+#: app/templates/license.hbs
+msgid "Contact Puppet Sales."
+msgstr "Puppet営業担当へのお問い合わせ"
+
+#: app/templates/license.hbs
+msgid "Contact Support."
+msgstr "サポート担当へのお問い合わせ"
+
+#: app/templates/license.hbs
+msgid "Contact us to renew."
+msgstr "ライセンスを更新するために営業担当へのお問い合わせ"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "Containment cycles caused a loading error. Please review"
+msgstr "格納サイクルにより読み込みエラーが発生しました。確認してください。"
+
+#: app/templates/navigate-away.hbs
+msgid "Continue editing"
+msgstr "編集を続行"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Convert query to static node list"
+msgstr "クエリを静的ノードリストに変換"
+
+#: app/pods/classifier/class-params/class-structured-value-popover/template.hbs
+#: app/pods/classifier/variable-structured-value-popover/template.hbs
+msgid "Converted to string"
+msgstr "文字列に変換済み"
+
+#: app/pods/components/cm/package/location-filter/template.hbs
+msgid "Copy path"
+msgstr "パスをコピー"
+
+#: app/pods/rbac/password-generate-modal/template.hbs
+msgid ""
+"Copy this link and send it to the user who has requested a password change."
+msgstr "このリンクをコピーし、パスワード変更をリクエストしたユーザに送信します。"
+
+#: app/templates/not-found.hbs
+msgid "Copyright &copy; 2017 Puppet"
+msgstr "Copyright &copy; 2017 Puppet"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/reports/template.hbs
+msgid "Correction applied"
+msgstr "修正"
+
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/cm/status-name/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Corrective change"
+msgstr "修正"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Corrective change event"
+msgstr "修正的変更イベント"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+#: app/pods/jobs/job/template.hbs
+msgid "Corrective changes"
+msgstr "修正"
+
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/cm/status-name/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Corrective no-op"
+msgstr "修正(no-op)"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Corrective no-op event"
+msgstr "修正的no-opイベント"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+msgid "Corrective no-ops"
+msgstr "修正（no-op）"
+
+#: app/pods/cm/error/template.hbs
+msgid "Could not fetch data!"
+msgstr "データを取得できませんでした!"
+
+#: app/pods/rbac/groups/index/route.js
+msgid "Could not load groups"
+msgstr "グループを読み込めませんでした"
+
+#: app/pods/rbac/users/index/route.js
+msgid "Could not load users"
+msgstr "ユーザを読み込めませんでした"
+
+#: app/pods/rbac/role/route.js
+msgid "Could not save role"
+msgstr "ロールを保存できませんでした"
+
+#: app/pods/rbac/roles/index/route.js
+msgid "Could not save roles"
+msgstr "ロールを保存できませんでした"
+
+#: app/pods/rbac/user/route.js
+msgid "Could not save user"
+msgstr "ユーザを保存できませんでした"
+
+#: app/pods/rbac/roles/index/template.hbs
+msgid "Create and edit user roles."
+msgstr "ユーザロールを作成および編集します。"
+
+#: app/pods/rbac/users/index/template.hbs
+msgid "Create and edit users."
+msgstr "ユーザを作成および編集します。"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Create, edit, and remove node groups here."
+msgstr "ここでは、ノードグループを作成、編集、削除できます。"
+
+#: app/pods/components/tasks/node-selection/template.hbs
+msgid "Created a node list from the following query:"
+msgstr "次のクエリからノードリストを作成しました:"
+
+#: app/pods/security/vulnerabilities/composition/controller.js
+msgid "Critical"
+msgstr "重要"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Current password"
+msgstr "現在のパスワード"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "DNS alt name"
+msgstr "DNS alt name"
+
+#: app/pods/classifier/inventory/node/class-list/template.hbs
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+#: app/pods/components/classifier/help-popover/template.hbs
+msgid "Data"
+msgstr "データ"
+
+#: app/pods/components/classifier/help-popover/template.hbs
+msgid "Data is used for automatic class parameter lookup."
+msgstr "データはクラスパラメータの自動検索に使用されます。"
+
+#: app/pods/cm/nodes/status/refreshed/template.hbs
+#: app/pods/cm/package-nodes/template.hbs
+#: app/pods/cm/packages/status/refreshed/template.hbs
+#: app/pods/cm/radiator/template.hbs
+#: app/pods/cm/reports/status/refreshed/template.hbs
+msgid "Data refreshed:"
+msgstr "データが更新されました:"
+
+#: app/pods/security/vulnerabilities/composition/headers/template.hbs
+msgid "Data sources:"
+msgstr "データソース:"
+
+#: app/pods/classifier/inventory/node/controller.js
+msgid "Debug"
+msgstr "Debug"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid "Debug: Prints all messages available for use in debugging."
+msgstr "Debug: デバッグに使用できるすべてのメッセージを出力します。"
+
+#: app/pods/components/classifier/group/variables-tab/template.hbs
+msgid "Declare global variables to be used by the nodes in this group."
+msgstr "このグループ内のノードが使用するグローバル変数を宣言します。"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Declare the classes that you want to apply to nodes in this group."
+msgstr "このグループ内のノードに適用するクラスを宣言します。"
+
+#: app/pods/jobs/job/controller.js
+msgid "Default"
+msgstr "デフォルト"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Dependencies in a cycle"
+msgstr "サイクル内の依存関係"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Dependencies with ancestors"
+msgstr "祖先との依存関係"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Dependencies with descendants"
+msgstr "子孫との依存関係"
+
+#: app/pods/components/cm/graph-error/template.hbs
+msgid "Dependency cycle detected:"
+msgstr "依存関係サイクルが検出されました:"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Dependency relationship details"
+msgstr "依存関係の詳細"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Dependency view"
+msgstr "依存関係ビュー"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/jobs/list/index/template.hbs app/pods/rbac/role/template.hbs
+#: app/pods/rbac/roles/index/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Description"
+msgstr "説明"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Description <span>(optional)</span>"
+msgstr "説明<span>(任意)</span>"
+
+#: app/pods/rbac/group/template.hbs
+msgid "Directory"
+msgstr "ディレクトリ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Directory name"
+msgstr "ディレクトリ名"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/components/classifier/class-entry/template.hbs
+#: app/pods/components/classifier/class-param/template.hbs
+#: app/pods/components/classifier/class-param/template.hbs
+#: app/pods/components/classifier/config-data-entry/template.hbs
+#: app/pods/components/classifier/config-data-entry/template.hbs
+#: app/pods/components/classifier/rules/fact-row/template.hbs
+#: app/pods/components/classifier/rules/pinned-row/template.hbs
+#: app/pods/components/classifier/variable-row/template.hbs
+#: app/pods/components/classifier/variable-row/template.hbs
+#: app/pods/components/rbac/role/group-row/template.hbs
+#: app/pods/components/rbac/role/permission-row/template.hbs
+#: app/pods/components/rbac/role/user-row/template.hbs
+#: app/pods/rbac/directory/index/template.hbs
+#: app/pods/rbac/directory/index/template.hbs
+#: app/pods/rbac/password-reset-modal/template.hbs
+#: app/pods/rbac/role/template.hbs app/pods/rbac/user/local/template.hbs
+#: app/templates/navigate-away.hbs
+msgid "Discard changes"
+msgstr "変更を破棄"
+
+#: app/pods/classifier/group/template.hbs app/pods/rbac/role/template.hbs
+#: app/pods/rbac/user/local/template.hbs
+msgid "Discard metadata changes"
+msgstr "メタデータの変更を破棄"
+
+#: app/pods/components/classifier/class-entry/template.hbs
+msgid "Discard this class"
+msgstr "このクラスを破棄"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Distinguished name of the user to perform directory lookups."
+msgstr "ディレクトリルックアップを実行するユーザの識別子です。"
+
+#: app/templates/help.hbs
+msgid "Do you have a specific question?"
+msgstr "何か質問はありますか?"
+
+#: app/templates/help.hbs
+msgid "Doing More"
+msgstr "レベルアップしたい方へ"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Duration"
+msgstr "継続期間"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"During the last Puppet run in no-op mode, one or more resources was "
+"enforced, as per your metaparameter settings."
+msgstr "前回のno-opモードでのPuppet実行時に、メタパラメータの設定に従って、1つまたは複数のリソースが適用されました。"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"During the last Puppet run, Puppet found inconsistencies between the last "
+"applied catalog and this node's configuration, and corrected those "
+"inconsistencies to match the last applied catalog."
+msgstr ""
+"前回のPuppet実行中に、最後に適用されたカタログとこのノードの設定の間に不一致が見つかったため、Puppetは最後に適用されたカタログに合わせて不一致を修正しました。"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"During the last Puppet run, Puppet found inconsistencies between the last "
+"applied catalog and this node's configuration, and would have corrected "
+"those inconsistencies to match the last applied catalog."
+msgstr ""
+"前回のPuppet実行中に、最後に適用されたカタログとこのノードの設定の間に不一致が見つかったため、Puppetは最後に適用されたカタログに合わせて不一致を修正するはずでした。"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"During the last Puppet run, catalog changes would have been applied to the "
+"node."
+msgstr "前回のPuppet実行中に、カタログ変更がノードに適用されるはずでした。"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"During the last Puppet run, changes to the catalog were successfully applied"
+" to the node."
+msgstr "前回のPuppet実行中に、カタログ変更がノードに正しく適用されました。"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"During the last Puppet run, the intended catalog for this node failed, so "
+"Puppet used a cached catalog, as per your configuration settings."
+msgstr "前回のPuppet実行時に、適用しようとしたカタログが失敗したためPuppetはキャッシュされたカタログを使用しました。"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "ERROR: could not retrieve master URL"
+msgstr "エラー: master URLを取得できませんでした"
+
+#: app/pods/components/classifier/class-param/template.hbs
+#: app/pods/components/classifier/config-data-entry/template.hbs
+#: app/pods/components/classifier/variable-row/template.hbs
+msgid "Edit"
+msgstr "編集"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Edit directory"
+msgstr "ディレクトリを編集"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Edit node group metadata"
+msgstr "ノードグループメタデータを編集"
+
+#: app/pods/rbac/role/template.hbs
+msgid "Edit role metadata"
+msgstr "ロールメタデータを編集"
+
+#: app/pods/rbac/user/local/template.hbs
+msgid "Edit user metadata"
+msgstr "ユーザメタデータを編集"
+
+#: app/pods/rbac/user/local/template.hbs app/pods/rbac/user/local/template.hbs
+#: app/pods/rbac/user/remote/template.hbs
+msgid "Email address"
+msgstr "メールアドレス"
+
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+msgid "Empty fact name"
+msgstr "空のfact名"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "Enforced resources"
+msgstr "適用されたリソース"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Enforced resources found"
+msgstr "適用されたリソースが見つかりました"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "Enforcement mode"
+msgstr "適用モード"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Enforcement mode: all run statuses"
+msgstr "適用モード:すべての実行ステータス"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Enforcement mode: unchanged"
+msgstr "適用モード:変更なし"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Enforcement mode: with corrective changes"
+msgstr "適用モード:修正あり"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Enforcement mode: with failures"
+msgstr "適用モード:失敗あり"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Enforcement mode: with intentional changes"
+msgstr "適用モード:変更あり"
+
+#: app/pods/components/tasks/add-param-row/component.js
+msgid "Enter a parameter name"
+msgstr "パラメータ名を入力"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Enter a query using the Puppet query language."
+msgstr "Puppetクエリ言語を使用してクエリを入力してください。"
+
+#: app/pods/tasks/create/template.hbs
+msgid "Enter parameters and values for this task."
+msgstr "このタスクのパラメータと値を入力"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/groups/index/template.hbs
+#: app/pods/classifier/inventory/node/group-list/template.hbs
+#: app/pods/cm/package-nodes/template.hbs app/pods/jobs/create/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Environment"
+msgstr "Environment"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Environment applied:"
+msgstr "適用されたenvironment:"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Environment group"
+msgstr "Environmentグループ"
+
+#: app/pods/components/classifier/env-trumps-popover/template.hbs
+msgid "Environment groups"
+msgstr "環境グループ"
+
+#: app/pods/components/classifier/env-trumps-popover/template.hbs
+msgid "Environment groups should not assign classification."
+msgstr "Environmentグループで分類を割り当てないでください。"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Environment selection"
+msgstr "Environmentの選択"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Environment:"
+msgstr "Environment:"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Error"
+msgstr "エラー"
+
+#: app/pods/classifier/route.js
+msgid "Error fetching environments"
+msgstr "Environmentの取得エラー"
+
+#: app/pods/cm/nodes/route.js
+msgid "Error loading node list for the job"
+msgstr "ジョブのノードリストの読み込みエラー"
+
+#: app/pods/cm/graph/node/route.js
+msgid "Error loading {{node}}"
+msgstr "{{node}}の読み込みエラー"
+
+#: app/pods/classifier/certificates/route.js
+#: app/pods/classifier/certificates/route.js
+#: app/pods/classifier/certificates/route.js
+#: app/pods/classifier/certificates/route.js
+msgid "Error processing certificates"
+msgstr "証明書の処理エラー"
+
+#: app/pods/classifier/group/route.js
+msgid "Error removing group"
+msgstr "グループの削除エラー"
+
+#: app/pods/jobs/target-list.js
+msgid "Error resolving pql query"
+msgstr "PQLクエリの解決エラー"
+
+#: app/pods/classifier/inventory/node/agent/run/service.js
+#: app/pods/classifier/inventory/node/agent/run/service.js
+msgid "Error retrieving Puppet run report"
+msgstr "Puppet実行レポートの取得エラー"
+
+#: app/pods/classifier/inventory/node/agent/run/service.js
+#: app/pods/classifier/inventory/node/agent/run/service.js
+msgid "Error retrieving Puppet run status"
+msgstr "Puppet実行ステータスの取得エラー"
+
+#: app/routes/application.js
+msgid "Error retrieving certificates"
+msgstr "証明書の取得エラー"
+
+#: app/pods/classifier/group/controller.js
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Error retrieving class definitions"
+msgstr "クラス定義の取得エラー"
+
+#: app/pods/jobs/create/route.js
+msgid "Error retrieving environments"
+msgstr "Environmentの取得エラー"
+
+#: app/pods/classifier/groups/index/controller.js
+#: app/pods/classifier/groups/index/route.js app/pods/classifier/route.js
+msgid "Error retrieving group hierarchy"
+msgstr "グループ階層の取得エラー"
+
+#: app/pods/classifier/groups/index/route.js
+msgid "Error retrieving groups"
+msgstr "グループの取得エラー"
+
+#: app/pods/jobs/job/route.js
+msgid "Error retrieving job {{jobId}}"
+msgstr "ジョブの取得エラー {{jobId}}"
+
+#: app/pods/jobs/list/index/route.js
+msgid "Error retrieving jobs"
+msgstr "ジョブの取得エラー"
+
+#: app/pods/classifier/group/route.js app/pods/classifier/group/route.js
+#: app/pods/classifier/inventory/nodes/route.js
+msgid "Error retrieving node count"
+msgstr "ノード数の取得エラー"
+
+#: app/pods/classifier/inventory/nodes/route.js
+msgid "Error retrieving node inventory"
+msgstr "ノードインベントリの取得エラー"
+
+#: app/pods/classifier/group/route.js
+msgid "Error retrieving node list"
+msgstr "ノードリストの取得エラー"
+
+#: app/pods/classifier/group/route.js
+msgid "Error retrieving node names"
+msgstr "ノード名の取得エラー"
+
+#: app/pods/classifier/inventory/node/package-list/route.js
+msgid "Error retrieving node packages"
+msgstr "ノードパッケージの取得エラー"
+
+#: app/pods/classifier/inventory/node/report-list/route.js
+msgid "Error retrieving node reports"
+msgstr "ノードレポートの取得エラー"
+
+#: app/pods/jobs/node-report/route.js
+msgid "Error retrieving report"
+msgstr "レポートの取得エラー"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Error running PQL query:"
+msgstr "PQLクエリの実行エラー:"
+
+#: app/pods/classifier/group/route.js
+msgid "Error saving group"
+msgstr "グループの保存エラー"
+
+#: app/pods/jobs/create/route.js
+msgid "Error starting job"
+msgstr "ジョブの開始エラー"
+
+#: app/pods/tasks/create/route.js
+msgid "Error starting task"
+msgstr "タスクの開始エラー"
+
+#: app/pods/jobs/job/route.js
+msgid "Error stopping job"
+msgstr "ジョブの停止エラー"
+
+#: app/pods/classifier/group/route.js
+msgid "Error while fetching nodes for job"
+msgstr "ジョブのノード取得中にエラーが発生しました"
+
+#: app/pods/cm/service-alerts-modal/template.hbs
+msgid "Errors"
+msgstr "エラー"
+
+#: app/pods/classifier/inventory/node/controller.js
+msgid "Evaltrace"
+msgstr "Evaltrace"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid ""
+"Evaltrace: Shows a breakdown of time spent for each step in the Puppet run."
+msgstr "Evaltrace: Puppet実行の各ステップにかかった時間の内訳を表示します。 "
+
+#: app/pods/components/classifier/help-popover/template.hbs
+msgid ""
+"Even if a class is declared directly in the Classes section above, setting "
+"data for its parameters instead of declaring the parameters can help promote"
+" code regularity and predictability."
+msgstr ""
+"上記のクラスセクションでクラスが宣言されていない場合でも、パラメータを宣言する代わりにそのパラメータのデータを設定することで、コードの規則性と予測可能性を高めることができます。"
+
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/components/cm/inspector-table/event/template.hbs
+msgid "Event"
+msgstr "イベント"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "Event timestamp"
+msgstr "エベント日時"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Event timestamp: "
+msgstr "エベント日時:"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Event type: "
+msgstr "イベントタイプ:"
+
+#: app/pods/cm/inspector/event/template.hbs
+msgid "Event was not found."
+msgstr "イベントが見つかりませんでした。"
+
+#: app/pods/cm/inspector/event/template.hbs
+msgid "Event with id <b>{{showId}}</b> was not found."
+msgstr "ID <b>{{showId}}</b>のイベントが見つかりませんでした。"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+#: app/pods/components/cm/inspector-sidebar/event/status-label/template.hbs
+msgid "Event:"
+msgstr "イベント:"
+
+#: app/pods/cm/inspector/template.hbs
+#: app/pods/cm/report/report-id/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/node/node-record/template.hbs
+#: app/templates/application.hbs
+msgid "Events"
+msgstr "イベント"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Events are not generated for skipped resources."
+msgstr "スキップされたリソースにはイベントは生成されません。"
+
+#: app/pods/cm/inspector/controller.js
+msgid "Events from the last run"
+msgstr "前回の実行時のイベント"
+
+#: app/pods/cm/inspector/controller.js
+msgid "Events in the last 24 hours"
+msgstr "最近24時間に発生したイベント"
+
+#: app/pods/cm/inspector/controller.js
+msgid "Events in the last 30 minutes"
+msgstr "最近30分間に発生したイベント"
+
+#: app/pods/cm/inspector/controller.js
+msgid "Events in the last 5 minutes"
+msgstr "最近5分間に発生したイベント"
+
+#: app/pods/cm/inspector/controller.js
+msgid "Events in the last 60 minutes"
+msgstr "最近60分間に発生したイベント"
+
+#: app/pods/cm/inspector/template.hbs
+msgid "Events | Puppet Enterprise"
+msgstr "イベント | Puppet Enterprise"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid ""
+"Every node you wish to manage must have the Puppet Enterprise agent "
+"installed."
+msgstr "Puppet Enterpriseで管理したいすべてのノードにagentをインストールする必要があります。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>389</i>"
+msgstr "例: <i>389</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>Corporate Active Directory</i>"
+msgstr "例: <i>企業のActive Directory</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"Example: <i>cn</i>. Example query result: <i>cn=Domain "
+"admins,ou=Groups,dc=rgbank,dc=com</i>"
+msgstr ""
+"例: <i>cn</i>。クエリ結果例: <i>cn=Domain admins,ou=Groups,dc=rgbank,dc=com</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>cn</i>. Example query result: <i>ries</i>"
+msgstr "例: <i>cn</i>。クエリ結果例: <i>ries</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>cn=Groups</i>"
+msgstr "例: <i>cn=Groups</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>cn=Users</i>"
+msgstr "例: <i>cn=Users</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>cn=admin,ou=users,dc=rgbank,dc=com</i>"
+msgstr "例: <i>cn=admin,ou=users,dc=rgbank,dc=com</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>dc=rgbank,dc=com</i>"
+msgstr "例: <i>dc=rgbank,dc=com</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>devi.delivery.rgbank.net</i>"
+msgstr "例: <i>devi.delivery.rgbank.net</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"Example: <i>displayName</i>. Example query result: <i>Ries Volkerink</i>"
+msgstr "例: <i>displayName</i>。クエリ結果例: <i>Ries Volkerink</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>group</i>"
+msgstr "例: <i>group</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>http://intranet/helpdesk</i>"
+msgstr "例: <i>http://intranet/helpdesk</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>mail</i>. Example query result: <i>ries@rg-bank.com</i>"
+msgstr "（例: <i>mail</i>）クエリ結果例: <i>ries@rg-bank.com</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>member</i>"
+msgstr "例: <i>member</i>"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Example: <i>name</i>. Example query result: <i>Domain admins</i>"
+msgstr "例: <i>name</i>。クエリ結果例: <i>Domain admins</i>"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Exit dependency view"
+msgstr "依存関係ビューを閉じる"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "Exit dependency view to unlock filter"
+msgstr "依存関係ビューを閉じて、フィルタのロックを解除する"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid ""
+"Explore relationships between classes and resources in this node's last "
+"applied catalog."
+msgstr "このノードに最後に適用されたカタログのクラスとリソース間の関係を調べましょう"
+
+#: app/pods/components/cm/search-input/template.hbs
+msgid "Export all"
+msgstr "すべてをエクスポート"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/components/cm/csv-export/template.hbs
+#: app/pods/components/jobs/node-count/template.hbs
+#: app/pods/components/security/alert-message/component.js
+#: app/templates/components/activity-entries.hbs
+msgid "Export data"
+msgstr "データをエクスポート"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Exported:"
+msgstr "エクスポート済み:"
+
+#: app/pods/rbac/directory/index/template.hbs
+#: app/templates/components/access-control/access-control-nav.hbs
+msgid "External directory"
+msgstr "外部ディレクトリ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "External directory | Access control | Puppet Enterprise"
+msgstr "外部ディレクトリ | アクセス管理 | Puppet Enterprise"
+
+#: app/pods/classifier/inventory/node/fact-list/template.hbs
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Fact"
+msgstr "Fact"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Facts"
+msgstr "Facts"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/cm/reports/template.hbs
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/jobs/node-row/component.js
+#: app/pods/jobs/job/filter-state.js
+msgid "Failed"
+msgstr "失敗"
+
+#: app/pods/components/jobs/node-row/component.js
+msgid "Failed - error..."
+msgstr "失敗 - エラー..."
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/reports/template.hbs
+msgid "Failed restarts"
+msgstr "失敗した再起動"
+
+#: app/pods/jobs/target-list.js app/pods/jobs/target-list.js
+msgid "Failed to find nodes"
+msgstr "ノードが見つかりませんでした。"
+
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Failure"
+msgstr "失敗"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Failure event"
+msgstr "失敗したイベント"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+#: app/pods/jobs/job/template.hbs
+msgid "Failures"
+msgstr "失敗"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+msgid "File"
+msgstr "ファイル"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "File and line number"
+msgstr "ファイルと行番号"
+
+#: app/pods/components/cm/report/log-row/template.hbs
+msgid "File:"
+msgstr "ファイル:"
+
+#: app/pods/security/vulnerabilities/composition/filter/template.hbs
+msgid "Filter by CVE ID:"
+msgstr "CVE IDでフィルタ:"
+
+#: app/pods/cm/report/report-id/events/template.hbs
+msgid "Filter by event status"
+msgstr "イベントステータスでフィルタ"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Filter by fact value"
+msgstr "fact値でフィルタ"
+
+#: app/pods/components/classifier/inventory/node-search/template.hbs
+msgid "Filter by node name:"
+msgstr "ノード名でフィルタ:"
+
+#: app/pods/cm/packages/loading/filter/template.hbs
+#: app/pods/cm/packages/status/filter/template.hbs
+msgid "Filter by package name:"
+msgstr "パッケージ名でフィルタ:"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Filter by run status"
+msgstr "実行ステータスでフィルタ"
+
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/package-nodes/template.hbs
+#: app/pods/cm/packages/status/content/template.hbs
+#: app/pods/security/vulnerabilities/composition/content/template.hbs
+msgid "Filter returns no data to display"
+msgstr "表示するデータがフィルタから返ってきません"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "Filter type"
+msgstr "フィルタタイプ"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "Filter:"
+msgstr "フィルタ:"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Fingerprint"
+msgstr "フィンガープリント"
+
+#: app/pods/components/jobs/job-row/component.js
+msgid "Finished with failures"
+msgstr "失敗ありで終了"
+
+#: app/pods/components/cm/cm-paginator/template.hbs
+msgid "First"
+msgstr "最初"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid ""
+"For details about this Puppet run, check the Reports tab for this node."
+msgstr "このPuppet実行の詳細については、このノードのReportsタブを確認してください。"
+
+#: app/pods/rbac/users/index/template.hbs
+msgid "Full name"
+msgstr "フルネーム"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Fully qualified domain name (FQDN) of the directory server."
+msgstr "ディレクトリサーバーのFQDNです。"
+
+#: app/pods/rbac/user/local/template.hbs
+msgid "Generate password reset"
+msgstr "パスワードリセットを生成"
+
+#: app/pods/cm/inspector/template.hbs
+msgid "Get insight into the failures and changes across your Puppet runs."
+msgstr "Puppet実行の失敗と変更の詳細を表示します。"
+
+#: app/templates/help.hbs
+msgid "Getting Started"
+msgstr "はじめに"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Give this node group a description."
+msgstr "このノードグループに説明を追加します。"
+
+#: app/pods/components/cm/cm-paginator/template.hbs
+msgid "Go"
+msgstr "移動"
+
+#: app/templates/help.hbs
+msgid "Go directly to the support portal"
+msgstr "サポートポータルに直接移動"
+
+#: app/templates/help.hbs
+msgid "Go to ask.puppet.com"
+msgstr "ask.puppet.comに移動"
+
+#: app/templates/help.hbs
+msgid "Go to support documentation"
+msgstr "サポートマニュアルに移動"
+
+#: app/templates/help.hbs
+msgid "Go to the Docs"
+msgstr "マニュアルに移動"
+
+#: app/templates/help.hbs
+msgid "Go to the Forge"
+msgstr "Forgeに移動"
+
+#: app/pods/classifier/inventory/node/group-list/template.hbs
+msgid "Group"
+msgstr "グループ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Group lookup attribute"
+msgstr "グループのルックアップ属性"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Group membership field"
+msgstr "グループのメンバーシップフィールド"
+
+#: app/pods/classifier/groups/index/template.hbs
+#: app/pods/components/rbac/role/groups-tab/template.hbs
+#: app/pods/components/rbac/user-groups/template.hbs
+msgid "Group name"
+msgstr "グループ名"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Group name attribute"
+msgstr "グループ名の属性"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Group object class"
+msgstr "グループのオブジェクトクラス"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Group relative distinguished name"
+msgstr "グループの相対識別子"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Group relative distinguished name (optional)"
+msgstr "グループの相対識別子(任意)"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Groups"
+msgstr "グループ"
+
+#: app/pods/rbac/groups/index/template.hbs
+msgid ""
+"Groups that you define in an external directory can be added here. Once they"
+" are imported, you can grant access to users in those groups."
+msgstr ""
+"ここでは、外部ディレクトリで定義したグループを追加できます。グループのインポートが完了後、そのグループ内のユーザにアクセス権を付与できます。"
+
+#: app/templates/application.hbs app/templates/help.hbs
+msgid "Help"
+msgstr "ヘルプ"
+
+#: app/templates/help.hbs
+msgid "Help | Puppet Enterprise"
+msgstr "ヘルプ | Puppet Enterprise"
+
+#: app/pods/components/cm/graph-details-button/component.js
+msgid "Hide details"
+msgstr "詳細を非表示"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Hide fact value filter"
+msgstr "Fact値フィルタを非表示"
+
+#: app/pods/security/vulnerabilities/composition/controller.js
+msgid "High"
+msgstr "高"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Hostname"
+msgstr "ホスト名"
+
+#: app/templates/help.hbs
+msgid ""
+"If you are just getting started with PE, we recommend the <a "
+"href=\"https://docs.puppet.com/pe/{{version}}/quick_start.html\">Quick Start"
+" Guides</a>."
+msgstr ""
+"Puppet Enterpriseを初めて利用する方には、<a "
+"href=\"https://docs.puppet.com/pe/{{version}}/quick_start.html\">クイックスタートガイド</a>がお勧めです。"
+
+#: app/pods/components/classifier/help-popover/template.hbs
+msgid ""
+"In order to use class parameters as data, the applicable class must be "
+"present in a node's catalog."
+msgstr "クラスパラメータをデータとして使用するには、適用されるクラスがノードのカタログに存在している必要があります。"
+
+#: app/pods/components/jobs/job-row/component.js
+#: app/pods/components/jobs/node-row/component.js
+#: app/pods/jobs/job/filter-state.js app/pods/jobs/job/template.hbs
+msgid "In progress"
+msgstr "進行中"
+
+#: app/pods/cm/service-alerts-modal/template.hbs
+msgid "Informational"
+msgstr "情報"
+
+#: app/pods/components/rbac/role/inherited-user-table-row/template.hbs
+#: app/pods/components/rbac/user/role-row/template.hbs
+msgid "Inherited"
+msgstr "継承"
+
+#: app/templates/application.hbs
+msgid "Inspect"
+msgstr "検査"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Instance type"
+msgstr "インスタンスタイプ"
+
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "Intended catalog failed"
+msgstr "適用しようとしたカタログが失敗しました"
+
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/cm/status-name/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Intentional change"
+msgstr "変更"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Intentional change event"
+msgstr "意図的変更イベント"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+#: app/pods/jobs/job/template.hbs
+msgid "Intentional changes"
+msgstr "変更"
+
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/cm/status-name/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Intentional no-op"
+msgstr "変更(no-op)"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Intentional no-op event"
+msgstr "意図的no-opイベント"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+msgid "Intentional no-ops"
+msgstr "変更（no-op）"
+
+#: app/pods/classifier/util/validate-fact-path.js
+#: app/pods/classifier/util/validate-fact-path.js
+msgid "Invalid fact path"
+msgstr "無効なfactパス"
+
+#: app/pods/classifier/util/validate-fact-path.js
+msgid "Invalid fact path: Bracket notation is only for numeric values"
+msgstr "無効なfactパス: 括弧記法は数値のみに使用できます"
+
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+msgid "Invalid regular expression"
+msgstr "無効な正規表現"
+
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+msgid "Invalid string operator"
+msgstr "無効な文字列演算子"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Inventory"
+msgstr "インベントリ情報"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Inventory:"
+msgstr "インベントリ:"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job Details"
+msgstr "ジョブの詳細"
+
+#: app/pods/jobs/list/index/template.hbs
+msgid "Job ID"
+msgstr "ジョブID"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job complete"
+msgstr "完了したジョブ"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Job description"
+msgstr "ジョブ説明"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job finished with failures."
+msgstr "ジョブは完了しましたが、失敗があります。"
+
+#: app/pods/components/jobs/job-status-filter/template.hbs
+#: app/pods/jobs/job/template.hbs
+msgid "Job node status"
+msgstr "ジョブノードステータス"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job progress"
+msgstr "進行中のジョブ"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job stopped"
+msgstr "停止したジョブ"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job stopped."
+msgstr "ジョブが停止しました。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job succeeded."
+msgstr "ジョブが成功しました。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job {{- jobId}} | Puppet Enterprise"
+msgstr "ジョブ{{- jobId}} | Puppet Enterprise"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Job {{jobId}}"
+msgstr "ジョブ {{jobId}}"
+
+#: app/pods/jobs/list/index/template.hbs app/templates/application.hbs
+msgid "Jobs"
+msgstr "ジョブ"
+
+#: app/pods/jobs/list/index/template.hbs
+msgid "Jobs | Puppet Enterprise"
+msgstr "ジョブ | Puppet Enterprise"
+
+#: app/pods/classifier/inventory/node/variable-list/template.hbs
+#: app/pods/components/classifier/config-data-list/template.hbs
+#: app/pods/components/classifier/group/variables-tab/template.hbs
+msgid "Key"
+msgstr "キー"
+
+#: app/pods/components/cm/cm-paginator/template.hbs
+msgid "Last"
+msgstr "最終"
+
+#: app/pods/rbac/users/index/template.hbs
+msgid "Last login"
+msgstr "最終ログイン"
+
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/nodes/template.hbs
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Last report"
+msgstr "最終レポート"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/packages/status/content/template.hbs
+msgid "Learn how to enable package data collection."
+msgstr "パッケージ情報の収集を有効にする方法を学ぶ"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Learn more about PQL queries."
+msgstr "PQLクエリについて詳しく学ぶ"
+
+#: app/pods/components/classifier/env-trumps-popover/template.hbs
+msgid "Learn more about environment groups"
+msgstr "Environmentグループについて詳しく学ぶ"
+
+#: app/pods/classifier/class-params/class-structured-value-popover/template.hbs
+msgid "Learn more about structured parameters"
+msgstr "ストラクチャパラメータについて詳しく学ぶ"
+
+#: app/pods/classifier/variable-structured-value-popover/template.hbs
+msgid "Learn more about structured variables"
+msgstr "構造化変数について詳しく学ぶ"
+
+#: app/pods/jobs/navigate-away-modal/template.hbs
+msgid "Leave"
+msgstr "ページを離れる"
+
+#: app/pods/cm/graph/template.hbs
+msgid "Leave full screen"
+msgstr "全画面表示を閉じる"
+
+#: app/pods/cm/report/report-id/logs/template.hbs
+msgid "Level"
+msgstr "レベル"
+
+#: app/templates/application.hbs app/templates/license.hbs
+msgid "License"
+msgstr "ライセンス"
+
+#: app/templates/license.hbs
+msgid "License | Puppet Enterprise"
+msgstr "ライセンス | Puppet Enterprise"
+
+#: app/pods/components/cm/report/log-row/template.hbs
+msgid "Line:"
+msgstr "行:"
+
+#: app/pods/components/classifier/group/nodes-tab/template.hbs
+msgid "Load all nodes"
+msgstr "すべてのノードを読み込む"
+
+#: app/templates/components/activity-entries.hbs
+msgid "Load more"
+msgstr "さらに読み込む"
+
+#: app/pods/components/cm/package/location-filter/template.hbs
+#: app/pods/components/cm/package/version-filter/template.hbs
+msgid "Loading ..."
+msgstr "読み込み中..."
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Loading classes..."
+msgstr "クラスを読み込み中..."
+
+#: app/templates/components/activity-entries.hbs
+msgid "Loading more changes"
+msgstr "その他の変更を読み込み中"
+
+#: app/pods/cm/package-nodes/loading/counter/template.hbs
+msgid "Loading package nodes..."
+msgstr "パッケージノードを読み込み中..."
+
+#: app/pods/cm/packages/loading/counter/template.hbs
+msgid "Loading packages..."
+msgstr "パッケージを読み込み中..."
+
+#: app/pods/cm/reports/loading/counter/template.hbs
+msgid "Loading reports..."
+msgstr "レポートを読み込み中..."
+
+#: app/pods/cm/graph/loading/template.hbs
+#: app/pods/security/vulnerabilities/loading/content/template.hbs
+msgid "Loading..."
+msgstr "読み込み中..."
+
+#: app/pods/cm/reports/template.hbs
+msgid "Locate logs and event reports for Puppet runs."
+msgstr "Puppet実行のログとイベントレポート"
+
+#: app/pods/cm/package-nodes/template.hbs
+msgid "Location"
+msgstr "場所"
+
+#: app/pods/cm/report/report-id/template.hbs
+msgid "Log"
+msgstr "ログ"
+
+#: app/templates/application.hbs
+msgid "Log out"
+msgstr "ログアウト"
+
+#: app/pods/components/rbac/group-users/template.hbs
+#: app/pods/components/rbac/role/groups-tab/template.hbs
+#: app/pods/components/rbac/role/users-tab/template.hbs
+#: app/pods/components/rbac/user-groups/template.hbs
+#: app/pods/rbac/group/template.hbs app/pods/rbac/groups/index/template.hbs
+#: app/pods/rbac/user/local/template.hbs app/pods/rbac/user/local/template.hbs
+#: app/pods/rbac/user/remote/template.hbs
+#: app/pods/rbac/users/index/template.hbs
+msgid "Login"
+msgstr "ログイン"
+
+#: app/pods/rbac/directory/index/template.hbs
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Login help (optional)"
+msgstr "ログインヘルプ(任意)"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Lookup password"
+msgstr "ルックアップパスワード"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Lookup password (optional)"
+msgstr "ルックアップパスワード(任意)"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Lookup user"
+msgstr "ルックアップユーザ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Lookup user (optional)"
+msgstr "ルックアップユーザ(任意)"
+
+#: app/pods/security/vulnerabilities/composition/controller.js
+msgid "Low"
+msgstr "低"
+
+#: app/pods/components/rbac/group-roles/template.hbs
+#: app/pods/components/rbac/user-roles/template.hbs
+msgid "Manage roles."
+msgstr "ロールを管理します。"
+
+#: app/pods/security/vulnerable-nodes/controller.js
+msgid "Managed"
+msgstr "管理下"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Matching nodes"
+msgstr "一致するノード"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Matching reports"
+msgstr "一致するレポート"
+
+#: app/pods/jobs/job/controller.js
+msgid "Maximum"
+msgstr "最大数"
+
+#: app/pods/security/vulnerabilities/composition/controller.js
+msgid "Medium"
+msgstr "中"
+
+#: app/pods/rbac/role/template.hbs
+msgid "Member groups"
+msgstr "メンバーグループ"
+
+#: app/pods/rbac/role/template.hbs
+msgid "Member users"
+msgstr "メンバーユーザ"
+
+#: app/pods/rbac/roles/index/template.hbs
+msgid "Members"
+msgstr "メンバー"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+#: app/pods/cm/report/report-id/logs/template.hbs
+#: app/pods/components/cm/basic-monitoring/table/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Message"
+msgstr "メッセージ"
+
+#: app/pods/components/cm/graph-error/template.hbs
+msgid "Multiple dependency cycles detected:"
+msgstr "複数の依存関係サイクルが検出されました:"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Must contain at least {{count}} characters"
+msgstr "{{count}}以上の文字が必要です"
+
+#: app/templates/application.hbs
+msgid "My account"
+msgstr "マイアカウント"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "N/A"
+msgstr "該当なし"
+
+#: app/pods/components/rbac/group-roles/template.hbs
+#: app/pods/components/rbac/user-roles/template.hbs
+#: app/pods/rbac/groups/index/template.hbs
+#: app/pods/rbac/roles/index/template.hbs
+msgid "Name"
+msgstr "名前"
+
+#: app/templates/help.hbs
+msgid "Need Help?"
+msgstr "サポートが必要ですか?"
+
+#: app/pods/jobs/create/template.hbs
+msgid "New Job | Puppet Enterprise"
+msgstr "新しいジョブ | Puppet Enterprise"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "New Value"
+msgstr "変更後"
+
+#: app/pods/jobs/list/index/template.hbs
+msgid "New job"
+msgstr "新しいジョブ"
+
+#: app/pods/cm/inspector/class/show/template.hbs
+#: app/pods/cm/nodes/template.hbs
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "New job with these nodes"
+msgstr "これらのノードを持つ新しいジョブ"
+
+#: app/pods/classifier/group/template.hbs
+msgid "New job with this group"
+msgstr "このグループを持つ新しいジョブ"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "New password"
+msgstr "新しいパスワード"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "New value: "
+msgstr "変更後:"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/nodes/status/paginator/template.hbs
+#: app/pods/cm/packages/status/pagination/template.hbs
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/cm/report/report-id/logs/template.hbs
+#: app/pods/components/cm/cm-paginator/template.hbs
+#: app/pods/components/tasks/target-table/template.hbs
+#: app/pods/jobs/job/template.hbs app/pods/jobs/list/index/template.hbs
+#: app/pods/security/vulnerabilities/composition/pagination/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Next"
+msgstr "次へ"
+
+#: app/pods/components/jobs/create/node-detail-row/component.js
+msgid "No"
+msgstr "いいえ"
+
+#: app/pods/classifier/group/template.hbs app/pods/rbac/group/controller.js
+msgid "No activity available for this group."
+msgstr "このグループにはアクティビティがありません。"
+
+#: app/pods/classifier/inventory/node/activity/controller.js
+msgid "No activity available for this node."
+msgstr "このノードにはアクティビティがありません。"
+
+#: app/pods/rbac/role/controller.js
+msgid "No activity available for this role."
+msgstr "このロールにはアクティビティがありません。"
+
+#: app/pods/rbac/user/controller.js
+msgid "No activity available for this user."
+msgstr "このユーザにはアクティビティがありません。"
+
+#: app/pods/components/cm/graph-error/template.hbs
+msgid "No catalog received. Try refreshing your browser."
+msgstr "カタログが受信されませんでした。ブラウザを更新してください。"
+
+#: app/pods/components/cm/graph-error/template.hbs
+#: app/pods/components/cm/graph-error/template.hbs
+msgid "No data available."
+msgstr "取得できるデータがありません。"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/nodes/status/content/template.hbs
+#: app/pods/cm/packages/status/content/template.hbs
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/cm/reports/status/content/template.hbs
+#: app/pods/components/cm/inspector-sidebar/empty/template.hbs
+#: app/pods/components/cm/inspector-table/empty/template.hbs
+msgid "No data to display"
+msgstr "表示するデータがありません"
+
+#: app/pods/rbac/groups/index/template.hbs
+msgid "No groups currently exist."
+msgstr "現在存在するグループはありません。"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "No items"
+msgstr "項目がありません"
+
+#: app/pods/jobs/list/index/template.hbs
+msgid "No jobs found."
+msgstr "ジョブが見つかりませんでした。"
+
+#: app/pods/components/classifier/group/nodes-tab/template.hbs
+msgid "No nodes currently match the rules for this node group."
+msgstr "現在、このノードグループのルールに一致するノードがありません。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "No nodes found."
+msgstr "ノードが見つかりませんでした。"
+
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/nodes/status/content/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "No nodes match your current filter."
+msgstr "現在のフィルタに一致するノードがありません。"
+
+#: app/pods/cm/package-nodes/template.hbs
+#: app/pods/cm/packages/status/content/template.hbs
+msgid "No packages match your current filter."
+msgstr "現在のフィルタに一致するパッケージがありません。"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "No report available. Try running Puppet again on this node."
+msgstr "取得できるレポートがありません。このノードでPuppetをもう一度実行してください。"
+
+#: app/pods/components/cm/status-legend/overview-not-reporting/template.hbs
+msgid "No reports"
+msgstr "レポートがありません"
+
+#: app/pods/cm/reports/status/content/template.hbs
+msgid "No reports match your current filter."
+msgstr "現在のフィルタに一致するレポートがありません。"
+
+#: app/pods/cm/report/report-id/events/template.hbs
+msgid "No resource events match the selected status."
+msgstr "選択したステータスに一致するリソースイベントがありません。"
+
+#: app/pods/components/cm/graph-details-info/list-details/template.hbs
+msgid "No resources with this {{listType}}"
+msgstr "この{{listType}}を持つリソースがありません"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "No response."
+msgstr "応答がありません。"
+
+#: app/pods/cm/package-nodes/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "No results"
+msgstr "結果がありません"
+
+#: app/pods/components/cm/search-input/template.hbs
+msgid "No results found"
+msgstr "検索結果が見つかりませんでした。"
+
+#: app/pods/components/classifier/inventory/node-search/template.hbs
+#: app/pods/components/jobs/node-target-list/template.hbs
+msgid "No results found for <b>{{nodeSearch}}</b>"
+msgstr "<b>{{nodeSearch}}</b>の結果が見つかりません"
+
+#: app/pods/security/vulnerabilities/composition/content/template.hbs
+msgid "No vulnerabilities match your current filter."
+msgstr "現在のフィルタに一致する脆弱性がありません。"
+
+#: app/pods/classifier/inventory/node/controller.js
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/reports/template.hbs app/pods/jobs/create/template.hbs
+#: app/pods/jobs/job/controller.js app/pods/jobs/job/template.hbs
+#: app/pods/jobs/list/index/template.hbs
+msgid "No-op"
+msgstr "No-op"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/nodes/template.hbs app/pods/cm/reports/template.hbs
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+#: app/templates/components/run-status/run-status-line.hbs
+msgid "No-op mode"
+msgstr "No-opモード"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "No-op mode: all run statuses"
+msgstr "No-opモード: すべての実行ステータス"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "No-op mode: with failures"
+msgstr "No-opモード: 失敗あり"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "No-op mode: would be unchanged"
+msgstr "No-opモード: 変更なしとなる予定"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "No-op mode: would have corrective changes"
+msgstr "No-opモード: 修正"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "No-op mode: would have intentional changes"
+msgstr "No-opモード: 変更"
+
+#: app/pods/jobs/create/template.hbs
+msgid "No-op: Simulate a Puppet run without enforcing a new catalog."
+msgstr "No-op: 新しいカタログを適用せずにPuppet実行をシミュレートします。"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid ""
+"No-op: Simulates the changes that Puppet will make without actually "
+"enforcing a new catalog. Nodes with {{- noopTrue}} in their {{- puppetConf}}"
+" files will always run in no-op mode."
+msgstr ""
+"No-op: 新しいカタログを実際に適用することなくPuppetで変更をシミュレートします。{{- puppetConf}}ファイルで{{- "
+"noopTrue}}に設定されたノードは、常にno-opモードで実行されます。"
+
+#: app/pods/cm/report/report-id/template.hbs
+#: app/pods/components/classifier/group/nodes-tab/template.hbs
+#: app/pods/components/cm/inspector-sidebar/event/node/template.hbs
+#: app/pods/components/cm/inspector-table/event/component.js
+#: app/pods/components/tasks/target-table/template.hbs
+#: app/pods/jobs/job/template.hbs
+msgid "Node"
+msgstr "ノード"
+
+#: app/pods/cm/inspector/class-node/template.hbs
+#: app/pods/cm/inspector/node/template.hbs
+msgid "Node <b>{{showingCertname}}</b> was not found."
+msgstr "ノード<b>{{showingCertname}}</b>が見つかりませんでした。"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "Node Graph:"
+msgstr "ノードグラフ:"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Node Name"
+msgstr "ノード名"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "Node affected"
+msgstr "影響を受けるノード"
+
+#: app/pods/components/cm/node/node-record/template.hbs
+msgid "Node graph"
+msgstr "ノードグラフ"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Node group name"
+msgstr "ノードグループ名"
+
+#: app/pods/components/tasks/target-type-select/template.hbs
+msgid "Node list"
+msgstr "ノードリスト"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+msgid "Node matches"
+msgstr "一致するノード"
+
+#: app/pods/classifier/certificates/template.hbs
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/nodes/template.hbs app/pods/cm/package-nodes/template.hbs
+#: app/pods/cm/reports/template.hbs
+#: app/pods/components/classifier/rules/pinned-section/template.hbs
+#: app/pods/components/cm/inspector-sidebar/class-node/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+msgid "Node name"
+msgstr "ノード名"
+
+#: app/pods/cm/inspector/class-node/show/template.hbs
+#: app/pods/cm/inspector/node/show/template.hbs
+msgid "Node name:"
+msgstr "ノード名:"
+
+#: app/pods/components/cm/inspector-table/event/component.js
+msgid "Node names"
+msgstr "ノード名"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Node run results"
+msgstr "ノードの実行結果"
+
+#: app/pods/cm/inspector/class-node/template.hbs
+#: app/pods/cm/inspector/node/template.hbs
+msgid "Node was not found."
+msgstr "ノードが見つかりませんでした。"
+
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/packages/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/jobs/list/index/template.hbs
+#: app/pods/security/vulnerabilities/template.hbs
+#: app/templates/application.hbs
+msgid "Nodes"
+msgstr "ノード"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Nodes assigned to a specific environment (example: production)"
+msgstr "特定の環境に割り当てられたノード(例: 本稼働)"
+
+#: app/pods/jobs/create/template.hbs
+msgid ""
+"Nodes can run in an environment if their environment is agent-specified, if "
+"they're included in an application in that environment, or if they're "
+"classified in that environment by the PE Node Manager."
+msgstr ""
+"環境がagentで指定されているか、環境のアプリケーションにノードが含まれている場合、または、Puppet Enterprise Node "
+"Managerによってノードが環境に分類されている場合、その環境でノードを実行することができます。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Nodes in the job had catalog failures or other errors."
+msgstr "ジョブ内のノードにカタログの失敗またはその他のエラーがありました。"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Nodes may match any rule."
+msgstr "いずれか1つのルールと一致すれば一致とみなされます。"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Nodes must match all rules."
+msgstr "すべてのルールに一致する必要があります。"
+
+#: app/pods/components/cm/leaderboard/status-box/template.hbs
+msgid "Nodes run in<br><b>enforcement</b>"
+msgstr "<b>適用モード</b><br>で実行されたノード"
+
+#: app/pods/components/cm/leaderboard/status-box/template.hbs
+msgid "Nodes run in<br><b>no-op</b>"
+msgstr "<b>no-opモード</b><br>で実行されたノード"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Nodes that did not run were \"Skipped\"."
+msgstr "実行されなかったノードは「スキップ済み」になりました。"
+
+#: app/pods/cm/nodes/status/counter/template.hbs
+msgid "Nodes under Puppet management:"
+msgstr "Puppetで管理しているノード"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Nodes with a specific class (example: managing the Apache class)"
+msgstr "特定のクラスを適用されているノード(例：Apacheクラスを管理)"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid ""
+"Nodes with a specific fact and fact value (example: OS name is windows)"
+msgstr "特定のfactおよびfact値を持つノード(例: OS名がwindowsである)"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid ""
+"Nodes with a specific report status (example: latest run report failed)"
+msgstr "特定のレポートステータスを持つノード(例：最新の実行が失敗)"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Nodes with a specific resource (example: httpd service)"
+msgstr "特定のリソースを持つノード(例：httpsサービス)"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid ""
+"Nodes with a specific resource and operating system (example: httpd and "
+"CentOS)"
+msgstr "特定のリソースとOSを持つノード(例：httpdとCentOS)"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid ""
+"Nodes with a specific version of a resource type (example: openssl package "
+"is version 1.1.0e) "
+msgstr "特定のバージョンのリソースを持つノード(例：バージョン1.1.0eのopensslパッケージ)"
+
+#: app/pods/cm/inspector/class/show/template.hbs
+msgid "Nodes with changes"
+msgstr "変更ありのノード"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with corrective changes"
+msgstr "修正ありのノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with corrective changes:"
+msgstr "修正ありのノード:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with corrective no-ops"
+msgstr "修正(no-op)ありのノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with corrective no-ops:"
+msgstr "修正(no-op)ありのノード:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with events"
+msgstr "イベントありのノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with events:"
+msgstr "イベントありのノード:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with failures"
+msgstr "失敗のあるノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with failures:"
+msgstr "失敗のあるノード:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with intentional changes"
+msgstr "変更ありのノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with intentional changes:"
+msgstr "変更ありのノード:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with intentional no-ops"
+msgstr "変更(no-op)ありのノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with intentional no-ops:"
+msgstr "変更(no-op)ありのノード:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Nodes with skips"
+msgstr "スキップありのノード"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Nodes with skips:"
+msgstr "スキップありのノード:"
+
+#: app/pods/classifier/inventory/nodes/template.hbs
+msgid "Nodes | Node management | Puppet Enterprise"
+msgstr "ノード | ノード管理 | Puppet Enterprise"
+
+#: app/pods/components/cm/leaderboard/status-box/template.hbs
+msgid "Nodes<br><b>not reporting</b>"
+msgstr "<b>レポートしていない</b><br>ノード"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "Not operational"
+msgstr "動作していない"
+
+#: app/pods/components/cm/status-legend/overview-not-reporting/template.hbs
+msgid "Not reporting"
+msgstr "レポートしていない"
+
+#: app/pods/components/cm/status-legend/overview-not-reporting/template.hbs
+msgid "Not responsive"
+msgstr "応答していない"
+
+#: app/pods/rbac/password-generate-modal/template.hbs
+msgid "Note"
+msgstr "注"
+
+#: app/pods/components/classifier/rules/pinned-section/template.hbs
+msgid "Number of nodes pinned to this group:"
+msgstr "このグループにピン留めされたノードの数:"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "OS"
+msgstr "OS"
+
+#: app/pods/cm/package-nodes/template.hbs
+msgid "OS version"
+msgstr "OSバージョン"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Object"
+msgstr "オブジェクト"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "Old Value"
+msgstr "変更前"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Old value: "
+msgstr "変更前: "
+
+#: app/pods/components/cm/package/location-filter/component.js
+msgid "On Puppet-managed nodes"
+msgstr "Puppet管理下のノード上"
+
+#: app/pods/components/cm/package/location-filter/component.js
+msgid "On Puppet-managed nodes at code path "
+msgstr "コードパスにおけるPuppet管理下のノード上"
+
+#: app/pods/components/cm/package/location-filter/component.js
+#: app/pods/components/cm/package/location-filter/template.hbs
+msgid "On all nodes"
+msgstr "すべてのノード上"
+
+#: app/pods/components/cm/package/location-filter/component.js
+msgid "On unmanaged nodes"
+msgstr "未管理のノード上"
+
+#: app/pods/components/cm/basic-monitoring/table/template.hbs
+msgid "One or more Puppet services is not accepting requests."
+msgstr "1つまたは複数のPuppetサービスがリクエストを受け付けていません。"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Operating System"
+msgstr "オペレーティングシステム"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "Operator"
+msgstr "演算子"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Optional description for the job"
+msgstr "ジョブの説明（任意）"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid "Options:"
+msgstr "オプション:"
+
+#: app/pods/jobs/create/template.hbs app/pods/jobs/job/controller.js
+msgid "Override <code>noop = true</code> configuration"
+msgstr "<code>noop = true</code>設定のオーバーライド"
+
+#: app/pods/jobs/create/template.hbs
+msgid ""
+"Override <code>noop = true</code> configuration: If any nodes in the job "
+"have <code>noop = true</code> set in their puppet.conf files, Puppet will "
+"ignore that setting and enforce a new catalog on those nodes."
+msgstr ""
+"<code>noop = true</code>設定のオーバーライド: "
+"ジョブのいずれかのノードについて、そのpuppet.confファイルに<code>noop = "
+"true</code>が設定されている場合、Puppetはその設定を無視して、そのノードに新しいカタログを適用します。"
+
+#: app/pods/cm/nodes/template.hbs app/templates/application.hbs
+msgid "Overview"
+msgstr "概要"
+
+#: app/pods/cm/nodes/template.hbs
+msgid "Overview | Puppet Enterprise"
+msgstr "概要 | Puppet Enterprise"
+
+#: app/pods/components/tasks/target-type-select/template.hbs
+msgid "PQL query"
+msgstr "PQLクエリ"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/packages/template.hbs
+msgid "Package"
+msgstr "パッケージ"
+
+#: app/pods/cm/package-nodes/template.hbs
+msgid "Package Nodes | Puppet Enterprise"
+msgstr "パッケージノード | Puppet Enterprise"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/packages/status/content/template.hbs
+msgid "Package data collection is required to view package inventory."
+msgstr "パッケージインベントリを表示するにはパッケージ情報の収集が必要です。"
+
+#: app/pods/cm/package-nodes/status/counter/template.hbs
+msgid ""
+"Package detected on: {{totalCount}} nodes. Package unmanaged on: "
+"{{unmanagedCount}} nodes."
+msgstr ""
+"{{totalCount}}件のノードでパッケージが検出されました。パッケージは{{unmanagedCount}}件のノードで未管理です。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+#: app/pods/cm/packages/template.hbs app/templates/application.hbs
+msgid "Packages"
+msgstr "パッケージ"
+
+#: app/pods/cm/packages/template.hbs
+msgid "Packages | Puppet Enterprise"
+msgstr "パッケージ | Puppet Enterprise"
+
+#: app/templates/not-found.hbs
+msgid "Page not found"
+msgstr "ページが見つかりません"
+
+#: app/pods/components/classifier/class-params/template.hbs
+#: app/pods/tasks/create/template.hbs
+msgid "Parameter"
+msgstr "パラメータ"
+
+#: app/pods/components/classifier/class-params/template.hbs
+msgid "Parameter name"
+msgstr "パラメータ名"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/group/template.hbs
+msgid "Parent"
+msgstr "親"
+
+#: app/pods/classifier/inventory/node/group-list/template.hbs
+msgid "Parent group"
+msgstr "親グループ"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "Parent name"
+msgstr "親名"
+
+#: app/pods/rbac/password-generate-modal/template.hbs
+msgid "Password Reset Link"
+msgstr "パスワードリセットリンク"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Password is incorrect"
+msgstr "パスワードが正しくありません"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Password of the user to perform directory lookups."
+msgstr "ディレクトリルックアップを実行するユーザのパスワードです。"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Passwords do not match"
+msgstr "パスワードが一致しません"
+
+#: app/pods/components/rbac/role/users-tab/component.js
+msgid "Pending addition"
+msgstr "追加待機中"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Permission"
+msgstr "パーミッション"
+
+#: app/pods/rbac/role/template.hbs app/pods/rbac/role/template.hbs
+msgid "Permissions"
+msgstr "パーミッション"
+
+#: app/pods/components/classifier/rules/pinned-section/template.hbs
+msgid "Pin node"
+msgstr "ノードをピンして追加します"
+
+#: app/pods/components/classifier/rules/pinned-section/template.hbs
+msgid "Pin specific nodes to the group."
+msgstr "グループに特定のノードをピンして追加します。"
+
+#: app/templates/components/ajax-error.hbs
+msgid "Please log back in."
+msgstr "もう一度ログインしてください。"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Please select a type."
+msgstr "選択してください。"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Please select an action."
+msgstr "選択してください。"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Please select an instance."
+msgstr "選択してください。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Please try again later."
+msgstr "後でもう一度試してください。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Please try again."
+msgstr "もう一度試してください。"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Plugin #{{id}}"
+msgstr "プラグイン#{{id}}"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Port"
+msgstr "ポート"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/nodes/status/paginator/template.hbs
+#: app/pods/cm/packages/status/pagination/template.hbs
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/cm/report/report-id/logs/template.hbs
+#: app/pods/components/cm/cm-paginator/template.hbs
+#: app/pods/components/tasks/target-table/template.hbs
+#: app/pods/jobs/job/template.hbs app/pods/jobs/list/index/template.hbs
+#: app/pods/security/vulnerabilities/composition/pagination/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Previous"
+msgstr "前へ"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "Primary master"
+msgstr "プライマリmaster"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "Primary master replica"
+msgstr "プライマリmasterのレプリカ"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "Property"
+msgstr "プロパティ"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Property: "
+msgstr "プロパティ: "
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Provide a description for your job"
+msgstr "ジョブの説明文を提供してください"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/package-nodes/template.hbs app/pods/cm/packages/template.hbs
+msgid "Provider"
+msgstr "プロバイダ"
+
+#: app/templates/help.hbs
+msgid ""
+"Puppet Ask is a place where members of the Puppet community can ask "
+"questions and get help from experienced Puppet users and employees."
+msgstr "Puppet Askに登録すると、Puppetコミュニティのメンバーや経験豊富なPuppetユーザ、Puppet社員から回答をもらえます。"
+
+#: app/templates/help.hbs
+msgid "Puppet Enterprise Documentation"
+msgstr "Puppet Enterpriseマニュアル"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"Puppet Enterprise attempts to connect to the directory server for the "
+"duration specified here."
+msgstr "ここで指定された時間の間、Puppet Enterpriseはディレクトリサーバーに接続を試みます。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"Puppet Enterprise can use SSL to communicate with your directory server."
+msgstr "Puppet Enterpriseは、ディレクトリサーバーとの通信にSSLを使用できます。"
+
+#: app/templates/application.hbs app/templates/not-found.hbs
+msgid "Puppet Logo"
+msgstr "Puppetロゴ"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Puppet Managed"
+msgstr "Puppet管理下"
+
+#: app/pods/components/cm/basic-monitoring/table/template.hbs
+msgid "Puppet Services are all accepting requests."
+msgstr "Puppetサービスは、すべてリクエストを受け付けています。"
+
+#: app/pods/cm/nodes/template.hbs
+msgid "Puppet Services status"
+msgstr "Puppetサービスのステータス"
+
+#: app/pods/security/vulnerabilities/composition/headers/template.hbs
+msgid "Puppet last connected:"
+msgstr "Puppetの前回の接続:"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/package-nodes/template.hbs
+msgid "Puppet managed"
+msgstr "Puppet管理下"
+
+#: app/templates/help.hbs
+msgid ""
+"Puppet offers a number of options for getting help with Puppet Enterprise "
+"(PE)."
+msgstr "Puppet Enterprise (PE)のサポートについて、いくつものオプションを提供しています。"
+
+#: app/templates/help.hbs
+msgid ""
+"Puppet provides two levels of commercial support for Puppet Enterprise - "
+"Standard and Premium."
+msgstr "Puppet社はスタンダードとプレミアムの商用サポートを提供しています。"
+
+#: app/pods/cm/radiator/template.hbs
+msgid "Puppet-managed node"
+msgid_plural "Puppet-managed node"
+msgstr[0] "Puppet管理下のノード"
+
+#: app/templates/license.hbs
+msgid "Purchase now."
+msgstr "今すぐ購入できます。"
+
+#: app/templates/license.hbs
+msgid "Purge an existing node."
+msgstr "使用中のノードを除去するには？"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Querying groups"
+msgstr "グループのクエリ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Querying users"
+msgstr "ユーザのクエリ"
+
+#: app/pods/components/jobs/job-row/component.js
+#: app/pods/components/jobs/node-row/component.js
+#: app/pods/jobs/job/filter-state.js app/pods/jobs/job/template.hbs
+msgid "Queued"
+msgstr "キュー済み"
+
+#: app/pods/cm/nodes/template.hbs
+msgid "Radiator"
+msgstr "ラジエーター"
+
+#: app/pods/cm/radiator/template.hbs
+msgid "Radiator | Puppet Enterprise"
+msgstr "ラジエーター | Puppet Enterprise"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Refresh"
+msgstr "更新"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Refresh node list"
+msgstr "ノードリストを更新"
+
+#: app/pods/components/cm/inspector-sidebar/empty/template.hbs
+#: app/pods/components/cm/inspector-table/empty/template.hbs
+msgid ""
+"Refresh your browser to check for recent events, or view past events by "
+"using the timeframe selector at the top of the page."
+msgstr ""
+"最近のイベントをチェックするにはブラウザを更新してください。過去のイベントを表示するには、ページ上部にあるタイムフレームセレクタを使用してください。"
+
+#: app/pods/rbac/reinstate-user-modal/template.hbs
+msgid "Reinstate User"
+msgstr "ユーザを復元"
+
+#: app/pods/rbac/reinstate-user-modal/template.hbs
+msgid "Reinstate user"
+msgstr "ユーザを復元"
+
+#: app/pods/rbac/user/local/template.hbs
+#: app/pods/rbac/user/remote/template.hbs
+msgid "Reinstate user access"
+msgstr "ユーザアクセスを復元"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "Reject"
+msgstr "拒否"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Reject All"
+msgstr "すべてを拒否"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "Rejected"
+msgstr "拒否済み"
+
+#: app/pods/components/classifier/class-param/template.hbs
+#: app/pods/components/classifier/config-data-entry/template.hbs
+#: app/pods/components/classifier/rules/fact-row/template.hbs
+#: app/pods/components/classifier/variable-row/template.hbs
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+#: app/pods/components/rbac/role/group-row/template.hbs
+#: app/pods/components/rbac/role/permission-row/template.hbs
+#: app/pods/components/rbac/role/user-row/template.hbs
+#: app/pods/components/rbac/user-table-row/template.hbs
+#: app/pods/components/tasks/params-table-row/template.hbs
+#: app/pods/rbac/groups/index/template.hbs
+#: app/pods/rbac/remove-user-group-modal/template.hbs
+msgid "Remove"
+msgstr "削除"
+
+#: app/pods/classifier/group-remove-modal/template.hbs
+msgid "Remove This Group"
+msgstr "このグループを削除"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "Remove all classes"
+msgstr "クラスをすべて削除"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "Remove all filters"
+msgstr "フィルタをすべて削除"
+
+#: app/pods/components/rbac/role/groups-tab/template.hbs
+msgid "Remove all groups"
+msgstr "グループをすべて削除"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Remove all permissions"
+msgstr "パーミッションをすべて削除"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+msgid "Remove all rules"
+msgstr "ルールをすべて削除"
+
+#: app/pods/components/rbac/role/users-tab/template.hbs
+msgid "Remove all users"
+msgstr "ユーザをすべて削除"
+
+#: app/pods/components/classifier/group/variables-tab/template.hbs
+msgid "Remove all variables"
+msgstr "変数をすべて削除"
+
+#: app/pods/rbac/directory/index/template.hbs
+#: app/pods/rbac/remove-directory-modal/template.hbs
+msgid "Remove connection"
+msgstr "接続を削除"
+
+#: app/pods/cm/package-nodes/template.hbs
+#: app/pods/components/classifier/inventory/node-search/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/components/cm/search-input/template.hbs
+#: app/pods/components/jobs/node-count/template.hbs
+#: app/pods/security/vulnerabilities/composition/filter/template.hbs
+msgid "Remove filter"
+msgstr "フィルタを削除"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Remove node group"
+msgstr "ノードグループを削除"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Remove selected"
+msgstr "選択した項目を削除"
+
+#: app/pods/components/classifier/class-entry/template.hbs
+msgid "Remove this class"
+msgstr "このクラスを削除"
+
+#: app/pods/classifier/group-remove-modal/template.hbs
+msgid "Remove this group"
+msgstr "このグループを削除"
+
+#: app/pods/rbac/remove-user-modal/template.hbs
+msgid "Remove user"
+msgstr "ユーザを削除"
+
+#: app/pods/rbac/remove-user-group-modal/template.hbs
+msgid "Remove {{groupName}}?"
+msgstr "{{groupName}}を削除しますか?"
+
+#: app/pods/rbac/remove-user-modal/template.hbs
+msgid "Remove {{login}}?"
+msgstr "{{login}}を削除しますか?"
+
+#: app/templates/license.hbs
+msgid "Renew now."
+msgstr "今すぐ更新できます。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Report"
+msgstr "レポート"
+
+#: app/pods/cm/reports/template.hbs
+msgid "Report time"
+msgstr "レポート日時"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+msgid "Reported at"
+msgstr "レポート日時"
+
+#: app/pods/classifier/inventory/node/template.hbs
+#: app/pods/cm/report/report-id/template.hbs app/pods/cm/reports/template.hbs
+#: app/templates/application.hbs
+msgid "Reports"
+msgstr "レポート"
+
+#: app/pods/cm/report/report-id/template.hbs app/pods/cm/reports/template.hbs
+msgid "Reports | Puppet Enterprise"
+msgstr "レポート | Puppet Enterprise"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Requesting job..."
+msgstr "ジョブをリクエスト中…"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+msgid "Reset Your Password"
+msgstr "パスワードをリセット"
+
+#: app/pods/rbac/password-reset-modal/template.hbs
+#: app/pods/rbac/user/local/template.hbs
+msgid "Reset password"
+msgstr "パスワードをリセット"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/components/cm/inspector-sidebar/class-resource/template.hbs
+#: app/pods/components/cm/inspector-sidebar/event/resource/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+#: app/pods/components/cm/inspector-table/event/component.js
+#: app/pods/components/cm/inspector-table/event/component.js
+msgid "Resource"
+msgstr "リソース"
+
+#: app/pods/cm/inspector/class-resource/template.hbs
+msgid "Resource <b>{{resourceName}}</b> was not found."
+msgstr "リソース<b>{{resourceName}}</b>が見つかりませんでした。"
+
+#: app/pods/cm/inspector/resource/template.hbs
+msgid "Resource <b>{{shownResource}}</b> was not found."
+msgstr "リソース<b>{{shownResource}}</b>が見つかりませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+msgid "Resource name"
+msgstr "リソース名"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "Resource path"
+msgstr "リソースパス"
+
+#: app/pods/cm/report/report-id/events/template.hbs
+msgid "Resource type"
+msgstr "リソース型"
+
+#: app/pods/cm/inspector/class-resource/template.hbs
+#: app/pods/cm/inspector/resource/template.hbs
+msgid "Resource was not found."
+msgstr "リソースが見つかりませんでした。"
+
+#: app/pods/cm/inspector/class-resource/show/template.hbs
+#: app/pods/cm/inspector/resource/show/template.hbs
+msgid "Resource:"
+msgstr "リソース:"
+
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "Resources"
+msgstr "リソース"
+
+#: app/pods/cm/inspector/class/show/template.hbs
+msgid "Resources with changes"
+msgstr "変更ありのリソース"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with corrective changes"
+msgstr "修正ありのリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with corrective changes:"
+msgstr "修正ありのリソース:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with corrective no-ops"
+msgstr "修正的no-opありのリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with corrective no-ops:"
+msgstr "修正的no-opありのリソース:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with events"
+msgstr "イベントありのリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with events:"
+msgstr "イベントありのリソース:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with failures"
+msgstr "失敗のあるリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with failures:"
+msgstr "失敗のあるリソース:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with intentional changes"
+msgstr "変更ありのリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with intentional changes:"
+msgstr "変更ありのリソース:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with intentional no-ops"
+msgstr "意図的no-opありのリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with intentional no-ops:"
+msgstr "意図的no-opありのリソース:"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Resources with skips"
+msgstr "スキップありのリソース"
+
+#: app/pods/components/cm/inspector-filter-summary/template.hbs
+msgid "Resources with skips:"
+msgstr "スキップありのリソース:"
+
+#: app/pods/components/cm/graph-details-info/list-details/template.hbs
+msgid "Resources with this {{listType}}:"
+msgstr "この{{listType}}を持つリソース:"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "Restarting"
+msgstr "再起動中"
+
+#: app/pods/components/cm/search-input/template.hbs
+msgid "Results found: {{formattedResultsCount}}"
+msgstr "検索結果: {{formattedResultsCount}}"
+
+#: app/pods/components/cm/cm-paginator/template.hbs
+msgid "Results per page:"
+msgstr "ページ当たりの結果数:"
+
+#: app/templates/not-found.hbs
+msgid "Return to home"
+msgstr "ホームに戻る"
+
+#: app/pods/rbac/revoke-user-modal/template.hbs
+msgid "Revoke User"
+msgstr "ユーザを無効化"
+
+#: app/pods/rbac/revoke-user-modal/template.hbs
+msgid "Revoke user"
+msgstr "ユーザを無効化"
+
+#: app/pods/rbac/user/local/template.hbs
+#: app/pods/rbac/user/remote/template.hbs
+msgid "Revoke user access"
+msgstr "ユーザアクセスを無効化"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Rules"
+msgstr "ルール"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Rules <span class=\"tab-change-count\">({{count}} change)</span>"
+msgid_plural "Rules <span class=\"tab-change-count\">({{count}} change)</span>"
+msgstr[0] "ルール<span class=\"tab-change-count\">({{count}}件の変更)</span>"
+
+#: app/pods/classifier/inventory/node/template.hbs
+#: app/templates/application.hbs
+msgid "Run"
+msgstr "実行"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Run Mode"
+msgstr "実行モード"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Run Mode:"
+msgstr "実行モード:"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid ""
+"Run Puppet has been disabled because Node Manager cannot connect to "
+"{{name}}."
+msgstr "Node Managerが{{name}}に接続できないため、[Puppetを実行]が無効化されています。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Run Puppet..."
+msgstr "Puppetを実行..."
+
+#: app/pods/jobs/job/template.hbs
+msgid "Run again"
+msgstr "再実行"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Run completed."
+msgstr "実行が完了しました。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Run in progress..."
+msgstr "実行中..."
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Run job"
+msgstr "ジョブを実行"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Run nodes in the selected environment:"
+msgstr "選択したenvironmentでノードを実行します。"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Run nodes in their own assigned environment."
+msgstr "割り当てられたenvironmentでノードを実行します。"
+
+#: app/pods/jobs/create/template.hbs
+msgid ""
+"Run nodes in their own assigned environment: Nodes will run in the "
+"environment specified by the PE Node Manager or their puppet.conf files."
+msgstr ""
+"割り当てられたenvironmentでノードを実行: ノードはPuppet Enterprise Node "
+"Managerまたはそのpuppet.confファイルで指定されたenvironmentで実行されます。"
+
+#: app/pods/cm/nodes/template.hbs
+#: app/pods/components/tasks/target-table/template.hbs
+#: app/templates/components/run-status/run-status-line.hbs
+msgid "Run status"
+msgstr "実行ステータス"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Run time"
+msgstr "実行時間"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/cm/report/report-id/template.hbs app/pods/cm/reports/template.hbs
+msgid "Run time (sec)"
+msgstr "実行時間(秒)"
+
+#: app/pods/components/cm/basic-monitoring/table/component.js
+msgid "Running"
+msgstr "実行中"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "Running query..."
+msgstr "クエリを実行中..."
+
+#: app/pods/components/tasks/node-selection/template.hbs
+msgid "Search"
+msgstr "検索"
+
+#: app/pods/components/tasks/node-selection/template.hbs
+msgid "Search nodes by node name"
+msgstr "ノード名でノードを検索"
+
+#: app/templates/license.hbs
+msgid "See AWS user guide."
+msgstr "AWSユーザガイドを参照してください。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "See details in the node list."
+msgstr "ノードリストで詳細を表示します。"
+
+#: app/templates/help.hbs
+msgid ""
+"See the Puppet Enterprise documentation to learn more about <a "
+"href=\"https://docs.puppet.com/pe/{{version}}/config_intro.html\">configuring"
+" PE</a>, <a "
+"href=\"https://docs.puppet.com/pe/{{version}}/console_cert_mgmt.html\">managing"
+" nodes</a>, <a "
+"href=\"https://docs.puppet.com/pe/{{version}}/rbac_intro.html\">managing "
+"users</a>, and other ways to automate your tasks."
+msgstr ""
+"Puppet Enterpriseのマニュアルをご覧ください。<a "
+"href=\"https://docs.puppet.com/pe/{{version}}/config_intro.html\">Puppet "
+"Enterpriseの設定</a>、<a "
+"href=\"https://docs.puppet.com/pe/{{version}}/console_cert_mgmt.html\">ノードの管理</a>、<a"
+" "
+"href=\"https://docs.puppet.com/pe/{{version}}/rbac_intro.html\">ユーザの管理</a>、その他のタスク自動化の方法について詳しく学ぶことができます。"
+
+#: app/pods/components/rbac/role/groups-tab/template.hbs
+msgid "Select a group to add to the role."
+msgstr "ロールに追加するグループを選択してください。"
+
+#: app/pods/components/tasks/target-type-select/template.hbs
+msgid "Select a target type"
+msgstr "ターゲットタイプを選択してください。"
+
+#: app/pods/tasks/create/template.hbs
+msgid "Select a task to use"
+msgstr "使用するタスクを選択"
+
+#: app/pods/components/rbac/role/users-tab/template.hbs
+msgid "Select a user to add to the role."
+msgstr "ロールに追加するユーザを選択してください。"
+
+#: app/pods/components/tasks/target-table/component.js
+msgid "Select all"
+msgstr "すべてを選択"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Select an environment for nodes to run in:"
+msgstr "ノードを実行するenvironmentを選択:"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Sending request...<span class='run-puppet-spinner'></span>"
+msgstr "リクエスト送信中...<span class='run-puppet-spinner'></span>"
+
+#: app/pods/components/cm/basic-monitoring/table/template.hbs
+msgid "Service"
+msgstr "サービス"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Set options for running Puppet on this node"
+msgstr "このノードでPuppetを実行する際のオプションを設定します"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid ""
+"Set parameters, without declaring classes, for nodes in this group. Data is "
+"applied on the next run."
+msgstr "このグループ内のノードに、クラスを宣言することなく、パラメータを設定します。データは、次回実行時に適用されます。"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid "Set up a job"
+msgstr "ジョブをセットアップ"
+
+#: app/pods/jobs/create/template.hbs
+msgid "Set up a job to enforce change on your nodes."
+msgstr "ノードに変更を強制するためにジョブをセットアップ"
+
+#: app/pods/tasks/create/template.hbs
+msgid "Set up a job to run a task on your nodes."
+msgstr "ノードでタスクを実行するためのジョブをセットアップ"
+
+#: app/pods/jobs/job/controller.js
+msgid "Set up a new job with this target"
+msgstr "このターゲットを持つ新しいジョブをセットアップ"
+
+#: app/pods/components/classifier/help-popover/template.hbs
+msgid ""
+"Setting data can be useful for configuring classes that are part of a node's"
+" catalog, but that aren't directly applied to the node."
+msgstr "データ設定はノードのカタログに含まれるクラスを設定する場合に役立ちますが、直接ノードに適用されるわけではありません。"
+
+#: app/templates/application.hbs
+msgid "Setup"
+msgstr "セットアップ"
+
+#: app/pods/security/vulnerabilities/template.hbs
+msgid "Severity"
+msgstr "重大度"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Severity level"
+msgstr "重大度レベル"
+
+#: app/pods/components/cm/graph-details-button/component.js
+msgid "Show details"
+msgstr "詳細を表示"
+
+#: app/pods/cm/inspector/template.hbs
+msgid "Show:"
+msgstr "表示:"
+
+#: app/pods/components/jobs/node-target-list/template.hbs
+msgid "Showing {{formattedCount}} node"
+msgid_plural "Showing {{formattedCount}} node"
+msgstr[0] "{{formattedCount}}件のノードを表示中"
+
+#: app/pods/components/jobs/node-target-list/template.hbs
+msgid "Showing {{formattedNodeCount}} of {{total}} nodes"
+msgstr "{{formattedNodeCount}} / {{total}}件のノードを表示中"
+
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Skip"
+msgstr "スキップ"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Skip event"
+msgstr "イベントをスキップ"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/cm/reports/template.hbs
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/jobs/node-row/component.js
+#: app/pods/jobs/job/filter-state.js
+msgid "Skipped"
+msgstr "スキップ済み"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Skipped resources"
+msgstr "スキップされたリソース"
+
+#: app/pods/components/cm/inspector-aggregate-bar/template.hbs
+#: app/pods/components/cm/inspector-table/event-count/template.hbs
+msgid "Skips"
+msgstr "スキップ"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Solution"
+msgstr "ソリューション"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid ""
+"Some of the classes or parameters in this group have been removed from "
+"Puppet. These classes and parameters still appear in the list but they are "
+"crossed out."
+msgstr ""
+"このグループの一部のクラスまたはパラメータがPuppetから削除されました。これらのクラスとパラメータはリストに打ち消し線付きで表示されます。"
+
+#: app/pods/rbac/groups/index/template.hbs
+#: app/pods/rbac/user/local/template.hbs app/pods/rbac/user/local/template.hbs
+#: app/pods/rbac/user/remote/template.hbs
+#: app/pods/rbac/users/index/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Source"
+msgstr "ソース"
+
+#: app/pods/classifier/inventory/node/class-list/template.hbs
+#: app/pods/classifier/inventory/node/variable-list/template.hbs
+#: app/pods/components/classifier/config-data-list/template.hbs
+msgid "Source group"
+msgstr "ソースグループ"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Source scans:"
+msgstr "ソーススキャン:"
+
+#: app/pods/components/cm/report/log-row/template.hbs
+msgid "Source:"
+msgstr "ソース:"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Start time"
+msgstr "開始時間"
+
+#: app/pods/jobs/job/controller.js
+msgid "Static node list"
+msgstr "静的ノードリスト"
+
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/components/rbac/role/users-tab/template.hbs
+#: app/pods/components/rbac/user-roles/template.hbs
+#: app/pods/jobs/list/index/template.hbs
+msgid "Status"
+msgstr "ステータス"
+
+#: app/pods/cm/inspector/template.hbs
+msgid "Status as of:"
+msgstr "ステータス取得日時:"
+
+#: app/pods/jobs/navigate-away-modal/template.hbs
+msgid "Stay"
+msgstr "ここに留まる"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Stop job"
+msgstr "ジョブを停止"
+
+#: app/pods/components/jobs/job-row/component.js
+msgid "Stopped"
+msgstr "停止済み"
+
+#: app/pods/components/jobs/job-row/component.js
+msgid "Stopping"
+msgstr "停止中"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Stopping job."
+msgstr "ジョブを停止しています。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "Stopping..."
+msgstr "停止中..."
+
+#: app/pods/classifier/variable-structured-value-popover/template.hbs
+msgid "Structured Parameters"
+msgstr "ストラクチャパラメータ"
+
+#: app/pods/classifier/class-params/class-structured-value-popover/template.hbs
+msgid "Structured parameters"
+msgstr "ストラクチャパラメータ"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "Submit query"
+msgstr "クエリを送信"
+
+#: app/pods/components/jobs/job-row/component.js
+#: app/pods/components/jobs/node-row/component.js
+#: app/pods/jobs/job/filter-state.js
+msgid "Succeeded"
+msgstr "正常終了"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Success"
+msgstr "成功"
+
+#: app/pods/components/cm/si-bread-crumbs/component.js
+msgid "Summary"
+msgstr "概要"
+
+#: app/pods/components/cm/inspector-sub-header/template.hbs
+msgid "Table shows nodes affected per class."
+msgstr "クラス毎に変更対象ノードの数"
+
+#: app/pods/cm/inspector/class/show/template.hbs
+#: app/pods/components/cm/inspector-sub-header/template.hbs
+msgid "Table shows nodes affected per resource."
+msgstr "リソース毎に変更対象ノードの数"
+
+#: app/pods/cm/inspector/class/show/template.hbs
+#: app/pods/components/cm/inspector-sub-header/template.hbs
+msgid "Table shows resources affected per node."
+msgstr "ノード毎に変更対象リソースの数"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "Tag"
+msgstr "タグ"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Tags:"
+msgstr "タグ:"
+
+#: app/pods/tasks/create/template.hbs
+msgid "Task"
+msgstr "タスク"
+
+#: app/pods/tasks/create/template.hbs
+msgid "Task parameters"
+msgstr "タスクパラメータ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Test changes"
+msgstr "変更をテスト"
+
+#: app/pods/components/cm/cm-paginator/template.hbs
+msgid ""
+"That page number doesn't exist. Choose a page number between 1 and "
+"{{formattedNumber}}"
+msgstr "そのページ番号は存在しません。1～{{formattedNumber}}間のページを選択してください。"
+
+#: app/templates/help.hbs
+msgid "The Forge"
+msgstr "Forge"
+
+#: app/templates/help.hbs
+msgid ""
+"The Forge is a repository of modules, written by both Puppet and the Puppet "
+"community, that help extend Puppet across your infrastructure."
+msgstr ""
+"ForgeはPuppet社やPuppetコミュニティのメンバーが作成したモジュールのリポジトリで、登録されているモジュールは自由に利用できます。"
+
+#: app/templates/help.hbs
+msgid ""
+"The PE documentation site is your most up-to-date resource for learning how "
+"to deploy PE, use PE to manage your infrastructure, and perform more "
+"advanced tasks."
+msgstr ""
+"Puppet EnterpriseマニュアルのWebサイトは、Puppet Enterpriseのセットアップ方法、Puppet "
+"Enterpriseを使ったインフラストラクチャの管理方法、そしてより高度なタスクを実行する方法を学べる最新の情報です。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "The base distinguished name for querying groups."
+msgstr "グループをクエリするためのベース識別子です。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "The base distinguished name for querying users."
+msgstr "ユーザをクエリするためのベース識別子です。"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "The classes will be applied on the next run."
+msgstr "これらのクラスは、次回実行時に適用されます。"
+
+#: app/pods/jobs/create/template.hbs
+msgid ""
+"The default run mode for a job always attempts to enforce new catalogs on "
+"agents."
+msgstr "ジョブのデフォルト実行モードは、常に、Agentに新しいカタログを適用しようとします。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "The display name for a group."
+msgstr "グループの表示名です。"
+
+#: app/pods/components/cm/data-filter/template.hbs
+msgid "The filter could not be evaluated"
+msgstr "フィルタを評価できませんでした。"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "The job includes the following nodes:"
+msgstr "ジョブには次のノードが含まれます:"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "The kind of object that represents groups."
+msgstr "グループを表すオブジェクトの種類です。"
+
+#: app/pods/components/classifier/env-trumps-popover/template.hbs
+msgid ""
+"The role of an environment group is to assign the selected environment for "
+"matching nodes at all times."
+msgstr "Environmentグループの役割は、条件に一致するノードに常に選択されたenvironmentを割り当てることです。"
+
+#: app/pods/components/classifier/rules/read-only/template.hbs
+msgid "The rules in this group are managed by the API."
+msgstr "このグループのルールはAPIによって管理されています。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "The way to fetch group membership information."
+msgstr "グループメンバーシップ情報を取得する方法です。"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid ""
+"The {{- testFlag}} option is set automatically to force a new catalog to "
+"compile."
+msgstr "{{- testFlag}}オプションは、新しいカタログを強制的にコンパイルするために自動的に設定されます。"
+
+#: app/templates/license.hbs
+msgid "There was a problem reading your Puppet Enterprise license file."
+msgstr "Puppet Enterpriseライセンスファイルの読み込みに問題が発生しました。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>corrective changes</b>."
+msgstr "<b>修正</b>ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>corrective no-ops</b>."
+msgstr "<b>修正的no-op</b>ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>corrective</b> changes."
+msgstr "<b>修正的</b>変更ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>events</b>."
+msgstr "<b>イベント</b>ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>failures</b>."
+msgstr "<b>失敗</b>のある<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>intentional changes</b>."
+msgstr "<b>変更</b>ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>intentional no-ops</b>."
+msgstr "<b>意図的no-op</b>ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>intentional</b> changes."
+msgstr "<b>意図的</b>変更ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>classes</b> with <b>skips</b>."
+msgstr "<b>スキップ</b>ありの<b>クラス</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>corrective changes</b>."
+msgstr "<b>修正</b>ありの<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>corrective no-ops</b>."
+msgstr "<b>修正的no-op</b>ありの<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>events</b>."
+msgstr "<b>イベント</b>ありの<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>failures</b>."
+msgstr "<b>失敗</b>のある<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>intentional changes</b>."
+msgstr "<b>変更</b>ありの<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>intentional no-ops</b>."
+msgstr "<b>意図的no-op</b>ありの<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>nodes</b> with <b>skips</b>."
+msgstr "<b>スキップ</b>ありの<b>ノード</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>corrective changes</b>."
+msgstr "<b>修正</b>ありの<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>corrective no-ops</b>."
+msgstr "<b>修正的no-op</b>ありの<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>events</b>."
+msgstr "<b>イベント</b>ありの<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>failures</b>."
+msgstr "<b>失敗</b>のある<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>intentional changes</b>."
+msgstr "<b>変更</b>ありの<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>intentional no-ops</b>."
+msgstr "<b>意図的no-op</b>ありの<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event-count/empty/template.hbs
+msgid "There were no <b>resources</b> with <b>skips</b>."
+msgstr "<b>スキップ</b>ありの<b>リソース</b>はありませんでした。"
+
+#: app/pods/components/cm/inspector-table/event/template.hbs
+msgid "There were no events for <b>{{item}}</b>."
+msgstr "<b>{{item}}</b>のイベントはありませんでした。"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "There's no data to display"
+msgstr "表示するデータがありません"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "These settings are used to construct queries for group objects."
+msgstr "この設定は、グループオブジェクトのクエリを構築するために使用されます。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "These settings map LDAP fields to actual data in the system."
+msgstr "この設定は、LDAPフィールドをシステム内の実際のデータにマッピングします。"
+
+#: app/pods/classifier/group-remove-modal/template.hbs
+msgid "This action cannot be undone."
+msgstr "このアクションは取り消しできません。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "This action will always compile a new catalog."
+msgstr "Puppetを実行するとカタログが再作成されます"
+
+#: app/pods/classifier/group/template.hbs
+msgid "This change may affect the classes that are available in this group."
+msgstr "この変更は、このグループで利用できるクラスに影響を与えます。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"This information gives Puppet Enterprise access to your external directory."
+msgstr "この情報は、外部ディレクトリにアクセスする権限をPuppet Enterpriseに与えます。"
+
+#: app/pods/classifier/group/template.hbs
+msgid "This is an environment group"
+msgstr "これはenvironmentグループです"
+
+#: app/pods/jobs/job/template.hbs
+msgid "This job was stopped before all nodes could run."
+msgstr "すべてのノードが実行される前にジョブが停止されました。"
+
+#: app/pods/jobs/job/template.hbs
+msgid "This job will stop when all in-progress Puppet runs finish."
+msgstr "このジョブは、処理中のPuppet実行がすべて終了すると停止します。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid ""
+"This link is displayed to users when they have trouble logging in to Puppet "
+"Enterprise."
+msgstr "このリンクは、ユーザのPuppet Enterpriseへのログインに問題が発生したときに表示されます。"
+
+#: app/pods/classifier/inventory/node/class-list/template.hbs
+msgid ""
+"This list is predicted based on current group membership. Because membership"
+" is assessed at runtime, classes might change in the next run."
+msgstr ""
+"このリストは、現在のグループメンバーシップに基づいて予測されたものです。メンバーシップは実行時に評価されるため、クラスは次回実行時に変更される可能性があります。"
+
+#: app/pods/classifier/inventory/node/class-list/template.hbs
+msgid ""
+"This list is predicted based on current group membership. Because membership"
+" is assessed at runtime, data might change in the next run."
+msgstr ""
+"このリストは、現在のグループメンバーシップに基づいて予測されたものです。メンバーシップは実行時に評価されるため、データは次回実行時に変更される可能性があります。"
+
+#: app/templates/license.hbs
+msgid "This master uses the Puppet Enterprise OpsWorks instance."
+msgstr "このmasterは、Puppet Enterprise OpsWorksインスタンスを使用します。"
+
+#: app/templates/license.hbs
+msgid ""
+"This master uses the Puppet Enterprise Pay As You Go AWS Marketplace image."
+msgstr "このmasterは、Puppet EnterpriseのPay As You Go AWS Marketplaceイメージを使用します。"
+
+#: app/pods/components/cm/status-legend/overview-not-reporting/template.hbs
+msgid ""
+"This node has never submitted a Puppet report. It might be a newly "
+"commissioned node, a node that has never come online, or a node with an "
+"improperly configured copy of Puppet."
+msgstr ""
+"このノードはPuppetレポートを一度も提出したことがありません。新しく割り当てられたノードか、オンラインになったことのないノードか、Puppetが適切に設定されていないノードの可能性があります。"
+
+#: app/pods/components/cm/status-legend/overview-not-reporting/template.hbs
+msgid ""
+"This node hasn't reported to the Puppet master recently. Investigation is "
+"recommended."
+msgstr "このノードは最近Puppet masterにレポートを送信していません。調査することをお勧めします。"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"This node's last Puppet run failed, or Puppet encountered an error that "
+"prevented it from making planned changes. Investigation is recommended."
+msgstr ""
+"このノードの前回のPuppet実行が失敗したか、何らかのエラーが発生したために、Puppetが予定された変更を行うことができませんでした。調査することをお勧めします。"
+
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"This node's last Puppet run in no-op failed, or Puppet encountered an error "
+"that prevented it from making simulated changes."
+msgstr ""
+"このノードの前回のno-"
+"opモードPuppet実行が失敗したか、何らかのエラーが発生したために、Puppetが予定された変更シミュレーションを行うことができませんでした。"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+msgid ""
+"This node's last Puppet run in no-op mode failed, or Puppet encountered an "
+"error that prevented it from making simulated changes"
+msgstr ""
+"このノードの前回のno-"
+"opモードPuppet実行が失敗したか、何らかのエラーが発生したために、Puppetが予定された変更シミュレーションを行うことができませんでした。"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"This node's last Puppet run was successful, and the node was fully "
+"compliant. No changes were necessary."
+msgstr "このノードの前回のPuppet実行は成功し、ノードは完全に準拠しています。変更は必要ありません。"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid ""
+"This node's last Puppet run was successful, and the node was fully "
+"compliant. No changes would have been necessary."
+msgstr "このノードの前回のPuppet実行は成功し、ノードは完全に準拠していました。変更は必要ありませんでした。"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "This resource is contained by class {{className}}"
+msgstr "このリソースはクラス{{className}}に含まれています。"
+
+#: app/pods/components/rbac/role/groups-tab/template.hbs
+msgid "This role contains no groups."
+msgstr "このロールにはグループが含まれていません。"
+
+#: app/pods/components/rbac/role/users-tab/template.hbs
+msgid "This role contains no users."
+msgstr "このロールにはユーザが含まれていません。"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid ""
+"This role has no permissions assigned to it. Use the following options to "
+"assign permissions."
+msgstr "このロールにはパーミッションが割り当てられていません。次のオプションを使用してパーミッションを割り当ててください。"
+
+#: app/pods/jobs/create/template.hbs
+msgid ""
+"This setting corresponds to the <code>--no-noop</code> flag available on the"
+" orchestrator CLI."
+msgstr "この設定は、オーケストレータCLIで利用できる<code>--no-noop</code>フラグに対応しています。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "This setting is used to construct queries for user objects."
+msgstr "この設定は、ユーザオブジェクトのクエリを構築するために使用されます。"
+
+#: app/pods/components/rbac/group-roles/template.hbs
+msgid ""
+"This user group is not a member of any user roles and therefore its members "
+"will have limited access to the console. To assign access privileges to this"
+" group, make it a member of at least one role."
+msgstr ""
+"このユーザグループは、どのユーザロールにも属さないため、このグループのメンバーはコンソールへのアクセスが制限されます。このグループにアクセス権を割り当てるには、少なくとも1つのロールに加えてくだざい。"
+
+#: app/pods/components/rbac/user-roles/template.hbs
+msgid ""
+"This user is not a member of any access roles and therefore cannot log into "
+"the console. To assign access privileges to this user, make them a member of"
+" at least one role."
+msgstr ""
+"このユーザはどのロールにも属さないため、コンソールにログインできません。このユーザにアクセス権を割り当てるには、少なくとも1つのロールに加えてくだざい。"
+
+#: app/pods/rbac/reinstate-user-modal/template.hbs
+msgid ""
+"This will give this user access to any roles of which they are currently a "
+"member."
+msgstr "このユーザに、現在メンバーとなっているロールであればどのロールでもアクセス権が与えられます。"
+
+#: app/pods/rbac/revoke-user-modal/template.hbs
+msgid ""
+"This will remove this user's access. The user will remain in any assigned "
+"roles but will no longer have access."
+msgstr "ユーザのアクセス権を削除します。ユーザは割り当てられたロールに残りますが、アクセス権はなくなります。"
+
+#: app/pods/cm/report/report-id/logs/template.hbs
+#: app/pods/components/cm/inspector-table/event/template.hbs
+#: app/pods/jobs/list/index/template.hbs
+msgid "Time"
+msgstr "時間"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid ""
+"To accept the request, run <code>{{allowDNSAltNames}}</code> on the CA."
+msgstr "リクエストを承認するには、CAで<code>{{allowDNSAltNames}}</code>を実行してください。"
+
+#: app/pods/jobs/create/template.hbs
+msgid "To change the run mode, use the following selections:"
+msgstr "実行モードを変更するには、次の選択を使用してください。"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid ""
+"To install an agent on a *nix node with a different operating system and "
+"architecture than the Puppet master, follow <a rel=\"noopener noreferrer\" "
+"href=\"{{docsPath}}#install-agents-with-a-different-os-and-architecture-"
+"than-the-puppet-master\" class=\"agents-install-docs\" "
+"target=\"_blank\">these steps</a>."
+msgstr ""
+"Puppet masterとは異なるOSおよびアーキテクチャを使用する*nixノードにAgentをインストールするには、<a "
+"rel=\"noopener noreferrer\" href=\"{{docsPath}}#install-agents-with-a"
+"-different-os-and-architecture-than-the-puppet-master\" class=\"agents-"
+"install-docs\" target=\"_blank\">この手順</a>に従ってください。"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid ""
+"To install an agent on a Windows node, follow <a rel=\"noopener noreferrer\""
+" href=\"https://docs.puppet.com/pe/{{version}}/install_windows.html"
+"#installing-with-pe-package-management\" class=\"agents-install-docs\" "
+"target=\"_blank\">these steps</a>."
+msgstr ""
+"WindowsノードにAgentをインストールするには、<a rel=\"noopener noreferrer\" "
+"href=\"https://docs.puppet.com/pe/{{version}}/install_windows.html"
+"#installing-with-pe-package-management\" class=\"agents-install-docs\" "
+"target=\"_blank\">この手順</a>に従ってください。"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid ""
+"To install the agent on a *nix node with the same operating system and "
+"architecture as the master, run this command:"
+msgstr "masterと同じOSおよびアーキテクチャを持つ*nixノード上にAgentをインストールするには、このコマンドを実行してください:"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid ""
+"To use the current list, convert the query to a static node list before you "
+"run the job."
+msgstr "現在のリストを使用するには、クエリを静的ノードリストに変換してから、ジョブを実行してください。"
+
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/status-name/component.js
+msgid "Total"
+msgstr "合計"
+
+#: app/pods/cm/packages/status/counter/template.hbs
+msgid "Total packages: {{count}}"
+msgstr "パッケージ数合計: {{count}}"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/jobs/job/template.hbs
+msgid "Total resources"
+msgstr "リソース合計"
+
+#: app/pods/classifier/inventory/node/controller.js
+msgid "Trace"
+msgstr "Trace"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid "Trace: Prints stack traces on some errors."
+msgstr "Trace: 一部のエラーが発生したときにスタックトレースを出力します。"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid "Type"
+msgstr "タイプ"
+
+#: app/pods/rbac/ds-user-no-removal-modal/template.hbs
+msgid "Unable to Remove Directory"
+msgstr "ディレクトリを削除できません"
+
+#: app/pods/classifier/group/controller.js app/pods/rbac/role/controller.js
+#: app/pods/rbac/user/controller.js
+msgid "Unable to fetch changes"
+msgstr "変更を取得できません"
+
+#: app/pods/rbac/user/controller.js
+msgid "Unable to get password reset token"
+msgstr "パスワードリセットトークンを取得できません"
+
+#: app/pods/tasks/create/route.js
+msgid "Unable to load task list"
+msgstr "タスクリストを読み込めません"
+
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/cm/graph/node/controller.js
+#: app/pods/cm/report/report-id/events/controller.js
+#: app/pods/cm/reports/template.hbs
+#: app/pods/components/cm/inspector-table/event/row/component.js
+#: app/pods/components/cm/report/event-row/component.js
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+#: app/pods/components/cm/status-name/component.js
+msgid "Unchanged"
+msgstr "未変更"
+
+#: app/pods/cm/inspector/bread-crumbs/service.js
+msgid "Unchanged event"
+msgstr "変更なしのイベント"
+
+#: app/pods/components/classifier/class-entry/template.hbs
+#: app/pods/components/classifier/class-param/template.hbs
+#: app/pods/components/classifier/config-data-entry/template.hbs
+#: app/pods/components/classifier/rules/fact-row/template.hbs
+#: app/pods/components/classifier/rules/pinned-row/template.hbs
+#: app/pods/components/classifier/variable-row/template.hbs
+#: app/pods/components/rbac/role/group-row/template.hbs
+#: app/pods/components/rbac/role/permission-row/template.hbs
+#: app/pods/components/rbac/role/user-row/template.hbs
+msgid "Undo remove"
+msgstr "削除を取り消す"
+
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "Unknown"
+msgstr "未知"
+
+#: app/pods/jobs/job/controller.js
+msgid "Unknown inventory type"
+msgstr "未知のインベントリ情報タイプ"
+
+#: app/pods/security/vulnerable-nodes/controller.js
+msgid "Unmanaged"
+msgstr "未管理"
+
+#: app/pods/classifier/group/controller.js
+msgid "Unnamed group"
+msgstr "無名のグループ"
+
+#: app/pods/components/classifier/rules/pinned-row/template.hbs
+msgid "Unpin"
+msgstr "ピンを外す"
+
+#: app/pods/components/classifier/rules/pinned-section/template.hbs
+msgid "Unpin all pinned nodes"
+msgstr "ピンされたノードをグループから解除"
+
+#: app/templates/navigate-away.hbs
+msgid "Unsaved Changes"
+msgstr "変更が未保存"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Unsigned certificates"
+msgstr "無署名の証明書"
+
+#: app/pods/classifier/certificates/template.hbs
+msgid "Unsigned certificates | Node management | Puppet Enterprise"
+msgstr "無署名の証明書 | ノード管理 | Puppet Enterprise"
+
+#: app/templates/application.hbs
+msgid "Unsigned certs"
+msgstr "無署名の証明書"
+
+#: app/pods/components/classifier/group/nodes-tab/template.hbs
+msgid "Update the rules or pin specific nodes."
+msgstr "ルールを更新するか、特定のノードをピンして追加します。"
+
+#: app/pods/jobs/job/template.hbs app/pods/jobs/list/index/template.hbs
+#: app/pods/rbac/user/local/template.hbs
+msgid "User"
+msgstr "ユーザ"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "User email address"
+msgstr "ユーザのメールアドレス"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "User email address field"
+msgstr "ユーザのメールアドレスフィールド"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "User full name"
+msgstr "ユーザのフルネーム"
+
+#: app/pods/rbac/groups/index/template.hbs
+#: app/pods/rbac/user/tab/partial/template.hbs
+#: app/templates/components/access-control/access-control-nav.hbs
+msgid "User groups"
+msgstr "ユーザグループ"
+
+#: app/pods/rbac/groups/index/template.hbs
+msgid "User groups | Access control | Puppet Enterprise"
+msgstr "ユーザグループ | アクセス管理 | Puppet Enterprise"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "User login attribute"
+msgstr "ユーザのログイン属性"
+
+#: app/pods/components/rbac/group-users/template.hbs
+#: app/pods/components/rbac/role/users-tab/template.hbs
+msgid "User name"
+msgstr "ユーザ名"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "User relative distinguished name"
+msgstr "ユーザの相対識別子"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "User relative distinguished name (optional)"
+msgstr "ユーザの相対識別子(任意)"
+
+#: app/pods/rbac/role/template.hbs
+msgid "User role name"
+msgstr "ユーザロール名"
+
+#: app/pods/rbac/group/template.hbs app/pods/rbac/roles/index/template.hbs
+#: app/pods/rbac/user/tab/partial/template.hbs
+#: app/templates/components/access-control/access-control-nav.hbs
+msgid "User roles"
+msgstr "ユーザロール"
+
+#: app/pods/rbac/roles/index/template.hbs
+msgid "User roles | Access control | Puppet Enterprise"
+msgstr "ユーザロール | アクセス管理 | Puppet Enterprise"
+
+#: app/pods/rbac/users/index/template.hbs
+msgid "User status"
+msgstr "ユーザステータス"
+
+#: app/pods/rbac/group/template.hbs app/pods/rbac/users/index/template.hbs
+#: app/templates/components/access-control/access-control-nav.hbs
+msgid "Users"
+msgstr "ユーザ"
+
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+msgid ""
+"Users in this role are allowed to manipulate objects in the following ways:"
+msgstr "このロールのユーザは、次の方法でオブジェクトを操作できます。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Users will log in with this value."
+msgstr "ユーザはこの値でログインします。"
+
+#: app/pods/rbac/users/index/template.hbs
+msgid "Users | Access control | Puppet Enterprise"
+msgstr "ユーザ | アクセス管理 | Puppet Enterprise"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Validating"
+msgstr "確認中"
+
+#: app/pods/classifier/inventory/node/fact-list/template.hbs
+#: app/pods/classifier/inventory/node/variable-list/template.hbs
+#: app/pods/components/classifier/class-params/template.hbs
+#: app/pods/components/classifier/config-data-list/template.hbs
+#: app/pods/components/classifier/group/variables-tab/template.hbs
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/tasks/create/template.hbs
+msgid "Value"
+msgstr "値"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Variables"
+msgstr "変数"
+
+#: app/pods/classifier/group/template.hbs
+msgid "Variables <span class=\"tab-change-count\">({{count}} change)</span>"
+msgid_plural ""
+"Variables <span class=\"tab-change-count\">({{count}} change)</span>"
+msgstr[0] "変数 <span class=\"tab-change-count\">({{count}}件の変更)</span>"
+
+#: app/pods/classifier/variable-structured-value-popover/template.hbs
+msgid ""
+"Variables can be structured as JSON. If we can't parse your variable as JSON"
+" we'll send it to the classifier service as a string."
+msgstr "変数はJSON形式で入力可能です。JSON形式として解析できない場合、変数は文字列として分類サービスに送られます。"
+
+#: app/pods/cm/report/report-id/template.hbs
+msgid ""
+"Verify a node's resources after a Puppet run, and review the message log."
+msgstr "Puppet実行の後にノードのリソースを検証し、メッセージログを確認します。"
+
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/cm/package-nodes/template.hbs app/pods/cm/packages/template.hbs
+msgid "Version"
+msgstr "バージョン"
+
+#: app/pods/components/cm/package/version-filter/template.hbs
+msgid "Version:"
+msgstr "バージョン:"
+
+#: app/pods/components/security/alert-message/component.js
+msgid "View"
+msgstr "表示"
+
+#: app/pods/cm/graph/template.hbs
+msgid "View full screen"
+msgstr "全画面表示"
+
+#: app/pods/classifier/group/template.hbs app/pods/rbac/group/controller.js
+msgid "View history of changes made to this group."
+msgstr "このグループに対する変更履歴を表示します。"
+
+#: app/pods/classifier/inventory/node/activity/controller.js
+msgid "View history of changes made to this node."
+msgstr "このノードに対する変更履歴を表示します。"
+
+#: app/pods/rbac/role/controller.js
+msgid "View history of changes made to this role."
+msgstr "このロールに対する変更履歴を表示します。"
+
+#: app/pods/rbac/user/controller.js
+msgid "View history of changes made to this user."
+msgstr "このユーザに対する変更履歴を表示します。"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "View in Nessus:"
+msgstr "Nessusで表示:"
+
+#: app/pods/classifier/inventory/nodes/template.hbs
+msgid ""
+"View information about your <b>{{formattedCount}}</b> Puppet-managed node"
+msgid_plural ""
+"View information about your <b>{{formattedCount}}</b> Puppet-managed node"
+msgstr[0] "Puppet管理下のノード<b>{{formattedCount}}</b>件の情報を表示"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "View more information about run options"
+msgstr "実行オプションの詳細情報を表示"
+
+#: app/pods/components/cm/node-link/template.hbs
+msgid "View node details"
+msgstr "ノードの詳細情報を表示"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "View node graph"
+msgstr "ノードグラフを表示"
+
+#: app/pods/cm/packages/template.hbs
+msgid "View packages in use across your infrastructure."
+msgstr "インフラ全体で使用されているパッケージを表示します。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "View report"
+msgstr "レポートを表示"
+
+#: app/pods/cm/inspector/event/show/template.hbs
+msgid "View run report"
+msgstr "実行レポートを表示"
+
+#: app/pods/cm/nodes/template.hbs
+msgid ""
+"View the latest run status for each node and focus on areas in need of "
+"attention."
+msgstr "ここには、各ノードの最新の実行ステータスが表示されます。必要なエリアに注意を向けましょう。"
+
+#: app/pods/security/vulnerabilities/template.hbs
+msgid "View vulnerabilities detected by integrated tools."
+msgstr "統合型ツールで検出された脆弱性を表示します。"
+
+#: app/pods/jobs/list/index/template.hbs
+msgid "View your in-progress and completed Puppet jobs."
+msgstr "処理中および完了済みのPuppetジョブを表示します。"
+
+#: app/pods/security/vulnerabilities/template.hbs
+msgid "Vulnerabilities"
+msgstr "脆弱性"
+
+#: app/pods/security/vulnerabilities/composition/headers/template.hbs
+msgid "Vulnerabilities reported:"
+msgstr "レポートされた脆弱性:"
+
+#: app/pods/security/vulnerabilities/template.hbs
+msgid "Vulnerabilities | Puppet Enterprise"
+msgstr "脆弱性 | Puppet Enterprise"
+
+#: app/pods/security/vulnerabilities/template.hbs
+msgid "Vulnerability"
+msgstr "脆弱性"
+
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "Vulnerabiltiy | Puppet Enterprise"
+msgstr "脆弱性 | Puppet Enterprise"
+
+#: app/pods/components/cm/graph-error/template.hbs
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Warning"
+msgstr "警告"
+
+#: app/pods/cm/service-alerts-modal/template.hbs
+msgid "Warnings"
+msgstr "警告"
+
+#: app/pods/jobs/create/template.hbs
+msgid "What environment do you want the nodes to run in?"
+msgstr "ノードをどの環境で実行しますか。"
+
+#: app/pods/jobs/create/template.hbs
+msgid "What mode do you want to run your nodes in?"
+msgstr "ノードをどのモードで実行しますか。"
+
+#: app/pods/jobs/navigate-away-modal/template.hbs
+msgid "What would you like to do?"
+msgstr "何をしたいですか？"
+
+#: app/pods/rbac/password-generate-modal/template.hbs
+msgid ""
+"When a revoked user uses this link, the user's revoked state is removed, "
+"even if you revoke the user after sending the link."
+msgstr "無効化されたユーザがこのリンクを使用すると、リンクの送信後にそのユーザを無効化した場合でも、そのユーザの無効化状態が解除されます。"
+
+#: app/pods/jobs/create/template.hbs app/pods/tasks/create/template.hbs
+msgid ""
+"When you run this job, the query will rerun and may produce a different set "
+"of nodes than what is currently displayed."
+msgstr "このジョブを実行すると、クエリが再実行され、現在表示されているのとは異なるノードが生成されることがあります。"
+
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Where in the LDAP tree we can find users and groups."
+msgstr "LDAPツリー内におけるユーザとグループの位置。"
+
+#: app/pods/jobs/job/controller.js
+msgid ""
+"Whole Environment targets are deprecated and are no longer supported in the "
+"command line or console."
+msgstr "全Environmentターゲットは廃止済みで、コマンドラインでもコンソールでもサポートされていません。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Why is the Run Puppet button disabled?"
+msgstr "[Puppetを実行]ボタンがクリックできないのはなぜですか?"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Why?"
+msgstr "なぜ?"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "With corrective changes"
+msgstr "修正あり"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "With failures"
+msgstr "失敗あり"
+
+#: app/pods/components/cm/status-legend/overview-enforcement/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "With intentional changes"
+msgstr "変更あり"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid "Working..."
+msgstr "作業中..."
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "Would be unchanged"
+msgstr "変更なし（no-op）"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "Would have corrective changes"
+msgstr "修正（no-op）"
+
+#: app/pods/components/cm/status-legend/overview-noop/template.hbs
+#: app/pods/components/cm/status-legend/reports/template.hbs
+msgid "Would have intentional changes"
+msgstr "変更（no-op）"
+
+#: app/pods/components/classifier/rules/facts-section/template.hbs
+msgid ""
+"Write rules to dynamically assign nodes to this group based on fact values."
+msgstr "factsの値に基づいてノードをグループに動的に割り当てるためのルールを記述します。"
+
+#: app/helpers/bool-to-yes-dash.js
+#: app/pods/components/jobs/create/node-detail-row/component.js
+#: app/pods/rbac/directory/index/template.hbs
+msgid "Yes"
+msgstr "はい"
+
+#: app/templates/license.hbs
+msgid "You are using the complimentary license."
+msgstr "無料ライセンスを使用中です。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "You can navigate away from this screen without canceling the run."
+msgstr "この画面から移動しても、実行は中止されません。"
+
+#: app/pods/components/classifier/certificates/unsigned-cert/template.hbs
+msgid ""
+"You cannot accept or reject requests in the console from nodes with a <a "
+"class=\"pe-base-tooltip-link dns-alt-names-docs\" href=\"{{path}}\" "
+"target=\"_blank\">DNS alt name</a>."
+msgstr ""
+"<a class=\"pe-base-tooltip-link dns-alt-names-docs\" href=\"{{path}}\" "
+"target=\"_blank\">DNSオルトネーム</a>を持つノードからのリクエストは、コンソールで承認または拒否できません。"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid ""
+"You don't have permission to view node groups. If you believe this is an "
+"error, contact your Puppet administrator."
+msgstr "ノードグループを表示するパーミッションがありません。エラーと考えられる場合、Puppet管理者にお問い合わせください。"
+
+#: app/templates/components/ajax-error.hbs
+msgid "You have been logged out of the console."
+msgstr "コンソールからログアウトされました。"
+
+#: app/templates/license.hbs app/templates/license.hbs
+msgid "You have exceeded your license by {{count}} node."
+msgid_plural "You have exceeded your license by {{count}} node."
+msgstr[0] "ライセンスを{{count}}ノード分超過しています。"
+
+#: app/mixins/navigate-away.js app/templates/navigate-away.hbs
+msgid ""
+"You have uncommitted changes on the current page. These changes will be lost"
+" if you do not commit them first."
+msgstr "現在のページで行った変更が保存されていません。先にコミットしなければ、これらの変更は失われます。"
+
+#: app/templates/license.hbs
+msgid "You have {{count}} node connected to this master."
+msgid_plural "You have {{count}} node connected to this master."
+msgstr[0] "このmasterに接続されたノードが{{count}}件あります。"
+
+#: app/templates/license.hbs app/templates/license.hbs
+msgid "You will be charged by the hour for each node connected to the master."
+msgstr "masterに接続されたノード数分、時間当たりで課金されます。"
+
+#: app/pods/jobs/navigate-away-modal/template.hbs
+msgid "You will lose the information you have entered if you leave this page."
+msgstr "今このページから移動すると入力した情報は保存されません。"
+
+#: app/pods/rbac/remove-directory-modal/template.hbs
+#: app/pods/rbac/remove-user-group-modal/template.hbs
+#: app/pods/rbac/remove-user-modal/template.hbs
+msgid "You will not be able to undo this action."
+msgstr "このアクションは取り消しできません。"
+
+#: app/templates/help.hbs
+msgid ""
+"You will receive an account and login for this portal when you purchase "
+"Puppet Enterprise."
+msgstr "Puppet Enterpriseを購入すると専用のアカウント、ログイン情報が提供されました。"
+
+#: app/templates/license.hbs
+msgid "Your license expired on {{formattedEndDate}}."
+msgstr "ライセンスは{{formattedEndDate}}に失効しました。"
+
+#: app/templates/license.hbs
+msgid "Your license expires in {{count}} day."
+msgid_plural "Your license expires in {{count}} day."
+msgstr[0] "ライセンスはあと{{count}}日有効です。"
+
+#: app/templates/license.hbs
+msgid ""
+"Your license must support the number of nodes that you want to manage with "
+"Puppet Enterprise."
+msgstr "Puppet Enterpriseで管理するノード数に対応したライセンスが必要です。"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "Your request timed out."
+msgstr "リクエストがタイムアウトしました。"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "alert"
+msgstr "alert"
+
+#: app/templates/help.hbs
+msgid "ask.puppet.com"
+msgstr "ask.puppet.com"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "class"
+msgstr "クラス"
+
+#: app/components/access-control/access-control-btn.js
+msgid "collapse access control list"
+msgstr "アクセス管理リストを折り畳み"
+
+#: app/pods/components/tasks/pql-query/template.hbs
+msgid "common queries selection"
+msgstr "一般的なクエリの選択"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "corrective change"
+msgstr "修正"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "corrective no-op"
+msgstr "修正（no-op）"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "crit"
+msgstr "crit"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "debug"
+msgstr "debug"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "defined type"
+msgstr "定義された型"
+
+#: app/pods/components/classifier/node-group-hierarchy/button/component.js
+msgid "display children"
+msgstr "子を表示"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "emerg"
+msgstr "emerg"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/inventory/node/group-list/template.hbs
+#: app/pods/components/classifier/node-group-hierarchy/group/template.hbs
+msgid "env group"
+msgstr "Environmentグループ"
+
+#: app/pods/jobs/create/template.hbs
+msgid "environment for nodes to run in"
+msgstr "ノードを実行するenvironment"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "err"
+msgstr "err"
+
+#: app/components/access-control/access-control-btn.js
+msgid "expand access control list"
+msgstr "アクセス管理リストを展開"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "failure"
+msgstr "失敗"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "have no reports"
+msgstr "レポートなし"
+
+#: app/components/run-status/lib/description.js
+msgid "have no reports."
+msgstr "レポートがありません。"
+
+#: app/pods/components/classifier/node-group-hierarchy/button/component.js
+msgid "hide children"
+msgstr "子を非表示"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "info"
+msgstr "info"
+
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+msgid "input exact value"
+msgstr "正確な値を入力"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "intentional change"
+msgstr "変更"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "intentional no-op"
+msgstr "変更（no-op）"
+
+#: app/pods/components/classifier/group/classes-tab/template.hbs
+msgid "learn more about data"
+msgstr "データについて"
+
+#: app/pods/classifier/group/template.hbs
+#: app/pods/classifier/groups/index/template.hbs
+#: app/pods/classifier/inventory/node/group-list/template.hbs
+#: app/pods/components/classifier/node-group-hierarchy/group/template.hbs
+msgid "learn more about environment groups"
+msgstr "Environmentグループについて"
+
+#: app/pods/jobs/create/template.hbs
+msgid "learn more about job environments"
+msgstr "ジョブ環境について"
+
+#: app/pods/jobs/create/template.hbs
+msgid "learn more about running nodes in no-op mode"
+msgstr "no-opモードにおけるノードの実行について"
+
+#: app/pods/classifier/certificates/template.hbs
+#: app/pods/classifier/group/route.js
+#: app/pods/classifier/groups/index/template.hbs
+#: app/pods/classifier/inventory/node/package-list/template.hbs
+#: app/pods/classifier/inventory/node/report-list/template.hbs
+#: app/pods/classifier/inventory/nodes/template.hbs
+#: app/pods/cm/inspector/base/loading/template.hbs app/pods/cm/nodes/route.js
+#: app/pods/cm/package-nodes/template.hbs
+#: app/pods/cm/packages/loading/content/template.hbs
+#: app/pods/cm/report/report-id/events/template.hbs
+#: app/pods/cm/reports/loading/spinner/template.hbs
+#: app/pods/components/cm/leaderboard/status-boxes/template.hbs
+#: app/pods/components/jobs/node-target-list/template.hbs
+#: app/pods/components/rbac/role/permissions-tab/template.hbs
+#: app/pods/components/tasks/target-table/template.hbs
+#: app/pods/jobs/job/template.hbs app/pods/jobs/list/index/template.hbs
+msgid "loading..."
+msgstr "読み込み中..."
+
+#: app/pods/components/cm/node/node-record/template.hbs
+#: app/pods/components/cm/node/node-record/template.hbs
+msgid "n/a"
+msgstr "n/a"
+
+#: app/components/run-status/run-status-icon.js
+#: app/templates/components/run-status/run-status-line.hbs
+msgid "no"
+msgstr "いいえ"
+
+#: app/components/run-status/run-status-icon.js
+msgid "no-op mode:"
+msgstr "no-opモード:"
+
+#: app/pods/cm/radiator/template.hbs
+msgid ""
+"node <span class=\"radiator-run-group\">not "
+"<strong>reporting</strong></span>"
+msgid_plural ""
+"node <span class=\"radiator-run-group\">not "
+"<strong>reporting</strong></span>"
+msgstr[0] "<span class=\"radiator-run-group\"><strong>レポート</strong>なし</span>のノード"
+
+#: app/pods/cm/radiator/template.hbs
+msgid "node run in <span class=\"radiator-run-group\">enforcement</span>"
+msgid_plural "node run in <span class=\"radiator-run-group\">enforcement</span>"
+msgstr[0] "<span class=\"radiator-run-group\">適用モード</span>で実行されたノード"
+
+#: app/pods/cm/radiator/template.hbs
+msgid "node run in <span class=\"radiator-run-group\">no-op</span>"
+msgid_plural "node run in <span class=\"radiator-run-group\">no-op</span>"
+msgstr[0] "<span class=\"radiator-run-group\">no-opモード</span>で実行されたノード"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "not defined"
+msgstr "未定義"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "notice"
+msgstr "notice"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "resource"
+msgstr "リソース"
+
+#: app/pods/cm/package-nodes/template.hbs
+msgid "results"
+msgstr "結果"
+
+#: app/pods/components/cm/data-filter/fact-filter/template.hbs
+msgid "select fact"
+msgstr "factを選択"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "select item"
+msgstr "項目を選択"
+
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "select {{node}} for removal"
+msgstr "{{node}}を削除したい場合に選択します"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "skip"
+msgstr "スキップ"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "stage"
+msgstr "ステージ"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "status"
+msgstr "ステータス"
+
+#: app/components/run-status/run-status-icon.js
+msgid "status:"
+msgstr "ステータス:"
+
+#: app/pods/cm/graph/node/controller.js
+msgid "tag"
+msgstr "タグ"
+
+#: app/pods/components/tasks/target-type-select/template.hbs
+msgid "target nodes selection mechanism"
+msgstr "ターゲットノード選択メカニズム"
+
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+msgid "total"
+msgstr "合計"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/inspector-sidebar/event/resource/component.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "unchanged"
+msgstr "変更なし"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+#: app/pods/components/cm/graph-details-info/node-details/template.hbs
+msgid "unknown"
+msgstr "不明"
+
+#: app/pods/components/cm/radiator-row/component.js
+msgid "unresponsive"
+msgstr "応答なし"
+
+#: app/components/run-status/lib/description.js
+msgid "unresponsive for {{count}}+ hours"
+msgid_plural "unresponsive for {{count}}+ hours"
+msgstr[0] "{{count}}時間以上応答なし"
+
+#: app/components/run-status/lib/description.js
+msgid "unresponsive for ~{{count}}+ hours"
+msgid_plural "unresponsive for ~{{count}}+ hours"
+msgstr[0] "約{{count}}時間以上応答なし"
+
+#: app/components/run-status/lib/description.js
+msgid "unresponsive recently"
+msgstr "最近応答していない"
+
+#: app/pods/components/cm/report/log-row/component.js
+msgid "warning"
+msgstr "warning"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "with corrective changes"
+msgstr "修正あり"
+
+#: app/components/run-status/lib/description.js
+msgid "with enforced resources"
+msgstr "適用されたリソースあり"
+
+#: app/components/run-status/lib/description.js
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "with failures"
+msgstr "失敗あり"
+
+#: app/components/run-status/lib/description.js
+#: app/components/run-status/lib/description.js
+msgid "with intended catalog failure"
+msgstr "予定されていたカタログの失敗あり"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "with intentional changes"
+msgstr "変更あり"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "would be unchanged"
+msgstr "変更なし（no-op）"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "would have corrective changes"
+msgstr "修正（no-op）"
+
+#: app/components/run-status/lib/description.js
+#: app/pods/components/cm/radiator-row/component.js
+msgid "would have intentional changes"
+msgstr "変更（no-op）"
+
+#: app/components/run-status/run-status-icon.js
+#: app/templates/components/run-status/run-status-line.hbs
+msgid "yes"
+msgstr "はい"
+
+#: app/pods/rbac/role/template.hbs
+msgid "{{- displayName}} | User roles | Puppet Enterprise"
+msgstr "{{- displayName}} | ユーザロール | Puppet Enterprise"
+
+#: app/pods/rbac/group/template.hbs
+msgid "{{- groupName}} | User groups | Puppet Enterprise"
+msgstr "{{- groupName}} | ユーザグループ | Puppet Enterprise"
+
+#: app/pods/classifier/inventory/node/template.hbs
+msgid "{{- name}} | Inventory | Puppet Enterprise"
+msgstr "{{- name}} | インベントリ情報 | Puppet Enterprise"
+
+#: app/pods/classifier/group/template.hbs
+msgid "{{- name}} | Puppet Enterprise"
+msgstr "{{- name}} | Puppet Enterprise"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "{{- nodeName}} graph | Puppet Enterprise"
+msgstr "{{- nodeName}}グラフ | Puppet Enterprise"
+
+#: app/pods/classifier/inventory/node/run-puppet-help/template.hbs
+msgid ""
+"{{- puppetAgentCommand}} retrieves the agent configuration from the Puppet "
+"master and applies it to the agent. "
+msgstr "{{- puppetAgentCommand}} は、Puppet masterからagent設定を取得し、agentに適用します。"
+
+#: app/pods/rbac/user/local/template.hbs
+#: app/pods/rbac/user/remote/template.hbs
+msgid "{{- userName}} | Users | Puppet Enterprise"
+msgstr "{{- userName}} | ユーザ | Puppet Enterprise"
+
+#: app/pods/classifier/groups/index/template.hbs
+msgid "{{added}} added!"
+msgstr "{{added}} 追加されました!"
+
+#: app/pods/security/vulnerabilities/composition/managed/template.hbs
+msgid "{{count}} Puppet-managed nodes have not been scanned."
+msgstr "{{count}}件のPuppet管理下ノードがスキャンされていません。"
+
+#: app/pods/rbac/role/template.hbs app/pods/rbac/role/template.hbs
+#: app/pods/rbac/role/template.hbs
+msgid "{{count}} change"
+msgid_plural "{{count}} change"
+msgstr[0] "{{count}}件の変更"
+
+#: app/templates/license.hbs
+msgid "{{count}} complimentary node"
+msgid_plural "{{count}} complimentary node"
+msgstr[0] "{{count}}件の無料ノード"
+
+#: app/pods/components/cm/basic-monitoring/service-alerts/component.js
+msgid "{{count}} error"
+msgid_plural "{{count}} error"
+msgstr[0] "{{count}}件のエラー"
+
+#: app/pods/components/cm/basic-monitoring/service-alerts/component.js
+msgid "{{count}} informational alert"
+msgid_plural "{{count}} informational alert"
+msgstr[0] "{{count}}件の情報アラート"
+
+#: app/templates/license.hbs app/templates/license.hbs
+msgid "{{count}} node in use"
+msgid_plural "{{count}} node in use"
+msgstr[0] "{{count}}ノード使用中"
+
+#: app/pods/components/classifier/group/nodes-tab/template.hbs
+msgid "{{count}} node matches the rules for this node group."
+msgid_plural "{{count}} node matches the rules for this node group."
+msgstr[0] "{{count}}件のノードがこのノードグループのルールに一致しています。"
+
+#: app/templates/license.hbs
+msgid "{{count}} node purchased"
+msgid_plural "{{count}} node purchased"
+msgstr[0] "{{count}}ノード使用可能"
+
+#: app/templates/license.hbs
+msgid "{{count}} node remaining"
+msgid_plural "{{count}} node remaining"
+msgstr[0] "{{count}}ノードが残存"
+
+#: app/templates/license.hbs
+msgid "{{count}} node remaining under your license"
+msgid_plural "{{count}} node remaining under your license"
+msgstr[0] "{{count}}ノード未使用"
+
+#: app/pods/cm/reports/status/counter/template.hbs
+msgid "{{count}} report available."
+msgid_plural "{{count}} report available."
+msgstr[0] "{{count}}件のレポートを表示します。"
+
+#: app/pods/cm/graph/node/template.hbs
+msgid "{{count}} resource with this tag"
+msgid_plural "{{count}} resource with this tag"
+msgstr[0] "このタグを持つ{{count}}件のリソース"
+
+#: app/pods/security/vulnerabilities/composition/filter/template.hbs
+msgid "{{count}} vulnerability"
+msgid_plural "{{count}} vulnerability"
+msgstr[0] "{{count}}件の脆弱性"
+
+#: app/pods/components/cm/basic-monitoring/service-alerts/component.js
+msgid "{{count}} warning"
+msgid_plural "{{count}} warning"
+msgstr[0] "{{count}}件の警告"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with corrective changes"
+msgstr "{{count}} 修正あり"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with corrective no-ops"
+msgstr "{{count}} 修正(no-op)あり"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with events"
+msgstr "{{count}} イベントあり"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with failures"
+msgstr "{{count}} 失敗あり"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with intentional changes"
+msgstr "変更あり{{count}} "
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with intentional no-ops"
+msgstr "{{count}} 変更(no-op)あり"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with skips"
+msgstr "{{count}} スキップあり"
+
+#: app/pods/components/cm/inspector-sidebar/class/template.hbs
+#: app/pods/components/cm/inspector-sidebar/node/template.hbs
+#: app/pods/components/cm/inspector-sidebar/resource/template.hbs
+msgid "{{count}} with total"
+msgstr "{{count}} 合計あり"
+
+#: app/pods/jobs/job/controller.js
+msgid "{{environment}} (all nodes run in their own environment)"
+msgstr "{{environment}} (すべてのノードはそれぞれ割り当てられたenvironment内で実行)"
+
+#: app/pods/jobs/job/controller.js
+msgid "{{environment}} (all nodes run in this environment)"
+msgstr "{{environment}} (すべてのノードはこのenvironment内で実行)"
+
+#: app/pods/components/jobs/node-count/template.hbs
+#: app/pods/components/tasks/target-table/template.hbs
+msgid "{{formattedCount}} node"
+msgid_plural "{{formattedCount}} node"
+msgstr[0] "{{formattedCount}} ノード"
+
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/components/cm/data-filter/template.hbs
+#: app/pods/security/vulnerable-nodes/template.hbs
+msgid "{{formattedCount}} result"
+msgid_plural "{{formattedCount}} result"
+msgstr[0] "{{formattedCount}} 結果"
+
+#: app/pods/components/classifier/inventory/node-search/template.hbs
+msgid "{{formattedNodeCount}} result found for <b>{{searchName}}</b>"
+msgid_plural "{{formattedNodeCount}} result found for <b>{{searchName}}</b>"
+msgstr[0] "<b>{{searchName}}</b>について、{{formattedNodeCount}}件の結果が見つかりました。"
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} total"
+msgstr "合計{{num}} "
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} with corrective changes"
+msgstr "{{num}} 修正あり"
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} with corrective no-ops"
+msgstr "{{num}} 修正(no-op)あり"
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} with failures"
+msgstr "{{num}} 失敗あり"
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} with intentional changes"
+msgstr "変更あり{{num}} "
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} with intentional no-ops"
+msgstr "{{num}} 変更(no-op)あり"
+
+#: app/pods/components/cm/inspector-status-tabs/status-tab-text/template.hbs
+msgid "{{num}} with skips"
+msgstr "{{num}} スキップあり"

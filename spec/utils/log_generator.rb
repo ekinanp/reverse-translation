@@ -3,19 +3,13 @@
 #
 # TODO:
 #   (1) Add recursive translations (i.e. make a translated string a parameter of
-#   another translated string)
+#   another translated string). Probably the most necessary addition.
 #
 #   (2) Right now, msgid entries dominate. Maybe increase the variety so that more
 #   msgid_plural entries are generated? This is not as strictly necessary, but would
 #   capture real world behavior.
 #
 #   (3) Could probably randomly generate the prefix too. But this is not that necessary.
-#
-#   (4) Have this class take in an array of PO files, to simulate the fact that services
-#   depend on different files
-#
-# Note this class might re-use code from the core library classes. This is OK, as it's
-# a test class so there is no need to refactor the main code base.
 class LogGenerator
   # Sample prefix for the log message
   PREFIX = "2017-07-25 17:20:48,042 INFO  [p.r.m.authentication] "
@@ -86,8 +80,8 @@ class LogGenerator
 
   attr_reader :po_entries
 
-  def initialize(po_file)
-    @po_entries = POParser.parse(po_file)[1..-1]
+  def initialize(po_files)
+    @po_entries = po_files.map { |f| POParser.parse(f)[1..-1] }.reduce(:concat)
   end
 
   # Returns a random parameter

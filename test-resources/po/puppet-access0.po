@@ -1,0 +1,397 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the puppet-access package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppet-access 2.3.0\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: 梅田智世 <c-umeda@nifty.com>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: exe/puppet-access.cc
+msgid "The configuration file {1} contains invalid JSON."
+msgstr "設定ファイル{1}に無効なJSON形式が含まれています。"
+
+#: exe/puppet-access.cc
+msgid "Configuration file {1} contains invalid key: {2}"
+msgid_plural "Configuration file {1} contains invalid keys: {2}"
+msgstr[0] "設定ファイル{1}に無効なキーが含まれています: {2}"
+
+#. info
+#: exe/puppet-access.cc
+msgid "Succesfully read configuration from {1}"
+msgstr "{1}からの設定ファイルの読み込みに成功しました。"
+
+#. warning
+#: exe/puppet-access.cc
+msgid ""
+"The config file path `{1}` is deprecated. Please move your configuration "
+"file to `{2}`"
+msgstr "設定ファイルパス`{1}`は廃止予定になっています。設定ファイルを`{2}`に移動してください。"
+
+#. info
+#: exe/puppet-access.cc
+msgid "Skipping configuration file {1} because it does not exist"
+msgstr "設定ファイル{1}が存在しないため、スキップしています。 "
+
+#. debug
+#: exe/puppet-access.cc
+msgid ""
+"Configuration values from CLI flags are:\n"
+"{1}"
+msgstr ""
+"CLIフラグにもとづく設定値:\n"
+"{1}"
+
+#. debug
+#: exe/puppet-access.cc
+msgid "Configuration file flag value is {1}"
+msgstr "設定ファイルフラグ値は{1}です。"
+
+#. info
+#: exe/puppet-access.cc
+msgid "Succesfully read user-specified configuration from {1}"
+msgstr "{1}からのユーザ固有の設定の読み込みに成功しました。"
+
+#. debug
+#: exe/puppet-access.cc
+msgid "Configuration file flag value is empty"
+msgstr "設定ファイルのフラグ値が空です。"
+
+#: exe/puppet-access.cc
+msgid "Username: "
+msgstr "ユーザ名: "
+
+#: exe/puppet-access.cc
+msgid "No username supplied."
+msgstr "ユーザ名が提示されていません。"
+
+#: exe/puppet-access.cc
+msgid "Please enter a username."
+msgstr "ユーザ名を入力してください。"
+
+#: exe/puppet-access.cc
+msgid "Password: "
+msgstr "パスワード: "
+
+#: exe/puppet-access.cc
+msgid ""
+"Please provide the service URL. For example, `puppet-access login [username]"
+" --service-url https://<HOSTNAME OF PUPPET ENTERPRISE CONSOLE>:4433/rbac-"
+"api`."
+msgstr ""
+"サービスURLを提供してください。たとえば、`puppet-access login [username] --service-url "
+"https://<HOSTNAME OF PUPPET ENTERPRISE CONSOLE>:4433/rbac-api`など。"
+
+#: exe/puppet-access.cc
+msgid "Enter your Puppet Enterprise credentials."
+msgstr "Puppet Enterprise認証情報を入力してください。"
+
+#: exe/puppet-access.cc
+msgid "ERROR: Sorry. We aren't able to log you in."
+msgstr "エラー: 申し訳ありません。ログインできません。"
+
+#: exe/puppet-access.cc
+msgid "Please try again."
+msgstr "もう一度試してください。"
+
+#: exe/puppet-access.cc
+msgid ""
+"ERROR: The value provided for --lifetime was malformed.\n"
+"Please provide a value using the format <integer>[smhdy].\n"
+"For example, for a token that is valid for one hour, use '1h',\n"
+"with no space between the integer and unit."
+msgstr ""
+"エラー: --lifetimeに関して入力された値が正しくありません。\n"
+"フォーマット<integer>[smhdy]を使った値を入力してください。\n"
+"たとえば、1時間有効なトークンの場合は、'1h'を使用してください。\n"
+"整数と単位の間にスペースは入れません。"
+
+#: exe/puppet-access.cc
+msgid "Access token saved to: "
+msgstr "アクセストークンを保存しました: "
+
+#: exe/puppet-access.cc
+msgid "Failed to log in. Please try again."
+msgstr "ログインに失敗しました。もう一度試してください。"
+
+#: exe/puppet-access.cc
+msgid "Token file deleted."
+msgstr "トークンファイルを削除しました。"
+
+#: exe/puppet-access.cc
+msgid ""
+"Expected at most 1 parameters for action login. Found {1}.\n"
+"Failed to parse the command line input."
+msgstr ""
+"アクションログインでは最大1つのパラメータが求められています。{1}が見つかりました。\n"
+"コマンドラインのインプットの解析に失敗しました。"
+
+#: exe/puppet-access.cc
+msgid "Username cannot be supplied as both a flag and an argument"
+msgstr "ユーザ名をフラグと引数の両方として提供することはできません。"
+
+#: exe/puppet-access.cc
+msgid ""
+"Usage\n"
+"=====\n"
+"\n"
+"  puppet-access <action> [--ca-cert arg] [-h|--help] [--service-url arg]\n"
+"    [-c|--config-file arg] [-t|--token-file arg] [--username arg] [-v|--verbose]\n"
+"    [-V|--version] [-d|--debug]\n"
+"\n"
+"Description\n"
+"===========\n"
+"\n"
+"Generate an access token by sending username and password to a token generation\n"
+"API endpoint. Tokens are returned in plain text and saved to a file on disk (by\n"
+"default, "
+msgstr ""
+"使用方法\n"
+"=====\n"
+"\n"
+"  puppet-access <action> [--ca-cert arg] [-h|--help] [--service-url arg]\n"
+"    [-c|--config-file arg] [-t|--token-file arg] [--username arg] [-v|--verbose]\n"
+"    [-V|--version] [-d|--debug]\n"
+"\n"
+"Description\n"
+"===========\n"
+"\n"
+"ユーザ名とパスワードをトークン生成APIエンドポイントに送信し、アクセストークンを生成してください。\n"
+"トークンはプレーンテキストで返され、ディスク上のファイルに保存されます(デフォルトでは、"
+
+#: exe/puppet-access.cc
+msgid "Enable debug logging."
+msgstr "デバッグログインを有効化する。"
+
+#: exe/puppet-access.cc
+msgid "Location of the token file. Defaults to {1}"
+msgstr "トークンファイルのロケーション。デフォルトは {1}。"
+
+#: exe/puppet-access.cc
+msgid "CA cert to use to contact token-issuing service. Defaults to {1}"
+msgstr "トークン発行サービスとの連絡に使用するCA証明書。デフォルトは{1}。"
+
+#: exe/puppet-access.cc
+msgid ""
+"FQDN, port, and API prefix of server where the token issuing service/server "
+"can be contacted (the Puppet Enterprise console node). (example: "
+"https://<HOSTNAME>:4433/rbac-api)"
+msgstr ""
+"トークン発行サービスと連絡をとれるサーバ(Puppet Enterpriseコンソールノード)のFQDN、ポート、APIプレフィックス(例: "
+"https://<HOSTNAME>:4433/rbac-api)。"
+
+#: exe/puppet-access.cc
+msgid "Path to configuration file. Defaults to {1}"
+msgstr "設定ファイルのパス。デフォルトは{1}。"
+
+#: exe/puppet-access.cc
+msgid "Login to generate a token in RBAC"
+msgstr "RBACでログインしてトークンを生成する。"
+
+#: exe/puppet-access.cc
+msgid "Login to generate a token in RBAC."
+msgstr "RBACでログインしてトークンを生成する。"
+
+#: exe/puppet-access.cc
+msgid "The username to login (optional)"
+msgstr "ログインするユーザ名(オプション)"
+
+#: exe/puppet-access.cc
+msgid ""
+"Specify the duration for which a token will be valid. The default duration "
+"is set by the Puppet Enterprise administrator. Accepts a value in the format"
+" <integer>[smhdy]."
+msgstr ""
+"トークンの有効期間を指定してください。デフォルトの期間はPuppet "
+"Enterprise管理者により設定されます。フォーマット<integer>[smhdy]の値が許可されます。"
+
+#: exe/puppet-access.cc
+msgid ""
+"Generates a token, but does not save it to disk. Instead, the token contents"
+" are displayed on STDOUT."
+msgstr "トークンを生成しますが、ディスクには保存されません。そのかわりに、トークンコンテンツがSTDOUTに表示されます。"
+
+#: exe/puppet-access.cc
+msgid "Removes the local token, but does not expire the token on the server"
+msgstr "ローカルトークンを削除しますが、サーバ上ではトークンは失効しません。"
+
+#: exe/puppet-access.cc
+msgid "Removes the local token, but does not expire the token on the server."
+msgstr "ローカルトークンを削除しますが、サーバ上ではトークンは失効しません。"
+
+#: exe/puppet-access.cc
+msgid "Prints the saved token contents to stdout"
+msgstr "保存されたトークンコンテンツをstdoutにプリントします。"
+
+#: exe/puppet-access.cc
+msgid "Prints the saved token contents to stdout."
+msgstr "保存されたトークンコンテンツをstdoutにプリントします。"
+
+#: exe/puppet-access.cc
+msgid "Failed to parse the command line input."
+msgstr "コマンドライン入力の解析に失敗しました。"
+
+#: exe/puppet-access.cc
+msgid "Invalid flag."
+msgstr "無効なフラグです。"
+
+#. debug
+#: exe/puppet-access.cc
+msgid ""
+"Running with merged options:\n"
+"{1}"
+msgstr ""
+"組み合わせたオプションによる実行:\n"
+"{1}"
+
+#: exe/puppet-access.cc
+msgid "Unhandled exception: {1}"
+msgstr "未処理の例外: {1}"
+
+#: lib/inc/puppet-access/error.hpp
+msgid "No file exists at path {1}."
+msgstr "パス{1}にファイルが存在しません。"
+
+#: lib/inc/puppet-access/error.hpp
+msgid ""
+"No authentication token exists at path {1}. Please log in with `puppet "
+"access login`"
+msgstr "パス{1}に認証トークンが存在しません。`puppet access login`でログインしてください。"
+
+#: lib/inc/puppet-access/request.hpp
+msgid "Unknown error. The complete body was: {1}"
+msgstr "不明なエラー。ボディ全体は次のとおり: {1}。"
+
+#: lib/src/config.cc
+msgid "Unable to determine the %PROGRAMDATA% directory."
+msgstr "%PROGRAMDATA%ディレクトリを確定できません。"
+
+#: lib/src/config.cc
+msgid ""
+"token-file: %1%\n"
+"certificate-file: %2%\n"
+"service-url: %3%"
+msgstr ""
+"token-file: %1%\n"
+"certificate-file: %2%\n"
+"service-url: %3%"
+
+#: lib/src/file.cc
+msgid "Unable to {1} temporary file '{2}' due to the following error: {3}."
+msgstr "以下のエラーが原因で、一時ファイル'{2}'を{1}できません: {3}。"
+
+#: lib/src/file.cc
+msgid "Unable to open file '{1}' for reading: {2}"
+msgstr "ファイル'{1}'を開いて読み込めません: {2}"
+
+#: lib/src/file.cc
+msgid "An I/O error occurred while reading file '{1}': {2}"
+msgstr "ファイル'{1}'の読み込み中にI/Oエラーが発生しました: {2}"
+
+#: lib/src/file.cc
+msgid "Cannot delete path '{1}' due to the following error: {2}."
+msgstr "以下のエラーが原因で、パス'{1}'を削除できません: {2}。"
+
+#: lib/src/file.cc
+msgid "The path points to a directory"
+msgstr "パスがディレクトリを指し示しています。"
+
+#: lib/src/puppet-access.cc
+msgid ""
+"The directory {1} does not exist and it cannot be created due to the "
+"following error: {2}."
+msgstr "ディレクトリ{1}が存在せず、以下のエラーが原因で作成できません: {2}。"
+
+#: lib/src/puppet-access.cc
+msgid ""
+"Unable to secure exclusive owner permissions for {1} due to the following "
+"error: {2}."
+msgstr "以下のエラーが原因で、独占オーナー許可を確保できません: {2}。"
+
+#. debug
+#: lib/src/puppet-access.cc
+msgid "Reading token at path {1}"
+msgstr "パス{1}でトークンを読み込んでいます。"
+
+#: lib/src/puppet-access.cc
+msgid "Unable to read token: {2}"
+msgstr "トークンを読み込めません: {2}。"
+
+#. debug
+#: lib/src/puppet-access.cc
+msgid "Deleting token at path {1}"
+msgstr "パス{1}でトークンを削除しています。"
+
+#: lib/src/puppet-access.cc
+msgid ""
+"Cannot delete token at '{1}' because it is a symbolic link instead of a "
+"token file."
+msgstr "トークンファイルではなくシンボリックリンクであるため、'{1}'でトークンを削除できません。"
+
+#: lib/src/puppet-access.cc
+msgid "Cannot delete token: {1}"
+msgstr "トークンを削除できません: {1}。"
+
+#: lib/src/puppet-access.cc
+msgid "Malformed token: token does not match expected formats"
+msgstr "適切な形式ではないトークン: トークンが求められるフォーマットと一致していません。"
+
+#: lib/src/puppet-access.cc
+msgid "The path '{1}' does not exist."
+msgstr "パス'{1}'は存在しません。"
+
+#: lib/src/puppet-access.cc
+msgid "The path '{1}' is a directory, not a file."
+msgstr "パス'{1}'はファイルではなくディレクトリです。"
+
+#: lib/src/puppet-access.cc
+msgid "The path '{1}' exists, but could not be read."
+msgstr "パス'{1}'は存在しますが、読み込めません。"
+
+#: lib/src/request.cc
+msgid ""
+"The response contained an unexpected type of token. The full response was: "
+"{1}"
+msgstr "応答に予期せぬトークンタイプが含まれています。応答の全文は以下のとおり: {1}。"
+
+#: lib/src/request.cc
+msgid "The response did not contain a token. The full response was: {1}"
+msgstr "応答にトークンが含まれていませんでした。応答の全文は以下のとおり: {1}。"
+
+#: lib/src/request.cc
+msgid "The server specified a Content-Type of \"{1}\"."
+msgstr "サーバが\"{1}\"のContent-Typeを指定しました。"
+
+#: lib/src/request.cc
+msgid "The server did not specify a Content-Type header."
+msgstr "サーバがContent-Typeヘッダを指定していません。"
+
+#: lib/src/request.cc
+msgid ""
+"The response from the server did not contain valid json. This usually indicates that the service-url option is incorrectly configured. {1} The body (possibly truncated) was:\n"
+" {2}."
+msgstr ""
+"サーバからの応答に、有効なjsonが含まれていません。これは通常、service-urlオプションの設定が不適切であることを示しています。{1} ボディ(省略されている可能性があります)は以下のとおり:\n"
+" {2}。"
+
+#: lib/src/request.cc
+msgid ""
+"Received an error while attempting to request a token. Status code was {1}. "
+"The specific error was {2}."
+msgstr "トークンのリクエストを試みている際にエラーを受信しました。ステータスコードは{1}です。このエラーは{2}です。"
+
+#: lib/src/request.cc
+msgid ""
+"Unable to reach the RBAC server at {1} due to the following error: {2}."
+msgstr "以下のエラーが原因で、{1}でRBACを読み込めません: {2}。"

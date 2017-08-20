@@ -1,0 +1,445 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.orchestrator\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: satoko inoue <satoko-inoue@to-in.co.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Git-Ref: 2e811bbf59ad095f095a42807ffd5e7608d92460\n"
+
+#: src/puppetlabs/orchestrator/activity.clj
+msgid "Request {0} run on {1} via orchestrator job {2}"
+msgstr "オーケストレータジョブ{2}を介して{1}で{0}実行をリクエスト"
+
+#: src/puppetlabs/orchestrator/activity.clj
+msgid "Reporting to activity service: user {0} ({1}) ran node {2} for job {3}"
+msgstr "アクティビティサービスへのレポート: ユーザ{0}({1})はジョブ{3}のノード{2}を実行しました"
+
+#: src/puppetlabs/orchestrator/api.clj
+msgid "Multi-purpose API for performing application management operations"
+msgstr "アプリケーション管理操作を行う多目的API"
+
+#: src/puppetlabs/orchestrator/api.clj
+msgid "Failed to make a connection to the database"
+msgstr "データベースへの接続に失敗しました"
+
+#: src/puppetlabs/orchestrator/api.clj
+msgid "Could not make a connection to the database"
+msgstr "データベースに接続できません"
+
+#: src/puppetlabs/orchestrator/api.clj
+msgid "User does not have permission to use orchestration"
+msgstr "ユーザにはオーケストレーションを使用するパーミッションがありません"
+
+#: src/puppetlabs/orchestrator/api.clj
+msgid "Exception while handling HTTP {0} request at {1}"
+msgstr "{1}のHTTP {0}リクエスト処理中の例外"
+
+#: src/puppetlabs/orchestrator/api.clj
+msgid "Could not find route {0}"
+msgstr "経路{0}を見つけられません"
+
+#: src/puppetlabs/orchestrator/api/command.clj
+msgid "Could not parse command body as JSON"
+msgstr "コマンドボディをJSON形式として解析できません"
+
+#: src/puppetlabs/orchestrator/api/command.clj
+msgid "Processing request for ''{0}'' command"
+msgstr "\"{0}\"コマンドのリクエストを処理"
+
+#: src/puppetlabs/orchestrator/api/command.clj
+msgid "Unknown command {0}"
+msgstr "不明なコマンド{0}"
+
+#: src/puppetlabs/orchestrator/api/inventory.clj
+msgid "nodes is required and must be an array of strings"
+msgstr "nodesは必須です。文字列の配列でなければなりません。"
+
+#: src/puppetlabs/orchestrator/command/deploy.clj
+#: src/puppetlabs/orchestrator/command/plan.clj
+msgid "scope and target cannot be specified together"
+msgstr "スコープおよびターゲットは同時に指定できません"
+
+#: src/puppetlabs/orchestrator/command/deploy.clj
+msgid "noop and no-noop are mutually exclusive options"
+msgstr "noopとno-noopは相互に排他的なオプションです"
+
+#: src/puppetlabs/orchestrator/command/deploy.clj
+#: src/puppetlabs/orchestrator/command/plan.clj
+msgid "environment must be present if enforcing environment"
+msgstr "環境を適用する場合、環境が存在する必要があります"
+
+#: src/puppetlabs/orchestrator/command/task.clj
+msgid "{0} is not a valid task parameter."
+msgstr "{0}は有効なタスクパラメータではありません。"
+
+#: src/puppetlabs/orchestrator/command/task.clj
+msgid "{0} is not found in environment {1}."
+msgstr "環境{1}で{0}は見つかりませんでした。"
+
+#: src/puppetlabs/orchestrator/command/task.clj
+msgid "created job: {0} on nodes: {1}"
+msgstr "ノード{1}でジョブ{0}を作成しました"
+
+#: src/puppetlabs/orchestrator/command/utils.clj
+msgid "{0} is not a valid scope."
+msgstr "{0}は有効なスコープではありません。"
+
+#: src/puppetlabs/orchestrator/command/utils.clj
+msgid "{2} is not a valid environment name."
+msgstr "{2}は有効な環境名ではありません。"
+
+#: src/puppetlabs/orchestrator/command/utils.clj
+msgid "{2} is not a valid task name."
+msgstr "{2}は有効なタスク名ではありません。"
+
+#: src/puppetlabs/orchestrator/command/utils.clj
+msgid "{0} is not a valid subject."
+msgstr "{0}は有効なサブジェクトではありません。"
+
+#: src/puppetlabs/orchestrator/core.clj
+msgid "Issuing HTTP request: {0} {1}"
+msgstr "HTTPリクエストの発行: {0} {1}"
+
+#. Made an HTTP request and got an unexpected response
+#. 0: HTTP method (GET/PUT/POST/...)
+#. 1: URL
+#. 2: HTTP status code (e.g., 404)
+#. 3: human-readable message sent back by the service
+#: src/puppetlabs/orchestrator/core.clj
+msgid "HTTP {0} to {1}:{2}: {3}"
+msgstr "{1}へのHTTP {0}: {2}: {3}"
+
+#. Something went trerribly wrong while making an HTTP
+#. request
+#. 0: HTTP method (GET/PUT/POST/...)
+#. 1: URL
+#. 2: additional options used in the request
+#. 3: exception thrown
+#: src/puppetlabs/orchestrator/core.clj
+msgid "Internal error making a HTTP {0} request to {1} with params {2}:{3}"
+msgstr "{1}へのパラメータ{2}のHTTP{0}リクエスト中の内部エラー: {3}"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Failed to deploy to node {0}: {1}"
+msgstr "ノード{0}のデプロイに失敗しました: {1}"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Puppet failed on node {0}"
+msgstr "Puppetはノード{0}で失敗しました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Successfully deployed node {0}"
+msgstr "ノード{0}を正常にデプロイしました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Enqueuing deploy of node {0}"
+msgstr "ノード{0}のデプロイをキューに追加しました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Skipped {0} due to stopped job"
+msgstr "停止したジョブのため{0}をスキップしました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Job stopped; skipping remaining nodes"
+msgstr "ジョブは停止しました; 残りのノードはスキップします"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Skipped {0} due to failed dependencies"
+msgstr "依存関係の失敗のため{0}をスキップしました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "The target was not found in environment {0}: {1}"
+msgstr "環境{0}でターゲットは見つかりませんでした: {1}"
+
+#. {0} is puppet environment, {1} is the error message
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Could not list the nodes in environment {0}: {1}"
+msgstr "環境{0}のノードを表示できませんでした: {1}"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Dependency cycle: {0}"
+msgstr "循環依存が存在します: {0}"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Transaction {0} of job {1} completed with status ''{2}''"
+msgstr "ジョブ{1}のトランザクション{0}はステータス\"{2}\"で完了しました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Timed out waiting for status update from the agent"
+msgstr "agentからのステータス更新の待機がタイムアウトしました"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Could not determine the result of the Puppet run"
+msgstr "Puppet実行の結果を確定できません"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Error deploying {0}: {1}"
+msgstr "{0}をデプロイ中のエラー: {1}"
+
+#: src/puppetlabs/orchestrator/deploy.clj
+msgid "Failed to retrieve report from PuppetDB: {0}"
+msgstr "PuppetDBからのレポートの取得に失敗しました: {0}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Session with {0} disconnected."
+msgstr "{0}とのセッションは切断されました。"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "Caught error on websocket connection with {0}: {1}"
+msgstr "{0}とのWebSocket接続のエラー: {1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Received error response to message {0}: {1}"
+msgstr "メッセージ{0}に対してエラー応答を受信しました: {1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Sending PCP inventory request to {0}"
+msgstr "PCPインベントリ情報リクエストを{0}に送信"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Timed out waiting for inventory response from {0}"
+msgstr "{0}からのインベントリ情報応答の待機がタイムアウトしました"
+
+#. an execution failure here means we received an error response to an
+#. inventory request
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Received error in response to initial inventory request to {0}: {1}"
+msgstr "{0}への初期インベントリ情報リクエストに対してエラーを受信しました: {1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Caught exception on initial inventory request to {0}: {1}"
+msgstr "{0}への初期インベントリ情報リクエストに例外を見つけました: {1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Received inventory response from {0}: {1} connected clients"
+msgstr "{0}からインベントリ情報応答を受信しました: 接続済のクライアントの数は{1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Received unexpected message from {0}: {1}"
+msgstr "{0}から予期せぬメッセージを受信しました: {1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Processed {0} from {1}: {2}"
+msgstr "{1}から{0}を処理しました: {2}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid ""
+"Processed inventory update from {0}. Connections: {1} Disconnections: {2}"
+msgstr "{0}からインベントリ情報更新を処理しました。接続数: {1} 非接続数: {2}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Processed message via {0}: {1}"
+msgstr "メッセージは{0}を介して処理されました: {1}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Registered connection from {0}"
+msgstr "{0}からの接続を登録しました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Sending initial inventory request to {0}"
+msgstr "{0}へ初期インベントリ情報リクエストを送信中"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "connection unsuccessful"
+msgstr "接続に失敗しました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Sending RPC blocking request to {0} via {1}"
+msgstr "RPCブロッキングリクエストを{1}を介して{0}に送信中"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Sending RPC nonblocking request to {0} via {1}"
+msgstr "RPC非ブロッキングリクエストを{1}を介して{0}に送信中"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid ""
+"The Puppet job with id {0} is still running. Waiting {1} seconds before "
+"checking again."
+msgstr "ID{0}のPuppetジョブは実行中です。再度チェックする前に{1}秒待機します。"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Timed out waiting for provisional response from {0} for job {1}"
+msgstr "{0}からのジョブ{1}のプロビジョナルリスポンスの待機がタイムアウトしました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Caught execution failure on run initiation on {0} via {1}"
+msgstr "{0}の実行開始の失敗を{1}を介して見つけました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Timed out waiting for status response from {0}"
+msgstr "{0}からのステータス応答の待機がタイムアウトしました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Triggering PXP Puppet run on {0}"
+msgstr "{0}のPXP Puppet実行をトリガします"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Lost connection with {0} via {1} during job {2}."
+msgstr "ジョブ{2}実行中に{0}との{1}を介した接続を失いました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Attempting reconnection with {0} via {1} during job {2}"
+msgstr "ジョブ{2}実行中の{0}との{1}を介しての再接続を試行中"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Initializing orchestrator dispatch service"
+msgstr "オーケストレータディスパッチサービスを開始"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Dispatch service shutting down"
+msgstr "ディスパッチサービスを停止中"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Stopped orchestrator dispatch service"
+msgstr "オーケストレータのディスパッチサービスを停止しました"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "Caught exception querying for connected clients: {0}"
+msgstr "接続済のクライアントに対するクエリ中に例外が見つかりました: {0}"
+
+#: src/puppetlabs/orchestrator/dispatch.clj
+msgid "{0} is not connected to the PCP broker"
+msgstr "{0}はPCPブローカに接続していません"
+
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "Unknown environment {0}"
+msgstr "不明な環境{0}"
+
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "Unknown job {0}"
+msgstr "不明なジョブ{0}"
+
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "The {0} task does not exist"
+msgstr "タスク{0}は存在しません"
+
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "Job id must be an integer"
+msgstr "ジョブIDは整数である必要があります"
+
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "No nodes were found for the specified target. Nothing to do."
+msgstr "指定したターゲットにはノードが見つかりません。することがありません。"
+
+#: src/puppetlabs/orchestrator/errors.clj
+msgid "Timed out waiting for a response to message {0}: {1}"
+msgstr "メッセージ{0}に対する応答の待機がタイムアウトしました: {1}"
+
+#: src/puppetlabs/orchestrator/job.clj
+msgid "Deleted {0} jobs older than {1} days"
+msgstr "{1}日より古いジョブが{0}件削除されました"
+
+#: src/puppetlabs/orchestrator/job.clj
+msgid "Failed to clean up old jobs in database."
+msgstr "データベースの古いジョブのクリーンアップに失敗しました。"
+
+#: src/puppetlabs/orchestrator/job.clj
+msgid "Failed to clean up old jobs in database: {0}"
+msgstr "データベースの古いジョブのクリーンアップに失敗しました: {0}"
+
+#: src/puppetlabs/orchestrator/job.clj
+msgid "{2} is not a valid job id"
+msgstr "{2}は有効なジョブIDではありません"
+
+#: src/puppetlabs/orchestrator/master.clj
+msgid "Failed to contact {0}."
+msgstr "{0}への連絡に失敗しました。"
+
+#: src/puppetlabs/orchestrator/master.clj
+msgid "The service encountered an error contacting puppet-server at {0}"
+msgstr "{0}でPuppetサーバーに連絡中に、サービスにエラーが発生しました"
+
+#: src/puppetlabs/orchestrator/puppetdb.clj
+msgid "PuppetDB query returned results without certname."
+msgstr "PuppetDBクエリはcertnameを含まない結果を返しました。"
+
+#: src/puppetlabs/orchestrator/puppetdb.clj
+msgid "PuppetDB query failed: {0}"
+msgstr "PuppetDBクエリが失敗しました: {0}"
+
+#: src/puppetlabs/orchestrator/puppetdb/client.clj
+msgid "Querying PuppetDB server at {0}"
+msgstr "{0}でPuppetDBサーバーにクエリしています"
+
+#: src/puppetlabs/orchestrator/puppetdb/client.clj
+msgid "An error occured querying PuppetDB {0} with query {1}: {2}"
+msgstr "PuppetDB {0}へクエリ{1}を実行中にエラーが発生しました: {2}"
+
+#: src/puppetlabs/orchestrator/puppetdb/client.clj
+msgid "Could not parse response from PuppetDB {0} as JSON with query {1}: {2}"
+msgstr "クエリ{1}に対するPuppetDB {0}の応答をJSON形式として解析できません: {2}"
+
+#: src/puppetlabs/orchestrator/puppetdb/client.clj
+msgid "Query to puppetdb {0} failed with query {1}: {2}"
+msgstr "PuppetDB {0}へのクエリ{1}は失敗しました: {2}"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid ""
+"Config setting classifier-service is missing. Jobs for entire environments "
+"will only run on nodes mentioned in the environment graph, and not on all "
+"nodes in the environment"
+msgstr ""
+"classifier-"
+"serviceが設定されていません。全環境のジョブは環境グラフに記載のあるノードのみで実行され、環境のすべてのノードで実行されるわけではありません"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "Required setting {0} is missing"
+msgstr "必須の設定{0}が不足しています"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "Creating local task store reading from {0}"
+msgstr "{0}から読み込むローカルタスクのストアを作成しています"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "Started orchestrator service"
+msgstr "オーケストレータサービスを開始しました"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "Scheduled job cleanup every hour."
+msgid_plural "Scheduled job cleanup every {0} hours."
+msgstr[0] "{0}時間おきのジョブのクリーンアップをスケジュールしました。"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "Jobs older than one day will be purged."
+msgid_plural "Jobs older than {0} days will be purged."
+msgstr[0] "{0}日より古いジョブは削除されます。"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "cleanup of in-progress work"
+msgstr "進行中の作業のクリーンアップ"
+
+#: src/puppetlabs/orchestrator/service.clj
+msgid "Stopped orchestrator service"
+msgstr "オーケストレータサービスを停止しました"
+
+#. We should have validated these
+#: src/puppetlabs/orchestrator/task.clj
+msgid "Scope must contain either a nodes key or query key"
+msgstr "スコープには、ノードキーまたはクエリキーのいずれかを含める必要があります"
+
+#: src/puppetlabs/orchestrator/task.clj
+msgid "Running tasks is not supported for agents older than version {0}"
+msgstr "{0}より古いバージョンのagentでは、タスクの実行はサポートされていません。"
+
+#: src/puppetlabs/orchestrator/task.clj
+msgid "Task execution errored"
+msgstr "タスクの実行でエラーが発生しました"
+
+#: src/puppetlabs/orchestrator/task.clj
+msgid "Failed to run job"
+msgstr "ジョブの実行に失敗しました"

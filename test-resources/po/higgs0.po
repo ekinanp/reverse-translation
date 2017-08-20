@@ -1,0 +1,1024 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017 Puppet, LLC.
+# This file is distributed under the same license as the PE Installer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PE Installer 2017.1.0-36-g95689e4\n"
+"\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: 2017-04-11 12:52-0700\n"
+"PO-Revision-Date: 2017-04-11 12:52-0700\n"
+"Last-Translator: Sam Woods <sam.woods@puppet.com>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../lib/installer/interview/content.rb:32
+msgid "(optional)"
+msgstr "(任意)"
+
+#: ../lib/installer/interview/content.rb:34
+msgid "The Puppet master component"
+msgstr "Puppet Masterコンポーネント"
+
+#: ../lib/installer/interview/content.rb:35
+msgid ""
+"The Puppet master serves configurations to a group of Puppet agent nodes."
+msgstr "Puppet Masterは Puppet agent ノードのグループに対して設定情報の通知を行います。"
+
+#: ../lib/installer/interview/content.rb:36
+msgid ""
+"This role also provides MCollective's message queue and client interface."
+msgstr "MCollectiveメッセージキューやクライアントインターフェースも含めてインストールします。"
+
+#: ../lib/installer/interview/content.rb:37
+msgid "It should be installed on a robust, dedicated server."
+msgstr "堅牢な専用サーバにインストールする必要があります。"
+
+#: ../lib/installer/interview/content.rb:40
+msgid "Install on this server."
+msgstr "このサーバにインストールします。"
+
+#: ../lib/installer/interview/content.rb:41
+msgid "Install on another server."
+msgstr "別のサーバにインストールします。"
+
+#: ../lib/installer/interview/content.rb:45
+msgid "Puppet master FQDN"
+msgstr "Puppet master FQDN"
+
+#: ../lib/installer/interview/content.rb:46
+msgid ""
+"The fully qualified domain name (master.example.com) of the machine to "
+"install the Puppet master on."
+msgstr "Puppet masterをインストールするマシンのFQDNを指定します (master.example.com)。"
+
+#: ../lib/installer/interview/content.rb:47
+msgid "This should be resolvable from %{installer_hostname}."
+msgstr "%{installer_hostname}から名前解決が出来る必要があります。"
+
+#: ../lib/installer/interview/content.rb:49
+msgid "This will be changed to an all lowercase string."
+msgstr "大文字を入力しても小文字として扱われます。"
+
+#: ../lib/installer/interview/content.rb:52
+msgid "Puppet master DNS aliases"
+msgstr "Puppet master DNSエイリアス"
+
+#: ../lib/installer/interview/content.rb:53
+msgid ""
+"The Puppet master's certificate can contain DNS aliases; agent nodes will "
+"only trust their master if they can reach it at its certname or at one of "
+"these aliases."
+msgstr ""
+"このPuppet masterの証明書はDNS別名を含むことができます（推奨）。puppet agentからpuppet "
+"masterに接続する時に使用するDNSエリアスを指定してください。この項目を指定しない場合、puppet agentはpuppet "
+"masterのcertnameで接続します。"
+
+#: ../lib/installer/interview/content.rb:55
+msgid ""
+"This must be a comma separated list that does not contain the following "
+"characters: _ ` : ; ( ) \" "
+msgstr "カンマ区切りのリストで入力してください。次の文字は入力できません: _ ` : ; ( ) \" "
+
+#: ../lib/installer/interview/content.rb:58
+#: ../lib/installer/interview/content.rb:96
+#: ../lib/installer/interview/content.rb:130 ../views/index.erb:19
+msgid ""
+"To install Puppet Enterprise, we need to be able to connect to the machines "
+"in your infrastructure from %{installer_hostname}."
+msgstr ""
+"Puppet Enterpriseをインストールするには、%{installer_hostname}からインストール先に接続できる必要があります。\n"
+"他のサーバにインストールするには、%{installer_hostname}から、インストール対象のサーバにSSHで接続できる必要があります。\n"
+"詳細に関しましては、前提条件を確認してください。"
+
+#: ../lib/installer/interview/content.rb:59
+#: ../lib/installer/interview/content.rb:97
+#: ../lib/installer/interview/content.rb:131
+msgid ""
+"Please ensure that the user information you supply below has the ability to "
+"perform actions as a root user."
+msgstr "SSH接続するユーザは、ルートユーザの権限で実行することができることが必要です。"
+
+#: ../lib/installer/interview/content.rb:60
+#: ../lib/installer/interview/content.rb:98
+#: ../lib/installer/interview/content.rb:132
+msgid "We will only use this information during the initial install process."
+msgstr "ここで設定を行うSSH情報はインストーラーでインストールするときのみ利用されます。"
+
+#: ../lib/installer/interview/content.rb:63
+#: ../lib/installer/interview/content.rb:100
+#: ../lib/installer/interview/content.rb:134
+msgid "SSH username"
+msgstr "SSHユーザ名"
+
+#: ../lib/installer/interview/content.rb:64
+msgid "The username to use when connecting to the Puppet master node."
+msgstr "Puppet masterをインストールするときに使用するSSHのユーザ名。"
+
+#: ../lib/installer/interview/content.rb:65
+#: ../lib/installer/interview/content.rb:102
+#: ../lib/installer/interview/content.rb:136
+msgid "This user must either be root or have sudo access."
+msgstr "このユーザはrootであるか、sudoアクセスが許可されている必要があります。"
+
+#: ../lib/installer/interview/content.rb:68
+#: ../lib/installer/interview/content.rb:105
+#: ../lib/installer/interview/content.rb:139
+msgid "SSH password"
+msgstr "SSHパスワード"
+
+#: ../lib/installer/interview/content.rb:69
+#: ../lib/installer/interview/content.rb:106
+#: ../lib/installer/interview/content.rb:140
+msgid "The password for the SSH username specified above."
+msgstr "SSHユーザ名のパスワード。"
+
+#: ../lib/installer/interview/content.rb:70
+#: ../lib/installer/interview/content.rb:107
+#: ../lib/installer/interview/content.rb:141
+msgid ""
+"This password will also be used if the user requires a password for sudo "
+"access."
+msgstr "sudoアクセス時にもこのパスワードが利用されます。"
+
+#: ../lib/installer/interview/content.rb:73
+msgid ""
+"If you don't use a password for SSH, you can also specify a path and "
+"passphrase to an SSH key that lives on the server %{installer_hostname}."
+msgstr ""
+"SSHのパスワードを利用せず、サーバ%{installer_hostname}上のSSHキーファイルとパスフレーズを指定することも出来ます。"
+
+#: ../lib/installer/interview/content.rb:76
+#: ../lib/installer/interview/content.rb:110
+#: ../lib/installer/interview/content.rb:144
+msgid "SSH key file path"
+msgstr "SSHキーファイルパス"
+
+#: ../lib/installer/interview/content.rb:77
+#: ../lib/installer/interview/content.rb:111
+#: ../lib/installer/interview/content.rb:145
+msgid "Absolute path to the SSH key on %{installer_hostname}."
+msgstr "%{installer_hostname}のSSHキーへの絶対パス"
+
+#: ../lib/installer/interview/content.rb:80
+#: ../lib/installer/interview/content.rb:114
+#: ../lib/installer/interview/content.rb:148
+msgid "SSH key passphrase"
+msgstr "SSHキーのパスフレーズ"
+
+#: ../lib/installer/interview/content.rb:81
+#: ../lib/installer/interview/content.rb:115
+#: ../lib/installer/interview/content.rb:149
+msgid "Needed if your SSH key is protected with a passphrase."
+msgstr "SSHキーがパスフレーズで保護されている場合に指定してください。"
+
+#: ../lib/installer/interview/content.rb:85
+msgid "The PuppetDB component"
+msgstr "PuppetDBコンポーネント"
+
+#: ../lib/installer/interview/content.rb:86
+msgid "PuppetDB is the centralized data service for Puppet Enterprise."
+msgstr "PuppetDBはPuppet Enterpriseの集中型データサービスです。"
+
+#: ../lib/installer/interview/content.rb:87
+msgid ""
+"It caches data generated by Puppet Enterprise and gives you rapid access to "
+"advanced features via a powerful API."
+msgstr "Puppet Enterpriseによって生成されたデータをキャッシュし、強力なAPIによって高度な機能に迅速なアクセスを実現します。"
+
+#: ../lib/installer/interview/content.rb:89
+msgid "PuppetDB hostname"
+msgstr "PuppetDBホスト名"
+
+#: ../lib/installer/interview/content.rb:90
+msgid "The hostname of the server you wish to deploy PuppetDB on."
+msgstr "PuppetDBをデプロイする標的であるサーバのホスト名。"
+
+#: ../lib/installer/interview/content.rb:91
+msgid ""
+"This will be changed to an all lowercase string and must be a different host"
+" than the master and console servers."
+msgstr "これはすべて小文字の文字列に変換されます。また、これはmasterおよびコンソールサーバではないホストである必要があります。"
+
+#: ../lib/installer/interview/content.rb:95
+msgid "PuppetDB SSH Configuration"
+msgstr "PuppetDBのSSH設定"
+
+#: ../lib/installer/interview/content.rb:101
+msgid "The username to use when connecting to the PuppetDB node."
+msgstr "PuppetDBノードに接続するときに使用するユーザ名。"
+
+#: ../lib/installer/interview/content.rb:119
+msgid "The Console component"
+msgstr "コンソールコンポーネント"
+
+#: ../lib/installer/interview/content.rb:120
+msgid ""
+"The Puppet Enterprise console is a web-based interface for interacting with "
+"Puppet Enterprise."
+msgstr "Puppet EnterpriseコンソールはPuppet Enterpriseと対話するためのwebベースのインターフェイスです。"
+
+#: ../lib/installer/interview/content.rb:121
+msgid ""
+"You'll use the console to classify your nodes, inspect your infrastructure, "
+"and much more."
+msgstr "コンソールはノードの管理、クラスフィケーションの管理、インフラの検査など、多用途に使用されます。"
+
+#: ../lib/installer/interview/content.rb:123
+msgid "Console hostname"
+msgstr "コンソールのホスト名"
+
+#: ../lib/installer/interview/content.rb:124
+msgid ""
+"The hostname of the server you wish to deploy Puppet Enterprise console on."
+msgstr "Puppet Enterpriseコンソールをデプロイしようとするサーバのホスト名。"
+
+#: ../lib/installer/interview/content.rb:125
+msgid ""
+"This will be changed to an all lowercase string and must be a different host"
+" than the master and PuppetDB servers."
+msgstr "これはすべて小文字の文字列に変換されます。また、これはmasterおよびPuppetDBサーバではないホストである必要があります。"
+
+#: ../lib/installer/interview/content.rb:129
+msgid "Console SSH Configuration"
+msgstr "コンソールのSSH設定"
+
+#: ../lib/installer/interview/content.rb:135
+msgid "The username to use when connecting to the console node."
+msgstr "コンソールノードに接続する際に使用するユーザ名。"
+
+#: ../lib/installer/interview/content.rb:153
+msgid "Database support"
+msgstr "データベースサポート"
+
+#: ../lib/installer/interview/content.rb:154
+msgid "Puppet Enterprise requires a PostgreSQL instance for data storage."
+msgstr "Puppet EnterpriseはデータストレージにPostgresSQLインスタンスを利用します。"
+
+#: ../lib/installer/interview/content.rb:155
+msgid ""
+"We can set it all up for you, or you can use an existing PostgreSQL "
+"instance."
+msgstr "新規にPostgreSQLをインストールするか、既存のPostgreSQLインスタンスを使用するかを選択してください。"
+
+#: ../lib/installer/interview/content.rb:156
+msgid "If you're unsure, choose to have us set things up."
+msgstr "既存のPostgreSQLがない場合は、新規インストールを選択してください。"
+
+#: ../lib/installer/interview/content.rb:159
+msgid "Install PostgreSQL on the Puppet master host for me."
+msgstr "Puppet masterに新規インストール"
+
+#: ../lib/installer/interview/content.rb:160
+msgid "Use an existing PostgreSQL instance."
+msgstr "既存のPostgreSQLインスタンスを使用"
+
+#: ../lib/installer/interview/content.rb:164
+msgid "PostgreSQL server DNS name"
+msgstr "PostgreSQLサーバのDNS名"
+
+#: ../lib/installer/interview/content.rb:165
+msgid "The hostname of an already installed and configured PostgreSQL server."
+msgstr "PostgreSQLサーバのホスト名"
+
+#: ../lib/installer/interview/content.rb:167
+msgid "Note:"
+msgstr "注意:"
+
+#: ../lib/installer/interview/content.rb:167
+msgid "This server must be running version 9.4 or higher of PostgreSQL."
+msgstr "このサーバはバージョン9.4以上のPostgreSQLを実行している必要があります。"
+
+#: ../lib/installer/interview/content.rb:170
+msgid "PostgreSQL port"
+msgstr "PostgreSQLのポート"
+
+#: ../lib/installer/interview/content.rb:171
+msgid "The port that your PostgreSQL server is listening for connections on."
+msgstr "PostgreSQLサーバー接続ポート"
+
+#: ../lib/installer/interview/content.rb:172
+msgid "By default, PostgreSQL uses 5432."
+msgstr "デフォルトでは、PostgreSQLは5432を使用します。"
+
+#: ../lib/installer/interview/content.rb:175
+msgid "PuppetDB database name"
+msgstr "データベース名（PuppetDB）"
+
+#: ../lib/installer/interview/content.rb:176
+msgid ""
+"PuppetDB uses this database to store catalogs generated by puppet agent "
+"runs."
+msgstr "PuppetDBはこのデータベースにPuppet agentの実行により生成されたカタログを格納します。"
+
+#: ../lib/installer/interview/content.rb:179
+msgid "PuppetDB database user"
+msgstr "PuppetDBデータベースのユーザ"
+
+#: ../lib/installer/interview/content.rb:182
+msgid "PuppetDB database password"
+msgstr "PuppetDBデータベースのパスワード"
+
+#: ../lib/installer/interview/content.rb:185
+msgid "Role-based access control database name (RBAC)"
+msgstr "データベース名（アクセス管理）"
+
+#: ../lib/installer/interview/content.rb:186
+msgid "Puppet Enterprise uses this database to store access control settings."
+msgstr "Puppet Enterpriseはこのデータベースを使用してアクセス管理の設定を保存します。"
+
+#: ../lib/installer/interview/content.rb:189
+msgid "RBAC database user"
+msgstr "RBACデータベースのユーザ"
+
+#: ../lib/installer/interview/content.rb:192
+msgid "RBAC database password"
+msgstr "RBACデータベースのパスワード"
+
+#: ../lib/installer/interview/content.rb:195
+msgid "Node classifier database name"
+msgstr "データベース名（クラシフィケーション）"
+
+#: ../lib/installer/interview/content.rb:196
+msgid "Puppet Enterprise uses this database to store node classifications."
+msgstr "Puppet Enterpriseはこのデータベースを使用してノードクラスフィケーションを保存します。"
+
+#: ../lib/installer/interview/content.rb:199
+msgid "Node classifier database user"
+msgstr "クラシフィケーション情報を格納するデータベースのユーザ名"
+
+#: ../lib/installer/interview/content.rb:202
+msgid "Node classifier database password"
+msgstr "クラシフィケーション情報を格納するデータベースのパスワード"
+
+#: ../lib/installer/interview/content.rb:205
+msgid "Activity database name"
+msgstr "データベース名（アクティビティ）"
+
+#: ../lib/installer/interview/content.rb:206
+msgid "Puppet Enterprise uses this database to store activities."
+msgstr "Puppet Enterpriseはこのデータベースを使用してアクティビティを保存します。"
+
+#: ../lib/installer/interview/content.rb:209
+msgid "Activity database user"
+msgstr "アクティビティデータベースのユーザ"
+
+#: ../lib/installer/interview/content.rb:212
+msgid "Activity database password"
+msgstr "アクティビティデータベースのパスワード"
+
+#: ../lib/installer/interview/content.rb:215
+msgid "Orchestrator database name"
+msgstr "データベース名（オーケストレータ）"
+
+#: ../lib/installer/interview/content.rb:216
+msgid ""
+"Puppet Enterprise uses this database to store data related to the "
+"Orchestration service."
+msgstr "Puppet Enterpriseはこのデータベースを使用してオーケストレーションサービスに関連するデータを保存します。"
+
+#: ../lib/installer/interview/content.rb:219
+msgid "Orchestrator database user"
+msgstr "オーケストレータデータベースのユーザ"
+
+#: ../lib/installer/interview/content.rb:222
+msgid "Orchestrator database password"
+msgstr "オーケストレータデータベースのパスワード"
+
+#: ../lib/installer/interview/content.rb:226
+msgid "Console 'admin' user"
+msgstr "コンソール'admin'ユーザ"
+
+#: ../lib/installer/interview/content.rb:228
+msgid "Console 'admin' password"
+msgstr "コンソール管理者（admin）パスワード"
+
+#: ../lib/installer/interview/content.rb:229
+msgid "The password must be at least 8 characters."
+msgstr "パスワードは8文字以上でなければなりません。"
+
+#: ../lib/installer/planner/step/backup_logs.rb:30
+msgid "Failed to create a temporary directory for the installer log files."
+msgstr "インストーラログファイルの為のテンポラリディレクトリ作成に失敗しました。"
+
+#: ../lib/installer/planner/step/backup_logs.rb:31
+#: ../lib/installer/planner/step/backup_logs.rb:63
+#: ../lib/installer/planner/step/backup_logs.rb:92
+#: ../lib/installer/planner/step/backup_logs.rb:101
+#: ../lib/installer/planner/step/check_root.rb:16
+#: ../lib/installer/planner/step/install_pe.rb:30
+#: ../lib/installer/planner/step/install_pe.rb:42
+#: ../lib/installer/planner/step/install_pe.rb:51
+#: ../lib/installer/planner/step/install_pe.rb:94
+msgid "The error was: %{error}"
+msgstr "エラーは次の通りです: %{error}"
+
+#: ../lib/installer/planner/step/backup_logs.rb:43
+#: ../lib/installer/planner/step/backup_logs.rb:73
+msgid "Failed to copy '%{local}' to '%{remote}'."
+msgstr "'%{local}'を'%{remote}'へコピーする事に失敗しました。"
+
+#: ../lib/installer/planner/step/backup_logs.rb:53
+#: ../lib/installer/planner/step/backup_logs.rb:82
+msgid "Failed to copy local file %{from} to temporary location %{to}."
+msgstr "ローカルファイル%{from}をテンポラリロケーション%{to}へコピーする事に失敗しました。"
+
+#: ../lib/installer/planner/step/backup_logs.rb:62
+#: ../lib/installer/planner/step/backup_logs.rb:91
+msgid "Failed to execute '%{cmd}'."
+msgstr "'%{cmd}'の実行に失敗しました。"
+
+#: ../lib/installer/planner/step/backup_logs.rb:100
+msgid "Failed to remove temporary directory '%{dir}'."
+msgstr "テンポラリディレクトリ'%{dir}'の削除に失敗しました。"
+
+#: ../lib/installer/planner/step/backup_logs.rb:112
+msgid "Backup installer log files to %{hosts}."
+msgstr "インストーラログファイルを%{hosts}にバックアップします。"
+
+#: ../lib/installer/planner/step/check_cross_dns.rb:30
+msgid "Could not resolve DNS from %{from} to %{address}."
+msgstr "%{from}から%{address}へのDNSを解決できませんでした。"
+
+#: ../lib/installer/planner/step/check_cross_dns.rb:40
+msgid "Verify that DNS is properly configured for %{hosts}."
+msgstr "DNSに%{hosts}が適切に設定されているかの検証"
+
+#: ../lib/installer/planner/step/check_dns.rb:11
+msgid "Could not resolve DNS to %{hostname}."
+msgstr "%{hostname}へのDNSを解決できませんでした。"
+
+#: ../lib/installer/planner/step/check_dns.rb:25
+msgid "Verify that %{hostname} can resolve %{hosts}."
+msgstr "%{hostname}が%{hosts}の名前解決の検証"
+
+#: ../lib/installer/planner/step/check_local_environment.rb:16
+msgid "Could not find working directory at %{dir}."
+msgstr "%{dir}で作業ディレクトリを見つけられませんでした。"
+
+#: ../lib/installer/planner/step/check_local_environment.rb:17
+#: ../lib/installer/planner/step/check_local_environment.rb:22
+msgid "Create it, or specify an alternative in installer.conf."
+msgstr "作成するか、installer.conf内で代替を指定してください。"
+
+#: ../lib/installer/planner/step/check_local_environment.rb:21
+msgid "Could not find copy of Puppet Enterprise at %{dir}."
+msgstr "%{dir}でPuppet Enterpriseのコピーを見つけられませんでした。"
+
+#: ../lib/installer/planner/step/check_local_environment.rb:35
+msgid "Verify local environment."
+msgstr "ローカル環境の検証"
+
+#: ../lib/installer/planner/step/check_root.rb:12
+#: ../lib/installer/planner/step/check_root.rb:15
+msgid "Could not obtain root access on %{hostname}."
+msgstr "%{hostname}のrootアクセスを取得できませんでした。"
+
+#: ../lib/installer/planner/step/check_root.rb:31
+msgid "Verify root access on %{hosts}."
+msgstr "%{hosts}のrootアクセス権を検証"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:44
+msgid "Puppet Enterprise %{version} is already installed."
+msgstr "Puppet Enterprise %{version}はすでにインストールされています。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:46
+msgid "An unknown version of Puppet Enterprise is already installed."
+msgstr "不明なバージョンのPuppet Enterpriseがすでにインストールされています。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:55
+#: ../lib/installer/planner/step/compatibility_check.rb:78
+msgid "Platform detection failed."
+msgstr "プラットフォーム検出に失敗しました。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:59
+msgid ""
+"%{platform} is not a supported platform for this version of Puppet "
+"Enterprise."
+msgstr "%{platform}はこのバージョンのPuppet Enterpriseでサポートされたプラットフォームではありません。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:64
+msgid "Puppet Enterprise could not detect the distribution and release."
+msgstr "Puppet Enterpriseは配布及びリリースを検出することができませんでした。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:68
+msgid "Puppet Enterprise could not detect the architecture."
+msgstr "Puppet Enterpriseはアーキテクチャの検出に失敗しました。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:75
+msgid "Multiple server platforms detected: %{platforms}."
+msgstr "複数のサーバプラットフォームが検知されました: %{platforms}。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:76
+msgid "Installing across different server platforms is not supported."
+msgstr "異なるサーバプラットフォーム上にインストールすることはサポートされていません。"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:84
+msgid ""
+"Could not find %{platform} installer from available installers: %{available}"
+msgstr ""
+"利用可能なインストーラから%{platform}用のインストーラを見つけることができませんでした。利用可能なインストーラ：%{available}"
+
+#: ../lib/installer/planner/step/compatibility_check.rb:95
+msgid "Verify that %{hostname} has a PE installer that matches %{hosts}'s OS."
+msgstr "%{hostname}が%{hosts}のOSとPuppet EnterpriseインストーラのサポートOSが一致することを検証"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:12
+msgid "SSH private key file %{keyfile} verified for %{hostname}."
+msgstr "%{hostname}のSSH秘密鍵ファイル%{keyfile}は検証されました。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:14
+msgid "There is a problem with the SSH private key: %{exception}."
+msgstr "SSH秘密鍵に問題があります: %{exception}。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:21
+msgid "SSH connection to %{hostname} established successfully."
+msgstr "%{hostname}へのSSH接続が正常に確立されました。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:23
+msgid "Could not open an SSH connection: %{exception}."
+msgstr "SSH接続を開くことができません: %{exception}。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:40
+msgid "'%{filename}' can not be read."
+msgstr "'%{filename}'を読み込めません。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:44
+msgid "'%{filename}' is empty."
+msgstr "'%{filename}'は空です。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:48
+msgid "'%{filename}' does not appear to be a private key."
+msgstr "'%{filename}'は秘密鍵ではないと思われます。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:52
+msgid "'%{filename}' permissions are too open."
+msgstr "'%{filename}'のパーミッションは緩すぎです。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:61
+msgid "'%{filename}' could not be parsed."
+msgstr "'%{filename}'を解析できませんでした。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:62
+msgid ""
+"The passphrase may be incorrect or the private key file may be corrupt."
+msgstr "パスフレーズが正しくないか秘密鍵ファイルが破損してる可能性があります。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:64
+msgid "'%{filename}' had an OpenSSL PKey Error: %{exception}."
+msgstr "'%{filename}' にてOpenSSL PKey エラーがありました: %{exception}。"
+
+#: ../lib/installer/planner/step/connect_ssh.rb:71
+msgid "Verify that %{hostname} can SSH to %{hosts}."
+msgstr "%{hostname}が%{hosts}にSSH接続できるか検証してください。"
+
+#: ../lib/installer/planner/step/filesystem_check.rb:63
+msgid ""
+"Insufficient space in '%{mount}' (%{freespace}); we recommend at least "
+"%{min_gb} GB for a production environment."
+msgstr "'%{mount}'内のスペース(%{freespace})が不十分です。本稼働環境では少なくとも%{min_gb} GBを推奨します。"
+
+#: ../lib/installer/planner/step/filesystem_check.rb:65
+#: ../lib/installer/planner/step/filesystem_check.rb:77
+#: ../lib/installer/planner/step/filesystem_check.rb:87
+msgid ""
+"Insufficient space in '%{mount}' (%{freespace}); we recommend at least "
+"%{min_gb} GB."
+msgstr "'%{mount}'内のスペース(%{freespace})が不十分です。少なくとも%{min_gb} GBを推奨します。"
+
+#: ../lib/installer/planner/step/filesystem_check.rb:69
+#: ../lib/installer/planner/step/filesystem_check.rb:80
+#: ../lib/installer/planner/step/filesystem_check.rb:90
+msgid ""
+"Insufficient space in '%{mount}' (%{freespace}); we require at least 1 GB."
+msgstr "'%{mount}'内のスペースが不十分です(%{freespace})。 少なくとも1 GBが必要です。"
+
+#: ../lib/installer/planner/step/filesystem_check.rb:94
+msgid "Could not check '/opt' and '/var' for free space."
+msgstr "'/opt' および '/var'の空き容量を確認できませんでした。"
+
+#: ../lib/installer/planner/step/filesystem_check.rb:104
+msgid ""
+"Verify that '/opt', '/var', and '/tmp' contain enough free space on "
+"%{hosts}."
+msgstr "%{hosts}の'/opt'、'/var'、および'/tmp' がに十分な空き容量があるかの検証"
+
+#: ../lib/installer/planner/step/hardware_check.rb:23
+msgid "Error reading CPU config: Could not execute '%{cmd}'."
+msgstr "CPU設定の読込エラー:  '%{cmd}'を実行できませんでした。"
+
+#: ../lib/installer/planner/step/hardware_check.rb:27
+msgid "We found 1 CPU core."
+msgid_plural "We found %{cores} CPU cores."
+msgstr[0] "%{cores}個CPUコアを見つけました。"
+
+#: ../lib/installer/planner/step/hardware_check.rb:28
+msgid "We recommend at least 2 CPU cores."
+msgstr "少なくとも2つのCPUコアを推奨します。"
+
+#: ../lib/installer/planner/step/hardware_check.rb:44
+msgid "Error reading memory config: Could not execute '%{cmd}'."
+msgstr "メモリ設定の読込エラー: '%{cmd}'を実行できませんでした。"
+
+#: ../lib/installer/planner/step/hardware_check.rb:50
+#: ../lib/installer/planner/step/hardware_check.rb:56
+msgid "We found %{ram} MB RAM."
+msgstr "%{ram} MBのRAMが見つかりました。"
+
+#: ../lib/installer/planner/step/hardware_check.rb:51
+#: ../lib/installer/planner/step/hardware_check.rb:57
+msgid "We recommend at least %{reccomended} MB."
+msgstr "%{reccomended} MB以上を推奨します。"
+
+#: ../lib/installer/planner/step/hardware_check.rb:68
+msgid "Verify that your hardware meets requirements on %{hosts}."
+msgstr "%{hosts}のハードウェア要件の検証"
+
+#: ../lib/installer/planner/step/install_pe.rb:29
+msgid ""
+"Failed to create a temporary directory for the Puppet Enterprise "
+"installation files."
+msgstr "Puppet Enterpriseインストールファイルのテンポラリディレクトリの作成に失敗しました。"
+
+#: ../lib/installer/planner/step/install_pe.rb:41
+msgid "Failed to create directory '%{dir}'."
+msgstr "ディレクトリ'%{dir}'の作成に失敗しました。"
+
+#: ../lib/installer/planner/step/install_pe.rb:50
+msgid "Failed to create configuration directory '%{dir}'."
+msgstr "設定ディレクトリ'%{dir}'の作成に失敗しました。"
+
+#: ../lib/installer/planner/step/install_pe.rb:57
+msgid "The Puppet Enterprise installer was not found in '%{dir}'."
+msgstr "Puppet Enterpriseインストーラは'%{dir}'に見つかりませんでした。"
+
+#: ../lib/installer/planner/step/install_pe.rb:65
+msgid "The Puppet Enterprise installer could not be copied to %{host}."
+msgstr "Puppet Enterpriseインストーラは%{host}にコピーできませんでした。"
+
+#: ../lib/installer/planner/step/install_pe.rb:76
+msgid "The Puppet Enterprise answers files could not be copied to %{host}."
+msgstr "Puppet Enterprise回答ファイルは%{host}にコピーできませんでした。"
+
+#: ../lib/installer/planner/step/install_pe.rb:84
+msgid "Failed to run PE installer on %{host}."
+msgstr "Puppet Enterpriseインストーラの%{host}での実行に失敗しました。"
+
+#: ../lib/installer/planner/step/install_pe.rb:93
+msgid "Failed to clean up temp directory '%{dir}' on %{host}."
+msgstr "%{host}上のテンポラリディレクトリ'%{dir}'のクリーンアップに失敗しました。"
+
+#: ../lib/installer/planner/step/install_pe.rb:113
+msgid "Install Puppet Enterprise on %{host}."
+msgstr "Puppet Enterpriseを%{host}にインストールします。"
+
+#: ../lib/installer/planner/step/verify_mco.rb:25
+msgid ""
+"MCollective ran successfully but did not find any of the Puppet Enterprise "
+"hosts."
+msgstr "MCollectiveは正常に実行しましたが、いずれのPuppet Enterpriseホストも見つかりませんでした。"
+
+#: ../lib/installer/planner/step/verify_mco.rb:28
+msgid "MCollective discovery failed."
+msgstr "MCollective discoveryが失敗しました。"
+
+#: ../lib/installer/planner/step/verify_mco.rb:37
+msgid "Verify that MCollective is functioning on %{hosts}."
+msgstr "MCollectiveが%{hosts}上で機能していることを検証します。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:44
+msgid "The puppet agent ran successfully."
+msgstr "Puppet agentは正常に実行しました。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:46
+msgid "The puppet agent test run failed."
+msgstr "Puppet agentテスト実行は失敗しました。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:58
+msgid "%{service} service is running."
+msgstr "%{service}サービスは実行中です。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:60
+msgid "%{service} service is NOT running, found %{ensure}."
+msgstr "%{service}サービスは実行中ではなく、%{ensure}です。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:62
+msgid "%{service} service was not found."
+msgstr "%{service}サービスは見つかりませんでした。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:65
+msgid "Failed to check the status of %{service} service."
+msgstr "%{service}サービスのステータスチェックに失敗しました。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:77
+msgid "Successfully connected to %{host}:%{port}."
+msgstr "%{host}:%{port}に正常に接続しました。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:79
+msgid "Could not connect to %{host}:%{port}."
+msgstr "%{host}:%{port}に接続できませんでした。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:82
+#: ../lib/installer/planner/step/verify_puppet.rb:99
+msgid "Could not find a host with role %{role}."
+msgstr "ロールが%{role}であるホストを見つけられませんでした。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:94
+msgid "Is allowing connections from %{host} on port %{port}."
+msgstr "ポート%{port}で%{host}からの接続を許可しています。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:96
+msgid "Is refusing connections from %{host} on port %{port}."
+msgstr "ポート%{port}で%{host}からの接続を拒否しています。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:102
+msgid "Puppet Test Run Failed."
+msgstr "Puppetテスト実行に失敗しました。"
+
+#: ../lib/installer/planner/step/verify_puppet.rb:111
+msgid "Verify that Puppet Enterprise is functioning on %{host}."
+msgstr "Puppet Enterpriseが%{host}上で機能していることを検証します。"
+
+#: ../views/deploy.erb:2
+msgid "Puppet Enterprise Installer - Deploying"
+msgstr "Puppet Enterpriseインストーラ ─ デプロイ"
+
+#: ../views/deploy.erb:6 ../views/deploy.erb:7
+msgid "Installing your deployment"
+msgstr "デプロイのインストール"
+
+#: ../views/deploy.erb:11
+msgid "Start using Puppet Enterprise"
+msgstr "Puppet Enterpriseを使用開始する"
+
+#: ../views/deploy.erb:15
+msgid "We have many tools to help you master Puppet Enterprise."
+msgstr "Puppet Enterpriseを使いこなすためのツールがたくさん用意されています。"
+
+#: ../views/deploy.erb:18
+msgid ""
+"Try the %{link}, a short series designed to help you evaluate and become "
+"familiar with Puppet Enterprise."
+msgstr "%{link}を試してください。これはPuppet Enterpriseに慣れ、査定ことを支援するために設計された短いシリーズです。"
+
+#: ../views/deploy.erb:22
+msgid ""
+"The %{link} offers a cornucopia of modules—reusable, sharable units of "
+"Puppet code—for simple and advanced operations."
+msgstr ""
+"このリンク %{link} の先にはシンプルかつ高度な操作のための豊富なモジュール(再利用可能、共有可能なPuppetコードのユニット)があります。"
+
+#: ../views/deploy.erb:26
+msgid ""
+"As a Puppet Enterprise customer, you have access to %{link}, which are "
+"modules guaranteed to work with Puppet Enterprise. Use them to automate your"
+" infrastructure when setting up NTP, PostgreSQL, Apache, Windows Registry, "
+"SQL Server, or even your Azure or AWS EC2 instances."
+msgstr ""
+"Puppet Enterpriseのお客様として、Puppet "
+"Enterpriseと連携することを保証するモジュールである%{link}へアクセスできます。これらを使用して、NTP、PostgreSQL、Apache、Windows"
+" Registry、SQLサーバ、またはAzureインスタンスかAWS EC2インスタンスを設定するときにインフラを自動化します。"
+
+#: ../views/deploy.erb:35 ../views/partials/_answer_file_links.erb:16
+msgid ""
+"When the installation completes, you can find the final PE configuration "
+"file at '/etc/puppetlabs/enterprise/conf.d/pe.conf' on %{master_hostname}."
+msgid_plural ""
+"When the installation completes, you can find the final PE configuration "
+"files at '/etc/puppetlabs/enterprise/conf.d/pe.conf' on %{master_hostname}."
+msgstr[0] ""
+"設定ファイルは、インストール完了後に%{master_hostname}の'/etc/puppetlabs/enterprise/conf.d/pe.conf'に保存されます。"
+
+#: ../views/deploy.erb:38
+msgid ""
+"You can find the installer log at "
+"/var/log/puppetlabs/installer/installer.log on %{installer_hostname}."
+msgstr ""
+"インストーラログが%{installer_hostname}の/var/log/puppetlabs/installer/installer.logに見つかります。"
+
+#: ../views/error.erb:2
+msgid "Puppet Enterprise Installer - Something undesired occured"
+msgstr "Puppet Enterpriseインストーラ- 望ましくない状況が発生しました。"
+
+#: ../views/error.erb:9
+msgid "Oops. Something is not right."
+msgstr "おっと。何かがよろしくない模様です。"
+
+#: ../views/error.erb:11
+msgid "Here's the data we have about what happened:"
+msgstr "以下が何が起こったかについて判っているデータです："
+
+#: ../views/index.erb:2
+msgid "Puppet Enterprise Installer"
+msgstr "Puppet Enterpriseインストーラ"
+
+#: ../views/index.erb:9
+msgid "Hi there!"
+msgstr "ようこそ"
+
+#: ../views/index.erb:11
+msgid ""
+"Welcome to the Puppet Enterprise Installer - the easiest way to get your "
+"Puppet Enterprise environment installed, configured, and ready for your "
+"first Puppet run."
+msgstr ""
+"Puppet Enterpriseインストーラにようこそ。Puppet "
+"Enterprise専用の機能とPuppetの実行環境を構築するための一番簡単な方法を提供します。"
+
+#: ../views/index.erb:11
+msgid ""
+"The components to be explicitly installed include a Puppet master, PuppetDB,"
+" and the Puppet Enterprise console."
+msgstr ""
+"本インストーラにはPuppet Master、Puppet DB、Puppet Enterprise "
+"コンソールを含んだコンポーネントをインストールします。"
+
+#: ../views/index.erb:14
+msgid "documentation"
+msgstr "マニュアル"
+
+#: ../views/index.erb:15
+msgid "Installation Overview and Instructions"
+msgstr "インストールの概要と指示"
+
+#: ../views/index.erb:16
+msgid ""
+"For more information on Puppet Enterprise and these components, check out "
+"the %{documentation_link}."
+msgstr ""
+"Puppet "
+"Enterpriseとこれらのコンポーネントの詳細については、%{documentation_link}を参照してインストール概要と設定値を確認してください。"
+
+#: ../views/index.erb:16
+msgid "Don't forget to check out the %{instructions_link}."
+msgstr "%{instructions_link}を必ず確認してください。"
+
+#: ../views/index.erb:19
+msgid ""
+"If necessary, please review the installation prerequisites in the "
+"documentation for details on SSH setup."
+msgstr "必要に応じて、SSHセットアップの詳細に関する文書でインストールの前提条件を確認してください。"
+
+#: ../views/index.erb:19
+msgid ""
+"You'll also need to provide the DNS hostname and alt names for your Puppet "
+"master server."
+msgstr ""
+"Puppet Enterpriseをインストールするには、Puppet masterサーバのDNSホスト名及び "
+"サブジェクトの別名を入力する必要があります。"
+
+#: ../views/index.erb:22
+msgid "Let's get started!"
+msgstr "セットアップ開始"
+
+#: ../views/index.erb:25
+msgid "You're only a few minutes away from your first Puppet run."
+msgstr "Puppet Enterpriseのインストールは数分で終了します。"
+
+#: ../views/interview.erb:2
+msgid "Puppet Enterprise Installer - We need some information from you"
+msgstr "Puppet Enterpriseインストーラ - 必要な情報を入力してください"
+
+#: ../views/interview.erb:6
+msgid "We need some information from you"
+msgstr "以下の項目を入力してください"
+
+#: ../views/interview.erb:44 ../views/summary.erb:27 ../views/validate.erb:13
+msgid "Go back"
+msgstr "戻る"
+
+#: ../views/interview.erb:45 ../views/summary.erb:28
+msgid "Continue"
+msgstr "次へ"
+
+#: ../views/js/validate.js.erb:15
+msgid "Please provide a unique value for this field."
+msgstr "このフィールドには他と重複しない値を入力してください。"
+
+#: ../views/js/validate.js.erb:19 ../views/js/validate.js.erb:23
+msgid "Invalid character entered."
+msgstr "無効な文字が入力されました。"
+
+#: ../views/js/validate.js.erb:23
+msgid "Answers cannot contain the single quote (') character."
+msgstr "回答にはシングルクオーテーション文字（'）を使用しないでください。"
+
+#: ../views/partials/_answer_file_links.erb:5
+msgid "View the PE configuration files we've just generated"
+msgstr "インストールを行うPuppet Enterprise設定ファイルを表示します。"
+
+#: ../views/partials/_phase.erb:17
+msgid "Log View"
+msgstr "ログビュー"
+
+#: ../views/partials/_phase.erb:28
+msgid "Summary View"
+msgstr "サマリービュー"
+
+#: ../views/partials/summary/_pe_db.erb:3
+msgid ""
+"The database server and database will be installed and automatically "
+"configured on %{server_name}."
+msgstr "データベースサーバーおよびデータベースは%{server_name}にインストールされ、自動的に設定されます。"
+
+#: ../views/partials/summary/_server.erb:3
+msgid "Hostname"
+msgstr "ホスト名"
+
+#: ../views/partials/summary/_server.erb:5
+msgid "DNS aliases"
+msgstr "DNSエイリアス"
+
+#: ../views/summary.erb:2
+msgid "Puppet Enterprise Installer - Confirm the plan"
+msgstr "Puppet Enterpriseインストーラ ─ 計画の確認"
+
+#: ../views/summary.erb:6
+msgid "Confirm the plan"
+msgstr "設定内容の確認"
+
+#: ../views/summary.erb:18
+msgid "PuppetDB and console databases"
+msgstr "PuppetDBおよびコンソールデータベース"
+
+#: ../views/type.erb:2
+msgid "Puppet Enterprise Installer - Choose your deployment"
+msgstr "Puppet Enterpriseインストーラ ─ デプロイの選択"
+
+#: ../views/type.erb:6
+msgid "Choose your deployment"
+msgstr "デプロイの選択"
+
+#: ../views/type.erb:13
+msgid "Monolithic"
+msgstr "モノリシック"
+
+#: ../views/type.erb:16
+msgid ""
+"For standard monolithic or monolithic plus compile masters installations"
+msgstr "標準モノリシック、もしくはモノリシックに加えコンパイルmasterのインストール"
+
+#: ../views/type.erb:20
+msgid ""
+"This installation type can be used to manage up to several thousand "
+"production nodes."
+msgstr "このインストールタイプを用いて数千に及ぶ本稼働ノードを管理することが可能です。"
+
+#: ../views/type.erb:20
+msgid ""
+"Refer to the system requirements in the PE documentation for guidance on "
+"hardware recommendations, which vary depending on the number of nodes you "
+"want to manage."
+msgstr "システム要件は管理するノード数によって変わるため、Puppet Enterprise文書のハードウェアに関する推奨事項を参照してください。"
+
+#: ../views/type.erb:35
+msgid "Split"
+msgstr "分割"
+
+#: ../views/type.erb:38
+msgid "For large environment installations (LEI)"
+msgstr "大規模インストール(LEI)"
+
+#: ../views/type.erb:42
+msgid ""
+"The LEI runs on a split installation with additional compile masters and "
+"ActiveMQ message brokering."
+msgstr ""
+"LEIはPuppet Enterpriseを分割インストールし、コンパイルmasterとActiveMQメッセージブローカリングを追加します。"
+
+#: ../views/type.erb:42
+msgid "This installation is suitable for managing up to 7000 nodes."
+msgstr "このインストールは最大7000ノードを管理する場合に適しています。"
+
+#: ../views/type.erb:42
+msgid ""
+"Refer to the system requirements in the PE documentation for guidance on "
+"hardware recommendations."
+msgstr "システム要件については、Puppet Enterpriseマニュアルのハードウェアに関する推奨事項を参照してください。"
+
+#: ../views/type.erb:55
+msgid "Other ways to deploy Puppet Enterprise"
+msgstr "Puppet Enterpriseをデプロイする他の方法"
+
+#: ../views/validate.erb:2 ../views/validate.erb:6
+msgid "Puppet Enterprise Installer - Validating"
+msgstr "Puppet Enterpriseインストーラ ─ 検証"
+
+#: ../views/validate.erb:8
+msgid "We're checking to make sure the installation will work correctly"
+msgstr "インストールが正常に動作するか検証しています。"
+
+#: ../views/validate.erb:14
+msgid "Retry validation"
+msgstr "再検証"
+
+#: ../views/validate.erb:15
+msgid "Deploy now"
+msgstr "インストール"

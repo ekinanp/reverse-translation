@@ -1,0 +1,1303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Puppet <docs@puppet.com>
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: puppetlabs.pe_console_ui\n"
+"Report-Msgid-Bugs-To: docs@puppet.com\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: satoko inoue <satoko-inoue@to-in.co.jp>, 2017\n"
+"Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Git-Ref: b12d3e7df386b72d0c0ef105040cd36ee4f97495\n"
+
+#. {0} is service-name (rbac, classifier, orchestrator etc.);
+#. {1} is object-type (node_groups, nodes, puppet_agent);
+#. {2} is object-id (node group id, node id, agent id);
+#: src/puppetlabs/pe_console_middleware/activity/routes.clj
+msgid ""
+"Failed request for activity on service-name {0} {1} {2}. Status code: {3}, "
+"Message: {4}"
+msgstr "サービス名{0} {1} {2}のアクティビティリクエストが失敗しました。ステータスコード: {3}、メッセージ: {4}"
+
+#: src/puppetlabs/pe_console_middleware/activity/routes.clj
+msgid "Request activity for {0} {1} {2} "
+msgstr "{0} {1} {2}にアクティビティをリクエスト"
+
+#: src/puppetlabs/pe_console_middleware/activity/routes.clj
+msgid "Request activity as csv for {0} {1} {2} "
+msgstr "{0} {1} {2}にアクティビティをcsvとしてリクエスト"
+
+#: src/puppetlabs/pe_console_middleware/agents/inventory.clj
+msgid "No http-async-client available."
+msgstr "利用できるhttp-async-clientがありません。"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/agents/inventory.clj
+msgid ""
+"There was a problem connecting to the orchestrator at {0}. Message: {1}"
+msgstr "{0}のオーケストレータへの接続に問題が発生しました。メッセージ: {1}"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/agents/inventory.clj
+msgid ""
+"Failed request for inventory via GET {0}. Status code: {1}, Message: {2}"
+msgstr "GET {0}経由のインベントリリクエストが失敗しました。ステータスコード:{1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/agents/inventory.clj
+msgid "Successful fetch of inventory via GET {0}"
+msgstr "GET {0}経由のインベントリ情報取得が成功しました"
+
+#: src/puppetlabs/pe_console_middleware/agents/routes.clj
+msgid ""
+"Request for puppet run-enabled node via /inventory route for node {0} made "
+"by {1}."
+msgstr "{1}によるノード{0}に対する/inventory経路経由でのPuppet実行有効化ノードのリクエスト。"
+
+#. {0} is the node's certname
+#. {1} is the user name
+#: src/puppetlabs/pe_console_middleware/agents/routes.clj
+msgid ""
+"Attempt to check if puppet can be run on node {0} failed. Request made to "
+"/inventory failed due to lack of permissions for user {1}."
+msgstr ""
+"Puppetがノード{0}上で実行可能かどうかの確認に失敗しました。/inventoryへのリクエストが、ユーザ{1}のパーミッションがないために失敗しました。"
+
+#. {2} is a user
+#: src/puppetlabs/pe_console_middleware/agents/routes.clj
+msgid "Request for puppet run status via /run/{0}/{1} route made by {2}."
+msgstr "{2}による/run/{0}/{1}経路でのPuppet実行ステータスのリクエスト。"
+
+#. {2} is a user
+#: src/puppetlabs/pe_console_middleware/agents/routes.clj
+msgid ""
+"Attempt to request puppet run status via /run/{0}/{1} route made by {2} "
+"failed due to lack of permissions."
+msgstr "{2}による/run/{0}/{1}経路でのPuppet実行ステータスのリクエストがパーミッション不足により失敗しました。"
+
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid ""
+"Attempt to run puppet request on {0} made by {1} failed due to network "
+"error: {2}."
+msgstr "{1}による{0}上のPuppet実行リクエストがネットワークエラーにより失敗しました: {2}"
+
+#. {0} is a node's certname
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "Attempt to run puppet on {0} failed. Message: {1}"
+msgstr "{0}上のPuppet実行が失敗しました。メッセージ: {1}"
+
+#. {0} is a nodes certname
+#. {1} is a user name
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "Attempt to run puppet on {0} made by {1} failed. Message {2}."
+msgstr "{1}による{0}上のPuppet実行が失敗しました。メッセージ: {2}"
+
+#. {0} is a nodes certname
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "Request for {0} failed. Message: {1}"
+msgstr "{0}へのリクエストが失敗しました。メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid ""
+"Attempt to run puppet request on {0} made by {1} failed due to lack of "
+"permissions."
+msgstr "{1}による{0}上のPuppet実行リクエストがパーミッション不足により失敗しました。"
+
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+#: src/puppetlabs/pe_console_middleware/agents/utils.clj
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "You do not have permission to perform this action."
+msgstr "このアクションを実行するパーミッションがありません。"
+
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "making query-run-status for job {0}"
+msgstr "ジョブ{0}のクエリ実行ステータスを作成中"
+
+#. {0} is job name
+#. {2} is job status
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "job status for job name {0} - {1}"
+msgstr "ジョブ名{0}のジョブステータス - {1}"
+
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Sleeping for {0} ms"
+msgstr "{0}ミリ秒間スリープ中"
+
+#. {0} is a node certname
+#. {2} is user name
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid ""
+"Attempt to request job status for {0} made by {1} failed due to connection "
+"error."
+msgstr "{1}による{0}に対するジョブステータスのリクエストが接続エラーにより失敗しました。"
+
+#. {0} is a node certname
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "Request for {0} failed due to a connection error"
+msgstr "{0}へのリクエストが接続エラーにより失敗しました。"
+
+#. {0} is job name
+#. {1} is the error
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid ""
+"Orchestrator returned an error while requesting job status for {0}. Reason: "
+"{1}"
+msgstr "{0}のジョブステータスをリクエスト中にオーケストレータがエラーを返しました。理由: {1}"
+
+#. {0} is a node's certname
+#: src/puppetlabs/pe_console_middleware/agents/run.clj
+msgid "Job report request for {0} failed. Message: {1}"
+msgstr "{0}のジョブレポートリクエストが失敗しました。メッセージ: {1}"
+
+#. {0} is a node certname
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "Certificate request for {0} not found"
+msgstr "{0}の証明書リクエストが見つかりませんでした"
+
+#. {0} is a node certname
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "Not authorized to perform certificate request for {0}"
+msgstr "{0}の証明書リクエストを実行する権限がありません"
+
+#. {0} is a node certname
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "Failed to perform certificate request for {0}"
+msgstr "{0}の証明書リクエストの実行に失敗しました"
+
+#. {0} is an action
+#. {1} is a node certname
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "Processed {0} for {1} successfully"
+msgstr "{1}の{0}の処理が成功しました"
+
+#. {0} is action
+#. {1} is a node certname
+#. {2} is a status
+#. {3} is an error message
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "Failed to process {0} for {1}. Status code: {2}, Message: {3}"
+msgstr "{1}の{0}の処理に失敗しました。ステータスコード: {2}、メッセージ : {3}"
+
+#. {0} is an action
+#. {1} is one acceptable action
+#. {2} is another acceptable action
+#: src/puppetlabs/pe_console_middleware/certificates/accept_reject.clj
+msgid "Action {0} is not one of the following acceptable actions: {1}, {2}"
+msgstr "アクション{0}は、許容される次のいずれのアクションでもありません: {1}、{2}"
+
+#: src/puppetlabs/pe_console_middleware/certificates/routes.clj
+msgid "Not authorized to view certificate signing requests."
+msgstr "証明書署名リクエストを表示する権限がありません。"
+
+#: src/puppetlabs/pe_console_middleware/certificates/routes.clj
+msgid "Certificate signing requests not found."
+msgstr "証明書署名リクエストが見つかりませんでした。"
+
+#: src/puppetlabs/pe_console_middleware/certificates/routes.clj
+msgid "Unable to retrieve certificate signing requests."
+msgstr "証明書署名リクエストを取得できません。"
+
+#: src/puppetlabs/pe_console_middleware/certificates/routes.clj
+msgid "Unable to connect to retrieve certificate signing requests."
+msgstr "証明書署名リクエスト取得のために接続できません。"
+
+#. {0} is path of certificate server
+#: src/puppetlabs/pe_console_middleware/certificates/routes.clj
+msgid "failed getting certificate state from {0} "
+msgstr "{0}からの証明書状態の取得に失敗しました。"
+
+#. {0} is path of certificate server
+#: src/puppetlabs/pe_console_middleware/certificates/routes.clj
+msgid "connection failed while trying to get certificate state from {0} "
+msgstr "{0}からの証明書の取得中に、接続に失敗しました。"
+
+#. {0} url
+#: src/puppetlabs/pe_console_middleware/classifier/classes.clj
+msgid "Request to {0} for classes failed. Status code: {1}, Message: {2}"
+msgstr "クラスの{0}へのリクエストが失敗しました。ステータスコード: {1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/classifier/classifier.clj
+msgid "There was an error connecting to PuppetDB: {0}"
+msgstr "PuppetDBへの接続にエラーが発生しました: {0}"
+
+#: src/puppetlabs/pe_console_middleware/classifier/classifier.clj
+msgid "There was an error connecting to the classifier service: {0}"
+msgstr "Classifier serviceへの接続にエラーが発生しました: {0}"
+
+#: src/puppetlabs/pe_console_middleware/classifier/group_tree.clj
+msgid "The depth parameter was specified but malformed. Received: ''{0}''"
+msgstr "指定された深さパラメータの形式が不正です。受信: ''{0}''"
+
+#: src/puppetlabs/pe_console_middleware/classifier/group_tree.clj
+msgid "The group id specified is invalid. Received: ''{0}''"
+msgstr "指定されたグループIDが不正です。受信: ''{0}''"
+
+#. {0} is url
+#: src/puppetlabs/pe_console_middleware/classifier/group_tree.clj
+msgid "Error occurred accessing {0}. Message: {1}"
+msgstr "{0}へのアクセスでエラーが発生しました。メッセージ: {1}"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/classifier/groups.clj
+msgid "Request to {0} for groups failed. Status code: {1}, Message: {2}"
+msgstr "{0}へのグループリクエストが失敗しました。ステータスコード: {1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/classifier/inventory/reports.clj
+msgid "Report {0} matches the transaction id {1}"
+msgstr "レポート{0}がトランザクションID {1}に一致"
+
+#: src/puppetlabs/pe_console_middleware/classifier/inventory/reports.clj
+msgid ""
+"The request for report with transaction id {0} timed out after {1} seconds"
+msgstr "トランザクションID {0}のレポートリクエストが{1}秒後にタイムアウトしました"
+
+#. default to 5 seconds
+#: src/puppetlabs/pe_console_middleware/classifier/inventory/reports.clj
+msgid "Request to api/classifier/reports/{0} made"
+msgstr "api/classifier/reports/{0}へのリクエストが発行されました"
+
+#: src/puppetlabs/pe_console_middleware/cm/cache.clj
+msgid "Enqueuing cache update for {0}"
+msgstr "{0}のキャッシュアップデートをキューに追加しています"
+
+#: src/puppetlabs/pe_console_middleware/cm/cache.clj
+msgid "Caught exception updating cache. Error: {0}"
+msgstr "キャッシュのアップデート中に例外が見つかりました。エラー: {0}"
+
+#: src/puppetlabs/pe_console_middleware/cm/cache.clj
+msgid "Dequeuing result cache update for {0}"
+msgstr "{0}の結果キャッシュアップデートをキューから削除しています"
+
+#: src/puppetlabs/pe_console_middleware/cm/cache.clj
+msgid "Dequeued result cache update for {0}"
+msgstr "{0}の結果キャッシュアップデートをキューから削除しました"
+
+#: src/puppetlabs/pe_console_middleware/cm/filtering.clj
+msgid "Error in filter specification: {0}"
+msgstr "フィルタ指定エラー: {0}"
+
+#: src/puppetlabs/pe_console_middleware/cm/middleware_utils.clj
+msgid "**** Data is incomplete ****"
+msgstr "**** データが不完全です ****"
+
+#: src/puppetlabs/pe_console_middleware/cm/middleware_utils.clj
+msgid "Exception occurred during CSV processing: "
+msgstr "CSV処理中に例外が発生しました:"
+
+#: src/puppetlabs/pe_console_middleware/cm/middleware_utils.clj
+msgid "Mandatory parameter(s) not specified: {0}"
+msgstr "必須のパラメータが指定されていません: {0}"
+
+#: src/puppetlabs/pe_console_middleware/cm/middleware_utils.clj
+msgid "Error parsing timestamp parameter \"{0}\": {1}"
+msgstr "タイムスタンプパラメータ\"{0}\"の解析でエラーが発生しました: {1}"
+
+#: src/puppetlabs/pe_console_middleware/cm/middleware_utils.clj
+msgid "Symbol expected, got: {0}"
+msgstr "記号が期待されていますが、次の値が入力されました: {0}"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Package"
+msgstr "パッケージ"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Package version"
+msgstr "パッケージバージョン"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Package provider"
+msgstr "パッケージプロバイダ"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Node count"
+msgstr "ノード数"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/core.clj
+msgid "Node name"
+msgstr "ノード名"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Puppet managed?"
+msgstr "Puppet管理下ですか?"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "File"
+msgstr "ファイル"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Version"
+msgstr "バージョン"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Provider"
+msgstr "プロバイダ"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Certname"
+msgstr "Certname"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Environment"
+msgstr "Environment"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/core.clj
+msgid "Operating system"
+msgstr "オペレーティングシステム"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/routes.clj
+msgid "packages"
+msgstr "パッケージ"
+
+#: src/puppetlabs/pe_console_middleware/cm/packages/routes.clj
+#: src/puppetlabs/pe_console_middleware/security/routes.clj
+msgid "nodes"
+msgstr "ノード"
+
+#: src/puppetlabs/pe_console_middleware/cm/pdb.clj
+msgid "Paging value must be a number"
+msgstr "ページ値は数字でなければなりません"
+
+#: src/puppetlabs/pe_console_middleware/cm/pdb.clj
+msgid "Paging limit must be a positive number"
+msgstr "ページ制限は正の数字でなければなりません"
+
+#: src/puppetlabs/pe_console_middleware/cm/pdb.clj
+msgid "Paging offset must be zero or a positive number"
+msgstr "ページオフセットは0か正の数字でなければなりません"
+
+#: src/puppetlabs/pe_console_middleware/cm/pdb.clj
+msgid "Paging limit cannot be specified without an offset"
+msgstr "ページ制限をページオフセットなしで指定することはできません"
+
+#: src/puppetlabs/pe_console_middleware/cm/pdb.clj
+msgid "Paging offset cannot be specified without a limit"
+msgstr "ページオフセットをページ制限なしで指定することはできません"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Error converting timestamp parameter {0} to datetime: {1}"
+msgstr "タイムスタンプパラメータ{0}のdatetimeへの変換でエラーが発生しました: {1}"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/core.clj
+msgid "Run status"
+msgstr "実行ステータス"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Reported at"
+msgstr "レポート日時"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/core.clj
+msgid "No-op mode"
+msgstr "No-opモード"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/core.clj
+msgid "Intended catalog failed"
+msgstr "適用しようとしたカタログが失敗しました"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/core.clj
+msgid "Enforced resources found"
+msgstr "適用されたリソースが見つかりました"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Correction applied"
+msgstr "修正"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Failed"
+msgstr "失敗"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Changed"
+msgstr "変更済み"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Unchanged"
+msgstr "未変更"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "No-op"
+msgstr "No-op"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Skipped"
+msgstr "スキップ済み"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Failed restarts"
+msgstr "失敗した再起動"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Config retrieval"
+msgstr "設定の取得"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Run time"
+msgstr "実行時間"
+
+#. {0} is a filter
+#. {1} is a list of valid filters
+#: src/puppetlabs/pe_console_middleware/cm/reports/core.clj
+msgid "Invalid filter_id {0}. Valid filters are: {1}"
+msgstr "filter_ID {0}が不正です。有効なフィルタ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/cm/reports/routes.clj
+msgid "reports"
+msgstr "レポート"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Activity Service"
+msgstr "Activityサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "PuppetDB Service"
+msgstr "PuppetDBサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "RBAC Service"
+msgstr "RBACサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Code Manager Service"
+msgstr "Code Managerサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Puppet Server"
+msgstr "Puppetサーバー"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Classifier Service"
+msgstr "Classifierサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Orchestrator Service"
+msgstr "Orchestratorサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Unknown Service"
+msgstr "未知のサービス"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Unreachable"
+msgstr "到達不能"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Status undetermined"
+msgstr "ステータス確認不能"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Operational"
+msgstr "運用可能"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Error reported"
+msgstr "エラーが報告されました"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Starting"
+msgstr "起動中"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Stopping"
+msgstr "停止中"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Unknown state returned from status endpoint: ''{0}''"
+msgstr "ステータスエンドポイントから未知の状態が返されました: ''{0}''"
+
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Cannot parse status response from {0}, error is: {1}"
+msgstr "{0}からのステータス応答を解析できません。エラー: {1}"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Status service request to {0} returned an error. Message: {1}"
+msgstr "{0}へのステータスサービスリクエストがエラーを返しました。メッセージ: {1}"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/cm/service_alert/core.clj
+msgid "Timed out trying to contact status service at {0}"
+msgstr "ステータスサービスに接続する{0}への通信がタイムアウトしました"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Class"
+msgstr "クラス"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Node"
+msgstr "ノード"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Resource"
+msgstr "リソース"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Failures"
+msgstr "失敗"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Corrective changes"
+msgstr "修正"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Intentional changes"
+msgstr "変更"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Corrective no-ops"
+msgstr "修正（no-op）"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Intentional no-ops"
+msgstr "変更（no-op）"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Skips"
+msgstr "スキップ"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "corrective change"
+msgstr "修正"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "intentional change"
+msgstr "変更"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "corrective no-op"
+msgstr "修正（no-op）"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "intentional no-op"
+msgstr "変更（no-op）"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Event"
+msgstr "イベント"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Time"
+msgstr "時間"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Resource path"
+msgstr "リソースパス"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Node affected"
+msgstr "影響を受けるノード"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Event timestamp"
+msgstr "エベント日時"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Config version"
+msgstr "設定バージョン"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "File and line number"
+msgstr "ファイルと行番号"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Property"
+msgstr "プロパティ"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Old Value"
+msgstr "変更前"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "New Value"
+msgstr "変更後"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/core.clj
+msgid "Message"
+msgstr "メッセージ"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_inspector/routes.clj
+msgid "state-inspector"
+msgstr "状態インスペクタ"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/core.clj
+msgid "Last report"
+msgstr "最終レポート"
+
+#: src/puppetlabs/pe_console_middleware/cm/state_overview/routes.clj
+msgid "state-overview"
+msgstr "状態の概要"
+
+#. {0} http method (GET, PUT, etc.)
+#. {1} url
+#. {2} message
+#: src/puppetlabs/pe_console_middleware/core.clj
+msgid "Failed to make {0} request to {1}. Message: {2}"
+msgstr "{1}への{0}リクエストが失敗しました。メッセージ: {2}"
+
+#. {0} http method (GET, PUT, etc.)
+#. {1} url
+#. {2} status code
+#. {3} message or error
+#: src/puppetlabs/pe_console_middleware/core.clj
+msgid "Failed to make {0} request to {1}. Status code: {2}, Message: {3}"
+msgstr "{1}への{0}のリクエストが失敗しました。ステータスコード: {2}、メッセージ: {3}"
+
+#. {0} and {1} are combined to make a url
+#: src/puppetlabs/pe_console_middleware/core.clj
+msgid "Unexpected error while making a request to {0} {1}"
+msgstr "{0} {1}へのリクエスト中に予期しないエラーが発生しました"
+
+#: src/puppetlabs/pe_console_middleware/core.clj
+msgid "Unexpected error while processing stream data"
+msgstr "ストリームデータの処理中に予期しないエラーが発生しました"
+
+#: src/puppetlabs/pe_console_middleware/http_async_client.clj
+msgid "Creating async http client"
+msgstr "非同期HTTPクライアントを作成中"
+
+#: src/puppetlabs/pe_console_middleware/http_async_client.clj
+msgid "Shutting down async http client"
+msgstr "非同期HTTPクライアントをシャットダウン中"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/inventory/nodes.clj
+msgid "Failed to process node query to {0}. Status code: {1}, Message: {2}"
+msgstr "{0}へのノードクエリの処理に失敗しました。ステータスコード: {1}、メッセージ : {2}"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/inventory/nodes.clj
+msgid "Failed to process nodes query to {0}. Message: {1}"
+msgstr "{0}へのノードクエリの処理に失敗しました。メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/inventory/nodes.clj
+msgid "Request for node inventory details failed."
+msgstr "ノードインベントリ情報詳細のリクエストに失敗しました。"
+
+#: src/puppetlabs/pe_console_middleware/inventory/nodes.clj
+msgid "Failed to process inventory details request with code {0} - {1}"
+msgstr "インベントリ情報詳細のリクエストの処理に失敗しました。ステータスコード: {0}、メッセージ : {1}"
+
+#: src/puppetlabs/pe_console_middleware/inventory/nodes.clj
+msgid "The payload provided to inventory node details was malformed"
+msgstr "インベントリノード詳細に提供されたペイロードの形式が不正です"
+
+#: src/puppetlabs/pe_console_middleware/inventory/routes.clj
+msgid "Request for nodes from query"
+msgstr "クエリからのノードリクエスト"
+
+#: src/puppetlabs/pe_console_middleware/inventory/routes.clj
+msgid "Request for nodes details"
+msgstr "ノード詳細リクエスト"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Failed to process jobs request to {0}. Status code: {1}, Message: {2}"
+msgstr "{0}へのジョブリクエストの処理に失敗しました。ステータスコード: {1}、メッセージ : {2}"
+
+#. {0} is a url
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Failed to process jobs request to {0}. Message: {1}"
+msgstr "{0}へのジョブリクエストの処理に失敗しました。メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Report for job {0} on node {1} was not found"
+msgstr "ノード{1}上のジョブ{0}のレポートが見つかりませんでした "
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Succeeded"
+msgstr "正常終了"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Failed - error ..."
+msgstr "失敗 - エラー..."
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Queued"
+msgstr "キュー済み"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "In progress"
+msgstr "進行中"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Unknown"
+msgstr "未知"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "No job-id found in response"
+msgstr "応答にジョブIDが見つかりませんでした"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "The payload provided to job creation was malformed"
+msgstr "ジョブ作成に提供されたペイロードの形式が不正です"
+
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "The payload provided to job stop was malformed"
+msgstr "ジョブ停止に提供されたペイロードの形式が不正です"
+
+#. {0} is a job id
+#. {1} is an event id
+#: src/puppetlabs/pe_console_middleware/jobs/jobs.clj
+msgid "Requesting recent events for job id {0} with event start id of {1}."
+msgstr "ジョブID {0}で、イベント開始IDが{1}の最近のイベントをリクエスト中"
+
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Request for jobs"
+msgstr "ジョブリクエスト"
+
+#. {0} is a job id
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Request for job {0}"
+msgstr "ジョブ{0}に対するリクエスト"
+
+#. {0} is a job id
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Request for nodes included in job {0}"
+msgstr "ジョブ{0}に含まれるノードへのリクエスト"
+
+#. {0} is a job id
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Request for report associated with {0} and {1}"
+msgstr "{0}および{1}に関連するレポートのリクエスト"
+
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Create a job"
+msgstr "ジョブを作成"
+
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Stop a job"
+msgstr "ジョブを停止"
+
+#. {0} is a job id
+#. {1} is an event id
+#: src/puppetlabs/pe_console_middleware/jobs/routes.clj
+msgid "Request events for job {0} from {1}"
+msgstr "{1}からのジョブ{0}に対するイベントリクエスト"
+
+#: src/puppetlabs/pe_console_middleware/licensing/parsing.clj
+msgid "License file: {0} - {0}"
+msgstr "ライセンスファイル: {0} - {0}"
+
+#: src/puppetlabs/pe_console_middleware/licensing/parsing.clj
+msgid "Unable to parse license file"
+msgstr "ライセンスファイルを解析できません"
+
+#: src/puppetlabs/pe_console_middleware/licensing/parsing.clj
+msgid "End date is malformed"
+msgstr "終了日の形式が不正です"
+
+#: src/puppetlabs/pe_console_middleware/licensing/parsing.clj
+msgid "End date \"{0}\" was not correctly parsed by java.util.Date"
+msgstr "終了日\"{0}\"がjava.util.Dateで正しく解析できませんでした"
+
+#: src/puppetlabs/pe_console_middleware/licensing/parsing.clj
+msgid "Nodes is malformed"
+msgstr "ノードの形式が不正です"
+
+#: src/puppetlabs/pe_console_middleware/licensing/parsing.clj
+msgid "\"{0}\" is not a positive integer"
+msgstr "\"{0}\"が正の整数ではありません"
+
+#: src/puppetlabs/pe_console_middleware/licensing/retrieval.clj
+msgid "Unable to load license file {0}"
+msgstr "ライセンスファイル{0}を読み込めません"
+
+#: src/puppetlabs/pe_console_middleware/licensing/routes.clj
+msgid "There was an error connecting to the licensing service: {0}"
+msgstr "ライセンスサービスへの接続にエラーが発生しました: {0}"
+
+#: src/puppetlabs/pe_console_middleware/middleware.clj
+msgid "You lack permission to view this resource."
+msgstr "このリソースを表示するのに十分なパーミッションがありません。"
+
+#: src/puppetlabs/pe_console_middleware/rbac/ds.clj
+msgid ""
+"Successful request to update directory server settings via PUT /api/rbac/ds"
+msgstr "PUT /api/rbac/ds経由でのディレクトリサーバー設定更新リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/ds.clj
+msgid ""
+"Failed request to update directory server settings via PUT /api/rbac/ds. "
+"Status code:  {0}, Message: {1}"
+msgstr ""
+"PUT /api/rbac/ds経由でのディレクトリサーバー設定更新リクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/ds.clj
+msgid ""
+"Successful request to test updated directory server settings via PUT "
+"/api/rbac/ds/test"
+msgstr "PUT /api/rbac/ds/test経由でのディレクトリサーバー設定更新のテストリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/ds.clj
+msgid ""
+"Failed request to test updated directory server settings via PUT "
+"/api/rbac/ds/test. Status code: {0}, Message: {1}"
+msgstr ""
+"PUT /api/rbac/ds/test経由でのディレクトリサーバー設定更新のテストリクエストが失敗しました。 ステータスコード: "
+"{0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/ds.clj
+msgid ""
+"Successful request to delete directory server settings via DELETE "
+"/api/rbac/ds"
+msgstr "DELETE /api/rbac/ds経由でのディレクトリサーバー設定削除リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/ds.clj
+msgid ""
+"Failed request to delete directory server settings via DELETE /api/rbac/ds. "
+"Status code: {0} status code, Message: {1}"
+msgstr ""
+"DELETE /api/rbac/ds経由でのディレクトリサーバー設定削除リクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Successful request of groups {0} via GET /api/rbac/groups{1}"
+msgstr "GET /api/rbac/groups{1}経由でのグループ{0}のリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Successful request of groups via GET /api/rbac/groups{0}"
+msgstr "GET /api/rbac/groups{0}経由でのグループリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid ""
+"Failed request to get groups via GET /api/rbac/groups. Status code: {0}, "
+"Message: {1}"
+msgstr "GET /api/rbac/groups経由でのグループリクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Successful request of group via GET /api/rbac/groups/{0}"
+msgstr "GET /api/rbac/groups/{0}経由でのグループリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid ""
+"Failed request of group via GET /api/rbac/groups/:groupid. Status code: {0},"
+" Message: {1}"
+msgstr ""
+"GET /api/rbac/groups/:groupid経由でのグループリクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Group with login {0} not found"
+msgstr "ログイン{0}のグループが見つかりませんでした"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Group with login {0} already exists"
+msgstr "ログイン{0}のグループがすでに存在します"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Not authorized to edit group {0}"
+msgstr "グループ{0}を編集する権限がありません"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "ID {0} in request url does not match ID {1} in request object."
+msgstr "リクエストURL内のID {0}はリクエストオブジェクト内のID {1}と一致しません。"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Not authorized to create group {0}"
+msgstr "グループ{0}を作成する権限がありません"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Not authorized to delete group {0}"
+msgstr "グループ{0}を削除する権限がありません"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Group id {0} not found"
+msgstr "グループID {0}が見つかりませんでした"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Successful submission of group via POST /api/rbac/groups"
+msgstr "POST /api/rbac/groups経由でのグループ送信が成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid ""
+"Failed submission of group via POST /api/rbac/groups. Status code: {0}, "
+"Message: {1}"
+msgstr "POST /api/rbac/groups経由でのグループ送信が失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid "Successful request to update group via PUT /api/rbac/groups/{0}"
+msgstr "PUT /api/rbac/groups/{0}経由でのグループ更新リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid ""
+"Failed request to update group via PUT /api/rbac/groups/:groupid. Status "
+"code: {0}, Message: {1}"
+msgstr ""
+"PUT /api/rbac/groups/:groupid経由でのグループ更新リクエストが失敗しました。 ステータスコード: {0}、メッセージ: "
+"{1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid ""
+"Successful request to delete group via DELETE /api/rbac/groups/{0}. Status "
+"code: {1}"
+msgstr "DELETE /api/rbac/groups/{0}経由でのグループ削除リクエストが成功しました。 ステータスコード: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/groups.clj
+msgid ""
+"Failed request to delete group via DELETE /api/rbac/groups/{0}. Status code:"
+" {1}, Message: {2}"
+msgstr ""
+"DELETE /api/rbac/groups/{0}経由でのグループ削除リクエストが失敗しました。 ステータスコード: {1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/instances.clj
+msgid "Object type not found"
+msgstr "オブジェクト型が見つかりませんでした"
+
+#: src/puppetlabs/pe_console_middleware/rbac/instances.clj
+msgid ""
+"Failed request of {0} via GET /api/rbac/instances/{1} with {2} status code "
+"and response: {3}"
+msgstr ""
+"GET /api/rbac/instances/{1}経由での{0}のリクエストが失敗しました。 ステータスコード: {2}、応答: {3}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/object_types.clj
+msgid "Successful request for roles via GET /api/rbac/object-types"
+msgstr "GET /api/rbac/object-types経由でのリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/object_types.clj
+msgid ""
+"Failed request for object-types via GET /api/rbac/object-types. Status code:"
+" {0}, Message: {1}"
+msgstr ""
+"GET /api/rbac/object-types経由でのオブジェクト型リクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#. {0} is a role id
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Current user lacks the permission to delete role identified by {0}"
+msgstr "現在のユーザには、ID {0}のロールを削除するのに十分なパーミッションがありません。"
+
+#. {0} is a role id
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "No role exists for id {0}"
+msgstr "ID {0}のロールが存在しません"
+
+#. {0} is a role id
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Failed to edit role identified by {0}"
+msgstr "ID {0}のロールの編集に失敗しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Current user lacks the permission to create roles"
+msgstr "現在のユーザには、ロールの作成に十分なパーミッションがありません。"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Role with name {0} exists already"
+msgstr "名前が{0}のロールがすでに存在します"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Failed to create role with name {0}"
+msgstr "名前が{0}のロールの作成に失敗しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Current user lacks the permission to modify role identified by ID {0}"
+msgstr "現在のユーザには、ID {0}のロールを変更するのに十分なパーミッションがありません。"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "No role exists for ID {0}"
+msgstr "ID {0}のロールが存在しません"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Conflict. Role with ID {0} already exists."
+msgstr "干渉。ID {0}のロールがすでに存在します。"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Failed to edit role identified by ID {0}"
+msgstr "ID {0}のロールの編集に失敗しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Unnamed role"
+msgstr "無名のロール"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid ""
+"The ''instance'' key of the permission {0} must be in the form of ''object-"
+"type/instance''."
+msgstr "パーミッション{0}の''instance''キーは、''object-type/instance''の形式でなければなりません。"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Successful request for roles via GET /api/rbac/roles"
+msgstr "GET /api/rbac/roles経由でのロールリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid ""
+"Failed request for roles via GET /api/rbac/roles. Status code: {0}, Message:"
+" {1}"
+msgstr "GET /api/rbac/roles経由でのロールリクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Successful request to create role via POST /api/rbac/roles"
+msgstr "POST /api/rbac/roles経由でのロール作成リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid ""
+"Failed request to create role via POST /api/rbac/roles. Status code: {0}, "
+"Message: {1}"
+msgstr "POST /api/rbac/roles経由でのロール作成リクエストが失敗しました。 ステータスコード: {0}、メッセージ: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Successful request for role via GET /api/rbac/roles/{0}"
+msgstr "GET /api/rbac/roles/{0}経由でのロールリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid ""
+"Failed request for role via GET /api/rbac/roles/{0}. Status code: {1}, "
+"Message: {2}"
+msgstr "GET /api/rbac/roles/{0}経由でのロールリクエストが失敗しました。 ステータスコード: {1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Successful request to update role via PUT /api/rbac/roles/{0}"
+msgstr "PUT /api/rbac/roles/{0}経由でのロール更新リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid ""
+"Failed request to update role via PUT /api/rbac/roles/{0}. Status code: {1},"
+" Message: {2}"
+msgstr ""
+"PUT /api/rbac/roles/{0}経由でのロール更新リクエストが失敗しました。 ステータスコード: {1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid "Successful request to delete role via DELETE /api/rbac/roles/{0}"
+msgstr "DELETE /api/rbac/roles/{0}経由でのロール削除リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/roles.clj
+msgid ""
+"Failed request to delete role via DELETE /api/rbac/roles/{0}. Status code: "
+"{1}, Message: {2}"
+msgstr ""
+"DELETE /api/rbac/roles/{0}経由でのロール削除リクエストが失敗しました。 ステータスコード: {1}、メッセージ: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Unamed user"
+msgstr "無名のユーザ"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Not authorized to edit user id {0}"
+msgstr "ユーザID {0}を編集する権限がありません"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "User id {0} not found"
+msgstr "ユーザID {0}が見つかりませんでした"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "User with login {0} already exists"
+msgstr "ログイン{0}のユーザがすでに存在します"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Not authorized to create user name {0}"
+msgstr "ユーザ名{0}を作成する権限がありません"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "User name {0} not found"
+msgstr "ユーザ名{0}が見つかりませんでした"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Successful request for users via GET /api/rbac/users"
+msgstr "GET /api/rbac/users経由でのユーザリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request for users via GET /api/rbac/users with {0} status code and "
+"response: {1}"
+msgstr "GET /api/rbac/users経由でのユーザリクエストが失敗しました。 ステータスコード: {0}、応答: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Successful request for user via GET /api/rbac/users/{0}"
+msgstr "GET /api/rbac/users/{0}経由でのユーザリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request for user via GET /api/rbac/users/{0} with {1} status code and"
+" response: {2}"
+msgstr "GET /api/rbac/users/{0}経由でのユーザリクエストが失敗しました。 ステータスコード: {1}、応答: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Successful request to create user via POST /api/rbac/users"
+msgstr "POST /api/rbac/users経由でのユーザ作成リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request to create user via POST /api/rbac/users with {0} status code "
+"and response: {1}"
+msgstr "POST /api/rbac/users経由でのユーザ作成リクエストが失敗しました。 ステータスコード: {0}、応答: {1}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Successful request to update user via PUT /api/rbac/users/{0}"
+msgstr "PUT /api/rbac/users/{0}経由でのユーザ更新リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request to update user via PUT /api/rbac/users/{0} with {1} status "
+"code and response: {2}"
+msgstr "PUT /api/rbac/users/{0}経由でのユーザ更新リクエストが失敗しました。 ステータスコード: {1}、応答: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid "Successful request to delete user via DELETE /api/rbac/users/{0}"
+msgstr "DELETE /api/rbac/users/{0}経由でのユーザ削除リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request to delete user via DELETE /api/rbac/users/{0} with {1} status"
+" code and response: {2}"
+msgstr ""
+"DELETE /api/rbac/users/{0}経由でのユーザ削除リクエストが失敗しました。 ステータスコード: {1}、応答: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Successful request to reset user password via POST "
+"/api/rbac/users/{0}/password/reset"
+msgstr "POST /api/rbac/users/{0}/password/reset経由でのユーザパスワードのリセットリクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request to reset user password via POST "
+"/api/rbac/users/{0}/password/reset with {1} status code and response: {2}"
+msgstr ""
+"POST "
+"/api/rbac/users/{0}/password/reset経由でのユーザパスワードのリセットリクエストが失敗しました。ステータスコード: "
+"{1}、応答: {2}"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Successful request to update user password via PUT "
+"/api/rbac/users/current/password"
+msgstr "PUT /api/rbac/users/current/password経由でのユーザパスワードの更新リクエストが成功しました"
+
+#: src/puppetlabs/pe_console_middleware/rbac/users.clj
+msgid ""
+"Failed request to update user password via PUT "
+"/api/rbac/users/current/password with {0} status code and response: {1}"
+msgstr ""
+"PUT /api/rbac/users/current/password経由でのユーザパスワードの更新リクエストが失敗しました。ステータスコード: "
+"{0}、応答: {1}"
+
+#: src/puppetlabs/pe_console_middleware/routes.clj
+msgid "Initializing pe-console-app"
+msgstr "pe-console-appを初期化中"
+
+#: src/puppetlabs/pe_console_middleware/routes.clj
+msgid "Starting pe-console-app"
+msgstr "pe-console-appを起動中"
+
+#: src/puppetlabs/pe_console_middleware/routes.clj
+msgid "Shutting down pe-console-app"
+msgstr "pe-console-appをシャットダウン中"
+
+#: src/puppetlabs/pe_console_middleware/security/core.clj
+msgid "Severity"
+msgstr "重大度"
+
+#: src/puppetlabs/pe_console_middleware/security/core.clj
+msgid "CVSS rating"
+msgstr "CVSS評価"
+
+#: src/puppetlabs/pe_console_middleware/security/core.clj
+msgid "Vulnerability"
+msgstr "脆弱性"
+
+#: src/puppetlabs/pe_console_middleware/security/core.clj
+msgid "Nodes"
+msgstr "ノード"
+
+#: src/puppetlabs/pe_console_middleware/security/core.clj
+msgid "Node Name"
+msgstr "ノード名"
+
+#: src/puppetlabs/pe_console_middleware/security/routes.clj
+msgid "unscanned"
+msgstr "スキャンされていません"
+
+#: src/puppetlabs/pe_console_middleware/tasks/routes.clj
+msgid "Retrieve list of tasks"
+msgstr "タスクリストの取得"
+
+#: src/puppetlabs/pe_console_middleware/tasks/routes.clj
+msgid "Create a task"
+msgstr "タスクの作成"
+
+#: src/puppetlabs/pe_console_middleware/tasks/tasks.clj
+msgid "The payload provided to task creation was malformed"
+msgstr "タスク作成に提供されたペイロードの形式が不正です"
+
+#: src/puppetlabs/pe_console_ui/middleware.clj
+msgid "An uncaught server error was thrown. Check the log for details."
+msgstr "キャッチされなかったサーバーエラーがスローされました。詳細はログを確認してください。"
+
+#: src/puppetlabs/pe_console_ui/middleware.clj
+msgid "Route requires authentication."
+msgstr "認証が必要な経路です。"
+
+#: src/puppetlabs/pe_console_ui/middleware.clj
+msgid "failed authentication - token expired"
+msgstr "認証失敗 - トークンの有効期限切れ"
+
+#: src/puppetlabs/pe_console_ui/middleware.clj
+msgid "failed authentication - token timed-out"
+msgstr "認証失敗 - トークンタイムアウト"
+
+#: src/puppetlabs/pe_console_ui/middleware.clj
+msgid "failed authentication - token revoked"
+msgstr "認証失敗 - トークン無効"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid ""
+"You are using a browser that is not supported or you have disabled "
+"JavaScript."
+msgstr "サポートされていないブラウザを使用しているか、JavaScriptが無効になっています。"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Refer to the Puppet Enterprise browser requirements."
+msgstr "Puppet Enterpriseのブラウザ要件を参照してください。"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Copyright"
+msgstr "Copyright"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "2017"
+msgstr "2017"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Page not found"
+msgstr "ページが見つかりません"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Return to home"
+msgstr "ホームに戻る"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Page Not Found | Puppet Enterprise"
+msgstr "ページが見つかりませんでした | Puppet Enterprise"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Puppet Enterprise"
+msgstr "Puppet Enterprise"
+
+#: src/puppetlabs/pe_console_ui/routes.clj
+msgid "Resource not found."
+msgstr "リソースが見つかりませんでした。"
+
+#: src/puppetlabs/pe_console_ui/service.clj
+msgid "[:console {0}] is a required setting."
+msgstr "[:console {0}]は必須の設定です。"
+
+#: src/puppetlabs/pe_console_ui/service.clj
+msgid "[:console {0}] must be a readable file. Unable to read {1}"
+msgstr "[:console {0}]は読み取り可能なファイルでなければなりません。{1}を読み取れません。"
+
+#: src/puppetlabs/pe_console_ui/service.clj
+msgid "Initializing PE console UI web service at https://{0}:{1,number,#}{2}"
+msgstr "PEコンソールUIのWebサービスをhttps://{0}:{1,number,#}{2}で初期化中"
