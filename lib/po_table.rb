@@ -7,11 +7,21 @@ require_relative 'po_entry'
 # can correspond to all the PO files.
 class POTable
   def initialize(pot_files)
-    @entries = pot_files.map { |f| POParser::parse(f) }.reduce(:concat).sort! do |e1, e2|
+    # First, inject the param_re as a part of every parsed entry returned from
+    # the parser, since we'll be sorting them starting from longest to shortest.
+    parsed_entries = pot_files.map { |f| POParser::parse(f) }.map do |parsed_entry|
+      param_re, entries = parsed_entry 
+      entries.map { |e| [param_re, e] }
+    end.reduce(:concat)
+    # Now, sort the entries by longest match, and then create the individual table
+    # entries from them.
+    @entries = parsed_entries.sort! do |pe1, pe2|
+      _, e1 = pe1
+      _, e2 = pe2
       msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
       next msgstr_avg_cmp unless msgstr_avg_cmp == 0
       average_length(e2[0]) <=> average_length(e1[0])
-    end.map { |e| POEntry.new(e) }
+    end.map { |pe| POEntry.new(pe[0], pe[1]) }
   end
 
   def reverse_translate(msg)

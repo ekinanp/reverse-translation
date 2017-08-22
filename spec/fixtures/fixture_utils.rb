@@ -42,4 +42,10 @@ module FixtureUtils
     tmp_file.unlink
     path
   end
+
+  # Interleaves the array "b" with array "a". Note that
+  # if |b| > |a|, then the remaining elements of b are not included.
+  def self.interleave(a, b)
+    a.zip(b).reduce(:concat).compact
+  end
 end

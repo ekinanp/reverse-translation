@@ -1,3 +1,5 @@
+require_relative 'po_param'
+
 # TODO: This module considers only happy cases (when the POT file is a valid
 # POT file). Maybe add some error message output/error-handling? Not necessary
 # for now, though.
@@ -39,21 +41,35 @@ module POParser
     end
   end
 
-  # Parses the given PO file, returning an array of pairs of maps. Each pair 
-  # of maps will be two entries: <msg-id> <msg-str>. <msg-id> will contain 
-  # the values of the "msgid" and "msgid_plural" fields, while <msg-str> will 
-  # contain values for "msgstr" and "msgstr[0]" fields. For example, an entry 
-  # might look like:
+  # Parses the given PO file, returning an array [param_re, entries]. param_re
+  # is the regex describing what a parameter looks like in a given string. entries
+  # is an array of pairs of maps. Each pair of maps are made up of two parts: 
+  # <msg-id> and <msg-str>. <msg-id> will contain the values of the "msgid" and 
+  # "msgid_plural" fields, while <msg-str> will contain values for "msgstr" and 
+  # "msgstr[0]" fields. For example, an entry in entries might look like:
   #
   # <msg-id> = { "msgid" => "Foo", "msgid_plural" => "Foos" }
   # <msg-str> = { "msgstr[0]" => "Translation 1", "msgstr[1]" => "Translation 2" }
+  #
+  # TODO: Modify POParser tests to account for this refactoring!
   def self.parse(path)
-    IO.read(path).scan(PO_ENTRY).map do |entry|
+    contents = IO.read(path)
+
+    # Guess the param regex. We choose the one w/ the most matches, tie-breakers are
+    # in order of appearance in the PO_PARAMS array.
+    _, ix = POParam::PO_PARAMS.map { |re| contents.scan(re).length }.each_with_index.max
+    param_re = POParam::PO_PARAMS[ix]
+
+    # Now parse the PO file's individual entries
+    entries = contents.scan(PO_ENTRY).map do |entry|
       entry = entry[0]
       msgid_entries = parse_part(MSGID_PART.match(entry)[0], MSGID_ENTRY)
       msgstr_entries = parse_part(MSGSTR_PART.match(entry)[0], MSGSTR_ENTRY)
       [msgid_entries, msgstr_entries]
     end
+
+    # Combine the results together
+    [param_re, entries]
   end
 
   private_class_method :parse_part
