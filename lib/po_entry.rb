@@ -11,14 +11,17 @@ class POEntry
     msgid_part, msgstr_part = pot_entry
     translation = msgid_part["msgid#{"_plural" if msgid_part.size > 1}"]
     @translations = msgstr_part.values.map do |value| 
-      key_regex = to_regex(value)
       params = POParam.extract_params(value, @param_re)
+      key_regex = to_regex(value, params)
       [key_regex, [translation, params]]
     end.to_h
   end
-  
-  def to_regex(msgstr) 
-    Regexp.new(Regexp.escape(msgstr).gsub(POParam::to_param_sub_re(@param_re),'\1(?m-ix:(.*))'))
+ 
+  def to_regex(msgstr, params)
+    escaped_param_re = POParam.escape_param_re(@param_re)
+    escaped_msg = Regexp.escape(msgstr)
+    substitution_map = params.zip(params.size.times.collect { '(?m-ix:(.*))' }).to_h
+    Regexp.new(POParam.substitute_params(escaped_msg, escaped_param_re, substitution_map))
   end
 
   # This method parses out a message matching a given regex pattern by returning
@@ -39,10 +42,10 @@ class POEntry
   def reverse_translate(msg)
     match_re = @translations.keys.find { |k| msg =~ k }
     return msg if match_re == nil 
-    pre, param_values, post = parse_match(msg, @param_re)
+    pre, param_values, post = parse_match(msg, match_re)
     translation, _ = @translations[match_re] 
     pre + POParam::substitute_params(translation, @param_re, param_values) + post
   end
 
-  private #:to_regex#, :extract_params
+  private :to_regex
 end

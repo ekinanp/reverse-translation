@@ -8,15 +8,15 @@ module POEntryFixture
     "messages, because these can also happen"
 
   UNTRANSLATED_MSG = "This message is not meant to be translated."
-  MSGID_TEMPLATE = "{0} is \\{1} OK because this is a simple case of {1} with regular parameters: {2} blah"
-  MSGSTR_TEMPLATE = "{2} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
+  MSGID_TEMPLATE = "a {0} is OK because this is a simple case of {1} with regular parameters: {2} blah"
+  MSGSTR_TEMPLATE = "a {2} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because we need to "\
        "ensure that the escaped regex characters are also matched {1} so that things work {0} blah" 
 
-  INPUT_MSG_TEMPLATE = "#{MULTI_LINE_PARAM} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because \\{1} we need to "\
-       "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{BASIC_PARAM} blah" 
+  INPUT_MSG_TEMPLATE = "<BEGINNING PART> a #{MULTI_LINE_PARAM} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because we need to "\
+    "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{BASIC_PARAM} blah <ENDING PART>" 
 
-  EXPECTED_RESULT_TEMPLATE = "#{BASIC_PARAM} is \\{1} OK because this is a simple case of "\
-    "#{QUOTED_PARAM} with regular parameters: #{MULTI_LINE_PARAM} blah"
+  EXPECTED_RESULT_TEMPLATE = "<BEGINNING PART> a #{BASIC_PARAM} is OK because this is a simple case of "\
+    "#{QUOTED_PARAM} with regular parameters: #{MULTI_LINE_PARAM} blah <ENDING PART>"
 
   def self.pluralize(template, num_times)
     template.sub(/(\\\{\d\})/, "\\1#{"s"*num_times}")
@@ -54,6 +54,10 @@ module POEntryFixture
 
     [[msgid_part, msgstr_part], expected_map]
   end
+
+  # Both the simple and plural cases will use this for their
+  # parameter regex.
+  PARAM_RE = POParam::STANDARD
 
   SIMPLE_TEST_CASE = make_happy_test_case(1)
   SIMPLE_PO_ENTRY = SIMPLE_TEST_CASE[0]

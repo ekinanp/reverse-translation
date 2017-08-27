@@ -1,7 +1,5 @@
 require "spec_helper"
 
-# TODO: Some common setup between LogParser and POParser. Maybe
-# refactor?
 describe POParser do
   before do
     @file = Tempfile.new("po_parser_test_file")

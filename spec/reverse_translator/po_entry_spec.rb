@@ -1,9 +1,11 @@
 require "spec_helper"
 
+# TODO: Mock out parts of the code that belong to POParam. This is not that
+# important and not worth the effort, but still good to do if time permits.
 describe POEntry do
   context "initialized with a simple po entry (just msgid and msgstr)" do
     before do
-      @entry = POEntry.new(POEntryFixture::SIMPLE_PO_ENTRY)
+      @entry = POEntry.new(POEntryFixture::PARAM_RE, POEntryFixture::SIMPLE_PO_ENTRY)
     end
     describe "#reverse_translate" do
       context "given a translatable message" do
@@ -21,7 +23,7 @@ describe POEntry do
 
   context "initialized with a pluralized po entry" do
     before do
-      @entry = POEntry.new(POEntryFixture::PLURAL_PO_ENTRY)
+      @entry = POEntry.new(POEntryFixture::PARAM_RE, POEntryFixture::PLURAL_PO_ENTRY)
     end
     describe "#reverse_translate" do
       context "given a translatable message" do

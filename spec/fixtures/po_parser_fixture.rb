@@ -63,10 +63,11 @@ module POParserFixture
     end
   end
 
-  # Relevant test data for the POParser. Note that we don't care about the type of message
-  # or what language it's in; we only care that the PO file is parsed correctly, i.e. that
-  # the right message contents are extracted.
-  MSG = ["\a\b\r\n\s\t\"\\", "Now that the escape characters are done", "Does this message work?"]
+  # Relevant test data for the POParser. Note that we don't care about what language a message
+  # is in, only that the right message contents are extracted and the right param_re describing
+  # its parameters.
+  MSG = ["\a\b\r\n\s\t\"\\", "Now that the escape characters are done", "Does this message work?", "What about with %{param1} and %{param2} and %{param3} parameters?"]
   TEST_INPUT = [[[MSG], [MSG]], [[MSG, MSG], [MSG, MSG, MSG]]]
-  EXPECTED_RESULT, INPUT_STRING = make_po_file_contents(TEST_INPUT)
+  STRUCTURE, INPUT_STRING = make_po_file_contents(TEST_INPUT)
+  EXPECTED_RESULT = [POParam::RUBY_PERCENT, STRUCTURE]
 end

@@ -52,7 +52,7 @@ module POParam
   # This method takes a param regex and converts it to another regex
   # that recognizes escaped characters. For example, STANDARD becomes
   #   /\\\{\d+\\\}/
-  def self.to_param_sub_re(param_re)
+  def self.escape_param_re(param_re)
     Regexp.new(param_re.to_s.gsub(REGEXP_CH) { |m| "\\\\#{m}" })
   end
 

@@ -21,7 +21,7 @@ class POTable
       msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
       next msgstr_avg_cmp unless msgstr_avg_cmp == 0
       average_length(e2[0]) <=> average_length(e1[0])
-    end.map { |pe| POEntry.new(pe[0], pe[1]) }
+    end.map { |(param_re, po_entry)| POEntry.new(param_re, po_entry) }
   end
 
   def reverse_translate(msg)

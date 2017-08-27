@@ -111,15 +111,15 @@ describe POParam do
     end
   end
 
-  describe ".to_param_sub_re" do
+  describe ".escape_param_re" do
     describe "given a regex A describing a possible set of po parameters" do
       it "produces a regex B such that for all strings s matching A, Regexp.escape(s) identically matches B" do
         test_cases = POParamFixture::TO_PARAM_SUB_RE_TEST_CASES 
 
         test_cases.each do |param_re, msgs|
-          param_sub_re = POParam.to_param_sub_re(param_re)          
+          escaped_param_re = POParam.escape_param_re(param_re)          
           msgs.each do |(msg)|
-            expect(param_re.match(msg)[1..-1]).to eql(param_sub_re.match(Regexp.escape(msg))[1..-1])
+            expect(param_re.match(msg)[1..-1]).to eql(escaped_param_re.match(Regexp.escape(msg))[1..-1])
           end
         end
       end
