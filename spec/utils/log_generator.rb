@@ -75,26 +75,19 @@ class LogGenerator
   # Final list of parameters
   PARAMS = [FILENAMES, IDENTIFIERS, QUOTED_PARAMS, EXCEPTION_MSGS, MISC]
 
-  # For substituting-in the random parameters
-  PARAM_RE = /(?:\A|([^\\]))\{(\d+)\}/
-
   attr_reader :po_entries
 
   def initialize(po_files)
-    @po_entries = po_files.map { |f| POParser.parse(f)[1..-1] }.reduce(:concat)
+    @po_entries = po_files.map { |f| POParser.parse(f) }.map do |(param_re, entries)|
+      entries[1..-1].map { |e| [param_re, e] }
+    end.reduce(:concat).select do |param_re, (_, msgstr_part)| 
+      !msgstr_part.any? { |_, msg| POParam.adjacent_params?(msg, param_re) }
+    end
   end
 
   # Returns a random parameter
   def random_param
     PARAMS.sample.sample
-  end
-
-  # Substitutes the given params into the message
-  def substitute_params(msg, params)
-    ordered_params = msg.scan(PARAM_RE).map { |e| e[1] }.zip(params).sort.map { |e| e[1] }
-    ordered_params.inject(msg) do |new_msg, param|
-      new_msg.sub(PARAM_RE, "\\1#{param}")
-    end
   end
 
   # Returns a two element array [english_msg, non_english_msg] where "english_msg" contains the 
@@ -104,15 +97,17 @@ class LogGenerator
   # Note that if there is a "msgid_plural" entry, that one will always be selected since
   # the translator automatically translates all msgstr entries to "msgid_plural"
   def random_msg
-    entry = @po_entries.sample
+    param_re, entry = @po_entries.sample
     english_key = entry[0].keys.sort[entry[0].keys.size - 1]
     non_english_key = entry[1].keys.sample
 
     english_msg_raw = entry[0][english_key]
     non_english_msg_raw = entry[1][non_english_key]
 
-    params = english_msg_raw.scan(PARAM_RE).size.times.collect { random_param }
-    [english_msg_raw, non_english_msg_raw].map { |msg| substitute_params(msg, params) }
+    params = POParam.extract_params(english_msg_raw, param_re).uniq
+    param_vals = params.map { |p| [p, random_param] }.to_h
+
+    [english_msg_raw, non_english_msg_raw].map { |msg| POParam.substitute_params(msg, param_re, param_vals) }
   end
 
   # Generates a random log file. Takes two parameters:

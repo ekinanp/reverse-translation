@@ -8,7 +8,8 @@ module Main
   USAGE = "USAGE: ./reverse_translate <log-file>"
   NO_ARG_MSG = "ERROR: No log-file provided!\n#{USAGE}"
 
-  PO_FILES = [`find resources/ja/ -name "*.po"`.split]
+#  PO_FILES = [`find resources/ja/ -name "*.po"`.split] # <-- TODO: Use this instead!
+  PO_FILES = [["resources/ja/puppet0.po"]]
  
   def self.error_exit(msg)
     puts msg

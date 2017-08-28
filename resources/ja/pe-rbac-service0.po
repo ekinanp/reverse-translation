@@ -677,6 +677,12 @@ msgstr "無効なパーミッション: {0}"
 msgid "The display name for the \"{0}\" role cannot be changed."
 msgstr "\"{0}\"ロールの表示名は変更できません。"
 
+#: src/clj/puppetlabs/rbac/storage.clj src/clj/puppetlabs/rbac/storage.clj
+#: src/clj/puppetlabs/rbac/storage.clj src/clj/puppetlabs/rbac/storage.clj
+#: src/clj/puppetlabs/rbac/translations.clj
+msgid "Administrators"
+msgstr "管理者"
+
 #: src/clj/puppetlabs/rbac/storage.clj
 #: src/clj/puppetlabs/rbac/translations.clj
 msgid "Administrators"

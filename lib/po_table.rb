@@ -1,5 +1,6 @@
 require_relative 'po_parser'
 require_relative 'po_entry'
+require_relative 'po_param'
 
 # This class represents the reverse-lookup table for an array of PO files.
 # It is intended that an array of PO files will correspond to logs obtained
@@ -13,15 +14,19 @@ class POTable
       param_re, entries = parsed_entry 
       entries.map { |e| [param_re, e] }
     end.reduce(:concat)
-    # Now, sort the entries by longest match, and then create the individual table
-    # entries from them.
-    @entries = parsed_entries.sort! do |pe1, pe2|
+    # Now, sort the entries by longest match    
+    parsed_entries.sort! do |pe1, pe2|
       _, e1 = pe1
       _, e2 = pe2
       msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
       next msgstr_avg_cmp unless msgstr_avg_cmp == 0
       average_length(e2[0]) <=> average_length(e1[0])
-    end.map { |(param_re, po_entry)| POEntry.new(param_re, po_entry) }
+    end
+    # TODO: Test this addition of the code!
+    @entries = parsed_entries.inject([]) do |accum, (param_re, po_entry)|
+      next accum if po_entry[1].any? { |_, msg| POParam.adjacent_params?(msg, param_re) }
+      accum.push(POEntry.new(param_re, po_entry))
+    end
   end
 
   def reverse_translate(msg)

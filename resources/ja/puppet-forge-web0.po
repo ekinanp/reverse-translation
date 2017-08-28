@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Puppet Forge Website i18n\n"
 "Report-Msgid-Bugs-To: forge@puppet.com\n"
-"POT-Creation-Date: 2017-07-05 11:41-0700\n"
-"PO-Revision-Date: 2017-07-05 11:41-0700\n"
+"POT-Creation-Date: 2017-08-15 16:50-0700\n"
+"PO-Revision-Date: 2017-08-15 16:50-0700\n"
 "Last-Translator: satoko inoue <satoko-inoue@to-in.co.jp>, 2017\n"
 "Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -179,24 +179,52 @@ msgstr ""
 "enterprise/\">Puppet Enterprise</a>のIT自動化ソフトウェアで使っていだだけるモジュールのリポジトリです。"
 
 #: mustache/app/templates/home.rb:3
-msgid "Puppet 5 is Here!"
-msgstr "Puppet 5が公開されました!"
+msgid "The Puppet Development Kit is Here!"
+msgstr "Puppet開発キットが公開されました! "
 
 #: mustache/app/templates/home.rb:4
 msgid ""
-"Puppet 5 is here! Puppet 5 provides both enhancements and some deprecations "
-"over Puppet 4, but largely retains backwards compatibility."
+"The Puppet Development Kit (PDK) is the shortest path to better modules. It "
+"makes it easier than ever to develop and test Puppet modules by providing a "
+"simple, unified interface to a set of helpful tools for anyone who writes or"
+" consumes Puppet code. Learn more from the <a href=\"https://puppet.com/blog"
+"/develop-modules-faster-new-puppet-development-kit\">announcement blog "
+"post</a>. Try it out now by <a href=\"https://puppet.com/download-puppet-"
+"development-kit\">downloading the PDK</a> and running through the <a "
+"href=\"https://docs.puppet.com/pdk/latest/index.html\">Getting Started "
+"guide</a>."
 msgstr ""
-"Puppet 5が公開されました! Puppet 5では、Puppet "
-"4からの機能強化とともに一部廃止された機能がありますが、全体的には後方互換性が維持されています。"
+"Puppet開発キット(PDK)は、より良いモジュールを開発するための最短パスです。シンプルで統一されたインターフェースにより、Puppetコードを記述したり使用したりする際に役立つツールセットを提供するこのキットを使えば、Puppetモジュールの開発やテストがこれまでになく簡単になります。詳細については、<a"
+" href=\"https://puppet.com/blog/develop-modules-faster-new-puppet-"
+"development-kit\">ブログの告知記事</a>をご覧ください。<a href=\"https://puppet.com/download-"
+"puppet-development-kit\">PDKをダウンロード</a>し、<a "
+"href=\"https://docs.puppet.com/pdk/latest/index.html\">スタートガイド</a>に目を通して、いますぐ試してみてください。"
 
 #: mustache/app/templates/home.rb:5
-msgid "For authors, we recommend:"
-msgstr "開発者の方には、次のことをお勧めします。"
+msgid "Puppet 5 is Here!"
+msgstr "Puppet 5が公開されました!"
 
 #: mustache/app/templates/home.rb:6
 msgid ""
-"Read through the <a "
+"Puppet 5 provides both enhancements and some deprecations over Puppet 4 "
+"while largely retaining backwards compatibility. Check out the <a "
+"href=\"https://puppet.com/blog/puppet-5-platform-released\">announcement "
+"blog post</a> to learn more. If you're still on Puppet 3.x, review the <a "
+"href=\"https://docs.puppet.com/upgrade\">upgrade mini-site</a> to plan your "
+"upgrade."
+msgstr ""
+"Puppet 5では、Puppet 4の機能が拡張され、一部の機能が廃止されていますが、全体的には後方互換性が維持されています。詳細については、<a "
+"href=\"https://puppet.com/blog/puppet-5-platform-"
+"released\">ブログの告知記事</a>を確認してください。Puppet 3.xを使っている場合は、<a "
+"href=\"https://docs.puppet.com/upgrade\">アップグレードミニサイト</a>を参照し、アップグレードを検討してください。"
+
+#: mustache/app/templates/home.rb:7
+msgid "For authors, we recommend:"
+msgstr "開発者の方には、次のことをお勧めします。"
+
+#: mustache/app/templates/home.rb:8
+msgid ""
+"Reading through the <a "
 "href=\"https://docs.puppet.com/puppet/latest/lang_updating_manifests.html\">Updating"
 " Manifests for Puppet 5</a> documentaion"
 msgstr ""
@@ -204,38 +232,17 @@ msgstr ""
 "href=\"https://docs.puppet.com/puppet/latest/lang_updating_manifests.html\">Puppet"
 " 5向けにマニフェストをアップデートするには</a>を通読する"
 
-#: mustache/app/templates/home.rb:7
-msgid ""
-"Test your module code under Puppet 5 and update its compatibility metadata "
-"once you're sure everything works"
-msgstr "開発したモジュールコードをPuppet 5でテストし、すべて正常に動作することを確認してから、互換性メタデータをアップデートする"
-
-#: mustache/app/templates/home.rb:8
-msgid "For module consumers, we recommend:"
-msgstr "モジュール利用者の方には、次のことをお勧めします。"
-
 #: mustache/app/templates/home.rb:9
 msgid ""
-"Check out the <a href=\"https://puppet.com/blog/puppet-5-platform-"
-"released\">announcement blog post</a> to get started with the release"
-msgstr ""
-"<a href=\"https://puppet.com/blog/puppet-5-platform-"
-"released\">発表ブログ記事</a>で、本リリースの概要を把握する"
+"Testing your module code under Puppet 5 and updating compatibility metadata "
+"once you're sure everything works"
+msgstr "開発したモジュールコードPuppet 5でテストし、すべて正常に動作することを確認してから、互換性メタデータをアップデートする "
 
 #: mustache/app/templates/home.rb:10
-msgid ""
-"If you're still on Puppet 3.x, review the <a "
-"href=\"https://docs.puppet.com/upgrade\">upgrade mini-site</a> to plan your "
-"upgrade"
-msgstr ""
-"まだPuppet 3.xをお使いの場合は、<a "
-"href=\"https://docs.puppet.com/upgrade\">アップグレードミニサイト</a>を確認し、アップグレードを計画する"
-
-#: mustache/app/templates/home.rb:11
 msgid "Writing Great Modules"
 msgstr "良いモジュールを作るには"
 
-#: mustache/app/templates/home.rb:12
+#: mustache/app/templates/home.rb:11
 msgid ""
 "Modules are reusable, sharable units of Puppet code. You can use modules to "
 "extend Puppet across your infrastructure by automating tasks such as setting"
@@ -244,19 +251,19 @@ msgstr ""
 "モジュールとは、再利用可能、共有可能なPuppetコードユニットです。 "
 "モジュールを使用することで、データベースやWebサーバー、メールサーバーのセットアップなどのタスクを自動化して、お使いのインフラストラクチャ全体にPuppetを拡張できます。"
 
-#: mustache/app/templates/home.rb:13
+#: mustache/app/templates/home.rb:12
 msgid "Read the Docs"
 msgstr " マニュアルについて"
 
-#: mustache/app/templates/home.rb:14
+#: mustache/app/templates/home.rb:13
 msgid "If you're new to Puppet, we recommend the following:"
 msgstr "Puppetが初めての方には、以下の記事がお勧めです。"
 
-#: mustache/app/templates/home.rb:15
+#: mustache/app/templates/home.rb:14
 msgid "<a href=\"https://learn.puppet.com/\">Learning Puppet Guide</a>"
 msgstr "<a href=\"https://learn.puppet.com/\">Learning Puppetガイド</a>"
 
-#: mustache/app/templates/home.rb:16
+#: mustache/app/templates/home.rb:15
 msgid ""
 "<a "
 "href=\"https://docs.puppet.com/puppet/latest/reference/modules_fundamentals.html\">Module"
@@ -265,7 +272,7 @@ msgstr ""
 "<a "
 "href=\"https://docs.puppet.com/puppet/latest/reference/modules_fundamentals.html\">モジュールの基本</a>"
 
-#: mustache/app/templates/home.rb:17
+#: mustache/app/templates/home.rb:16
 msgid ""
 "<a "
 "href=\"https://docs.puppet.com/guides/module_guides/bgtm.html\">Beginner's "
@@ -274,7 +281,7 @@ msgstr ""
 "<a "
 "href=\"https://docs.puppet.com/ja/puppet/4.9/bgtm.html\">モジュールに関するビギナーズガイド</a>"
 
-#: mustache/app/templates/home.rb:18
+#: mustache/app/templates/home.rb:17
 msgid ""
 "<a href=\"https://docs.puppet.com/guides/style_guide.html\">Puppet Language "
 "Style Guide</a>"
@@ -282,7 +289,7 @@ msgstr ""
 "<a "
 "href=\"https://docs.puppet.com/ja/puppet/4.9/style_guide.html\">Puppet言語スタイルガイド</a>"
 
-#: mustache/app/templates/home.rb:19
+#: mustache/app/templates/home.rb:18
 msgid ""
 "<a "
 "href=\"https://docs.puppet.com/puppet/latest/reference/lang_updating_manifests.html\">Updating"
@@ -292,7 +299,7 @@ msgstr ""
 "href=\"https://docs.puppet.com/puppet/latest/reference/lang_updating_manifests.html\">Puppet"
 " 4向けにマニフェストをアップデートするには</a>"
 
-#: mustache/app/templates/home.rb:20
+#: mustache/app/templates/home.rb:19
 msgid ""
 "<a "
 "href=\"https://docs.puppet.com/puppet/latest/reference/release_notes.html\">Puppet"
@@ -301,21 +308,21 @@ msgstr ""
 "<a "
 "href=\"https://docs.puppet.com/puppet/latest/reference/release_notes.html\">Puppetリリースノート</a>"
 
-#: mustache/app/templates/home.rb:21
+#: mustache/app/templates/home.rb:20
 msgid "Authoring Tools"
 msgstr "オーサリングツール"
 
-#: mustache/app/templates/home.rb:22
+#: mustache/app/templates/home.rb:21
 msgid ""
 "Write Puppet code in your favorite editor with the following tools and "
 "plugins:"
 msgstr "Puppetコードは、次のツールとプラグインを使用して、お好みのエディタで記述できます。"
 
-#: mustache/app/templates/home.rb:23
+#: mustache/app/templates/home.rb:22
 msgid "Authors: Add compatibility data to your modules"
 msgstr "作成者: モジュールに互換性データを追加するには"
 
-#: mustache/app/templates/home.rb:24
+#: mustache/app/templates/home.rb:23
 msgid ""
 "We've added search filters to help people find modules that are compatible "
 "with their Puppet versions and platforms. <a href=\"http://puppet.com/blog"
@@ -326,23 +333,23 @@ msgstr ""
 "href=\"http://puppet.com/blog/puppet-forge-search-module-"
 "compatibility\">互換性データをお使いのモジュールに追加する方法はこちら</a>。"
 
-#: mustache/app/templates/home.rb:25
+#: mustache/app/templates/home.rb:24
 msgid "New to the Puppet Forge?"
 msgstr "Puppet Forgeのご利用は初めてですか?"
 
-#: mustache/app/templates/home.rb:26
+#: mustache/app/templates/home.rb:25
 msgid "A Video Introduction"
 msgstr "入門ビデオ"
 
-#: mustache/app/templates/home.rb:27
+#: mustache/app/templates/home.rb:26
 msgid "Learn more at <a href=\"http://learn.puppet.com/\">learn.puppet.com</a>."
 msgstr "詳しくは、<a href=\"http://learn.puppet.com/\">learn.puppet.com</a>をご覧ください。"
 
-#: mustache/app/templates/home.rb:28
+#: mustache/app/templates/home.rb:27
 msgid "Share modules"
 msgstr "モジュールの共有"
 
-#: mustache/app/templates/home.rb:29
+#: mustache/app/templates/home.rb:28
 msgid ""
 "<a href=\"/signup\">Register an account</a>, create a module, upload a "
 "release of it, and your automation code is shared with the Puppet community."
@@ -350,7 +357,7 @@ msgstr ""
 "<a "
 "href=\"/signup\">アカウントを登録し</a>、モジュールを作成し、リリースをアップロードすると、自動化コードがPuppetコミュニティと共有されます。"
 
-#: mustache/app/templates/home.rb:30
+#: mustache/app/templates/home.rb:29
 msgid ""
 "<a "
 "href=\"http://docs.puppet.com/puppet/latest/reference/modules_publishing.html\">"
@@ -360,11 +367,11 @@ msgstr ""
 "href=\"http://docs.puppet.com/puppet/latest/reference/modules_publishing.html\">"
 " Puppetモジュールツールを使用してモジュールを作成、共有する方法はこちら</a>。"
 
-#: mustache/app/templates/home.rb:31
+#: mustache/app/templates/home.rb:30
 msgid "Recent Releases"
 msgstr "最近のリリース"
 
-#: mustache/app/templates/home.rb:32
+#: mustache/app/templates/home.rb:31
 msgid "Frequent Contributors"
 msgstr "貢献者ランキング"
 
@@ -450,5 +457,5 @@ msgid "Puppet Supported"
 msgstr "Puppetサポート付き"
 
 #: mustache/app/templates/sidebar/supported.rb:3
-msgid "<a href=\"/modules?endorsements=supported\">View all</a>"
-msgstr "<a href=\"/modules?endorsements=supported\">すべて表示</a>"
+msgid "<a href=\"/modules?endorsements=supported+partner\">View all</a>"
+msgstr "<a href=\"/modules?endorsements=supported+partner\">すべて表示</a>"

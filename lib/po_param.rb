@@ -43,7 +43,7 @@ module POParam
 
   # Relevant, escaped regex characters for the PO parameter
   # regexes
-  REGEXP_CH = /\\(?:\{|\}|\$|\+)/
+  REGEXP_CH = /\\(?:\{|\}|\$|\+|\.)/
 
   # The regexes for all possible parameters in the strings of
   # a PO file.
@@ -54,6 +54,12 @@ module POParam
   #   /\\\{\d+\\\}/
   def self.escape_param_re(param_re)
     Regexp.new(param_re.to_s.gsub(REGEXP_CH) { |m| "\\\\#{m}" })
+  end
+
+  # This method takes a param regex and returns true if it is either
+  # the PRINTF regex or the escaped PRINTF regex.
+  def self.printf?(param_re)
+    param_re == PRINTF || param_re == escape_param_re(PRINTF)
   end
 
   # This method takes in a message, a param regex describing the
@@ -68,7 +74,7 @@ module POParam
     return msg if !param_re.match(msg)
     # If message does not have PRINTF-type parameters, we can just do a one-to-one
     # substitution
-    return msg.gsub(param_re) { |m| param_vals[param_re.match(m)[1]] } if param_re != PRINTF
+    return msg.gsub(param_re) { |m| param_vals[param_re.match(m)[1]] } unless printf?(param_re) 
     # If message does have PRINTF-type parameters and these parameters are positional,
     # then we can still do one-to-one substitution but we need to also sub-back the previous
     # character
@@ -107,9 +113,29 @@ module POParam
     matches = msg.scan(param_re)
     return [] if matches.empty?
     # At this point, we do have one parameter.
-    return matches.reduce(:concat) if param_re != PRINTF
+    return matches.reduce(:concat) unless printf?(param_re)
     # If we do have a positional argument then just return the values as-is
     return matches.map { |m| m[1] } if matches.first[1]
     matches.each_index.map { |i| (i + 1).to_s }
+  end
+
+  # This method takes in a message and a param_re. It returns true if the
+  # message contains two parameters that are next to each other, false otherwise.
+  # It's purpose is to avoid catastrophic backtracking when running the regex
+  # matcher for the translation.
+  #
+  # For example, let param_re = STANDARD. Then if msg = "{0}{1} and {2}", the
+  # method will return true since {0} and {1} are next to each other.
+  def self.adjacent_params?(msg, param_re)
+    # TODO: Refactor this later if time permits to a more functional style.
+    # Also write tests for it!
+    prev_pre = nil
+    while match_obj = param_re.match(msg) do
+      cur_pre = match_obj.pre_match
+      return true if prev_pre == cur_pre
+      prev_pre = cur_pre
+      msg = cur_pre + match_obj.post_match
+    end
+    return false
   end
 end

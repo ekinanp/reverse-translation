@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: docs@puppet.com\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: 梅田智世 <c-umeda@nifty.com>, 2017\n"
+"Last-Translator: satoko inoue <satoko-inoue@to-in.co.jp>, 2017\n"
 "Language-Team: Japanese (Japan) (https://www.transifex.com/puppet/teams/59186/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgstr[0] "設定ファイル{1}に無効なキーが含まれています: {2}"
 #. info
 #: exe/puppet-access.cc
 msgid "Succesfully read configuration from {1}"
-msgstr "{1}からの設定ファイルの読み込みに成功しました。"
+msgstr "{1}からの設定の読み込みに成功しました。"
 
 #. warning
 #: exe/puppet-access.cc
@@ -50,7 +50,7 @@ msgid ""
 "Configuration values from CLI flags are:\n"
 "{1}"
 msgstr ""
-"CLIフラグにもとづく設定値:\n"
+"CLIフラグに基づく設定値:\n"
 "{1}"
 
 #. debug
@@ -74,7 +74,7 @@ msgstr "ユーザ名: "
 
 #: exe/puppet-access.cc
 msgid "No username supplied."
-msgstr "ユーザ名が提示されていません。"
+msgstr "ユーザ名が指定されていません。"
 
 #: exe/puppet-access.cc
 msgid "Please enter a username."
@@ -90,8 +90,8 @@ msgid ""
 " --service-url https://<HOSTNAME OF PUPPET ENTERPRISE CONSOLE>:4433/rbac-"
 "api`."
 msgstr ""
-"サービスURLを提供してください。たとえば、`puppet-access login [username] --service-url "
-"https://<HOSTNAME OF PUPPET ENTERPRISE CONSOLE>:4433/rbac-api`など。"
+"サービスURLを指定してください(例: `puppet-access login [username] --service-url "
+"https://<HOSTNAME OF PUPPET ENTERPRISE CONSOLE>:4433/rbac-api`)。"
 
 #: exe/puppet-access.cc
 msgid "Enter your Puppet Enterprise credentials."
@@ -114,7 +114,7 @@ msgid ""
 msgstr ""
 "エラー: --lifetimeに関して入力された値が正しくありません。\n"
 "フォーマット<integer>[smhdy]を使った値を入力してください。\n"
-"たとえば、1時間有効なトークンの場合は、'1h'を使用してください。\n"
+"例えば、1時間有効なトークンの場合は、'1h'を使用してください。\n"
 "整数と単位の間にスペースは入れません。"
 
 #: exe/puppet-access.cc
@@ -139,7 +139,7 @@ msgstr ""
 
 #: exe/puppet-access.cc
 msgid "Username cannot be supplied as both a flag and an argument"
-msgstr "ユーザ名をフラグと引数の両方として提供することはできません。"
+msgstr "ユーザ名をフラグと引数の両方に指定することはできません。"
 
 #: exe/puppet-access.cc
 msgid ""
@@ -164,7 +164,7 @@ msgstr ""
 "    [-c|--config-file arg] [-t|--token-file arg] [--username arg] [-v|--verbose]\n"
 "    [-V|--version] [-d|--debug]\n"
 "\n"
-"Description\n"
+"説明\n"
 "===========\n"
 "\n"
 "ユーザ名とパスワードをトークン生成APIエンドポイントに送信し、アクセストークンを生成してください。\n"
@@ -172,15 +172,15 @@ msgstr ""
 
 #: exe/puppet-access.cc
 msgid "Enable debug logging."
-msgstr "デバッグログインを有効化する。"
+msgstr "デバッグログを有効化する。"
 
 #: exe/puppet-access.cc
 msgid "Location of the token file. Defaults to {1}"
-msgstr "トークンファイルのロケーション。デフォルトは {1}。"
+msgstr "トークンファイルのロケーション。デフォルトは{1}。"
 
 #: exe/puppet-access.cc
 msgid "CA cert to use to contact token-issuing service. Defaults to {1}"
-msgstr "トークン発行サービスとの連絡に使用するCA証明書。デフォルトは{1}。"
+msgstr "トークン発行サービスへのアクセスに使用するCA証明書。デフォルトは{1}。"
 
 #: exe/puppet-access.cc
 msgid ""
@@ -188,7 +188,7 @@ msgid ""
 "can be contacted (the Puppet Enterprise console node). (example: "
 "https://<HOSTNAME>:4433/rbac-api)"
 msgstr ""
-"トークン発行サービスと連絡をとれるサーバ(Puppet Enterpriseコンソールノード)のFQDN、ポート、APIプレフィックス(例: "
+"トークン発行サービス/サーバにアクセス可能なサーバ(Puppet Enterpriseコンソールノード)のFQDN、ポート、APIプレフィックス(例: "
 "https://<HOSTNAME>:4433/rbac-api)。"
 
 #: exe/puppet-access.cc
@@ -220,7 +220,7 @@ msgstr ""
 msgid ""
 "Generates a token, but does not save it to disk. Instead, the token contents"
 " are displayed on STDOUT."
-msgstr "トークンを生成しますが、ディスクには保存されません。そのかわりに、トークンコンテンツがSTDOUTに表示されます。"
+msgstr "トークンを生成しますが、ディスクには保存しません。代わりにトークンコンテンツがSTDOUTに表示されます。"
 
 #: exe/puppet-access.cc
 msgid "Removes the local token, but does not expire the token on the server"
@@ -305,7 +305,7 @@ msgstr "以下のエラーが原因で、パス'{1}'を削除できません: {2
 
 #: lib/src/file.cc
 msgid "The path points to a directory"
-msgstr "パスがディレクトリを指し示しています。"
+msgstr "パスが以下のディレクトリを指しています: "
 
 #: lib/src/puppet-access.cc
 msgid ""
@@ -317,7 +317,7 @@ msgstr "ディレクトリ{1}が存在せず、以下のエラーが原因で作
 msgid ""
 "Unable to secure exclusive owner permissions for {1} due to the following "
 "error: {2}."
-msgstr "以下のエラーが原因で、独占オーナー許可を確保できません: {2}。"
+msgstr "以下のエラーが原因で、 {1}に対する排他的なオーナー権限を取得できません:  {2}。"
 
 #. debug
 #: lib/src/puppet-access.cc
@@ -382,8 +382,8 @@ msgid ""
 "The response from the server did not contain valid json. This usually indicates that the service-url option is incorrectly configured. {1} The body (possibly truncated) was:\n"
 " {2}."
 msgstr ""
-"サーバからの応答に、有効なjsonが含まれていません。これは通常、service-urlオプションの設定が不適切であることを示しています。{1} ボディ(省略されている可能性があります)は以下のとおり:\n"
-" {2}。"
+"サーバからの応答に、有効なjsonが含まれていません。これは通常、service-urlオプションが正しく設定されていないことを示しています。{1} ボディ(省略されている可能性があります)の内容: \n"
+"{2}。"
 
 #: lib/src/request.cc
 msgid ""
@@ -394,4 +394,4 @@ msgstr "トークンのリクエストを試みている際にエラーを受信
 #: lib/src/request.cc
 msgid ""
 "Unable to reach the RBAC server at {1} due to the following error: {2}."
-msgstr "以下のエラーが原因で、{1}でRBACを読み込めません: {2}。"
+msgstr "以下のエラーが原因で、{1}でRBACサーバにアクセスできません: {2}。"

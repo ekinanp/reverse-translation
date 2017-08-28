@@ -1,3 +1,4 @@
+require 'timeout'
 require_relative 'po_param'
 
 # This class represents an entry in the look-up table used to reverse translate
@@ -44,8 +45,8 @@ class POEntry
     return msg if match_re == nil 
     pre, param_values, post = parse_match(msg, match_re)
     translation, _ = @translations[match_re] 
-    pre + POParam::substitute_params(translation, @param_re, param_values) + post
+    pre + POParam.substitute_params(translation, @param_re, param_values) + post
   end
 
-  private :to_regex
+  private :to_regex 
 end
