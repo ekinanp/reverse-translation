@@ -16,11 +16,11 @@ class POTable
     end.reduce(:concat)
     # Now, sort the entries by longest match    
     parsed_entries.sort! do |pe1, pe2|
-      _, e1 = pe1
-      _, e2 = pe2
-      msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
+      pre1, e1 = pe1
+      pre2, e2 = pe2
+      msgstr_avg_cmp = average_length(e2[1], pre2) <=> average_length(e1[1], pre1)
       next msgstr_avg_cmp unless msgstr_avg_cmp == 0
-      average_length(e2[0]) <=> average_length(e1[0])
+      average_length(e2[0], pre2) <=> average_length(e1[0], pre1)
     end
     # TODO: Test this addition of the code!
     @entries = parsed_entries.inject([]) do |accum, (param_re, po_entry)|
@@ -33,8 +33,11 @@ class POTable
     @entries.inject(msg) { |new_msg, entry| entry.reverse_translate(new_msg) }
   end
 
-  def average_length(entry)
-    entry.values.inject(0.0) { |s, e| s + e.length } / entry.size
+  # This will return the average length of each entry. Note that a parameter regex is
+  # necessary so that we don't count the parameter names themselves as part of the overall 
+  # string's length.
+  def average_length(entry, param_re)
+    entry.values.inject(0.0) { |sum, e| sum + e.gsub(param_re, "").length } / entry.size
   end
 
   private :average_length

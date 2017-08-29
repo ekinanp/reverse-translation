@@ -13,13 +13,17 @@ class ReverseTranslator
   # This method takes two parameters: the log file that's to be translated,
   # and the path of the output file containing the locations of where to write
   # the translations.
+  #
+  # TODO: This should eventually be multi-threaded. Have each thread translate its
+  # own chunk of the parsed out messages, returning an array of translated messages.
+  # Then combine these messages together and print them out to the output file.
   def reverse_translate(log_file, log_file_trans)
     out_file = File.open(log_file_trans, "w")
-    LogParser.parse(log_file).each do |entry|
-      translated_entry = @tables.inject(entry) do |new_entry, table|
-        table.reverse_translate(new_entry)
+    LogParser.parse(log_file).each do |(prefix, msg)|
+      translated_msg = @tables.inject(msg.strip) do |cur_msg, table|
+        table.reverse_translate(cur_msg)
       end
-      out_file.puts(translated_entry)
+      out_file.puts(prefix + translated_msg)
     end
     out_file.close
   end

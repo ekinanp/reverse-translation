@@ -58,9 +58,13 @@ get_all_po_files() {
   done
 }
 
+mkdir ${REPOS_DIR_ROOT}
 mkdir ${PO_FILES_DIR_ROOT}
 
 # Core loop to do the processing work
 for repo in "${REPOS[@]}"; do
   get_all_po_files "$repo"
 done
+
+# Clean up
+rm -rf ${REPOS_DIR_ROOT}

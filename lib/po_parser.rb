@@ -33,10 +33,12 @@ module POParser
   # if need be.
   PO_ENTRY = Regexp.new("(#{MSGID_PART.to_s+MSGSTR_PART.to_s})")
 
+  # Bulk of the work is done here. 
   def self.parse_part(part, entry_re)
     part.scan(entry_re).inject({}) do |entries, entry|
      key = entry[0]
-     val = entry[1].scan(VALUE).join.gsub(ESCP_CH) { |m| (sub = ESCP_SUB[m[1]]) ? sub : m[1] } 
+     val = entry[1].scan(VALUE).join.gsub(ESCP_CH) { |m| (sub = ESCP_SUB[m[1]]) ? sub : m[1] }.strip 
+     return nil if val.empty?
      entries.merge(key => val)
     end
   end
@@ -50,6 +52,12 @@ module POParser
   #
   # <msg-id> = { "msgid" => "Foo", "msgid_plural" => "Foos" }
   # <msg-str> = { "msgstr[0]" => "Translation 1", "msgstr[1]" => "Translation 2" }
+  #
+  # Note that the POParser will do the following:
+  #    (1) All values will be stripped of leading and trailing whitespace.
+  #
+  #    (2) If any part of an entry, whether it is the msg-id or msg-str parts, have an
+  #    empty value set after (1), then that entry will not be included.
   #
   # TODO: Modify POParser tests to account for this refactoring!
   def self.parse(path)
@@ -65,8 +73,9 @@ module POParser
       entry = entry[0]
       msgid_entries = parse_part(MSGID_PART.match(entry)[0], MSGID_ENTRY)
       msgstr_entries = parse_part(MSGSTR_PART.match(entry)[0], MSGSTR_ENTRY)
+      next nil unless msgid_entries && msgstr_entries
       [msgid_entries, msgstr_entries]
-    end
+    end.compact
 
     # Combine the results together
     [param_re, entries]

@@ -8,11 +8,20 @@
 #   (2) Right now, msgid entries dominate. Maybe increase the variety so that more
 #   msgid_plural entries are generated? This is not as strictly necessary, but would
 #   capture real world behavior.
-#
-#   (3) Could probably randomly generate the prefix too. But this is not that necessary.
 class LogGenerator
-  # Sample prefix for the log message
-  PREFIX = "2017-07-25 17:20:48,042 INFO  [p.r.m.authentication] "
+  # Some representative possible prefixes for the log message.
+  PREFIXES = [
+    # Entries (1) and (2) represent possible cases of PREFIX_ONE in LogParser
+    "2017-07-25 17:20:48,042 INFO  [p.r.m.authentication]  ",
+    "2017-01-12 15:41:17.329 DEBUG [random.thread] [db:,sess:5977c90d.1a94,pid:6804,vtid:2/1,tid:0]  ",
+    # Entry (3) represents possible cases of PREFIX_TWO in LogParser
+    "2017-02-10 15:40:35.350230 INFO  puppetlabs.pxp_agent.request_processor:908 -  ",
+    # Entry (4) represents possible cases of PREFIX_THREE in LogParser
+    "2017-04-10 12:41:18,12 PDT [db:,sess:5977c90d.1a8f,pid:6799,vtid:,tid:0]  ",
+    # Entries (5) and (6) represent possible cases of PREFIX_FOUR in LogParser
+    "2014-03-11 00:08:46,981 [pool-60-thread-3] INFO  ",
+    "2017-07-26 14:33:13,815 [qtp235129614-2508] DEBUG [p.r.h.m.authentication]  "
+  ]
 
   # Types of parameters that may be found in different log files
   FILENAMES = ["fileOne.c", "file-two.clj", "file_three.rb", "file-four.hs"]
@@ -121,8 +130,9 @@ class LogGenerator
     english_file = File.open(path + "_english.log", "w")
     non_english_file = File.open(path + "_non_english.log", "w")
     num_entries.times.collect { random_msg }. each do |english, non_english|
-      english_file.puts(PREFIX + english)
-      non_english_file.puts(PREFIX + non_english)
+      prefix = PREFIXES.sample
+      english_file.puts(prefix + english)
+      non_english_file.puts(prefix + non_english)
     end
     english_file.close
     non_english_file.close
