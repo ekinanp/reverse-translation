@@ -28,8 +28,7 @@ The tool relies on PO files, which are files containing the translations from En
 ```
 ./scripts/get_po_files.sh
 ```
-which will go to all the listed repos in the script and obtain the language specific PO files (right 
-now, it is all the Japanese PO files). To add a new repo, open the script in a text editor, and include the repo's name as part of the REPOS variable in the script. Right now, only Puppet repos can be added. The script will be modified to account for third-party repos in the near future.
+which will go to all the listed repos in the script and obtain the language specific PO files (right now, it is all the Japanese PO files). To add a new puppet repo, open the script in a text editor, and include the repo's name as part of the PUPPET_REPOS variable in the script. To add a third party repo, open the script again in a text editor, and include the repo's full git URL in the THIRD_PARTY_REPOS variable. 
 
 ## Limitations
 

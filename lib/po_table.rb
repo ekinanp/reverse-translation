@@ -37,7 +37,7 @@ class POTable
   # necessary so that we don't count the parameter names themselves as part of the overall 
   # string's length.
   def average_length(entry, param_re)
-    entry.values.inject(0.0) { |sum, e| sum + e.gsub(param_re, "").length } / entry.size
+    entry.values.inject(0.0) { |sum, e| sum + POParam.substitute_const(e, param_re, "").length } / entry.size
   end
 
   private :average_length

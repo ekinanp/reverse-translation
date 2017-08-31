@@ -119,6 +119,13 @@ module POParam
     matches.each_index.map { |i| (i + 1).to_s }
   end
 
+  # This method takes in a message and a parameter regex, and substitutes
+  # all parameters in the message with a single, constant value
+  def self.substitute_const(msg, param_re, val)
+    params = extract_params(msg, param_re)
+    substitute_params(msg, param_re, params.zip(params.size.times.collect { val }).to_h)
+  end
+
   # This method takes in a message and a param_re. It returns true if the
   # message contains two parameters that are next to each other, false otherwise.
   # It's purpose is to avoid catastrophic backtracking when running the regex
@@ -131,7 +138,7 @@ module POParam
     # Also write tests for it!
     prev_pre = nil
     while match_obj = param_re.match(msg) do
-      cur_pre = match_obj.pre_match
+      cur_pre = match_obj.pre_match + (printf?(param_re) ? match_obj[1].to_s : "")
       return true if prev_pre == cur_pre
       prev_pre = cur_pre
       msg = cur_pre + match_obj.post_match

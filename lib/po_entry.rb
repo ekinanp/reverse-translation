@@ -21,8 +21,7 @@ class POEntry
   def to_regex(msgstr, params)
     escaped_param_re = POParam.escape_param_re(@param_re)
     escaped_msg = Regexp.escape(msgstr)
-    substitution_map = params.zip(params.size.times.collect { '(?m-ix:(.*))' }).to_h
-    Regexp.new(POParam.substitute_params(escaped_msg, escaped_param_re, substitution_map))
+    Regexp.new(POParam.substitute_const(escaped_msg, escaped_param_re, '(?m-ix:(.*))'))
   end
 
   # This method parses out a message matching a given regex pattern by returning
