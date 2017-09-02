@@ -87,10 +87,10 @@ class LogGenerator
   attr_reader :po_entries
 
   def initialize(po_files)
-    @po_entries = po_files.map { |f| POParser.parse(f) }.map do |(param_re, entries)|
-      entries[1..-1].map { |e| [param_re, e] }
-    end.reduce(:concat).select do |param_re, (_, msgstr_part)| 
-      !msgstr_part.any? { |_, msg| POParam.adjacent_params?(msg, param_re) }
+    @po_entries = po_files.map { |f| POParser.parse(f) }.map do |entries|
+      entries[1..-1]
+    end.reduce(:concat).select do |(_, msgstr_part)| 
+      msgstr_part.all? { |_, msg| not msg.adjacent_params? }
     end
   end
 
@@ -106,17 +106,15 @@ class LogGenerator
   # Note that if there is a "msgid_plural" entry, that one will always be selected since
   # the translator automatically translates all msgstr entries to "msgid_plural"
   def random_msg
-    param_re, entry = @po_entries.sample
+    entry = @po_entries.sample
     english_key = entry[0].keys.sort[entry[0].keys.size - 1]
     non_english_key = entry[1].keys.sample
 
     english_msg_raw = entry[0][english_key]
     non_english_msg_raw = entry[1][non_english_key]
 
-    params = POParam.extract_params(english_msg_raw, param_re).uniq
-    param_vals = params.map { |p| [p, random_param] }.to_h
-
-    [english_msg_raw, non_english_msg_raw].map { |msg| POParam.substitute_params(msg, param_re, param_vals) }
+    param_vals = english_msg_raw.params.map { |p| [p, random_param] }.to_h
+    [english_msg_raw, non_english_msg_raw].map { |msg| msg.substitute_values(param_vals) }
   end
 
   # Generates a random log file. Takes two parameters:
