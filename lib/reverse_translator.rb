@@ -17,12 +17,15 @@ class ReverseTranslator
   # TODO: This should eventually be multi-threaded. Have each thread translate its
   # own chunk of the parsed out messages, returning an array of translated messages.
   # Then combine these messages together and print them out to the output file.
+  #
+  # TODO: @tables[0] is used as a default. In the future, this should be extended so
+  # that a log message can be translated using the table containing the group that
+  # it belongs to (e.g. table[0] can be puppet only logs, table[1] postgres, table[2]
+  # some other third party log, etc.).
   def reverse_translate(log_file, log_file_trans)
     out_file = File.open(log_file_trans, "w")
     LogParser.parse(log_file).each do |(prefix, msg)|
-      translated_msg = @tables.inject(msg.strip) do |cur_msg, table|
-        table.reverse_translate(cur_msg)
-      end
+      translated_msg = @tables[0].reverse_translate(msg.strip)
       out_file.puts(prefix + translated_msg)
     end
     out_file.close

@@ -1,4 +1,4 @@
-require_relative 'po_param'
+require_relative 'parameterized_string'
 
 # TODO: This module considers only happy cases (when the POT file is a valid
 # POT file). Maybe add some error message output/error-handling? Not necessary
@@ -34,21 +34,21 @@ module POParser
   PO_ENTRY = Regexp.new("(#{MSGID_PART.to_s+MSGSTR_PART.to_s})")
 
   # Bulk of the work is done here. 
-  def self.parse_part(part, entry_re)
+  def self.parse_part(part, entry_re, param_re)
     part.scan(entry_re).inject({}) do |entries, entry|
      key = entry[0]
      val = entry[1].scan(VALUE).join.gsub(ESCP_CH) { |m| (sub = ESCP_SUB[m[1]]) ? sub : m[1] }.strip 
      return nil if val.empty?
-     entries.merge(key => val)
+     entries.merge(key => ParameterizedString.new(val, param_re))
     end
   end
 
-  # Parses the given PO file, returning an array [param_re, entries]. param_re
-  # is the regex describing what a parameter looks like in a given string. entries
-  # is an array of pairs of maps. Each pair of maps are made up of two parts: 
+  # Parses the given PO file, returning an array of entries. Each entry is an
+  # array of pairs of maps. Each pair of maps are made up of two parts: 
   # <msg-id> and <msg-str>. <msg-id> will contain the values of the "msgid" and 
   # "msgid_plural" fields, while <msg-str> will contain values for "msgstr" and 
-  # "msgstr[0]" fields. For example, an entry in entries might look like:
+  # "msgstr[0]" fields. Note that a "value" here is a parametrized string object.
+  # For example, here's what a single entry might look like:
   #
   # <msg-id> = { "msgid" => "Foo", "msgid_plural" => "Foos" }
   # <msg-str> = { "msgstr[0]" => "Translation 1", "msgstr[1]" => "Translation 2" }
@@ -59,26 +59,22 @@ module POParser
   #    (2) If any part of an entry, whether it is the msg-id or msg-str parts, have an
   #    empty value set after (1), then that entry will not be included.
   #
-  # TODO: Modify POParser tests to account for this refactoring!
   def self.parse(path)
     contents = IO.read(path)
 
     # Guess the param regex. We choose the one w/ the most matches, tie-breakers are
     # in order of appearance in the PO_PARAMS array.
-    _, ix = POParam::PO_PARAMS.map { |re| contents.scan(re).length }.each_with_index.max
-    param_re = POParam::PO_PARAMS[ix]
+    _, ix = ParameterizedString::PARAM_RES.map { |re| contents.scan(re).length }.each_with_index.max
+    param_re = ParameterizedString::PARAM_RES[ix]
 
     # Now parse the PO file's individual entries
-    entries = contents.scan(PO_ENTRY).map do |entry|
+    contents.scan(PO_ENTRY).map do |entry|
       entry = entry[0]
-      msgid_entries = parse_part(MSGID_PART.match(entry)[0], MSGID_ENTRY)
-      msgstr_entries = parse_part(MSGSTR_PART.match(entry)[0], MSGSTR_ENTRY)
+      msgid_entries = parse_part(MSGID_PART.match(entry)[0], MSGID_ENTRY, param_re)
+      msgstr_entries = parse_part(MSGSTR_PART.match(entry)[0], MSGSTR_ENTRY, param_re)
       next nil unless msgid_entries && msgstr_entries
       [msgid_entries, msgstr_entries]
     end.compact
-
-    # Combine the results together
-    [param_re, entries]
   end
 
   private_class_method :parse_part

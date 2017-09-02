@@ -6569,7 +6569,7 @@ msgstr "  - falseになるはずのテストで%{values} trueが与えられて�
 
 #: ../lib/puppet/reference/providers.rb:71
 msgid "  - Got %{values} false tests that should have been true\n"
-msgstr "  - trueになるはずのテストで{values} falseテストが与えられました。\n"
+msgstr "  - trueになるはずのテストで%{values} falseテストが与えられました。\n"
 
 #: ../lib/puppet/reference/providers.rb:73
 msgid "  - Missing features %{values}\n"
