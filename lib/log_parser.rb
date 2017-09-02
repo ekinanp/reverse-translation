@@ -58,11 +58,11 @@ module LogParser
 
   SEPARATOR = Regexp.new("(^" + PREFIXES.to_s + /\s+/.to_s + ")")
 
-  # Parses the given .log file, returning an array where each entry consists of:
+  # Parses the given file object, returning an array where each entry consists of:
   #     [PREFIX, MSG]
   # It is assumed that each .log file is of the form
   #     (<SEPARATOR><MSG>)*
-  def self.parse(path)
-    IO.read(path).split(SEPARATOR)[1..-1].each_slice(2).to_a
+  def self.parse(file)
+    file.read.split(SEPARATOR)[1..-1].each_slice(2).to_a
   end
 end

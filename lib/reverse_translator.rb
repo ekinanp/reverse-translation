@@ -10,9 +10,10 @@ class ReverseTranslator
     @tables = po_groups.map { |po_files| POTable.new(po_files) }
   end
 
-  # This method takes two parameters: the log file that's to be translated,
-  # and the path of the output file containing the locations of where to write
-  # the translations.
+  # This method takes two parameters: an input file object containing the log
+  # messages that need to be translated, and an output file object to write the
+  # translated messages to. The input file object should be open for reading, while
+  # the output file object should be open for writing.
   #
   # TODO: This should eventually be multi-threaded. Have each thread translate its
   # own chunk of the parsed out messages, returning an array of translated messages.
@@ -22,12 +23,10 @@ class ReverseTranslator
   # that a log message can be translated using the table containing the group that
   # it belongs to (e.g. table[0] can be puppet only logs, table[1] postgres, table[2]
   # some other third party log, etc.).
-  def reverse_translate(log_file, log_file_trans)
-    out_file = File.open(log_file_trans, "w")
-    LogParser.parse(log_file).each do |(prefix, msg)|
+  def reverse_translate(input_file, output_file)
+    LogParser.parse(input_file).each do |(prefix, msg)|
       translated_msg = @tables[0].reverse_translate(msg.strip)
-      out_file.puts(prefix + translated_msg)
+      output_file.puts(prefix + translated_msg)
     end
-    out_file.close
   end
 end
