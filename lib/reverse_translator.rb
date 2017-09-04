@@ -6,6 +6,8 @@ require_relative 'log_parser'
 # encapsulates multiple PO files. For initialization, it will take an array of
 # arrays of PO files that it needs to create its lookup tables.
 class ReverseTranslator 
+  MSGS_PER_THREAD = 2000
+
   def initialize(po_groups)
     @tables = po_groups.map { |po_files| POTable.new(po_files) }
   end
@@ -15,18 +17,23 @@ class ReverseTranslator
   # translated messages to. The input file object should be open for reading, while
   # the output file object should be open for writing.
   #
-  # TODO: This should eventually be multi-threaded. Have each thread translate its
-  # own chunk of the parsed out messages, returning an array of translated messages.
-  # Then combine these messages together and print them out to the output file.
-  #
   # TODO: @tables[0] is used as a default. In the future, this should be extended so
   # that a log message can be translated using the table containing the group that
   # it belongs to (e.g. table[0] can be puppet only logs, table[1] postgres, table[2]
   # some other third party log, etc.).
+  #
+  # NOTE: If performance becomes an issue, consider using a thread pool.
   def reverse_translate(input_file, output_file)
-    LogParser.parse(input_file).each do |(prefix, msg)|
-      translated_msg = @tables[0].reverse_translate(msg.strip)
-      output_file.puts(prefix + translated_msg)
+    threads = LogParser.parse(input_file).each_slice(MSGS_PER_THREAD).to_a.map do |log_msgs|
+      Thread.new do
+        translated_msgs = log_msgs.map do |(prefix, msg)|
+          prefix + @tables[0].reverse_translate(msg.strip)
+        end
+      end
+    end
+
+    threads.each do |thread|
+      thread.value.each { |log_msg| output_file.puts(log_msg) }
     end
   end
 end
