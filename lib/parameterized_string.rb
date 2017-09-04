@@ -168,24 +168,26 @@ class ParameterizedString
   #   catastrophic backtracking. Note that a param string has adjacent
   #   param specifiers iff there exists a "mid" that is the empty string.
   #
-  #   (6) param_str_re - A regex used to match a paramted string that arose
-  #   out of the "param_str" passed into this class. For example, if we
-  #   have param_str = "This %s is worth %d dollars" and we get a message:
-  #      "I went to Denny's today. This pancake is worth 10 dollars"
-  #   then match_re would indicate that the phrase "This pancake is worth 10
-  #   dollars" matches our param_str, where the %s param specifier is the
-  #   term "pancake" and %d the term "dollars". The matching regex is
-  #   constructed by replacing each param specifier with (.*) in the overall
-  #   param_str.
+  #   (6) prefix_re - A regex that matches the prefix
+  #
+  #   (7) param_mids_re - This is the param_mids array but transformed so that
+  #   the <mid> portion consists of a regex matching <mid> in the original
+  #   array. If the last <mid> is the empty string, then the regex matches the end
+  #   of the string instead -- for the reason why, see the description of the matching
+  #   algorithm for more details.
   def initialize(param_str, param_re)
     @prefix, rest = parse_prefix(param_str, param_re)
     @param_mids = parse_param_mids(rest, param_re) 
     @params = @param_mids.map { |(param, _)| param }
     @length = substitute_const("").length 
     @has_adjacent_params = @param_mids[0...-1].any? { |(_, mid)| mid.empty? }
-    @param_str_re = Regexp.new(@param_mids.inject(Regexp.escape(@prefix)) do |accum, (_, mid)|
-      accum += '(?m-ix:(.*))' + Regexp.escape(mid)
-    end)
+
+    # Construct the regexes
+    @prefix_re = Regexp.new(Regexp.escape(@prefix))
+    @param_mids_re = @param_mids.map { |param, mid| [param, Regexp.new(Regexp.escape(mid))] }
+    return if @param_mids_re.empty?
+    last_param, last_mid_re = @param_mids_re.pop
+    @param_mids_re << [last_param, last_mid_re == // ? /\z/ : last_mid_re]
   end
 
   # This method takes in a map that maps each parameter's identifier to
@@ -230,10 +232,58 @@ class ParameterizedString
   #   parameterized string.
   #
   #   (2) Otherwise, this method returns nil.
+  #
+  # The algorithm works as follows. We know that if msg matches our parameterized string, it
+  # must match the regex <prefix>(<param><mid>){n} where n = param_mids.length, i.e. the number
+  # of parameters in the parameterized string. Thus, we do the following:
+  #    (1) First check that it matches the prefix. If it does not, then we return nil.
+  #    Otherwise, go to (2).
+  #
+  #    (2) We have the prefix. "pre" is the part of "msg" preceding the prefix. The part
+  #    after the prefix must match (<param><mid>){n}. Thus, we iterate the remaining part
+  #    of the string through our param_mids array and do the following for a given
+  #    (param, mid) pair:
+  #       (a) If the rest of the string does not match <mid>, then we return nil.
+  #
+  #       (b) If it does, then note that the part preceding the match with <mid> is
+  #       the value of param. So we include (param => value) in our param_vals map.
+  #       And note that the part after the match with <mid> is still in the form
+  #       (<param><mid>){remaining} where remaining is the remaining # of elements in
+  #       the param_mids array we have to check.
+  #
+  #    (3) If (2) does not return nil, then "msg" does match our parameterized string. The
+  #    remaining part of msg is the "post" portion we want to return.
+  #
+  # NOTE: There is a slight edge case. If the last <mid> in the last element of the
+  # (<param>, <mid>) array is empty, then the value of that <param> is the remaining
+  # part of the string.
+  #
+  # TODO: Maybe remove the adjacent_params? filter in the main code and have this return
+  # nil for strings of that form? Might be a good idea.
+  #
+  # NOTE: This matching algorithm is an order of magnitude faster than the original regex
+  # method. However, it does introduce a limitation in the tool because it does not do a
+  # greedy match on the parameter value. For example, if we have a string of the form:
+  #    "Example string: '%{line}'"
+  # and we are matching some of the form "Example string: ''temp''", then this routine
+  # would return:
+  #   ["", { "line" => "" }, "temp''"]
+  # If this becomes an issue, then the original algorithm can be used or some additional
+  # complexity can be added to the routine to consider specific, common cases that might
+  # occur.
   def match(msg)
-    match_obj = @param_str_re.match(msg)
-    return nil unless match_obj
-    param_vals = @params.zip(match_obj[1..-1]).to_h
-    [match_obj.pre_match, param_vals, match_obj.post_match]
+    prefix_match = @prefix_re.match(msg)
+    return nil unless prefix_match
+    pre = prefix_match.pre_match
+
+    param_vals = {}
+    post = @param_mids_re.inject(prefix_match.post_match) do |rest, (param, mid_re)|
+      mid_match = mid_re.match(rest)
+      return nil unless mid_match
+      param_vals.store(param, mid_match.pre_match)
+      mid_match.post_match
+    end
+
+    [pre, param_vals, post]
   end
 end

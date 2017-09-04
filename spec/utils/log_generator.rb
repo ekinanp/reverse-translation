@@ -25,7 +25,7 @@ class LogGenerator
 
   # Types of parameters that may be found in different log files
   FILENAMES = ["fileOne.c", "file-two.clj", "file_three.rb", "file-four.hs"]
-  IDENTIFIERS = ["'admin'", "'temp'", "'user'", "'_hidden_'"]
+  IDENTIFIERS = ["admin", "temp", "user", "_hidden_"]
   QUOTED_PARAMS = [
     "\"Error: Cannot find specified file\"", 
     "\"/etc/puppetlabs/puppet/ssl/certs/ca.pem\"", 
