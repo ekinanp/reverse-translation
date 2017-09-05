@@ -34,7 +34,9 @@ class POTable
     # Now translate
     translated_msg = msg
     (start...@entries.size).each do |ix|
-      translated_msg = @entries[ix].reverse_translate(translated_msg) 
+      old_msg = translated_msg
+      translated_msg = @entries[ix].reverse_translate(old_msg) 
+      return translated_msg if translated_msg.object_id != old_msg.object_id
     end
     translated_msg
   end
