@@ -6,8 +6,8 @@ require_relative 'log_parser'
 # encapsulates multiple PO files. For initialization, it will take an array of
 # arrays of PO files that it needs to create its lookup tables.
 class ReverseTranslator 
-  def initialize(po_groups)
-    @tables = po_groups.map { |po_files| POTable.new(po_files) }
+  def initialize(po_groups, depth)
+    @tables = po_groups.map { |po_files| POTable.new(po_files, depth) }
   end
 
   # This method takes two parameters: an input file object containing the log

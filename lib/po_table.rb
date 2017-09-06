@@ -7,7 +7,10 @@ require_relative 'array'
 # from services implemented in a specific language (e.g. Clojure). Or they
 # can correspond to all the PO files.
 class POTable
-  def initialize(pot_files)
+  def initialize(pot_files, depth)
+    # Set the depth of the translation
+    @depth = depth
+
     # Sort the entries by longest match
     parsed_entries = pot_files.map { |f| POParser::parse(f) }.reduce(:concat).sort do |e1, e2|
       msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
@@ -38,8 +41,9 @@ class POTable
   #   our @entries array, we exit.
   #
   #   (3) Otherwise, we translate the message with the current entry. If
-  #   that translation resulted in the entire message being translated,
-  #   we exit. Otherwise, we loop to our next entry and repeat (1) - (3).
+  #   that translation resulted in the entire message being translated OR
+  #   we have reached our maximum depth, we exit. Otherwise, we loop to our
+  #   next entry and repeat (1) - (3).
   #
   # Initially, was_translated is vacuously true. One key invariant in the
   # loop is that the ix returned by bsearch_index_left(ix) is >= the passed-in
@@ -47,6 +51,7 @@ class POTable
   # our loop is guaranteed to terminate.
   def reverse_translate(log_message)
     was_translated = true
+    cur_depth = 0
     ix = 0
     loop do
       ix = @entries.bsearch_index_left(ix) do |e|
@@ -56,7 +61,8 @@ class POTable
       return unless ix && ix < @entries.size
 
       was_translated = log_message.translate_with(@entries[ix])
-      return if log_message.translated? 
+      cur_depth += 1 if was_translated
+      return if log_message.translated? || cur_depth == @depth
       ix += 1
     end
   end
