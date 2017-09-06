@@ -24,9 +24,9 @@ class ReverseTranslator
   # it belongs to (e.g. table[0] can be puppet only logs, table[1] postgres, table[2]
   # some other third party log, etc.).
   def reverse_translate(input_file, output_file)
-    LogParser.parse(input_file).each do |(prefix, msg)|
-      translated_msg = @tables[0].reverse_translate(msg.strip)
-      output_file.puts(prefix + translated_msg)
+    LogParser.parse(input_file).each do |log_message|
+      @tables[0].reverse_translate(log_message)
+      output_file.puts(log_message)
     end
   end
 end

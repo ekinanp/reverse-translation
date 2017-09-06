@@ -1,3 +1,5 @@
+require_relative 'foreign_log_message'
+
 module LogParser
   # This method takes in regexp components that make up a prefix,
   # and builds the overall prefix expression out of them by including 
@@ -58,11 +60,12 @@ module LogParser
 
   SEPARATOR = Regexp.new("(^" + PREFIXES.to_s + /\s+/.to_s + ")")
 
-  # Parses the given file object, returning an array where each entry consists of:
-  #     [PREFIX, MSG]
+  # Parses the given file object, returning an array of foreign log message objects. 
   # It is assumed that each .log file is of the form
   #     (<SEPARATOR><MSG>)*
   def self.parse(file)
-    file.read.split(SEPARATOR)[1..-1].each_slice(2).to_a
+    file.read.split(SEPARATOR)[1..-1].each_slice(2).map do |prefix, message|
+      ForeignLogMessage.new(prefix, message.strip)
+    end
   end
 end

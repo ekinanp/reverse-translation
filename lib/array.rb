@@ -13,17 +13,14 @@ class Array
   # At a high level, the code does this (assume that the block "direction" is implicitly
   # passed to bsearch_index for clarity):
   #
-  #   prev_mid = self.size 
-  #   while ((prev_mid = bsearch_index(self[0..prev_mid-1]))) {}
+  #   prev_mid = high+1
+  #   while ((prev_mid = bsearch_index(self[low..prev_mid-1]))) {}
   #   prev_mid
   #
   # Unfortunately, the above code wouldn't be very efficient performance wise, because
-  # the line self[0..prev_mid-1] creates a temporary array everytime it is invoked. That
+  # the line self[low..prev_mid-1] creates a temporary array everytime it is invoked. That
   # is why the binary search itself must be explicitly written, as is done below.
-  def bsearch_index_left(&direction)
-    low = 0
-    high = self.size - 1
-
+  def bsearch_index_left(low = 0, high = self.size - 1, &direction)
     prev_mid = nil
     while (low <= high) do
       mid = low + (high - low)/2
