@@ -19,7 +19,7 @@ module LogParser
   # Prefix components, obtained from examining individual entries in log files, or looking
   # at their logback.xml if the repo had it.
   DATE = /\d{4}-\d{2}-\d{2}/
-  TIMESTAMP = /\d{2}:\d{2}:\d{2}[.,]\d*/
+  TIMESTAMP = /\d{2}:\d{2}:\d{2}(?:[.,]\d*)?/
   THREAD = /\[[^\s]+\]/
   LEVEL = /[[:upper:]]+/
   CALLER = /\[[^\s]+\](?:(?:\s+\[[^\s]+\]){0,2})/
@@ -27,6 +27,12 @@ module LogParser
   TIMEZONE = LEVEL
   # For cpp projects
   NAMESPACE = /\w+(?:\.\w+)*:\d+/ 
+  # For the puppet-agent log
+  MONTH = /\w{3,5}/
+  DAY = /\d+/
+  HOST = /\w+/
+  PROGRAM = /[\w-]+\[\d+\]:/
+  FILE = /\([^\)]+\)/
 
   # This prefix applies to:
   #   (1) PCP-BROKER.LOG
@@ -43,6 +49,11 @@ module LogParser
   #   (1) CONSOLE-SERVICES.LOG
   PREFIX_FOUR = build_prefix_re(DATE, TIMESTAMP, THREAD, LEVEL, [CALLER])
 
+  # This prefix applies to:
+  #   (1) PUPPET AGENT LOG
+  # TODO: Refine this more. The necessity of this prefix was found during the demo
+  PUPPET_AGENT = build_prefix_re(MONTH, DAY, TIMESTAMP, HOST, PROGRAM, [FILE])
+
   # In case we get a log-file where none of the prefixes match, it's highly
   # likely that this will as all of the log files I've looked at capture this
   # general pattern of an YYYY-MM-DD date followed by a timestamp.
@@ -55,6 +66,7 @@ module LogParser
     PREFIX_TWO,
     PREFIX_THREE,
     PREFIX_FOUR,
+    PUPPET_AGENT,
     PREFIX_GENERAL
   )
 
