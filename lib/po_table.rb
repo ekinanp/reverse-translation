@@ -1,6 +1,6 @@
 require_relative 'po_parser'
 require_relative 'po_entry'
-require_relative 'array'
+require_relative 'utils'
 
 # This class represents the reverse-lookup table for an array of PO files.
 # It is intended that an array of PO files will correspond to logs obtained

@@ -1,5 +1,3 @@
-require_relative 'math'
-
 # This class encapsulates foreign log messages. A foreign log message consists
 # of three parameters:
 #   (1) The prefix (e.g. a timestamp)

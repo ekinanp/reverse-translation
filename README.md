@@ -4,7 +4,7 @@ A CLI tool for translating foreign log files back to English.
 
 ## Setup
 
-Running the tool requires ruby version 2.0 or greater. First, clone the repo:
+Running the tool requires Ruby version 2.4 or greater. First, clone the repo:
 ```
 git clone git@github.com:ekinanp/reverse-translation.git
 ```
@@ -13,7 +13,10 @@ Then go into the repo's root directory
 ```
 cd reverse-translation
 ```
-
+To see the list of available options that can be passed into the tool, type the following command in the repo's root directory:
+```
+./bin/reverse_translate --help
+```
 To run the tool, type the following command in the repo's root directory:
 ```
 ./bin/reverse_translate <log-file>
@@ -22,7 +25,7 @@ where \<log-file\> is the path to the log file that needs to be translated. Be s
 
 If no log-file is provided, then the tool will default to using STDIN to read the log messages, and STDOUT to write their translations.
 
-NOTE: One key assumption in the tool is that the parameters are not translated, so it is highly unlikely that a parameter itself will be a part of the message in a foreign log file. For example, assume we have a log entry of the form "{0} errored on Node {1}!" whose translation is "Node {1} errored with {0}!", where {0} and {1} are the message's parameters. Then if the log message is of the form "Puppet errored on Node B errored on Node C", the tool will translate this to "Node B errored with Puppet errored on Node C", while another valid translation is "Node C errored with Puppet errored on Node B", i.e. the translation becomes ambiguous. So as counter-intuitive as it might be, please avoid running the CLI tool with English log files, as this risk becomes highly likely then!
+NOTE: One key assumption in the tool is that the parameters are not translated, so it is highly unlikely that a parameter itself will be a part of the message in a foreign log file. For example, assume we have a log entry of the form "{0} errored on Node {1}!" whose translation is "Node {1} errored with {0}!", where {0} and {1} are the message's parameters. Then if the log message is of the form "Puppet errored on Node B errored on Node C", the tool will translate this to "Node B errored with Puppet errored on Node C", while another valid translation is "Node C errored with Puppet errored on Node B", i.e. the translation becomes ambiguous. So as counter-intuitive as it might be, please avoid running the CLI tool with PO files that contain English translations (e.g. to test out some new feature in the tool).
 
 ## PO files
 

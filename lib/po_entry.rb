@@ -1,4 +1,4 @@
-require_relative 'math'
+require_relative 'utils'
 
 # This class represents an entry in the look-up table used to reverse translate
 # a given log message. Here, we take as input a parsed-out POT file entry 
