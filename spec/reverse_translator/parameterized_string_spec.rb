@@ -122,12 +122,44 @@ describe ParameterizedString do
     end
   end
 
+  describe "#substitute_const" do
+    it "enforces the property that ps.substitute_const(v) == ps.substitute_values(params_v_map) where params_v_map is a map of the param ids. to the constant value v" do
+      ParameterizedStringFixture::SUBSTITUTE_CONST_TEST_CASES.each do |(param_str, param_re, param_v_map)|
+        ps = ParameterizedString.new(param_str, param_re)
+        expect(ps.substitute_const("(constant)")).to eql(ps.substitute_values(param_v_map))
+      end
+    end
+  end
+
   describe "#params" do
     it "returns an array of all the unique parameters appearing in the parameterized string" do
       ParameterizedStringFixture::PARAMS_TEST_CASES.each do |(param_str, param_re, expected)|
         ps = ParameterizedString.new(param_str, param_re)
         expect(ps.params).to eql(expected)
       end
+    end
+  end
+
+  describe "#length" do
+    it "returns the length of the parameterized string (which is the length of the original string excluding the parameters themselves)" do
+      ParameterizedStringFixture::LENGTH_TEST_CASES.each do |(param_str, param_re, expected)|
+        ps = ParameterizedString.new(param_str, param_re)
+        expect(ps.length).to eql(expected)
+      end
+    end
+  end
+
+  describe "#adjacent_params?" do
+    it "should return true when the string has adjacent parameters, false otherwise." do
+      ParameterizedStringFixture::ADJACENT_PARAMS_TEST_CASES.each do |(param_str, param_re, expected)|
+        ps = ParameterizedString.new(param_str, param_re)
+        expect(ps.adjacent_params?).to eql(expected)
+      end
+    end
+  end
+
+  describe "#match" do
+    context "when the parameterized string is passed in a param_str and param_re for initialization" do
     end
   end
 end

@@ -97,6 +97,10 @@ module ParameterizedStringFixture
   # NOTE: There might be some redundant test cases for some of the parameterized string class'
   # methods, but this abstraction makes it simpler to add a new test case capturing a larger
   # class of instance methods because both methods will use the same pieces.
+  #
+  # NOTE: The key idea is that once the parameterized string's structure is parsed out,
+  # everything else about the string (its length, its parameters) follows. The main work in the
+  # parameterized string class is figuring out this structure.
   TEST_CASE_PIECES = [
     ["This string has no parameters", [], STANDARD],
 
@@ -115,7 +119,13 @@ module ParameterizedStringFixture
     ["This ", [[{"1" => "%1$s"}, " has "], [{"2" => "%2$d"}, " parameter"]], PRINTF],
     ["", [[{"1" => "%1$s"}, " has "], [{"2" => "%2$d"}, " parameter"]], PRINTF],
     ["", [[{"1" => "%1$s"}, " has "], [{"2" => "%2$d"}, " parameter for "], [{"3" => "%3$f"}, ""]], PRINTF],
-    ["", [[{"1" => "%1$s"}, " has "], [{"1" => "%1$s"}, " at "], [{"2" => "%2$d"}, " and "], [{"2" => "%2$d"}, ""]], PRINTF]
+    ["", [[{"1" => "%1$s"}, " has "], [{"1" => "%1$s"}, " at "], [{"2" => "%2$d"}, " and "], [{"2" => "%2$d"}, ""]], PRINTF],
+
+    # Test cases for adjacent parameters. These should return true when adjacent_params?
+    # is called
+    ["", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " has adjacent parameters"]], STANDARD],
+    ["This string ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " also has adjacent parameters"]], STANDARD],
+    ["Finally, this string contains adjacent parameters too ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, ""]], STANDARD]
   ]
 
   # This method builds a test case using the above test case pieces. It takes in a block
@@ -137,7 +147,39 @@ module ParameterizedStringFixture
     end]
   end
 
+  # The constant we will use is the phrase "(constant)" for the tests
+  SUBSTITUTE_CONST_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
+    [param_mids.inject({}) do |accum, (param, mid)|
+      accum.merge(param.keys[0] => "(constant)")
+    end]
+  end
+
   PARAMS_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
     [param_mids.map { |(param, mid)| param.keys[0] }.uniq ]
+  end
+
+  LENGTH_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
+    param_mids.inject(prefix.length) { |accum, (_, mid)| accum + mid.length }
+  end
+
+  # A parameterized string has adjacent parameters iff any <MID> except the last one
+  # is the empty string -- when constructing these test cases, we make this property
+  # explicit by considering only the part of param_mids that has the last element
+  # removed.
+  ADJACENT_PARAMS_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
+    param_mids_dup = param_mids.dup
+    param_mids_dup.pop
+    param_mids_dup.any? { |(_ ,mid)| mid.empty? }
+  end
+
+  # Looking at the TEST_CASE_PIECES values, notice that if we pass the param_str itself
+  # as input to match, then the "pre" and "post" pieces should be the empty string, and
+  # the "param_vals" map that's returned should be the final map resulting from merging
+  # the <id> => <original-value> maps themselves. Thus, these test cases construct the
+  # id_orig_map.
+  MATCH_PROPERTY_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
+    id_orig_map = param_mids.inject({}) do |accum, (param, _)|
+      accum.merge(param)
+    end
   end
 end
