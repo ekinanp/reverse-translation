@@ -160,6 +160,12 @@ describe ParameterizedString do
 
   describe "#match" do
     context "when the parameterized string is passed in a param_str and param_re for initialization" do
+      it "should match the original param_str, with the pre and post fields set to '' and the param_vals map a hash of <id> => <original value>" do
+        ParameterizedStringFixture::MATCH_PROPERTY_TEST_CASES.each do |(param_str, param_re, id_orig_map)|
+          ps = ParameterizedString.new(param_str, param_re)
+          expect(ps.match(param_str)).to eql(["", id_orig_map, ""])
+        end
+      end
     end
   end
 end

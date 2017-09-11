@@ -101,7 +101,7 @@ module ParameterizedStringFixture
   # NOTE: The key idea is that once the parameterized string's structure is parsed out,
   # everything else about the string (its length, its parameters) follows. The main work in the
   # parameterized string class is figuring out this structure.
-  TEST_CASE_PIECES = [
+  GENERAL_TEST_CASE_PIECES = [
     ["This string has no parameters", [], STANDARD],
 
     # For any regex other than PRINTF
@@ -119,21 +119,15 @@ module ParameterizedStringFixture
     ["This ", [[{"1" => "%1$s"}, " has "], [{"2" => "%2$d"}, " parameter"]], PRINTF],
     ["", [[{"1" => "%1$s"}, " has "], [{"2" => "%2$d"}, " parameter"]], PRINTF],
     ["", [[{"1" => "%1$s"}, " has "], [{"2" => "%2$d"}, " parameter for "], [{"3" => "%3$f"}, ""]], PRINTF],
-    ["", [[{"1" => "%1$s"}, " has "], [{"1" => "%1$s"}, " at "], [{"2" => "%2$d"}, " and "], [{"2" => "%2$d"}, ""]], PRINTF],
-
-    # Test cases for adjacent parameters. These should return true when adjacent_params?
-    # is called
-    ["", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " has adjacent parameters"]], STANDARD],
-    ["This string ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " also has adjacent parameters"]], STANDARD],
-    ["Finally, this string contains adjacent parameters too ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, ""]], STANDARD]
+    ["", [[{"1" => "%1$s"}, " has "], [{"1" => "%1$s"}, " at "], [{"2" => "%2$d"}, " and "], [{"2" => "%2$d"}, ""]], PRINTF]
   ]
 
   # This method builds a test case using the above test case pieces. It takes in a block
   # that specifies the "other" part outlined above. For substitute_values, these will be
   # the values that will be used to pass in to that routine; for params, it will be the
   # expected order of the parameters, etc.
-  def self.construct_test_case
-    TEST_CASE_PIECES.map do |(prefix, param_mids, param_re)|
+  def self.construct_test_case(test_case_pieces = GENERAL_TEST_CASE_PIECES)
+    test_case_pieces.map do |(prefix, param_mids, param_re)|
       param_str = param_mids.inject(prefix) do |accum, (param, mid)|
         accum + param.values[0] + mid
       end
@@ -162,11 +156,18 @@ module ParameterizedStringFixture
     param_mids.inject(prefix.length) { |accum, (_, mid)| accum + mid.length }
   end
 
+  # Test case pieces that are special to adjacent_params?.
+  ADJACENT_PARAMS_TEST_CASE_PIECES = GENERAL_TEST_CASE_PIECES + [
+    ["", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " has adjacent parameters"]], STANDARD],
+    ["This string ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " also has adjacent parameters"]], STANDARD],
+    ["Finally, this string contains adjacent parameters too ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, ""]], STANDARD]
+  ]
+
   # A parameterized string has adjacent parameters iff any <MID> except the last one
   # is the empty string -- when constructing these test cases, we make this property
   # explicit by considering only the part of param_mids that has the last element
   # removed.
-  ADJACENT_PARAMS_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
+  ADJACENT_PARAMS_TEST_CASES = construct_test_case(ADJACENT_PARAMS_TEST_CASE_PIECES) do |prefix, param_mids, param_re|
     param_mids_dup = param_mids.dup
     param_mids_dup.pop
     param_mids_dup.any? { |(_ ,mid)| mid.empty? }
@@ -178,8 +179,8 @@ module ParameterizedStringFixture
   # the <id> => <original-value> maps themselves. Thus, these test cases construct the
   # id_orig_map.
   MATCH_PROPERTY_TEST_CASES = construct_test_case do |prefix, param_mids, param_re|
-    id_orig_map = param_mids.inject({}) do |accum, (param, _)|
+    [param_mids.inject({}) do |accum, (param, _)|
       accum.merge(param)
-    end
+    end]
   end
 end
