@@ -7,11 +7,13 @@ describe Main do
     valid_log_file_trans = MainFixture::VALID_LOG_FILE_TRANS
 
     context "given no command line arguments" do
-      it "should output an error message, the usage of the tool and return an exit code of 1" do
-        expect do
-          expect(Main.run([])).to eql(1) 
-        end.to output(MainFixture::EXPECTED_NO_ARG_MSG).to_stdout
-      end
+      # TODO: Write test that ensures the tool reads from STDIN and writes to STDOUT, i.e.
+      # pass it an empty ARGV
+#      it "should output an error message, the usage of the tool and return an exit code of 1" do
+#        expect do
+#          expect(Main.run([])).to eql(1) 
+#        end.to output(MainFixture::EXPECTED_NO_ARG_MSG).to_stdout
+#      end
     end
 
     context "given a non-existent log file" do

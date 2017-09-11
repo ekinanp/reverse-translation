@@ -69,5 +69,5 @@ module POParserFixture
   MSG = ["\a\b\r\n\s\t\"\\", "Now that the escape characters are done", "Does this message work?", "What about with %{param1} and %{param2} and %{param3} parameters?"]
   TEST_INPUT = [[[MSG], [MSG]], [[MSG, MSG], [MSG, MSG, MSG]]]
   STRUCTURE, INPUT_STRING = make_po_file_contents(TEST_INPUT)
-  EXPECTED_RESULT = [POParam::RUBY_PERCENT, STRUCTURE]
+  EXPECTED_RESULT = [ParameterizedString::RUBY_PERCENT, STRUCTURE]
 end

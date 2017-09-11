@@ -57,7 +57,7 @@ module POEntryFixture
 
   # Both the simple and plural cases will use this for their
   # parameter regex.
-  PARAM_RE = POParam::STANDARD
+  PARAM_RE = ParameterizedString::STANDARD
 
   SIMPLE_TEST_CASE = make_happy_test_case(1)
   SIMPLE_PO_ENTRY = SIMPLE_TEST_CASE[0]

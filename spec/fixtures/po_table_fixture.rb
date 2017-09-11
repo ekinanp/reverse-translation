@@ -28,7 +28,7 @@ module POTableFixture
   # captured by the file.
   def self.make_mock_po_parser_file(entries)
     data = entries.map { |entry| make_mock_po_parser_entry(*entry) }
-    [POParam::PO_PARAMS.sample, data]
+    [ParameterizedString::PARAM_RES.sample, data]
   end
 
   # There will be two PO files used for testing. File 1's entries will
