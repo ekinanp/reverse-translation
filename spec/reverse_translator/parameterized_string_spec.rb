@@ -167,5 +167,47 @@ describe ParameterizedString do
         end
       end
     end
+    context "given an arbitrary parameterized string" do
+      param_str = ParameterizedString.new(
+        "This {0} string has {1} parameter",
+        ParameterizedString::STANDARD
+      )
+      context "and an input that does not match the 'prefix' part of the string" do
+        it "should return nil" do
+          expect(param_str.match("Bad prefix")).to be_nil
+        end
+      end
+      context "and an input that fails to match at some <param><mid> pair" do
+        it "should return nil" do
+          expect(param_str.match("This {special} string does not have {one} parameter")).to be_nil
+          expect(param_str.match("This {special} string has {one} param")).to be_nil
+        end
+      end
+      context "and an input that matches the string" do
+        it "should return the part preceding the match, the parameter-value map, and the part succeeding the match" do
+          input = "Hi there. This {special} string has {one} parameter. Yes, it does."
+          expected = ["Hi there. ", {"0" => "{special}", "1" => "{one}"}, ". Yes, it does."]
+
+          expect(param_str.match(input)).to eql(expected)
+        end
+      end
+    end
+    context "given a parameterized string with a parameter at the end" do
+      it "should set the value of the final parameter to whatever comes after it; equivalently, the 'post' part should always be empty in the return" do
+        param_str = ParameterizedString.new(
+          "This {0} string has a parameter at the end. {1}",
+          ParameterizedString::STANDARD
+        )
+
+        test_cases = {
+          "Hi there. This {special} string has a parameter at the end. Hopefully its value is set." =>
+          ["Hi there. ", {"0" => "{special}", "1" => "Hopefully its value is set."}, ""],
+          "This {special} string has a parameter at the end. " =>
+          ["", {"0" => "{special}", "1" => ""}, ""]
+        }
+
+        test_cases.each { |input, expected| expect(param_str.match(input)).to eql(expected) }
+      end
+    end
   end
 end

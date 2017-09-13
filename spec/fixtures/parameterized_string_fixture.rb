@@ -156,7 +156,7 @@ module ParameterizedStringFixture
     param_mids.inject(prefix.length) { |accum, (_, mid)| accum + mid.length }
   end
 
-  # Test case pieces that are special to adjacent_params?.
+  # Test case pieces for adjacent_params?.
   ADJACENT_PARAMS_TEST_CASE_PIECES = GENERAL_TEST_CASE_PIECES + [
     ["", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " has adjacent parameters"]], STANDARD],
     ["This string ", [[{"0" => "{0}"}, ""], [{"1" => "{1}"}, " also has adjacent parameters"]], STANDARD],
