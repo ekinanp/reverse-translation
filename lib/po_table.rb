@@ -47,8 +47,13 @@ class POTable
   #
   # Initially, was_translated is vacuously true. One key invariant in the
   # loop is that the ix returned by bsearch_index_left(ix) is >= the passed-in
-  # ix (because log_message's max_untranslated_length will always shrink). So
-  # our loop is guaranteed to terminate.
+  # ix (because log_message's max_untranslated_length will shrink). So our
+  # loop is guaranteed to terminate.
+  # 
+  # NOTE: For foreign log messages containing parameters that are not foreign
+  # strings, this algorithm will loop all the way to the end of the table because
+  # the current code has no way of determining if a parameter is a foreign message
+  # or not (it assumes that every parameter is equally likely to be a foreign string).
   def reverse_translate(log_message)
     was_translated = true
     cur_depth = 0
