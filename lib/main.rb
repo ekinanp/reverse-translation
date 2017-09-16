@@ -3,6 +3,8 @@ require_relative 'reverse_translator'
 
 # This class contains the code for the CLI.
 class Main
+  attr_reader :po_files
+
   def initialize
     project_root = File.dirname(File.dirname(__FILE__))
     @po_files = [`find #{project_root}/resources/ja/ -name "*.po"`.split]
@@ -68,7 +70,7 @@ class Main
     log_file_trans = log_file + ".trans"
     input_file = File.open(log_file, "r")
     output_file = File.open(log_file_trans, "w")
-    ReverseTranslator.new(@po_files, @options[:depth]).reverse_translate(input_file, output_file)
+    ReverseTranslator.new(@po_files).reverse_translate(input_file, output_file, @options[:depth])
     puts "#{log_file} was successfully translated, with the result written to #{log_file_trans}!"
     input_file.close
     output_file.close

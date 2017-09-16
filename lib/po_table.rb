@@ -7,10 +7,7 @@ require_relative 'utils'
 # from services implemented in a specific language (e.g. Clojure). Or they
 # can correspond to all the PO files.
 class POTable
-  def initialize(pot_files, depth)
-    # Set the depth of the translation
-    @depth = depth
-
+  def initialize(pot_files)
     # Sort the entries by longest match
     parsed_entries = pot_files.map { |f| POParser::parse(f) }.reduce(:concat).sort do |e1, e2|
       msgstr_avg_cmp = average_length(e2[1]) <=> average_length(e1[1])
@@ -54,7 +51,7 @@ class POTable
   # strings, this algorithm will loop all the way to the end of the table because
   # the current code has no way of determining if a parameter is a foreign message
   # or not (it assumes that every parameter is equally likely to be a foreign string).
-  def reverse_translate(log_message)
+  def reverse_translate(log_message, depth)
     was_translated = true
     cur_depth = 0
     ix = 0
@@ -67,7 +64,7 @@ class POTable
 
       was_translated = log_message.translate_with(@entries[ix])
       cur_depth += 1 if was_translated
-      return if log_message.translated? || cur_depth == @depth
+      return if log_message.translated? || cur_depth == depth
       ix += 1
     end
   end
