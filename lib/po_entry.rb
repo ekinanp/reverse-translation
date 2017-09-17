@@ -28,9 +28,10 @@ class POEntry
   # of the message, and (3) are the lengths of the message's parameters (because
   # foreign log messages can contain other foreign log messages as parameters).
   def reverse_translate(msg)
-    matching_str = @translations.keys.find { |k| k.match(msg) }
+    match_res = nil
+    matching_str = @translations.keys.find { |k| match_res = k.match(msg) }
     return nil unless matching_str
-    pre, param_values, post = matching_str.match(msg)
+    pre, param_values, post = match_res
    
     max_untranslated_length = Math.max(pre.length, post.length)
     max_untranslated_length = param_values.values.inject(max_untranslated_length) do |accum, value|
