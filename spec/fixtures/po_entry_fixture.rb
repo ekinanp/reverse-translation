@@ -1,70 +1,79 @@
 module POEntryFixture
-  BASIC_PARAM = "file1.ext"
-  QUOTED_PARAM = "\"{0} {1} This is a random quoted string "\
-    "with weird \a\b\r\n\s\t characters and regex .\\()[]{}+|^$*? "\
-    "characters, to test the escape case\""
-  MULTI_LINE_PARAM = "This is a multi-line param\n"\
-    "that is used to represent exception generated\n"\
-    "messages, because these can also happen"
+  # At an abstract level, a POEntry encapsulates a map of <Foreign Message> => <Translation>
+  # relationships. When translating a message, here is the following pattern that's used:
+  #   (1) Find the first foreign message that matches the passed-in message
+  #   (2) Substitute its parameters into the translation
+  #   (3) Output the translation
+  #
+  # Thus, for testing purposes, a "Foreign Message" is an object that matches against a given
+  # set of strings and, for each match, returns a result object [pre, param_values, post].
+  # If a string is not in the set of matched strings, then its "match" method will return
+  # nil. We will change the lengths of "pre", "post", and each value in "param_values" so that
+  # we can ensure that 'max_untranslated_length' is computed correctly.
+  #
+  # Furthermore, our POEntry also keeps track of the foreign message with the smallest length.
+  # So each "Foreign Message" will keep track of a "length" parameter.
+  #
+  # Similarly a "Translation" is an object that encapsulates a "template" string into which
+  # we can substitute parameters. So, it will mock a single method "substitute_values" that will
+  # take a given "param_values" map, and simply concatenate each value after its "template" string
+  # -- since the "templates" will be unique, we can figure out whether the correct translation was
+  # used.
+  #
+  # See "setup_po_entry" in "po_entry_spec" to see how this works.
+ 
 
-  UNTRANSLATED_MSG = "This message is not meant to be translated."
-  MSGID_TEMPLATE = "a {0} is OK because this is a simple case of {1} with regular parameters: {2} blah"
-  MSGSTR_TEMPLATE = "a {2} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because we need to "\
-       "ensure that the escaped regex characters are also matched {1} so that things work {0} blah" 
+  # These are all of our "foreign" messages. Each foreign message consists of a map between
+  # the set of matched strings and the result returned for each set.
+  #
+  # A matched string iFMj is interpreted as the ith matching string of jth foreign message.
+  FOREIGN_MESSAGES = 
+    [ # The first foreign message
+      [{"1FM1" => ["pre"*10, {"1FM1" => "1FM1"}, "post"],
+        "2FM1" => ["pre", {"2FM1" => "2FM1"}, "post"*10],
+        "3FM1" => ["pre", {"3FM1" => "3FM1"*10}, "post"]}, 10],
+      # The second foreign message
+      [{"1FM2" => ["pre"*10, {"1FM2" => "1FM2"}, "post"],
+        "2FM2" => ["pre", {"2FM2" => "2FM2"}, "post"*10],
+        "3FM2" => ["pre", {"3FM2" => "3FM2"*10}, "post"]}, 8]]
 
-  INPUT_MSG_TEMPLATE = "<BEGINNING PART> a #{MULTI_LINE_PARAM} is \a\b\r\n\s\t .\\()[]{}+|^$*? more complicated because we need to "\
-    "ensure that the escaped regex characters are also matched #{QUOTED_PARAM} so that things work #{BASIC_PARAM} blah <ENDING PART>" 
+  TRANSLATIONS = ["1", "2"]
 
-  EXPECTED_RESULT_TEMPLATE = "<BEGINNING PART> a #{BASIC_PARAM} is OK because this is a simple case of "\
-    "#{QUOTED_PARAM} with regular parameters: #{MULTI_LINE_PARAM} blah <ENDING PART>"
-
-  def self.pluralize(template, num_times)
-    template.sub(/(\\\{\d\})/, "\\1#{"s"*num_times}")
+  def self.create_part_map(generate_part_name, parts)
+    parts.map do |part|
+      [generate_part_name.call, part]
+    end.to_h
   end
 
-  # This method returns an array [constructor_part, expected_part]. 
-  # "constructor_part" represents the portion of POParser's result that is 
-  # passed to POEntry, while "expected_part" represents the portion of
-  # this entry in the "expected" results returned by "make_happy_test_case". 
-  def self.make_entry_test_case(generate_entry_name, msg_template, expected_template, num_entries)
-    constructor_part = num_entries.times.collect { |i| [generate_entry_name.call, pluralize(msg_template, i)] }.to_h
-    expected_part = num_entries.times.collect { |i| pluralize(expected_template, i) }
-    [constructor_part, expected_part]
-  end
-
-  # This method creates a test case for the POEntry spec tests given the
-  # number of msgstr entries. It returns an array of two maps: [constructor, expected].
-  # The "constructor" map represents the input that should be passed into
-  # POEntry, while "expected" is a map of input messages to their expected
-  # translations after calling that entry's reverse_translate method.
-  def self.make_happy_test_case(num_msgstr)
-    is_plural = num_msgstr > 1
+  def self.create_entry_map(msgid_parts, msgstr_parts)
     FixtureUtils.reset
-    FixtureUtils.set_is_array(true) if is_plural
-
-    # Generate the "constructor" part
-    msgid_part, expected_results = \
-      make_entry_test_case(FixtureUtils::MSGID_GEN, MSGID_TEMPLATE, EXPECTED_RESULT_TEMPLATE, is_plural ? 2 : 1)
-    msgstr_part, inputs = \
-      make_entry_test_case(FixtureUtils::MSGSTR_GEN, MSGSTR_TEMPLATE, INPUT_MSG_TEMPLATE, num_msgstr)
-
-    # Now generate the "expected" part
-    expected_result = expected_results[1] ? expected_results[1] : expected_results[0]
-    expected_map = (num_msgstr).times.collect { |i| [inputs[i], expected_result] }.to_h
-
-    [[msgid_part, msgstr_part], expected_map]
+    FixtureUtils.set_is_array(true) if msgstr_parts.size > 1
+    msgid_map = create_part_map(FixtureUtils::MSGID_GEN, msgid_parts)
+    msgstr_map = create_part_map(FixtureUtils::MSGSTR_GEN, msgstr_parts)
+    [msgid_map, msgstr_map]
   end
 
-  # Both the simple and plural cases will use this for their
-  # parameter regex.
-  PARAM_RE = ParameterizedString::STANDARD
+  # This method returns the expected result when POEntry#reverse_translate is called on
+  # the given input. Idea is to simulate the "matching" algorithm, extract the translation
+  # using the provided translation_key, and then substitute the parameters in as outlined
+  # above.
+  def self.expected_result(po_entry, translation_key, input)
+    po_entry[1].values.each do |(valid_matches, _)|
+      match = valid_matches[input]
+      next unless match
+      pre, param_values, post = match
+      translation = po_entry[0][translation_key]
 
-  SIMPLE_TEST_CASE = make_happy_test_case(1)
-  SIMPLE_PO_ENTRY = SIMPLE_TEST_CASE[0]
-  SIMPLE_INPUT_MSG = SIMPLE_TEST_CASE[1].keys[0]
-  SIMPLE_EXPECTED_RESULT = SIMPLE_TEST_CASE[1].values[0] 
+      translated_msg = pre + translation + param_values.values.join + post
+      max_untranslated_length = [pre.length, *(param_values.values.map { |s| s.length }), post.length].max
+      return [translated_msg, max_untranslated_length]
+    end
+    nil
+  end
 
-  PLURAL_TEST_CASE = make_happy_test_case(3)
-  PLURAL_PO_ENTRY = PLURAL_TEST_CASE[0]
-  PLURAL_INPUT_EXPECTED = PLURAL_TEST_CASE[1]
+  PO_ENTRY_NON_PLURAL = create_entry_map(TRANSLATIONS.first(1), FOREIGN_MESSAGES.first(1)) 
+  PO_ENTRY_PLURAL = create_entry_map(TRANSLATIONS, FOREIGN_MESSAGES)
+
+  NON_PLURAL_EXPECTED_MIN_LENGTH = 10
+  PLURAL_EXPECTED_MIN_LENGTH = 8
 end
