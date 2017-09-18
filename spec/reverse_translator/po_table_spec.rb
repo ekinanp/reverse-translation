@@ -24,8 +24,11 @@ describe POTable do
       mock_flm.checked_entries << entry.id
       next false unless translating_entries[entry.id]
       allow(mock_flm).to receive(:max_untranslated_length).and_return(translating_entries[entry.id]) 
+      # have to mock again, because rpsec uses the old "max_untranslated_length" value
+      allow(mock_flm).to receive(:translated?).and_return(mock_flm.max_untranslated_length.zero?)
       true
     end
+    mock_flm
   end
 
   before do
@@ -49,6 +52,7 @@ describe POTable do
       end.to_h
 
       mock_po_entry = double()
+      allow(mock_po_entry).to receive(:min_length).and_return(entry_id)
       allow(mock_po_entry).to receive(:id).and_return(entry_id)
 
       allow(POEntry).to receive(:new).with([mock_msgid, mock_msgstr]).and_return(mock_po_entry)
@@ -62,24 +66,34 @@ describe POTable do
     @table = POTable.new(POTableFixture::PO_FILES_RAW.keys) 
   end
 
-  # There are four key operations going on in the code for this method:
-  #   (A) Iterating over each entry in the @entries array
-  #
-  #   (B) Skipping to a later entry by using a binary search before looping, and whenever
-  #   an entry successfully translates a message (to avoid processing entries that are longer
-  #   than the message itself, and hence cannot ever hope to translate it)
-  #
-  #   (C) Checking after a successful translation whether or not the maximum depth has been
-  #   reached and exiting out of the method if so
-  #
-  #   (D) Checking after a successful translation whether or not the entire message has
-  #   successfully been translated, and exiting out of the method if so.
-  #
-  # Each test case is "summarized" by a four-digit binary numer xAxBxCxD where a 1 in xI indicates
-  # that we're testing to see if Operation I occurred successfully for that test. Thus, there will
-  # be 16 total test cases. We can do better by shrinking this number down to 8, as note that the
-  # exit condition for xC and xD is the same line of code, so there's no need to test these
-  # together.
   describe "#reverse_translate" do
+    it "iterates over each entry in the @entries array ordered by average length" do
+      mock_flm = mock_foreign_log_message({}, 8)
+
+      @table.reverse_translate(mock_flm, -1)
+      expect(mock_flm.checked_entries).to eql([8, 7, 6, 5, 4, 2, 1])
+      expect(mock_flm.translated?).to be_falsey
+    end
+    it "uses binary search to skip entries that do not need to be checked, where it only does the binary search at the initial step, or whenever an entry translates part of the message" do
+      mock_flm = mock_foreign_log_message({7 => 5, 5 => 2}, 7)
+
+      @table.reverse_translate(mock_flm, -1)
+      expect(mock_flm.checked_entries).to eql([7, 5, 2, 1])
+      expect(mock_flm.translated?).to be_falsey
+    end
+    it "translates up to a certain depth" do
+      mock_flm = mock_foreign_log_message({8 => 5}, 8)
+
+      @table.reverse_translate(mock_flm, 1)
+      expect(mock_flm.checked_entries).to eql([8])
+      expect(mock_flm.translated?).to be_falsey
+    end
+    it "stops iterating through the entries once the message has been fully translated" do
+      mock_flm = mock_foreign_log_message({8 => 0}, 8)
+
+      @table.reverse_translate(mock_flm, -1)
+      expect(mock_flm.checked_entries).to eql([8])
+      expect(mock_flm.translated?).to be(true)
+    end
   end
 end

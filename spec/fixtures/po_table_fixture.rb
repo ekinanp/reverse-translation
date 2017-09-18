@@ -16,7 +16,7 @@ module POTableFixture
   # first for matches (to avoid shorter entries translating small portions of a foreign
   # message, thus messing up the overall translation). Thus, we will assign each parsed
   # entry a numeric value that serves as its min_length value. Because we will be using
-  # unique values for the min_length, this value will also serve to "summarize" that entrie's
+  # unique values for the min_length, this value will also serve to "summarize" that entry's
   # <Foreign Message> => <Translation> type relationship.
   #
   # TODO: ^ The above comment is a bit vague. Clarify more.
