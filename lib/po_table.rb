@@ -16,9 +16,8 @@ class POTable
     end
 
     # Keep only those entries that do not have any adjacent parameters (to avoid
-    # catastrophic backtracking).
-    #
-    # TODO: Add tests.
+    # catastrophic backtracking, and also ambiguity in parsing out the parameter
+    # values).
     @entries = parsed_entries.select do |entry|
       entry[1].all? { |_, msg| not msg.adjacent_params? }
     end.map { |entry| POEntry.new(entry) }
