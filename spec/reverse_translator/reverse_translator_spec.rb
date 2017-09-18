@@ -1,30 +1,40 @@
 require "spec_helper"
 
 describe ReverseTranslator do
+  before do
+    mock_po_file = "foo"
+
+    @mock_table = double()
+    allow(POTable).to receive(:new).with([mock_po_file]).and_return(@mock_table) 
+    @translator = ReverseTranslator.new([[mock_po_file]])
+  end
+
   describe "#reverse_translate" do
-    @mock_log_file = ReverseTranslatorFixture::MOCK_LOG_FILE
-    @mock_log_file_trans = ReverseTranslatorFixture::MOCK_LOG_FILE_TRANS
-    it "should translate the given log file (denoted by <path>), with the translated log file's path being <path>.trans" do
-      num_log_msgs = ReverseTranslatorFixture::MOCK_LOG_MSGS_MAP.size
-      num_po_files = ReverseTranslatorFixture::MOCK_PO_FILES.size
-  
-      @data_table_map = ReverseTranslatorFixture::MOCK_PO_FILES.map { |d| [d, double()] }.to_h
-      @data_table_map.each do |d, t| 
-        expect(t).to receive(:reverse_translate).exactly(num_log_msgs).times { |msg| msg + (ReverseTranslatorFixture::TRANSLATIONS[d]) } 
+    it "translates all log messages in the input stream, writing their translations to the provided output stream" do
+      # mock the log messages
+      mock_log_msgs = (1..10).map do |i|
+        mock_log_msg = double()
+        allow(mock_log_msg).to receive(:value).and_return(i)
+        mock_log_msg
       end
-      allow(POTable).to receive(:new).exactly(num_po_files).times { |d| @data_table_map[d] }
-  
-      expect(LogParser).to receive(:parse).with(@mock_log_file).once.and_return(ReverseTranslatorFixture::MOCK_LOG_MSGS_MAP.keys)
-  
-      @out_file = double()
-      @translated_log = ""
-      expect(@out_file).to receive(:puts).exactly(num_log_msgs).times { |msg| @translated_log = @translated_log + msg + "\n" }
-      expect(File).to receive(:open).with(@mock_log_file_trans, "w").once.and_return(@out_file)
-      expect(@out_file).to receive(:close).with(no_args).once 
-  
-      @reverse_translator = ReverseTranslator.new (ReverseTranslatorFixture::MOCK_PO_FILES)
-      @reverse_translator.reverse_translate(@mock_log_file, @mock_log_file_trans)
-      expect(@translated_log).to eql(ReverseTranslatorFixture::EXPECTED_TRANSLATED_LOG)
+
+      # mock the input and output streams
+      mock_input_file = double()
+      allow(LogParser).to receive(:parse).with(mock_input_file).and_return(mock_log_msgs)
+      translated_msgs = []
+      mock_output_file = double()
+      allow(mock_output_file).to receive(:puts) { |translated_msg| translated_msgs << translated_msg.value }
+
+      # mock the table's reverse_translate method
+      mock_depth = 5 
+      allow(@mock_table).to receive(:reverse_translate).with(any_args, mock_depth) do |log_msg|
+        old_val = log_msg.value
+        allow(log_msg).to receive(:value).and_return(old_val.succ) 
+      end
+
+      # run the test
+      @translator.reverse_translate(mock_input_file, mock_output_file, mock_depth)
+      expect(translated_msgs).to eql((2..11).to_a)
     end
   end
 end
