@@ -54,47 +54,19 @@ describe ParameterizedString do
 
   describe "regex describing printf-style parameters" do
     context "given a valid parameter" do
-      # Exhaustive testing here. If we denote the following sets:
-      #    A = INDEX
-      #    B = FLAGS
-      #    C = WIDTHS
-      #    D = PRECISION
-      #    E = LENGTHS
-      #    F = TYPES
-      # Then note that only Set F is required. Let x = xAxBxCxDxE be
-      # a 5-bit binary number, where xY represents whether Set Y is
-      # included or not. Assume that x = 10101. Then the number of
-      # possible valid printf parameters for this state (using a finite
-      # subset of the integers) is thus |xA||xC||xE||xF|. Taking into
-      # consideration all possible values of x (2^5 = 32), the total
-      # number of possible test cases that will be considered here is
-      # bounded above by 32|xA||xB||xC||xD||xE||xF| = 576000.
+      # Exhaustive testing here.
       it "matches it" do
-        OPTIONAL_SETS = [
-          ParameterizedStringFixture::PRINTF_INDEX,
-          ParameterizedStringFixture::PRINTF_FLAGS,
-          ParameterizedStringFixture::PRINTF_WIDTHS,
-          ParameterizedStringFixture::PRINTF_PRECISION,
-          ParameterizedStringFixture::PRINTF_LENGTHS,
-        ]
-        REQUIRED_SET = ParameterizedStringFixture::PRINTF_TYPES
-        (0..31).each do |n|
-          # Find the included sets and reverse the result so that we can
-          # create strings by prepending to the front of the string instead
-          # of the end.
-          sets = OPTIONAL_SETS.each_with_index.inject([]) do |accum, (set, i)|
-            next accum if (n & (1 << (4 - i))) == 0
-            accum << set
-          end.reverse 
+        inputs = FixtureUtils.string_cartesian_product(
+          ["%"],
+          [ParameterizedStringFixture::PRINTF_INDEX],
+          [ParameterizedStringFixture::PRINTF_FLAGS],
+          [ParameterizedStringFixture::PRINTF_WIDTHS],
+          [ParameterizedStringFixture::PRINTF_PRECISION],
+          [ParameterizedStringFixture::PRINTF_LENGTHS],
+          ParameterizedStringFixture::PRINTF_TYPES
+        )
 
-          # Compute the input cases, which is the concatenated Cartesian product
-          # of all the included sets prepended with a "%" sign, and then see if
-          # they match the regex.
-          inputs = sets.inject(REQUIRED_SET) do |accum, set|
-            set.product(accum).map { |p| p.join }
-          end.map { |i| "%#{i}" }
-          inputs.each { |i| expect(i).to match(PRINTF) }
-        end
+        inputs.each { |i| expect(i).to match(PRINTF) }
       end
     end
     context "given an invalid parameter" do
